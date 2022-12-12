@@ -1,4 +1,4 @@
 package cvut.omo.device;
 
-public class HomeDeviceState {
+public interface HomeDeviceState {
 }

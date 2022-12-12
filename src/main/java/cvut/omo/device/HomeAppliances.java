@@ -1,40 +1,66 @@
 package cvut.omo.device;
 
-import cvut.omo.device.consumption_structure.ConsumptionData;
+import cvut.omo.app_utils.Constants;
+import cvut.omo.device.device_data_structure.ConsumptionData;
+import cvut.omo.device.device_data_structure.UsageData;
+import cvut.omo.home_structure.Room;
 import lombok.*;
 
-@Getter
+import java.util.ArrayList;
+import java.util.List;
+
+
 @Setter
+@Getter
 @AllArgsConstructor
 @ToString
 public abstract class HomeAppliances implements HomeDevice{
 
+    protected List<ConsumptionData> consumptionDataList;
+    protected List<UsageData> usageDataList;
 
-    protected ConsumptionData consumptionData;
+    protected double currentConsumption;
+
+    protected double lifeTimeInYear;
     protected double workingHours;
 
+    protected Room room;
 
-    public HomeAppliances(){
-        consumptionData = identifyDeviceConsumption();
+    protected Documentation documentation;
+
+    //TODO
+    protected HomeDeviceState homeDeviceState;
+
+    public HomeAppliances(double lifeTime){
+        consumptionDataList = new ArrayList<>();
+        usageDataList = new ArrayList<>();
+        currentConsumption = Constants.DEVICE_OFF_STATE;
+        this.lifeTimeInYear = lifeTime;
     }
 
+    //TODO state. Change current consumption depends on state. Washing machine has water consumption also.
+    public void turnOn(){}
+    public void turnOff(){}
+    public void pause(){}
+    public void stop(){}
 
-    //TODO state;
 
-    public void turnOn(){
-    }
-    public void turnOff(){
-    }
-    public void pause(){
-    }
-    public void stop(){
-    }
+    public List<ConsumptionData> getConsumptionData(){return this.consumptionDataList;}
+    public void changeCurrentConsumption(double currentConsumption){this.currentConsumption = currentConsumption;}
 
-    protected abstract ConsumptionData identifyDeviceConsumption();
+    //TODO update working hours and check life time
+    public void update(){this.workingHours++;}
+
+
+    //TODO getDocumentation;
+    public Documentation getDocumentation(){this.documentation = new Documentation();return documentation;}
 
     //TODO visitor;
     public abstract void accept();
 
-    //TODO getDocumentation;
+
+    protected abstract void identifyConsumptionData();
+
+
 
 }
