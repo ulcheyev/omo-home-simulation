@@ -2,8 +2,13 @@ package cvut.omo.app_utils;
 
 public class Constants {
 
+    public final static int DAY_IN_HOUR = 24;
+
     public final static double ELECTRICITY_PRICE_KWH = 14;
     public final static double WATER_PRICE_M3 = 14;
+
+    public final static String ELECTRICITY_UNIT_OF_MEASURMENT = "KWH";
+    public final static String WATER_UNIT_OF_MEASURMENT = "M3";
 
     public final static double COMPUTER_RUN_STATE_ELECTRICITY_CONSUMPTION = 14;
     public final static double TV_ELECTRICITY_RUN_STATE_CONSUMPTION = 12;

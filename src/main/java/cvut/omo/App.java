@@ -1,13 +1,13 @@
 package cvut.omo;
 import cvut.omo.device.HomeDevice;
-import cvut.omo.device.device_data_structure.ConsumptionAndUsageDataStructure;
-import cvut.omo.entity.person.Person;
+import cvut.omo.device.device_data_structure.ConsumptionAndUsageCollection;
+import cvut.omo.device.device_data_structure.Iterator;
+import cvut.omo.device.device_data_structure.SourceType;
 import cvut.omo.home_structure.*;
 import cvut.omo.home_structure.home_builder.SmartHomeBuilder;
 import cvut.omo.home_structure.home_builder.SmartHomeBuilderDirector;
-import cvut.omo.home_structure.room_builder.SmartHomeRoomBuilder;
-import cvut.omo.home_structure.room_builder.SmartHomeRoomBuilderDirector;
-import org.checkerframework.checker.units.qual.C;
+
+import java.util.Date;
 
 public class App {
 
@@ -15,30 +15,42 @@ public class App {
     public static void main(String[] args) {
 
 
-
-
         SmartHomeBuilderDirector.createSmallHomeConfiguration(SmartHomeBuilder.INSTANCE);
         Home home = SmartHomeBuilder.INSTANCE.getResult();
 
-        ConsumptionAndUsageDataStructure data = new ConsumptionAndUsageDataStructure(home.getHomeDevices());
 
 
 
-//        int count = 0;
-//        for(Floor floor: home.getFloors()){
-//            for(Room room: floor.getRooms()){
-//                System.out.println(room.getRoomType());
-//                for(HomeDevice homeDevice: room.getHomeDevices()){
-//                    count++;
-//                }
-//            }
-//        }
+        int count = 0;
+        for(Floor floor: home.getFloors()){
+            for(Room room: floor.getRooms()){
+                System.out.println(room.getRoomType());
+                for(HomeDevice homeDevice: room.getHomeDevices()){
+                    count++;
+                }
+            }
+        }
+        System.out.println(count);
+        System.out.println(ConsumptionAndUsageCollection.getInstance().generateReport());
+        System.out.println("___________________________________________________________");
+
+        for(Floor floor: home.getFloors()){
+            for(Room room: floor.getRooms()){
+                for(int i = 0; i < 48; i ++) {
+                    for (HomeDevice homeDevice : room.getHomeDevices()) {
+                        homeDevice.update();
+                    }
+                }
+            }
+        }
+        System.out.println(ConsumptionAndUsageCollection.getInstance().generateReport());
+
+
 //
 //        for(Person person: home.getPersons()){
 //            System.out.println(person.getName());
 //        }
 
-        System.out.println(data.generateReport());
 //        System.out.println(count);
 
 

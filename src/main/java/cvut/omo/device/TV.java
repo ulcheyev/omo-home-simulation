@@ -9,6 +9,7 @@ public class TV extends HomeAppliances {
 
     @Override
     protected void identifyConsumptionData() {
+        this.sourceTypes.add(SourceType.ENERGY);
         this.consumptionDataList.add(new ConsumptionData(this, SourceType.ENERGY));
     }
 

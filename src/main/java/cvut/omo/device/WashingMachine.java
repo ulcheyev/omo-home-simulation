@@ -9,6 +9,8 @@ public class WashingMachine extends HomeAppliances{
 
     @Override
     protected void identifyConsumptionData() {
+        this.sourceTypes.add(SourceType.ENERGY);
+        this.sourceTypes.add(SourceType.WATER);
         this.consumptionDataList.add(new ConsumptionData(this, SourceType.ENERGY));
         this.consumptionDataList.add(new ConsumptionData(this, SourceType.WATER));
     }
