@@ -5,10 +5,6 @@ import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
 public class Pet {
-
-
-
-
     private PetType petType;
 
 

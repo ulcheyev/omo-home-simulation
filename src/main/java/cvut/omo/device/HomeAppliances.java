@@ -1,16 +1,11 @@
 package cvut.omo.device;
 
 import cvut.omo.app_utils.Constants;
-import cvut.omo.device.device_data_structure.ConsumptionAndUsageCollection;
-import cvut.omo.device.device_data_structure.ConsumptionData;
-import cvut.omo.device.device_data_structure.SourceType;
-import cvut.omo.device.device_data_structure.UsageData;
+import cvut.omo.data_collections.consumption.ConsumptionCollection;
 import cvut.omo.home_structure.Room;
 import lombok.*;
 
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 
@@ -20,11 +15,7 @@ import java.util.Set;
 @ToString
 public abstract class HomeAppliances implements HomeDevice{
 
-    protected List<ConsumptionData> consumptionDataList;
-    protected List<UsageData> usageDataList;
     protected Set<SourceType> sourceTypes;
-
-    private int currConsData = 0;
 
     protected double lifeTimeInYear;
     protected double workingHours;
@@ -37,12 +28,9 @@ public abstract class HomeAppliances implements HomeDevice{
     protected HomeDeviceState homeDeviceState;
 
     public HomeAppliances(double lifeTime){
-        consumptionDataList = new ArrayList<>();
-        usageDataList = new ArrayList<>();
         sourceTypes = new HashSet<>();
         this.lifeTimeInYear = lifeTime;
-        identifyConsumptionData();
-        ConsumptionAndUsageCollection.getInstance().putHomeDevice(this);
+        identify();
     }
 
     //TODO state. Change current consumption depends on state. Washing machine has water consumption also.
@@ -52,40 +40,36 @@ public abstract class HomeAppliances implements HomeDevice{
     public void stop(){}
 
 
-    public List<ConsumptionData> getConsumptionData(){return this.consumptionDataList;}
+    public void setCurrentConsumption(SourceType sourceType, double currentConsumption){
+        sourceTypes.forEach(type -> {if(type.equals(sourceType)){type.setCurrentConsumption(currentConsumption);}});
+    }
 
-    public void changeCurrentConsumption(SourceType sourceType, double currentConsumption){
-        for(int i = currConsData; i < consumptionDataList.size(); i++){
-            if(consumptionDataList.get(i).getSourceType() == sourceType){
-                consumptionDataList.get(i).setDeviceCurrentConsumption(currentConsumption);
-            }
-        }
+    public double getCurrentConsumption(SourceType sourceType){
+        return sourceTypes.stream()
+                .filter(type->type.equals(sourceType))
+                .findFirst()
+                .map(SourceType::getCurrentConsumption)
+                .orElse(Constants.DEVICE_OFF_STATE);
     }
 
     //TODO update working hours and check life time
     public void update(){
         this.workingHours++;
-        if(workingHours % Constants.DAY_IN_HOUR == 0){
-
-            for (SourceType sourceType : sourceTypes) {
-                consumptionDataList.add(new ConsumptionData(this, sourceType));
-                currConsData++;
-            }
-        }
-        for(int i = currConsData; i < consumptionDataList.size(); i++){
-            consumptionDataList.get(i).update();
-        }
+        ConsumptionCollection.getInstance().update(this);
     }
-
 
     //TODO getDocumentation;
     public Documentation getDocumentation(){this.documentation = new Documentation();return documentation;}
 
+    public boolean isNotConsume(){
+        return sourceTypes.contains(SourceType.NOT_CONSUME);
+    }
+
     //TODO visitor;
     public abstract void accept();
 
+    protected abstract void identify();
 
-    protected abstract void identifyConsumptionData();
 
 
 

@@ -1,15 +1,15 @@
 package cvut.omo.device;
 
-import cvut.omo.device.device_data_structure.ConsumptionData;
-import cvut.omo.device.device_data_structure.SourceType;
+import cvut.omo.data_collections.consumption.ConsumptionCollection;
 
 public class CircuitBreaker extends HomeAppliances{
 
     public CircuitBreaker(double lifeTime) {super(lifeTime);}
 
     @Override
-    protected void identifyConsumptionData() {
-        this.consumptionDataList.add(new ConsumptionData(this, SourceType.NOT_CONSUME));
+    protected void identify() {
+        this.sourceTypes.add(SourceType.NOT_CONSUME);
+        ConsumptionCollection.getInstance().put(this);
     }
 
     @Override

@@ -2,9 +2,9 @@ package cvut.omo.device.factory;
 
 import cvut.omo.app_utils.Constants;
 import cvut.omo.device.*;
-import cvut.omo.device.sensor.FireSensor;
-import cvut.omo.device.sensor.Sensor;
-import cvut.omo.device.sensor.WaterLeakSensor;
+import cvut.omo.device.FireSensor;
+import cvut.omo.device.Sensor;
+import cvut.omo.device.WaterLeakSensor;
 
 public class SmartHomeDeviceFactory implements HomeDeviceFactory {
 
@@ -18,5 +18,5 @@ public class SmartHomeDeviceFactory implements HomeDeviceFactory {
     public HomeDevice createOven(){return new Oven(Constants.OVEN_LIFE_TIME);}
     public HomeDevice createTV(){return new TV(Constants.TV_LIFE_TIME);}
     public HomeDevice createWashingMachine(){return new WashingMachine(Constants.WASHING_MACHINE_LIFE_TIME);}
-    public HomeDevice createMicrowave(){return new Microwave(Constants.MICROWAVE_LIFE_TIME);}
+    public HomeDevice createFridge(){return new Fridge(Constants.FRIDGE_LIFE_TIME);}
 }

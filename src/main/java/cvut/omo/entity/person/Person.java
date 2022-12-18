@@ -13,5 +13,6 @@ public class Person {
 
     private String name;
     private FamilyRole familyRole;
+//    private PersonStatus personStatus;
 
 }

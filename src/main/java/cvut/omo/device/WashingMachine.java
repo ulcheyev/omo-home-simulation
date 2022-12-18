@@ -1,18 +1,16 @@
 package cvut.omo.device;
 
-import cvut.omo.device.device_data_structure.ConsumptionData;
-import cvut.omo.device.device_data_structure.SourceType;
+import cvut.omo.data_collections.consumption.ConsumptionCollection;
 
 public class WashingMachine extends HomeAppliances{
 
     public WashingMachine(double lifeTime) {super(lifeTime);}
 
     @Override
-    protected void identifyConsumptionData() {
+    protected void identify() {
         this.sourceTypes.add(SourceType.ENERGY);
         this.sourceTypes.add(SourceType.WATER);
-        this.consumptionDataList.add(new ConsumptionData(this, SourceType.ENERGY));
-        this.consumptionDataList.add(new ConsumptionData(this, SourceType.WATER));
+        ConsumptionCollection.getInstance().put(this);
     }
 
     @Override

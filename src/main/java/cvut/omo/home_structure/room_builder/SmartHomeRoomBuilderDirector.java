@@ -37,7 +37,7 @@ public final class SmartHomeRoomBuilderDirector {
                 .setHomeDevice(homeDeviceFactory.createOven())
                 .setHomeDevice(homeDeviceFactory.createFireSensor())
                 .setHomeDevice(homeDeviceFactory.createWaterLeakSensor())
-                .setHomeDevice(homeDeviceFactory.createMicrowave())
+                .setHomeDevice(homeDeviceFactory.createFridge())
                 .setHomeDevice(homeDeviceFactory.createTV());
     }
 

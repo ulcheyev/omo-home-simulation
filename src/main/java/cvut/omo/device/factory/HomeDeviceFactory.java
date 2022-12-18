@@ -1,7 +1,7 @@
 package cvut.omo.device.factory;
 
 import cvut.omo.device.*;
-import cvut.omo.device.sensor.Sensor;
+import cvut.omo.device.Sensor;
 
 public interface HomeDeviceFactory {
 
@@ -12,5 +12,5 @@ public interface HomeDeviceFactory {
      HomeDevice createOven();
      HomeDevice createTV();
      HomeDevice createWashingMachine();
-     HomeDevice createMicrowave();
+     HomeDevice createFridge();
 }

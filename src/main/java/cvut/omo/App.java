@@ -1,18 +1,16 @@
 package cvut.omo;
 import cvut.omo.device.HomeDevice;
-import cvut.omo.device.device_data_structure.ConsumptionAndUsageCollection;
-import cvut.omo.device.device_data_structure.Iterator;
-import cvut.omo.device.device_data_structure.SourceType;
+import cvut.omo.data_collections.consumption.ConsumptionCollection;
 import cvut.omo.home_structure.*;
 import cvut.omo.home_structure.home_builder.SmartHomeBuilder;
 import cvut.omo.home_structure.home_builder.SmartHomeBuilderDirector;
 
-import java.util.Date;
+import java.io.IOException;
 
 public class App {
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
 
         SmartHomeBuilderDirector.createSmallHomeConfiguration(SmartHomeBuilder.INSTANCE);
@@ -31,7 +29,7 @@ public class App {
             }
         }
         System.out.println(count);
-        System.out.println(ConsumptionAndUsageCollection.getInstance().generateReport());
+//        System.out.println(ConsumptionAndUsageCollection.generateReport());
         System.out.println("___________________________________________________________");
 
         for(Floor floor: home.getFloors()){
@@ -43,7 +41,7 @@ public class App {
                 }
             }
         }
-        System.out.println(ConsumptionAndUsageCollection.getInstance().generateReport());
+        ConsumptionCollection.getInstance().generateReport();
 
 
 //
