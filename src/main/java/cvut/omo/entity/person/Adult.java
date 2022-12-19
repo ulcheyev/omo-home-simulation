@@ -4,7 +4,7 @@ import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
 public class Adult extends Person{
-    public Adult(String name, FamilyRole familyRole) {
-        super(name, familyRole);
+    public Adult(String name, FamilyRole familyRole, PersonStatus personStatus) {
+        super(name, familyRole,personStatus);
     }
 }

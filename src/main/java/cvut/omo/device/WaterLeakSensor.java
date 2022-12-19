@@ -8,6 +8,11 @@ public class WaterLeakSensor extends Sensor {
         super(lifeTime);
     }
 
+    public String getDeviceName(){
+        device = "WaterLeakSensor";
+        return device;
+    }
+
     @Override
     public void alert() {}
 

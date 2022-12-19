@@ -4,6 +4,7 @@ import cvut.omo.device.factory.HomeDeviceFactory;
 import cvut.omo.device.factory.SmartHomeDeviceFactory;
 import cvut.omo.entity.person.FamilyRole;
 import cvut.omo.entity.person.Person;
+import cvut.omo.entity.person.PersonStatus;
 import cvut.omo.entity.pet.Pet;
 import cvut.omo.entity.pet.PetType;
 import cvut.omo.exceptions.FloorException;
@@ -30,8 +31,8 @@ public final class SmartHomeBuilder implements HomeBuilder{
 
     //TODO proverka, esli roli uzhe est. Napr 2 mamy 2 papy
     @Override
-    public HomeBuilder addPerson(String name, FamilyRole familyRole) {
-       home.addPerson(new Person(name, familyRole));
+    public HomeBuilder addPerson(String name, FamilyRole familyRole, PersonStatus personStatus) {
+       home.addPerson(new Person(name, familyRole,personStatus));
        return this;
     }
 

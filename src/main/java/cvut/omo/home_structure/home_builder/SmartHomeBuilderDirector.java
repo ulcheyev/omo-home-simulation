@@ -1,5 +1,6 @@
 package cvut.omo.home_structure.home_builder;
 import cvut.omo.entity.person.FamilyRole;
+import cvut.omo.entity.person.PersonStatus;
 import cvut.omo.entity.pet.PetType;
 import cvut.omo.home_structure.RoomType;
 
@@ -26,12 +27,12 @@ public final class SmartHomeBuilderDirector {
                 .addRoom(RoomType.BATHROOM)
                 .and()
                 //Persons
-                .addPerson("Lola", FamilyRole.MOTHER)
-                .addPerson("Boba", FamilyRole.FATHER)
-                .addPerson("Pipa",FamilyRole.SON)
-                .addPerson("Popa", FamilyRole.DAUGHTER)
-                .addPerson("Mr. Pepa", FamilyRole.GRANDFATHER)
-                .addPerson("Mr. Lolo", FamilyRole.GRANDMOTHER)
+                .addPerson("Lola", FamilyRole.MOTHER, PersonStatus.FREE)
+                .addPerson("Boba", FamilyRole.FATHER, PersonStatus.FREE)
+                .addPerson("Pipa",FamilyRole.SON, PersonStatus.FREE)
+                .addPerson("Popa", FamilyRole.DAUGHTER, PersonStatus.FREE)
+                .addPerson("Mr. Pepa", FamilyRole.GRANDFATHER, PersonStatus.FREE)
+                .addPerson("Mr. Lolo", FamilyRole.GRANDMOTHER, PersonStatus.FREE)
                 //Pets
                 .addPet(PetType.CAT)
                 .addPet(PetType.DOG)
@@ -65,14 +66,14 @@ public final class SmartHomeBuilderDirector {
                 .addRoom(RoomType.BATHROOM)
                 .and()
                 //Persons
-                .addPerson("Lola", FamilyRole.MOTHER)
-                .addPerson("Boba", FamilyRole.FATHER)
-                .addPerson("Pipa",FamilyRole.SON)
-                .addPerson("Popa", FamilyRole.DAUGHTER)
-                .addPerson("Eliot",FamilyRole.SON)
-                .addPerson("Male zlo", FamilyRole.DAUGHTER)
-                .addPerson("Mr. Pepa", FamilyRole.GRANDFATHER)
-                .addPerson("Mr. Lolo", FamilyRole.GRANDMOTHER)
+                .addPerson("Lola", FamilyRole.MOTHER, PersonStatus.FREE)
+                .addPerson("Boba", FamilyRole.FATHER, PersonStatus.FREE)
+                .addPerson("Pipa",FamilyRole.SON, PersonStatus.FREE)
+                .addPerson("Popa", FamilyRole.DAUGHTER, PersonStatus.FREE)
+                .addPerson("Eliot",FamilyRole.SON, PersonStatus.FREE)
+                .addPerson("Male zlo", FamilyRole.DAUGHTER, PersonStatus.FREE)
+                .addPerson("Mr. Pepa", FamilyRole.GRANDFATHER, PersonStatus.FREE)
+                .addPerson("Mr. Lolo", FamilyRole.GRANDMOTHER, PersonStatus.FREE)
                 //Pets
                 .addPet(PetType.CAT)
                 .addPet(PetType.DOG)

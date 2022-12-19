@@ -8,7 +8,8 @@ public interface HomeDevice{
      void turnOn();
      void turnOff();
      void pause();
-     void stop();
+     void start();
+     void repair();
 
      Set<SourceType> getSourceTypes();
      double getCurrentConsumption(SourceType sourceType);

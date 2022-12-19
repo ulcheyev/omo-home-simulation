@@ -1,6 +1,7 @@
 package cvut.omo.home_structure;
 
 import cvut.omo.device.HomeDevice;
+import cvut.omo.entity.person.Person;
 import cvut.omo.item.Item;
 import lombok.*;
 
@@ -19,6 +20,7 @@ public class Room {
 
     private Floor floor;
     private RoomType roomType;
+    private Person person;
 
     public Room(Floor floor, RoomType roomType){
         this.floor = floor;
@@ -45,4 +47,10 @@ public class Room {
     public void addItem(Item item){items.add(item);}
 
     public void removeItem(Item item){items.remove(item);}
+
+//    public boolean roomOccupancy(Room room){
+//        if (person.getLocation().floor == room.floor && person.getLocation().roomType == room.roomType){
+//            return true;
+//        }return false;
+//    }
 }
