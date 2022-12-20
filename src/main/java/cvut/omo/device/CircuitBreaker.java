@@ -1,6 +1,9 @@
 package cvut.omo.device;
 
+import cvut.omo.app_utils.Constants;
 import cvut.omo.data_collections.consumption.ConsumptionCollection;
+
+import java.util.concurrent.CompletionService;
 
 public class CircuitBreaker extends HomeAppliances{
 
@@ -10,18 +13,8 @@ public class CircuitBreaker extends HomeAppliances{
 
     @Override
     protected void identify() {
-        this.sourceTypes.add(SourceType.NOT_CONSUME);
+        this.currentConsumption.put(SourceType.NOT_CONSUME, Constants.DEVICE_DOES_NOT_CONSUME);
         ConsumptionCollection.getInstance().put(this);
-    }
-
-    @Override
-    public Documentation getDocumentation(){
-        if(this.homeDeviceState instanceof BrokenState && this.documentation == null){
-            this.documentation = new Documentation();
-            this.documentation.setInstructionsForTheDevice(InstructionType.BUY);
-            this.documentation.setWarrantyCard("Circuit warranty card that does not guarantee");
-        }
-        return documentation;
     }
 
     @Override

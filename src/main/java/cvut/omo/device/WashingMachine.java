@@ -1,27 +1,15 @@
 package cvut.omo.device;
-
 import cvut.omo.app_utils.Constants;
 import cvut.omo.data_collections.consumption.ConsumptionCollection;
-
 public class WashingMachine extends HomeAppliances{
 
     public WashingMachine(double lifeTime) {super(lifeTime);}
 
     @Override
     protected void identify() {
-        this.sourceTypes.add(SourceType.ENERGY);
-        this.sourceTypes.add(SourceType.WATER);
+        this.currentConsumption.put(SourceType.ENERGY, Constants.DEVICE_OFF_STATE);
+        this.currentConsumption.put(SourceType.WATER, Constants.DEVICE_OFF_STATE);
         ConsumptionCollection.getInstance().put(this);
-    }
-
-    @Override
-    public Documentation getDocumentation(){
-        if(this.homeDeviceState instanceof BrokenState && this.documentation == null){
-            this.documentation = new Documentation();
-            this.documentation.setInstructionsForTheDevice(InstructionType.CALL_GRANDFATHER);
-            this.documentation.setWarrantyCard("Washing Machine warranty card that does not guarantee");
-        }
-        return documentation;
     }
 
     @Override

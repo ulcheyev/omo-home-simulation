@@ -37,7 +37,9 @@ public class App {
                 for(int i = 0; i < 48; i ++) {
                     for (HomeDevice homeDevice : room.getHomeDevices()) {
                         homeDevice.update();
-//                        homeDevice.breakDevice();
+                        homeDevice.breakDevice();
+//                        homeDevice.clickOn();
+                        homeDevice.update();
                     }
                 }
             }

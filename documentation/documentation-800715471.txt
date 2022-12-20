@@ -1,0 +1,6 @@
+********************
+DOCUMENTATION
+********************
+This is very clever documentation for the device: TV you just broke. 
+It turned out that your device has a state of damage: FINE.
+The device is very, very slightly damaged. Call your grandfather and he will help you.
