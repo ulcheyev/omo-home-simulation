@@ -15,6 +15,16 @@ public class CircuitBreaker extends HomeAppliances{
     }
 
     @Override
+    public Documentation getDocumentation(){
+        if(this.homeDeviceState instanceof BrokenState && this.documentation == null){
+            this.documentation = new Documentation();
+            this.documentation.setInstructionsForTheDevice(InstructionType.BUY);
+            this.documentation.setWarrantyCard("Circuit warranty card that does not guarantee");
+        }
+        return documentation;
+    }
+
+    @Override
     public void turnOn(){}
 
     @Override
@@ -25,7 +35,7 @@ public class CircuitBreaker extends HomeAppliances{
 
     @Override
     public void run(){}
-    
+
     @Override
     public void accept() {}
 

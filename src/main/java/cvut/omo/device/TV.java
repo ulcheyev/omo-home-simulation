@@ -15,6 +15,16 @@ public class TV extends HomeAppliances {
     }
 
     @Override
+    public Documentation getDocumentation(){
+        if(this.homeDeviceState instanceof BrokenState && this.documentation == null){
+            this.documentation = new Documentation();
+            this.documentation.setInstructionsForTheDevice(InstructionType.CALL_GRANDFATHER);
+            this.documentation.setWarrantyCard("TV warranty card that does not guarantee");
+        }
+        return documentation;
+    }
+
+    @Override
     public void turnOn() {
         setCurrentConsumption(SourceType.ENERGY, Constants.TV_ELECTRICITY_IDDLE_STATE_CONSUMPTION);
     }

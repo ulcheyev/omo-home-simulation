@@ -16,6 +16,16 @@ public abstract class Sensor extends HomeAppliances {
         ConsumptionCollection.getInstance().put(this);
     }
 
+    @Override
+    public Documentation getDocumentation(){
+        if(this.homeDeviceState instanceof BrokenState && this.documentation == null){
+            this.documentation = new Documentation();
+            this.documentation.setInstructionsForTheDevice(InstructionType.BUY);
+            this.documentation.setWarrantyCard("Sensor warranty card that does not guarantee");
+        }
+        return documentation;
+    }
+
     public  void turnOn(){
         setCurrentConsumption(SourceType.ENERGY, Constants.SENSOR_ELECTRICITY_IDDLE_STATE_CONSUMPTION);
     };

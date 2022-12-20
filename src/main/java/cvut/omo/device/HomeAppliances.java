@@ -73,7 +73,12 @@ public abstract class HomeAppliances implements HomeDevice{
     }
 
     //TODO getDocumentation;
-    public Documentation getDocumentation(){this.documentation = new Documentation();return documentation;}
+    public Documentation getDocumentation(){
+        if(this.homeDeviceState instanceof BrokenState && this.documentation == null) {
+            this.documentation = new Documentation();
+        }
+        return documentation;
+    }
 
     public boolean isNotConsume(){
         return sourceTypes.contains(SourceType.NOT_CONSUME);

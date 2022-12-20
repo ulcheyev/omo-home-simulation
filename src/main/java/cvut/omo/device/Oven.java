@@ -15,6 +15,16 @@ public class Oven extends HomeAppliances{
     }
 
     @Override
+    public Documentation getDocumentation(){
+        if(this.homeDeviceState instanceof BrokenState && this.documentation == null){
+            this.documentation = new Documentation();
+            this.documentation.setInstructionsForTheDevice(InstructionType.FIX);
+            this.documentation.setWarrantyCard("Oven warranty card that does not guarantee");
+        }
+        return documentation;
+    }
+
+    @Override
     public void turnOn() {
         setCurrentConsumption(SourceType.ENERGY, Constants.OVEN_ELECTRICITY_IDDLE_STATE_CONSUMPTION);
     }

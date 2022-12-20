@@ -8,6 +8,15 @@ public class Fridge extends HomeAppliances{
 
     public Fridge(double lifeTime) {super(lifeTime);}
 
+    @Override
+    public Documentation getDocumentation(){
+        if(this.homeDeviceState instanceof BrokenState && this.documentation == null){
+            this.documentation = new Documentation();
+            this.documentation.setInstructionsForTheDevice(InstructionType.CALL_GRANDFATHER);
+            this.documentation.setWarrantyCard("Fridge warranty card that does not guarantee");
+        }
+        return documentation;
+    }
 
     @Override
     public void turnOn() {

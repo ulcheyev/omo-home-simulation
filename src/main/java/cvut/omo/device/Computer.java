@@ -15,6 +15,16 @@ public class Computer extends HomeAppliances {
     }
 
     @Override
+    public Documentation getDocumentation(){
+        if(this.homeDeviceState instanceof BrokenState && this.documentation == null){
+            this.documentation = new Documentation();
+            this.documentation.setInstructionsForTheDevice(InstructionType.FIX);
+            this.documentation.setWarrantyCard("Computer warranty card that does not guarantee");
+        }
+        return documentation;
+    }
+
+    @Override
     public void turnOn() {
         setCurrentConsumption(SourceType.ENERGY, Constants.COMPUTER_IDDLE_STATE_ELECTRICITY_CONSUMPTION);
     }
@@ -29,7 +39,6 @@ public class Computer extends HomeAppliances {
     public void run() {
         setCurrentConsumption(SourceType.ENERGY, Constants.COMPUTER_RUN_STATE_ELECTRICITY_CONSUMPTION);
     }
-
 
     @Override
     public void accept() {}
