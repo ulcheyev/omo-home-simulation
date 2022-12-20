@@ -36,8 +36,8 @@ public class App {
             for(Room room: floor.getRooms()){
                 for(int i = 0; i < 48; i ++) {
                     for (HomeDevice homeDevice : room.getHomeDevices()) {
-                        homeDevice.update();
                         homeDevice.clickOn();
+                        homeDevice.update();
                     }
                 }
             }

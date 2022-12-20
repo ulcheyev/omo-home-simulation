@@ -9,8 +9,8 @@ public class WashingMachine extends HomeAppliances{
 
     @Override
     protected void identify() {
-        this.sourceTypes.add(SourceType.ENERGY);
-        this.sourceTypes.add(SourceType.WATER);
+        this.currentConsumption.put(SourceType.ENERGY, Constants.DEVICE_OFF_STATE);
+        this.currentConsumption.put(SourceType.WATER, Constants.DEVICE_OFF_STATE);
         ConsumptionCollection.getInstance().put(this);
     }
 

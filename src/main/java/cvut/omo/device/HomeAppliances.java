@@ -7,10 +7,7 @@ import cvut.omo.entity.person.Person;
 import cvut.omo.home_structure.Room;
 import lombok.*;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 import static cvut.omo.app_utils.Constants.*;
 
@@ -20,7 +17,7 @@ import static cvut.omo.app_utils.Constants.*;
 @AllArgsConstructor
 public abstract class HomeAppliances implements HomeDevice{
 
-    protected Set<SourceType> sourceTypes;
+    protected Dictionary<SourceType, Double> currentConsumption;
     protected double lifeTimeInYear;
     protected double workingHours;
     protected Room room;
@@ -30,7 +27,7 @@ public abstract class HomeAppliances implements HomeDevice{
     protected HomeDeviceState homeDeviceState;
 
     public HomeAppliances(double lifeTime){
-        sourceTypes = new HashSet<>();
+        currentConsumption = new Hashtable<>();
         homeDeviceState = new OffState(this);
         persons = new ArrayList<>();
         this.lifeTimeInYear = lifeTime;
@@ -55,15 +52,11 @@ public abstract class HomeAppliances implements HomeDevice{
 
 
     public void setCurrentConsumption(SourceType sourceType, double currentConsumption){
-        sourceTypes.forEach(type -> {if(type.equals(sourceType)){type.setCurrentConsumption(currentConsumption);}});
+        this.currentConsumption.put(sourceType, currentConsumption);
     }
 
     public double getCurrentConsumption(SourceType sourceType){
-        return sourceTypes.stream()
-                .filter(type->type.equals(sourceType))
-                .findFirst()
-                .map(SourceType::getCurrentConsumption)
-                .orElse(Constants.DEVICE_OFF_STATE);
+        return currentConsumption.get(sourceType);
     }
 
     //TODO update working hours and check life time
@@ -76,11 +69,16 @@ public abstract class HomeAppliances implements HomeDevice{
     public Documentation getDocumentation(){this.documentation = new Documentation();return documentation;}
 
     public boolean isNotConsume(){
-        return sourceTypes.contains(SourceType.NOT_CONSUME);
+        return currentConsumption.get(SourceType.NOT_CONSUME) != null;
     }
 
-    public HomeDeviceState getHomeDeviceState() {
-        return homeDeviceState;
+    public Set<SourceType> getSourceTypes(){
+        Set<SourceType> sourceTypes = new HashSet<>();
+        for (Iterator<SourceType> it = currentConsumption.keys().asIterator(); it.hasNext(); ) {
+            SourceType sourceType = it.next();
+            sourceTypes.add(sourceType);
+        }
+        return sourceTypes;
     }
 
     //TODO visitor;
@@ -94,15 +92,17 @@ public abstract class HomeAppliances implements HomeDevice{
     protected abstract void goIntoPauseMode();
     protected abstract void run();
     protected void turnOff(){
-        for(SourceType sourceType: this.sourceTypes){
+        for (Iterator<SourceType> it = currentConsumption.keys().asIterator(); it.hasNext(); ) {
+            SourceType sourceType = it.next();
             setCurrentConsumption(sourceType, DEVICE_OFF_STATE);
         }
     };
     protected void breakDown(){
-        for(SourceType sourceType: this.sourceTypes){
+        for (Iterator<SourceType> it = currentConsumption.keys().asIterator(); it.hasNext(); ) {
+            SourceType sourceType = it.next();
             setCurrentConsumption(sourceType, DEVICE_BROKEN_STATE);
         }
-    };
+    }
 
 
 }

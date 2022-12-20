@@ -10,26 +10,25 @@ public class Oven extends HomeAppliances{
 
     @Override
     protected void identify() {
-        this.sourceTypes.add(SourceType.ENERGY);
+        this.currentConsumption.put(SourceType.ENERGY, Constants.DEVICE_OFF_STATE);
         ConsumptionCollection.getInstance().put(this);
     }
 
     @Override
     public void turnOn() {
-        setCurrentConsumption(SourceType.ENERGY, Constants.OVEN_ELECTRICITY_IDDLE_STATE_CONSUMPTION);
+        this.setCurrentConsumption(SourceType.ENERGY, Constants.OVEN_ELECTRICITY_IDDLE_STATE_CONSUMPTION);
     }
 
     @Override
     public void goIntoPauseMode() {
-        setCurrentConsumption(SourceType.ENERGY, Constants.OVEN_ELECTRICITY_IDDLE_STATE_CONSUMPTION);
+        this.setCurrentConsumption(SourceType.ENERGY, Constants.OVEN_ELECTRICITY_IDDLE_STATE_CONSUMPTION);
     }
 
     @Override
     public void run() {
-        setCurrentConsumption(SourceType.ENERGY, Constants.OVEN_ELECTRICITY_RUN_STATE_CONSUMPTION);
+        this.setCurrentConsumption(SourceType.ENERGY, Constants.OVEN_ELECTRICITY_RUN_STATE_CONSUMPTION);
     }
 
-
-    @Override
+     @Override
     public void accept() {}
 }

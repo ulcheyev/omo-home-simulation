@@ -12,22 +12,21 @@ public abstract class Sensor extends HomeAppliances {
 
     @Override
     protected void identify() {
-        this.sourceTypes.add(SourceType.ENERGY);
+        this.currentConsumption.put(SourceType.ENERGY, Constants.DEVICE_OFF_STATE);
         ConsumptionCollection.getInstance().put(this);
     }
 
     public  void turnOn(){
-        setCurrentConsumption(SourceType.ENERGY, Constants.SENSOR_ELECTRICITY_IDDLE_STATE_CONSUMPTION);
+        this.setCurrentConsumption(SourceType.ENERGY, Constants.SENSOR_ELECTRICITY_IDDLE_STATE_CONSUMPTION);
     };
 
 
     public void goIntoPauseMode(){
-        setCurrentConsumption(SourceType.ENERGY, Constants.SENSOR_ELECTRICITY_IDDLE_STATE_CONSUMPTION);
-
+        this.setCurrentConsumption(SourceType.ENERGY, Constants.SENSOR_ELECTRICITY_IDDLE_STATE_CONSUMPTION);
     };
 
     public  void run(){
-        setCurrentConsumption(SourceType.ENERGY, Constants.SENSOR_ELECTRICITY_RUN_STATE_CONSUMPTION);
+        this.setCurrentConsumption(SourceType.ENERGY, Constants.SENSOR_ELECTRICITY_RUN_STATE_CONSUMPTION);
     };
 
     public abstract void alert();

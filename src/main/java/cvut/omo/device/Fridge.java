@@ -11,25 +11,24 @@ public class Fridge extends HomeAppliances{
 
     @Override
     public void turnOn() {
-        setCurrentConsumption(SourceType.ENERGY, Constants.FRIDGE_IDDLE_STATE_ELECTRICITY_CONSUMPTION);
+        this.setCurrentConsumption(SourceType.ENERGY, Constants.FRIDGE_IDDLE_STATE_ELECTRICITY_CONSUMPTION);
     }
 
     @Override
     public void goIntoPauseMode() {
-        setCurrentConsumption(SourceType.ENERGY, Constants.FRIDGE_IDDLE_STATE_ELECTRICITY_CONSUMPTION);
+        this.setCurrentConsumption(SourceType.ENERGY, Constants.FRIDGE_IDDLE_STATE_ELECTRICITY_CONSUMPTION);
     }
 
     @Override
     public void run() {
-        setCurrentConsumption(SourceType.ENERGY, Constants.FRIDGE_RUN_ELECTRICITY_CONSUMPTION);
+        this.setCurrentConsumption(SourceType.ENERGY, Constants.FRIDGE_RUN_ELECTRICITY_CONSUMPTION);
     }
 
     @Override
     protected void identify() {
-        this.sourceTypes.add(SourceType.ENERGY);
+        this.currentConsumption.put(SourceType.ENERGY, Constants.DEVICE_OFF_STATE);
         ConsumptionCollection.getInstance().put(this);
     }
-
 
     @Override
     public void accept() {}

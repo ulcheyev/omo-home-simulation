@@ -37,6 +37,7 @@ public class Constants {
 
     public final static double DEVICE_OFF_STATE = 0;
     public final static double DEVICE_BROKEN_STATE = 0;
+    public final static double DEVICE_DOES_NOT_CONSUME = 0;
 
 
     public final static String CONSUMPTION_REPORT_HEADER = "********************\nCONSUMPTION REPORT\n********************\n";

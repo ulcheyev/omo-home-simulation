@@ -1,6 +1,9 @@
 package cvut.omo.device;
 
+import cvut.omo.app_utils.Constants;
 import cvut.omo.data_collections.consumption.ConsumptionCollection;
+
+import java.util.concurrent.CompletionService;
 
 public class CircuitBreaker extends HomeAppliances{
 
@@ -10,7 +13,7 @@ public class CircuitBreaker extends HomeAppliances{
 
     @Override
     protected void identify() {
-        this.sourceTypes.add(SourceType.NOT_CONSUME);
+        this.currentConsumption.put(SourceType.NOT_CONSUME, Constants.DEVICE_DOES_NOT_CONSUME);
         ConsumptionCollection.getInstance().put(this);
     }
 
