@@ -1,15 +1,18 @@
 package cvut.omo.device;
 
+import cvut.omo.entity.person.Person;
 import cvut.omo.home_structure.Room;
 
 import java.util.Set;
 
 public interface HomeDevice{
-     void turnOn();
-     void turnOff();
-     void pause();
-     void start();
-     void repair();
+
+     void clickOn();
+     void clickOff();
+     void clickPause();
+     void clickStart(Person person);
+     void repair(Person person);
+     void breakDevice();
 
      Set<SourceType> getSourceTypes();
      double getCurrentConsumption(SourceType sourceType);

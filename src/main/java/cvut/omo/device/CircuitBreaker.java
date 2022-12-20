@@ -6,19 +6,26 @@ public class CircuitBreaker extends HomeAppliances{
 
     public HomeAppliances homeAppliances;
 
-    public String getDeviceName(){
-        return device;
-    }
-
     public CircuitBreaker(double lifeTime) {super(lifeTime);}
 
     @Override
     protected void identify() {
         this.sourceTypes.add(SourceType.NOT_CONSUME);
         ConsumptionCollection.getInstance().put(this);
-        device = "CircuitBreaker";
     }
 
+    @Override
+    public void turnOn(){}
+
+    @Override
+    public void turnOff(){}
+
+    @Override
+    public void goIntoPauseMode(){}
+
+    @Override
+    public void run(){}
+    
     @Override
     public void accept() {}
 
