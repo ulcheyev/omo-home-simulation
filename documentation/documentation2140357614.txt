@@ -1,6 +1,0 @@
-********************
-DOCUMENTATION
-********************
-This is very clever documentation for the device: Fridge you just broke. 
-It turned out that your device has a state of damage: HARDCORE.
-Nothing will help you, give your device to the service.

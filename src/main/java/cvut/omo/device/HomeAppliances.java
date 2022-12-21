@@ -1,8 +1,9 @@
 package cvut.omo.device;
 
+import cvut.omo.app_utils.Randomizer;
 import cvut.omo.data_collections.consumption.ConsumptionCollection;
 import cvut.omo.data_collections.consumption.ConsumptionData;
-import cvut.omo.device.pdf_documentation.Documentation;
+import cvut.omo.device.documentation.Documentation;
 import cvut.omo.entity.person.Person;
 import cvut.omo.home_structure.Room;
 import lombok.*;
@@ -51,8 +52,6 @@ public abstract class HomeAppliances implements HomeDevice{
         homeDeviceState._break(this);
     };
 
-
-
     public void setCurrentConsumption(SourceType sourceType, double currentConsumption){
         this.currentConsumption.put(sourceType, currentConsumption);
     }
@@ -69,8 +68,14 @@ public abstract class HomeAppliances implements HomeDevice{
 
     //TODO getDocumentation;
     public Documentation getDocumentation(){
-        if(this.homeDeviceState instanceof BrokenState && this.documentation == null) {
-            this.documentation = new Documentation();
+        if (homeDeviceState instanceof BrokenState && this.documentation == null){
+            try {
+                Documentation doc = new Documentation(this);
+                doc.generateDocumentation();
+                this.documentation = doc;
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
         return documentation;
     }
@@ -108,26 +113,11 @@ public abstract class HomeAppliances implements HomeDevice{
         for (Iterator<SourceType> it = currentConsumption.keys().asIterator(); it.hasNext(); ) {
             SourceType sourceType = it.next();
             setCurrentConsumption(sourceType, DEVICE_BROKEN_STATE);
-            this.setBrokennessLevel(getBrokennessLevel());
-        }
-
-        if (this.documentation == null){
-            try {
-                Documentation doc = new Documentation();
-                doc.generateReport(this);
-                this.setDocumentation(doc);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+            this.setBrokennessLevel(Randomizer.getRandomBrokennessLevel());
         }
     }
 
-    private static final Random PRNG = new Random();
 
-    public static BrokennessLevel getBrokennessLevel()  {
-        BrokennessLevel[] brokennessLevels = BrokennessLevel.values();
-        return brokennessLevels[PRNG.nextInt(brokennessLevels.length)];
-    }
 
 
 }

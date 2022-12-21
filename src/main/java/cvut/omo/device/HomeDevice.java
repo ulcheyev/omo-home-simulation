@@ -1,6 +1,6 @@
 package cvut.omo.device;
 
-import cvut.omo.device.pdf_documentation.Documentation;
+import cvut.omo.device.documentation.Documentation;
 import cvut.omo.entity.person.Person;
 import cvut.omo.home_structure.Room;
 

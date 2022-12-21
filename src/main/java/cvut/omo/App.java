@@ -17,8 +17,6 @@ public class App {
         Home home = SmartHomeBuilder.INSTANCE.getResult();
 
 
-
-
         int count = 0;
         for(Floor floor: home.getFloors()){
             for(Room room: floor.getRooms()){
@@ -38,8 +36,8 @@ public class App {
                     for (HomeDevice homeDevice : room.getHomeDevices()) {
                         homeDevice.update();
                         homeDevice.breakDevice();
+                        homeDevice.getDocumentation();
 //                        homeDevice.clickOn();
-                        homeDevice.update();
                     }
                 }
             }

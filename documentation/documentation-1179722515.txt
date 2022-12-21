@@ -1,6 +1,0 @@
-********************
-DOCUMENTATION
-********************
-This is very clever documentation for the device: FireSensor you just broke. 
-It turned out that your device has a state of damage: MEDIUM.
-You still have a chance to save your device. You will need to fix it for it to work.
