@@ -17,7 +17,7 @@ public class ConsumptionReportIterator implements Iterator {
     @Override
     public String next() {
         StringBuilder res = new StringBuilder();
-        HomeDevice curr = data.getHomeDeviceAt(currIdx);
+        HomeDevice curr = data.getAt(currIdx);
 
         if(!curr.isNotConsume()) {
             List<ConsumptionData> dataAbout = data.getDataAbout(curr);

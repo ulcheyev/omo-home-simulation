@@ -1,7 +1,9 @@
 package cvut.omo.entity.pet;
 
 
-public enum PetType {
+import cvut.omo.entity.ResponsibleType;
+
+public enum PetType implements ResponsibleType {
     CAT,
     DOG,
     MINI_PIG

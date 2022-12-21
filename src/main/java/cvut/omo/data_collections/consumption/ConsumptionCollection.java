@@ -2,14 +2,13 @@ package cvut.omo.data_collections.consumption;
 
 import cvut.omo.app_utils.Constants;
 import cvut.omo.app_utils.FileWriter;
-import cvut.omo.data_collections.SmartHomeCollection;
 import cvut.omo.device.HomeDevice;
 import cvut.omo.device.SourceType;
 
 import java.io.IOException;
 import java.util.*;
 
-public class ConsumptionCollection implements SmartHomeCollection {
+public class ConsumptionCollection implements IConsumptionCollection {
 
     private static final HashMap<HomeDevice, List<ConsumptionData>> data = new HashMap<>();
     private static ConsumptionCollection collection;
@@ -22,7 +21,6 @@ public class ConsumptionCollection implements SmartHomeCollection {
             return new ConsumptionCollection();
         }
         return collection;
-
     }
 
     @Override
@@ -37,10 +35,6 @@ public class ConsumptionCollection implements SmartHomeCollection {
         }
     }
 
-    @Override
-    public void addConsumptionData(ConsumptionData consumptionData) {
-        data.get(consumptionData.getHomeDevice()).add(consumptionData);
-    }
 
     @Override
     public void update(HomeDevice homeDevice) {
@@ -50,7 +44,7 @@ public class ConsumptionCollection implements SmartHomeCollection {
     }
 
     @Override
-    public HomeDevice getHomeDeviceAt(int idx){
+    public HomeDevice getAt(int idx){
         return (HomeDevice) data.keySet().toArray()[idx];
     }
 

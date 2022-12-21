@@ -14,13 +14,11 @@ public class OnState extends HomeDeviceState{
 
     @Override
     public void switchOff(HomeAppliances homeAppliances) {
-        homeAppliances.clickOff();
         homeAppliances.setHomeDeviceState(new OffState(homeAppliances));
     }
 
     @Override
     public void repair(Person person, HomeAppliances homeAppliances) {
-
     }
 
     @Override

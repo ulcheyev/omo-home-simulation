@@ -1,7 +1,9 @@
 package cvut.omo.entity.person;
 
 
-public enum FamilyRole {
+import cvut.omo.entity.ResponsibleType;
+
+public enum FamilyRole implements ResponsibleType {
     FATHER,
     MOTHER,
     SON,
