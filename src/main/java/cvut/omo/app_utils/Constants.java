@@ -4,11 +4,6 @@ public class Constants {
 
     public final static int DAY_IN_HOUR = 24;
 
-    public final static double ELECTRICITY_PRICE_KWH = 14;
-    public final static double WATER_PRICE_M3 = 14;
-
-    public final static String WATER_UNIT_OF_MEASUREMENT = "M3";
-    public final static String ELECTRICITY_UNIT_OF_MEASUREMENT = "KWH";
     public final static char CURRENCY = '$';
 
     public final static double COMPUTER_RUN_STATE_ELECTRICITY_CONSUMPTION = 14;
@@ -41,4 +36,6 @@ public class Constants {
 
 
     public final static String CONSUMPTION_REPORT_HEADER = "********************\nCONSUMPTION REPORT\n********************\n";
+    public final static String PDF_DOCUMENTATION_HEADER = "********************\nDOCUMENTATION\n********************\n";
+    public final static String STARS = "\n************************************************************************************\n";
 }

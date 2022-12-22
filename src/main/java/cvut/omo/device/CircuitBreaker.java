@@ -28,7 +28,7 @@ public class CircuitBreaker extends HomeAppliances{
 
     @Override
     public void run(){}
-    
+
     @Override
     public void accept() {}
 

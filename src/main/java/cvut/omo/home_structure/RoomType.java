@@ -6,5 +6,6 @@ public enum RoomType {
     CHILDRENS_ROOM,
     HALL,
     KITCHEN,
-    BEDROOM
+    BEDROOM,
+    STUB
 }

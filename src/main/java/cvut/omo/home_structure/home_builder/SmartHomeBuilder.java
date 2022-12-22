@@ -1,10 +1,8 @@
 package cvut.omo.home_structure.home_builder;
 
-import cvut.omo.device.factory.HomeDeviceFactory;
-import cvut.omo.device.factory.SmartHomeDeviceFactory;
-import cvut.omo.entity.person.FamilyRole;
+import cvut.omo.entity.person.FamilyRoleType;
 import cvut.omo.entity.person.Person;
-import cvut.omo.entity.person.PersonStatus;
+import cvut.omo.entity.EntityStatus;
 import cvut.omo.entity.pet.Pet;
 import cvut.omo.entity.pet.PetType;
 import cvut.omo.exceptions.FloorException;
@@ -20,19 +18,19 @@ public final class SmartHomeBuilder implements HomeBuilder{
 
     public static final SmartHomeBuilder INSTANCE = new SmartHomeBuilder();
     private final SmartHomeRoomBuilderDirector smartHomeRoomBuilderDirector = SmartHomeRoomBuilderDirector.INSTANCE;
-    private Home home = new Home();
+    private Home home = Home.INSTANCE;
     private SmartHomeBuilder(){}
 
     @Override
     public HomeBuilder reset() {
-        home = new Home();
+        home = Home.INSTANCE;
         return this;
     }
 
     //TODO proverka, esli roli uzhe est. Napr 2 mamy 2 papy
     @Override
-    public HomeBuilder addPerson(String name, FamilyRole familyRole, PersonStatus personStatus) {
-       home.addPerson(new Person(name, familyRole,personStatus));
+    public HomeBuilder addPerson(String name, FamilyRoleType familyRoleType) {
+       home.addPerson(new Person(name, familyRoleType));
        return this;
     }
 
@@ -61,7 +59,7 @@ public final class SmartHomeBuilder implements HomeBuilder{
         return this.home;
     }
 
-    public class FloorStub {
+    protected class FloorStub {
 
         private Floor floor;
         private RoomBuilder defaultRoomBuilder = SmartHomeRoomBuilder.INSTANCE;

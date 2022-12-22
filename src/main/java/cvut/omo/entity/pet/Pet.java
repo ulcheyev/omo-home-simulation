@@ -1,26 +1,34 @@
 package cvut.omo.entity.pet;
 
 import cvut.omo.device.HomeDevice;
-import cvut.omo.entity.Activity;
 import cvut.omo.entity.Responsible;
+import cvut.omo.entity.activity.Activity;
+import cvut.omo.entity.EntityStatus;
+import cvut.omo.event.EventType;
+import cvut.omo.home_structure.Room;
 import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
+
+import java.util.List;
 
 @AllArgsConstructor
-public class Pet implements Responsible {
+@Getter
+@Setter
+public class Pet extends Responsible {
+
     private PetType petType;
+    private List<Activity> activityList;
 
-
-    public void needSleep(){
-
+    public Pet(PetType petType) {
+        this.petType = petType;
     }
 
-    public void needGoForAWalk(){
 
-    }
+    public void needSleep(){}
 
-    public void brokeDevice(HomeDevice homeDevice){
+    public void needGoForAWalk(){}
 
-    }
-
+    public void brokeDevice(HomeDevice homeDevice) {}
 
 }

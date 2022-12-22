@@ -1,7 +1,7 @@
 package cvut.omo.data_collections.activity_usage;
 
 import cvut.omo.device.HomeDevice;
-import cvut.omo.entity.Activity;
+import cvut.omo.entity.activity.Activity;
 import cvut.omo.entity.person.Person;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

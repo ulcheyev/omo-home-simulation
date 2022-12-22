@@ -29,7 +29,6 @@ public class Computer extends HomeAppliances {
         this.setCurrentConsumption(SourceType.ENERGY, Constants.COMPUTER_RUN_STATE_ELECTRICITY_CONSUMPTION);
     }
 
-
     @Override
     public void accept() {}
 }

@@ -8,7 +8,6 @@ public class Fridge extends HomeAppliances{
 
     public Fridge(double lifeTime) {super(lifeTime);}
 
-
     @Override
     public void turnOn() {
         this.setCurrentConsumption(SourceType.ENERGY, Constants.FRIDGE_IDDLE_STATE_ELECTRICITY_CONSUMPTION);

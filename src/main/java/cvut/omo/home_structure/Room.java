@@ -1,17 +1,21 @@
 package cvut.omo.home_structure;
 
 import cvut.omo.device.HomeDevice;
+import cvut.omo.entity.Responsible;
+import cvut.omo.entity.ResponsibleType;
+import cvut.omo.entity.person.FamilyRoleType;
 import cvut.omo.entity.person.Person;
 import cvut.omo.entity.pet.Pet;
+import cvut.omo.event.Event;
 import cvut.omo.item.Item;
 import lombok.*;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.List;
 
 @Getter
 @Setter
-@ToString
 @NoArgsConstructor
 public class Room {
 
@@ -20,6 +24,7 @@ public class Room {
     private List<Person> persons = new ArrayList<>();
     private List<Pet> pets = new ArrayList<>();
     private List<Item> items= new ArrayList<>();
+    private List<Event> events = new ArrayList<>();
 
     private Floor floor;
     private RoomType roomType;
@@ -51,6 +56,23 @@ public class Room {
     public void addPet(Pet pet){pets.add(pet);}
     public void removePet(Pet pet){pets.remove(pet);}
     public boolean isEmpty(){return persons.isEmpty();}
+
+    public boolean contains(ResponsibleType roleType){
+        for(Person person: persons){
+            if (person.getFamilyRoleType() == roleType){
+                return true;
+            }
+        }
+        return false;
+    }
+
+
+    public void update() {
+        for(Event event: events){
+            event.solve();
+        }
+    }
+
 
 //    public boolean roomOccupancy(Room room){
 //        if (person.getLocation().floor == room.floor && person.getLocation().roomType == room.roomType){

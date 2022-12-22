@@ -1,9 +1,13 @@
 package cvut.omo.home_structure;
 
+import cvut.omo.app_utils.Randomizer;
 import cvut.omo.device.HomeDevice;
 import cvut.omo.entity.ResponsibleType;
+import cvut.omo.entity.person.FamilyRoleType;
 import cvut.omo.entity.person.Person;
 import cvut.omo.entity.pet.Pet;
+import cvut.omo.event.Event;
+import cvut.omo.item.Food;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -14,11 +18,15 @@ import java.util.List;
 @Setter
 public class Home {
 
-    private static List<Floor> floors;
-    private static List<Person> persons;
-    private static List<Pet> pets;
+    public final static Home INSTANCE = new Home();
 
-    public Home(){
+    private List<Floor> floors;
+    private List<Person> persons;
+    private List<Pet> pets;
+    private List<Event> homeEvents;
+
+
+    private Home(){
         floors = new ArrayList<>();
         persons = new ArrayList<>();
         pets = new ArrayList<>();
@@ -26,8 +34,53 @@ public class Home {
 
 
     public void addFloor(Floor floor){floors.add(floor);}
-    public void addPerson(Person person){persons.add(person);}
-    public void addPet(Pet pet){pets.add(pet);}
+
+
+    //TODO sdelat normalno
+    public void addPerson(Person person) {
+        int idxForFloor = Randomizer.getRandomInt(floors.size());
+        int idxForRoom = Randomizer.getRandomInt(floors.get(idxForFloor).getRooms().size());
+        floors.get(idxForFloor).getRooms().get(idxForRoom).addPerson(person);
+        person.setRoom(floors.get(idxForFloor).getRooms().get(idxForRoom));
+    }
+
+    //TODO sdelat normalno
+    public void addPet (Pet pet) {
+       int idxForFloor = Randomizer.getRandomInt(floors.size());
+       int idxForRoom = Randomizer.getRandomInt(floors.get(idxForFloor).getRooms().size());
+       floors.get(idxForFloor).getRooms().get(idxForRoom).addPet(pet);
+    }
+
+    //TODO sdelat normalno
+    public Person searchPerson (ResponsibleType role) {
+        Person res = null;
+        for(Floor floor: floors) {
+            for (Room room : floor.getRooms()) {
+                for (Person person : room.getPersons()) {
+                    if (person.getFamilyRoleType() == role) {
+                        res = person;
+                    }
+                }
+            }
+        }
+        return res;
+    }
+
+    public Room searchRoom (RoomType type) {
+        if(type == RoomType.STUB){
+            return searchRoom(RoomType.values()[Randomizer.getRandomInt(RoomType.values().length)]);
+        }else {
+            Room res = null;
+            for (Floor floor : floors) {
+                for (Room room : floor.getRooms()) {
+                    if (room.getRoomType() == type) {
+                        res = room;
+                    }
+                }
+            }
+            return res;
+        }
+    }
 
     public List<HomeDevice> getHomeDevices(){
         List<HomeDevice> res = new ArrayList<>();
@@ -35,23 +88,6 @@ public class Home {
                 .forEach(floor -> floor.getRooms()
                         .forEach(room -> res.addAll(room.getHomeDevices())));
         return res;
-    }
-
-    public static boolean callResponsible(Room room, List<ResponsibleType> responsibles) {
-        for(ResponsibleType responsibleType: responsibles){
-           callResponsible(room, responsibleType);
-        }
-        return false;
-    }
-    public static boolean callResponsible(Room room, ResponsibleType responsibleType) {
-        for(Person person: persons){
-            if(person.getFamilyRole() == responsibleType){
-                person.getRoom().removePerson(person);
-                person.setRoom(room);
-                return true;
-            }
-        }
-        return false;
     }
 
 

@@ -1,8 +1,8 @@
 package cvut.omo.device;
 
-import cvut.omo.entity.person.FamilyRole;
+import cvut.omo.entity.person.FamilyRoleType;
 import cvut.omo.entity.person.Person;
-import cvut.omo.entity.person.PersonStatus;
+import cvut.omo.entity.EntityStatus;
 
 public class BrokenState extends HomeDeviceState {
 
@@ -19,8 +19,8 @@ public class BrokenState extends HomeDeviceState {
 
     @Override
     public void repair(Person person, HomeAppliances homeAppliances) {
-        if(person.getFamilyRole() == FamilyRole.SON || person.getFamilyRole() == FamilyRole.FATHER){
-            person.setPersonStatus(PersonStatus.BUSY);
+        if(person.getFamilyRoleType() == FamilyRoleType.SON || person.getFamilyRoleType() == FamilyRoleType.FATHER){
+            person.setEntityStatus(EntityStatus.BUSY);
         }
         homeAppliances.setHomeDeviceState(new OffState(homeAppliances));
     }

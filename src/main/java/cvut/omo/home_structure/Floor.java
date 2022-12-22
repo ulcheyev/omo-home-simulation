@@ -7,7 +7,6 @@ import java.util.List;
 
 @Getter
 @Setter
-@ToString
 public class Floor {
 
     private Integer numberOfFloor;

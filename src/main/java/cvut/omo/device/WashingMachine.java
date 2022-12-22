@@ -1,8 +1,6 @@
 package cvut.omo.device;
-
 import cvut.omo.app_utils.Constants;
 import cvut.omo.data_collections.consumption.ConsumptionCollection;
-
 public class WashingMachine extends HomeAppliances{
 
     public WashingMachine(double lifeTime) {super(lifeTime);}

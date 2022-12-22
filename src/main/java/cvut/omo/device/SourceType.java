@@ -1,23 +1,20 @@
 package cvut.omo.device;
 
-import cvut.omo.app_utils.Constants;
+
+import lombok.Getter;
 
 public enum SourceType {
-    WATER,
-    ENERGY,
-    NOT_CONSUME;
+    WATER("M3", 14),
+    ENERGY("KWH", 14),
+    NOT_CONSUME("", 0);
 
-    SourceType(){
-       this.currentConsumption = Constants.DEVICE_OFF_STATE;
-    }
+    @Getter
+    private final String UNIT_OF_MEASUREMENT;
+    @Getter
+    private final double PRICE_FOR_UNIT;
 
-    private double currentConsumption;
-
-    public double getCurrentConsumption() {
-        return currentConsumption;
-    }
-
-    public void setCurrentConsumption(double currentConsumption) {
-        this.currentConsumption = currentConsumption;
+    SourceType(String unit_of_measurement, double price_for_unit) {
+        UNIT_OF_MEASUREMENT = unit_of_measurement;
+        PRICE_FOR_UNIT = price_for_unit;
     }
 }
