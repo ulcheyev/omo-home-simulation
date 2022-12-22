@@ -1,5 +1,6 @@
 package cvut.omo.home_structure;
 
+import cvut.omo.data_collections.visitor.SmartHomeVisitor;
 import cvut.omo.device.HomeDevice;
 import cvut.omo.entity.Responsible;
 import cvut.omo.entity.ResponsibleType;
@@ -17,7 +18,7 @@ import java.util.List;
 @Getter
 @Setter
 @NoArgsConstructor
-public class Room {
+public class Room implements HomeComponent{
 
     private List<HomeDevice> homeDevices = new ArrayList<>();
     private List<Window> windows = new ArrayList<>();
@@ -71,6 +72,11 @@ public class Room {
         for(Event event: events){
             event.solve();
         }
+    }
+
+    @Override
+    public String accept(SmartHomeVisitor visitor) {
+        return visitor.visitRoom(this);
     }
 
 

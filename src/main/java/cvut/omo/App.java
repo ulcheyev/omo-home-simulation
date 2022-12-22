@@ -1,5 +1,6 @@
 package cvut.omo;
 import cvut.omo.app_utils.FileWriter;
+import cvut.omo.data_collections.visitor.HomeConfigurationReportVisitor;
 import cvut.omo.device.HomeDevice;
 import cvut.omo.data_collections.consumption.ConsumptionCollection;
 import cvut.omo.entity.person.Person;
@@ -49,6 +50,10 @@ public class App {
                 }
             }
         }
+
+        HomeConfigurationReportVisitor visitor = new HomeConfigurationReportVisitor();
+        visitor.generateReport();
+
 //        System.out.println(count);
 //        System.out.println(ConsumptionAndUsageCollection.generateReport());
 //        System.out.println("___________________________________________________________");

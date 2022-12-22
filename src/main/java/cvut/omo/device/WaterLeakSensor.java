@@ -11,6 +11,6 @@ public class WaterLeakSensor extends Sensor {
     @Override
     public void alert() {}
 
-    @Override
-    public void accept() {}
+//    @Override
+//    public void accept() {}
 }

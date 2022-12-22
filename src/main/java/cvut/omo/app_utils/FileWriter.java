@@ -1,12 +1,17 @@
 package cvut.omo.app_utils;
 import org.apache.commons.io.FileUtils;
+
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 
 public class FileWriter {
 
-    public static void generateNewLog(String fileName, String report) throws IOException {
+    public static void generateNewConsumptionReport(String fileName, String report) throws IOException {
+        writeToFile(openFile("reports/", fileName), report);
+    }
+
+    public static void generateNewHomeConfigReport(String fileName, String report) throws IOException {
         writeToFile(openFile("reports/", fileName), report);
     }
 

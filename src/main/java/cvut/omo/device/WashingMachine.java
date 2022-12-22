@@ -32,6 +32,6 @@ public class WashingMachine extends HomeAppliances{
     }
 
 
-    @Override
-    public void accept() {}
+//    @Override
+//    public void accept() {}
 }

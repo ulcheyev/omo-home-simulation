@@ -10,6 +10,7 @@ import cvut.omo.event.Event;
 import cvut.omo.item.Food;
 import lombok.Getter;
 import lombok.Setter;
+import org.checkerframework.checker.units.qual.A;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,13 +43,16 @@ public class Home {
         int idxForRoom = Randomizer.getRandomInt(floors.get(idxForFloor).getRooms().size());
         floors.get(idxForFloor).getRooms().get(idxForRoom).addPerson(person);
         person.setRoom(floors.get(idxForFloor).getRooms().get(idxForRoom));
+        persons.add(person);
     }
 
     //TODO sdelat normalno
     public void addPet (Pet pet) {
-       int idxForFloor = Randomizer.getRandomInt(floors.size());
-       int idxForRoom = Randomizer.getRandomInt(floors.get(idxForFloor).getRooms().size());
-       floors.get(idxForFloor).getRooms().get(idxForRoom).addPet(pet);
+        int idxForFloor = Randomizer.getRandomInt(floors.size());
+        int idxForRoom = Randomizer.getRandomInt(floors.get(idxForFloor).getRooms().size());
+        floors.get(idxForFloor).getRooms().get(idxForRoom).addPet(pet);
+        pets.add(pet);
+
     }
 
     //TODO sdelat normalno
@@ -82,8 +86,18 @@ public class Home {
         }
     }
 
-    public List<HomeDevice> getHomeDevices(){
-        List<HomeDevice> res = new ArrayList<>();
+
+    public List<HomeComponent> getComponentsForReport(){
+        List<HomeComponent> homeComponents = new ArrayList<>();
+        homeComponents.addAll(floors);
+        homeComponents.addAll(persons);
+        homeComponents.addAll(pets);
+        return homeComponents;
+    }
+
+
+    public List<HomeComponent> getHomeDevices(){
+        List<HomeComponent> res = new ArrayList<>();
         floors
                 .forEach(floor -> floor.getRooms()
                         .forEach(room -> res.addAll(room.getHomeDevices())));

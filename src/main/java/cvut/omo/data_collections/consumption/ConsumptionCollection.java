@@ -68,10 +68,10 @@ public class ConsumptionCollection implements IConsumptionCollection {
         while (iterator.hasNext()){
             String next = iterator.next();
             if(!next.isBlank()) {
-                res.append(next).append("\n");
+                res.append(next);
             }
         }
-        FileWriter.generateNewLog("consumption_report" + Randomizer.getRandomInt(), res.toString());
+        FileWriter.generateNewConsumptionReport("consumption_report" + Randomizer.getRandomInt(), res.toString());
     }
 
 

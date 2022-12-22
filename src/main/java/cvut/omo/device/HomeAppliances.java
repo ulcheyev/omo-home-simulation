@@ -3,6 +3,7 @@ package cvut.omo.device;
 import cvut.omo.app_utils.Randomizer;
 import cvut.omo.data_collections.consumption.ConsumptionCollection;
 import cvut.omo.data_collections.consumption.ConsumptionData;
+import cvut.omo.data_collections.visitor.SmartHomeVisitor;
 import cvut.omo.device.documentation.BrokennessLevel;
 import cvut.omo.device.documentation.Documentation;
 import cvut.omo.entity.person.Person;
@@ -95,7 +96,9 @@ public abstract class HomeAppliances implements HomeDevice{
     }
 
     //TODO visitor;
-    public abstract void accept();
+    public String accept(SmartHomeVisitor visitor){
+        return visitor.visitHomeDevice(this);
+    };
 
     protected abstract void identify();
 
@@ -109,7 +112,7 @@ public abstract class HomeAppliances implements HomeDevice{
             SourceType sourceType = it.next();
             setCurrentConsumption(sourceType, DEVICE_OFF_STATE);
         }
-    };
+    }
     protected void breakDown(){
         for (Iterator<SourceType> it = currentConsumption.keys().asIterator(); it.hasNext(); ) {
             SourceType sourceType = it.next();

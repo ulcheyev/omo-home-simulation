@@ -2,11 +2,12 @@ package cvut.omo.device;
 
 import cvut.omo.device.documentation.Documentation;
 import cvut.omo.entity.person.Person;
+import cvut.omo.home_structure.HomeComponent;
 import cvut.omo.home_structure.Room;
 
 import java.util.Set;
 
-public interface HomeDevice {
+public interface HomeDevice extends HomeComponent {
 
      void clickOn();
      void clickOff();

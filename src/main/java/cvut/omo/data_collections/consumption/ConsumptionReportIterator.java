@@ -63,7 +63,7 @@ public class ConsumptionReportIterator implements Iterator {
         res.append(sourceType.name()).append(": ")
                 .append(sumStub)
                 .append(sourceType.getUNIT_OF_MEASUREMENT()).append(" (SUM = ").append(sourceType.getPRICE_FOR_UNIT() * sumStub)
-                .append(currency).append(") ");
+                .append(currency).append(")\n");
     }
 
     private void addInfoAboutConsumptionFromAllTime(StringBuilder res){

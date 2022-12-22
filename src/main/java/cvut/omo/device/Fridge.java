@@ -29,6 +29,6 @@ public class Fridge extends HomeAppliances{
         ConsumptionCollection.getInstance().put(this);
     }
 
-    @Override
-    public void accept() {}
+//    @Override
+//    public void accept() {}
 }

@@ -34,8 +34,11 @@ public class Constants {
     public final static double DEVICE_BROKEN_STATE = 0;
     public final static double DEVICE_DOES_NOT_CONSUME = 0;
 
-
-    public final static String CONSUMPTION_REPORT_HEADER = "********************\nCONSUMPTION REPORT\n********************\n";
-    public final static String PDF_DOCUMENTATION_HEADER = "********************\nDOCUMENTATION\n********************\n";
+    public final static String CONSUMPTION_REPORT_HEADER = "******************\nCONSUMPTION REPORT\n******************\n\n";
+    public final static String HOME_CONFIG_REPORT_HEADER = "*************************\nHOME CONFIGURATION REPORT\n*************************\n\n";
+    public final static String PDF_DOCUMENTATION_HEADER = "********************\nDOCUMENTATION\n********************\n\n";
+    public final static String STARS_UP = "\n\n************************************************************************************\n";
     public final static String STARS = "\n************************************************************************************\n";
+    public final static String STARS_DOWN = "************************************************************************************";
+
 }
