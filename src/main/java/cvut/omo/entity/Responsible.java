@@ -1,10 +1,10 @@
 package cvut.omo.entity;
-
 import cvut.omo.entity.activity.Activity;
+import cvut.omo.entity.person.Person;
+import cvut.omo.home_structure.Home;
 import cvut.omo.home_structure.Room;
 import lombok.Getter;
 import lombok.Setter;
-
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -15,11 +15,11 @@ public abstract class Responsible {
     private Queue<Activity> activities;
     private EntityStatus entityStatus = EntityStatus.FREE;
     private Room room;
+    private String personName;
 
     protected Responsible(){
         activities = new LinkedList<>();
     }
-
 
     public void handle(Activity activity){
         if(isFree()){
@@ -47,7 +47,6 @@ public abstract class Responsible {
         Activity peek = activities.peek();
         if(peek != null) peek.execute(this);
     }
-
 
     public void relocate(Room room) {
 

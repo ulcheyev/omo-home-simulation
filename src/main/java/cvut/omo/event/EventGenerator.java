@@ -56,9 +56,9 @@ public class EventGenerator {
                 value = homeEvent;
             }
         }
-        if(value == null){
-            value = HomeEvent.STUB;
-        }
+//        if(value == null){
+//            value = HomeEvent.STUB;
+//        }
 
         return new Event(room, value);
     }

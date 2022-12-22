@@ -10,8 +10,9 @@ import java.util.List;
 public enum HomeEvent implements EventType{
 
     KNOCK_ON_THE_DOOR(RoomType.HALL, EventType.EventImportance.NOT_EMERGENCY, ActivityType.CONTROL_THE_DOOR),
-    STUB(RoomType.STUB, EventType.EventImportance.NOT_EMERGENCY, ActivityType.STUB);
+    FIRE_ALARM_WENT_OFF(RoomType.HALL, EventType.EventImportance.EMERGENCY, ActivityType.CALL_THE_RESCUE_SERVICE);
 
+//    STUB(RoomType.STUB, EventType.EventImportance.NOT_EMERGENCY, ActivityType.STUB);
 
 
     HomeEvent(RoomType roomType, EventType.EventImportance eventImportance, ActivityType...chainToSolve){

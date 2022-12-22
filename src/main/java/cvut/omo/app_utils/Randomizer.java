@@ -1,13 +1,10 @@
 package cvut.omo.app_utils;
 
 import cvut.omo.device.documentation.BrokennessLevel;
-import cvut.omo.entity.Responsible;
 import cvut.omo.entity.ResponsibleType;
 import cvut.omo.entity.activity.ActivityType;
 import cvut.omo.entity.person.FamilyRoleType;
 import cvut.omo.entity.person.Person;
-import cvut.omo.event.Event;
-import cvut.omo.event.EventType;
 import cvut.omo.home_structure.Room;
 
 import java.util.ArrayList;

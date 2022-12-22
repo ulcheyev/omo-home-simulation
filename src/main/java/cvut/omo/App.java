@@ -5,6 +5,7 @@ import cvut.omo.data_collections.consumption.ConsumptionCollection;
 import cvut.omo.entity.person.Person;
 import cvut.omo.event.Event;
 import cvut.omo.event.EventGenerator;
+import cvut.omo.event.HomeEvent;
 import cvut.omo.home_structure.*;
 import cvut.omo.home_structure.home_builder.SmartHomeBuilder;
 import cvut.omo.home_structure.home_builder.SmartHomeBuilderDirector;
@@ -25,16 +26,18 @@ public class App {
         for(Floor floor: home.getFloors()){
             for(Room room: floor.getRooms()){
                 EventGenerator.generateRandomHomeEvent(room);
-                System.out.println(room.getRoomType());
+                System.out.println(room.getRoomType() + " " + room.getFloor().getNumberOfFloor());
                 System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-
                 for(Person person: room.getPersons()){
-                    EventGenerator.generateRandomPersonEvent(person);
-                    System.out.println(person.getName());
+                    Event eventPerson = EventGenerator.generateRandomPersonEvent(person);
+                    room.getEvents().add(eventPerson);
+                    System.out.println(person.getName() + " have event: " + eventPerson.getEventType());
                 }
 
                 for (Event event: room.getEvents()){
-                    System.out.println(event.getEventType());
+                    if(event.getEventType() instanceof HomeEvent){
+                        System.out.println(event.getEventType());
+                    }
                 }
                 System.out.println("___________________________________________________________");
                 room.update();

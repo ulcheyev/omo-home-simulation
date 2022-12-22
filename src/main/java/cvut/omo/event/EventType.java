@@ -1,12 +1,8 @@
 package cvut.omo.event;
 
 
-import cvut.omo.entity.Responsible;
 import cvut.omo.entity.activity.ActivityType;
-import cvut.omo.home_structure.RoomType;
-import lombok.Getter;
 
-import java.util.Arrays;
 import java.util.List;
 
 public interface EventType {

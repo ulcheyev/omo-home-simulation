@@ -23,7 +23,6 @@ public class HomeEventSolveStrategy implements Strategy{
             for (ActivityType type : eventType.getChainToSolve()) {
                 ResponsibleType randomResponsibleType = Randomizer.getRandomResponsibleType(type);
                 person = Home.INSTANCE.searchPerson(randomResponsibleType);
-                //TODO handle EVENT
                 person.handle(new Relocate(room, ActivityType.RELOCATE));
                 person.handle(ActivityFactory.create(room, type));
 

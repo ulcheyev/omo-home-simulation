@@ -1,15 +1,10 @@
 package cvut.omo.event;
 
-import cvut.omo.app_utils.Randomizer;
 import cvut.omo.entity.Responsible;
-import cvut.omo.entity.ResponsibleType;
 import cvut.omo.entity.activity.ActivityFactory;
 import cvut.omo.entity.activity.ActivityType;
 import cvut.omo.entity.activity.Relocate;
-import cvut.omo.entity.person.FamilyRoleType;
-import cvut.omo.entity.person.Person;
 import cvut.omo.home_structure.Home;
-import cvut.omo.home_structure.Room;
 import lombok.NoArgsConstructor;
 
 @NoArgsConstructor

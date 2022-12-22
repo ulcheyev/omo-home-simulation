@@ -12,5 +12,14 @@ import lombok.Setter;
 @NoArgsConstructor
 public abstract class Activity {
 
+    protected ActivityType activityType;
+    protected Room room;
+    protected boolean isExucuted;
+
+    public Activity(ActivityType activityType) {
+        this.activityType = activityType;
+    }
+
+    public abstract void execute(Responsible responsible);
 
 }

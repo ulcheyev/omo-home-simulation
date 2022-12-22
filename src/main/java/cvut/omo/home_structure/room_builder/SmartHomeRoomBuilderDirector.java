@@ -69,7 +69,7 @@ public final class SmartHomeRoomBuilderDirector {
     public void createHall(RoomBuilder roomBuilder, Floor floor){
         roomBuilder
                 .reset()
-                .setRoomType(RoomType.GARAGE)
+                .setRoomType(RoomType.HALL)
                 .setWindow()
                 .setFloor(floor)
                 .setHomeDevice(homeDeviceFactory.createFireSensor())
