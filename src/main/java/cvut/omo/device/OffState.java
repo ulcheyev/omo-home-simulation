@@ -10,6 +10,9 @@ public class OffState extends HomeDeviceState{
     }
 
     @Override
+    public void connect(HomeAppliances homeAppliances) {}
+
+    @Override
     public void switchOn(HomeAppliances homeAppliances) {
         homeAppliances.setHomeDeviceState(new IddleState(homeAppliances));
     }

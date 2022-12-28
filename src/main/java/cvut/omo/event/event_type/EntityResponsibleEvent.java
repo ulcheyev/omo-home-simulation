@@ -12,23 +12,25 @@ import java.util.List;
 
 public enum EntityResponsibleEvent implements EventType {
 
-    NEED_EAT(Person.class, EventType.EventImportance.NOT_EMERGENCY, DEVICE_FRIDGE_ON),
-    NEED_WATCH_TV(Person.class, EventType.EventImportance.NOT_EMERGENCY, DEVICE_TV_ON),
-    NEED_COOKING(Person.class, EventType.EventImportance.NOT_EMERGENCY, DEVICE_OVEN_ON),
-    NEED_PLAY_COMPUTER(Person.class, EventType.EventImportance.NOT_EMERGENCY, DEVICE_COMPUTER_ON),
-    NEED_WASH_CLOTHES(Person.class, EventType.EventImportance.NOT_EMERGENCY, DEVICE_WASHING_MACHINE_ON),
+    //PERSON
+    PERSON_NEED_EAT(Person.class,  DEVICE_FRIDGE_RUN, DEVICE_FRIDGE_PAUSE, MAKE_TEA, PERSON_EAT),
+    NEED_WATCH_TV(Person.class, DEVICE_TV_RUN, DEVICE_TV_PAUSE),
+    NEED_COOKING(Person.class, DEVICE_FRIDGE_RUN, DEVICE_OVEN_ON, DEVICE_FRIDGE_PAUSE, DEVICE_OVEN_PAUSE),
+    NEED_PLAY_COMPUTER(Person.class, DEVICE_COMPUTER_RUN, DEVICE_COMPUTER_PAUSE),
+    NEED_WASH_CLOTHES(Person.class,  DEVICE_WASHING_MACHINE_RUN, DEVICE_WASHING_MACHINE_PAUSE),
 
-    NEED_GO_FOR_A_WALK(Pet.class, EventType.EventImportance.NOT_EMERGENCY, TAKE_A_WALK_WITH_PET),
-    PET_NEED_PET(Pet.class, EventType.EventImportance.NOT_EMERGENCY, PET_A_PET);
 
-    EntityResponsibleEvent(Class<? extends Responsible> clazz, EventType.EventImportance eventImportance, ActivityType...chainToSolve){
+    //PET
+    NEED_GO_FOR_A_WALK(Pet.class,  TAKE_A_WALK_WITH_PET),
+    PET_NEED_PET(Pet.class,  PET_A_PET),
+    PET_NEED_EAT(Pet.class,  PET_A_PET, DEVICE_FRIDGE_RUN, FEED_PET),
+    NEED_SAY(Pet.class, PET_SAY);
+
+    EntityResponsibleEvent(Class<? extends Responsible> clazz, ActivityType...chainToSolve){
         this.clazz = clazz;
         this.chainToSolve = Arrays.asList(chainToSolve);
-        this.eventImportance = eventImportance;
     }
 
-    @Getter
-    private final EventType.EventImportance eventImportance;
 
     @Getter
     private final Class<? extends Responsible> clazz;
@@ -36,8 +38,4 @@ public enum EntityResponsibleEvent implements EventType {
     @Getter
     private final List<ActivityType> chainToSolve;
 
-    public enum EventImportance {
-        EMERGENCY,
-        NOT_EMERGENCY
-    }
 }

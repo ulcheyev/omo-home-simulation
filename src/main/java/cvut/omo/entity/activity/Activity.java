@@ -1,13 +1,18 @@
 package cvut.omo.entity.activity;
 
+import cvut.omo.app_utils.Utils;
+import cvut.omo.data_collections.events.EventCollection;
 import cvut.omo.entity.Responsible;
 import cvut.omo.event.Event;
+import cvut.omo.home_structure.home_builder.Home;
 import cvut.omo.home_structure.nulls.NullRoom;
 import cvut.omo.home_structure.room_builder.Room;
 import cvut.omo.home_structure.room_builder.RoomName;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import java.util.List;
 
 
 @Getter
@@ -21,9 +26,7 @@ public abstract class Activity {
     protected Responsible responsible;
     protected Event event;
 
-
-
-    public Activity(Responsible responsible, Event event, ActivityType activityType) throws InterruptedException {
+    public Activity(Responsible responsible, Event event, ActivityType activityType) {
 
         this.event = event;
         this.activityType = activityType;
@@ -33,15 +36,9 @@ public abstract class Activity {
         assignRoom();
     }
 
-    private void checkResponsibleLocation() throws InterruptedException {
-        if(!room.isNull() &&
-           !responsible.getRoom().equals(room))
-        {
-            responsible.handle(ActivityFactory.createRelocateActivity(responsible,event,event.getRoom()));
-        }
-    }
 
-    public void execute() throws InterruptedException {
+    public void execute()
+    {
         responsible.lock();
         checkResponsibleLocation();
         doWork(responsible);
@@ -50,7 +47,7 @@ public abstract class Activity {
         event.checkSolving();
     };
 
-    protected abstract void doWork(Responsible responsible) throws InterruptedException;
+    protected abstract void doWork(Responsible responsible);
 
 
     public  boolean isExecuted(){
@@ -71,7 +68,8 @@ public abstract class Activity {
             return;
         }
         else{
-            this.room = responsible.getRoom();
+            RoomName name = Utils.getRandomObjFromList(activityType.getRoomNames());
+            this.room = Home.INSTANCE.searchRoomByType(name);
         }
 
     }
@@ -109,5 +107,16 @@ public abstract class Activity {
                 " in room " + location.getRoomName() +
                 " on the " + location.getFloor().getNumberOfFloor() + " floor " +
                 "did " + activityType.name();
+    }
+
+    private void checkResponsibleLocation(){
+        if(!room.isNull() &&
+                !responsible.getRoom().equals(room))
+        {
+            RelocateActivity relocateActivity =
+                    ActivityFactory.createRelocateActivity(responsible, event, room);
+            relocateActivity.doWork(responsible);
+            EventCollection.swapTwoEndActivities(event);
+        }
     }
 }

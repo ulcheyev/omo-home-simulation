@@ -7,7 +7,7 @@ import cvut.omo.home_structure.room_builder.Room;
 
 public class ActivityFactory {
 
-    public static RelocateActivity createRelocateActivity(Responsible res, Event event, Room room) throws InterruptedException {
+    public static RelocateActivity createRelocateActivity(Responsible res, Event event, Room room){
         return new RelocateActivity(res, event, room, ActivityType.RELOCATE);
     }
 
@@ -26,7 +26,7 @@ public class ActivityFactory {
         }
 
         if (ItemActivity.class.equals(solver)) {
-            return new ItemActivity(res, event,activityType);
+            return new ItemActivity(res, event, activityType.getToUse(), activityType);
         }
 
         return new BaseActivity(res, event, activityType);

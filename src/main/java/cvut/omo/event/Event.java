@@ -91,7 +91,7 @@ public class Event {
        return true;
     }
 
-    public List<Activity> getSolvesChain(){
+    public List<Activity> getReversedChainToSolve(){
         List<Activity> res = chainToSolve;
         Collections.reverse(res);
         return res;
@@ -100,10 +100,24 @@ public class Event {
     @Override
     public String toString() {
 
-        String location;
-        String resp;
+        String type =
+                !responsible.getResponsibleType().isNull()
+                ? " by "  + responsible.getResponsibleType().toString()
+                : !responsible.getClass().equals(NullResponsible.class)
+                ? " by "  + responsible.getClass().getSimpleName()
+                : "";
+
+        String location = room.isNull()
+                ? "Home"
+                : room.getRoomName().toString()
+                + " on the "
+                + room.getFloor().getNumberOfFloor()
+                + " floor";
 
         return "Event with type " +
-                eventType.toString();
+                eventType.toString()+
+                type +
+                " in " +
+                location;
     }
 }

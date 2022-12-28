@@ -2,16 +2,16 @@ package cvut.omo.device;
 
 import cvut.omo.entity.person.Person;
 
-public class RunState extends HomeDeviceState{
+public class DisconnectedState extends HomeDeviceState {
 
-    public RunState(Person person, HomeAppliances homeAppliances){
+
+    public DisconnectedState(HomeAppliances homeAppliances) {
         super(homeAppliances);
-        homeAppliances.run();
     }
 
     @Override
     public void connect(HomeAppliances homeAppliances) {
-
+        homeAppliances.setHomeDeviceState(new ConnectedState(homeAppliances));
     }
 
     @Override
@@ -21,7 +21,7 @@ public class RunState extends HomeDeviceState{
 
     @Override
     public void switchOff(HomeAppliances homeAppliances) {
-        homeAppliances.setHomeDeviceState(new OffState(homeAppliances));
+
     }
 
     @Override
@@ -31,16 +31,16 @@ public class RunState extends HomeDeviceState{
 
     @Override
     public void _break(HomeAppliances homeAppliances) {
-        homeAppliances.setHomeDeviceState(new BrokenState(homeAppliances));
-    }
 
-    @Override
-    public void pause(HomeAppliances homeAppliances) {
-        homeAppliances.setHomeDeviceState(new IddleState(homeAppliances));
     }
 
     @Override
     public void use(Person person, HomeAppliances homeAppliances) {
+
+    }
+
+    @Override
+    public void pause(HomeAppliances homeAppliances) {
 
     }
 }

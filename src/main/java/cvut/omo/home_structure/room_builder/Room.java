@@ -115,9 +115,23 @@ public class Room implements HomeComponent {
 
     //ToDO
     public void update() throws InterruptedException {
-        for(Responsible responsible: responsibles){
-            responsible.update();
-        }
+    Thread thread = new Thread(
+            () -> {
+                for(Responsible responsible: responsibles){
+                    responsible.update();
+                }
+                for(HomeDevice homeDevice: homeDevices){
+                    try {
+                        homeDevice.update();
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+    );
+    thread.start();
+    thread.join();
+
     }
 
     @Override

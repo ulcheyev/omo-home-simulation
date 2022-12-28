@@ -47,8 +47,5 @@ public enum DeviceResponsibleEvent implements EventType {
         return this.chainToSolve;
     }
 
-    @Override
-    public EventImportance getEventImportance() {
-        return null;
-    }
+
 }

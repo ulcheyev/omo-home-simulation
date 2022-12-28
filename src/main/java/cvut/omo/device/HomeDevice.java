@@ -5,12 +5,14 @@ import cvut.omo.entity.person.Person;
 import cvut.omo.event.Event;
 import cvut.omo.home_structure.HomeComponent;
 import cvut.omo.home_structure.room_builder.Room;
+import cvut.omo.item.Usable;
 
 import java.util.List;
 import java.util.Set;
+public interface HomeDevice extends HomeComponent, Usable {
 
-public interface HomeDevice extends HomeComponent {
-
+     void connect();
+     void disconnect();
      void clickOn();
      void clickOff();
      void clickPause();

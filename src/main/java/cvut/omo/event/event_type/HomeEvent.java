@@ -16,20 +16,16 @@ public enum HomeEvent implements EventType {
      *COMMON - DOES NOT MATTER IN WHICH ROOM (f.e bulb burned out)
      */
 
-    KNOCK_ON_THE_DOOR(RoomName.VESTIBULE, EventType.EventImportance.NOT_EMERGENCY, CONTROL_THE_DOOR, OPEN_THE_DOR),
-    FIRE_ALARM_WENT_OFF(RoomName.COMMON, EventType.EventImportance.EMERGENCY,DEVICE_FIRE_SENSOR_OFF, CALL_THE_RESCUE_SERVICE),
-    BULB_BURNED_OUT(RoomName.COMMON, EventType.EventImportance.EMERGENCY, CHANGE_BULB),
-    STORM(RoomName.STUB, EventType.EventImportance.NOT_EMERGENCY, HOME_POWER_OFF);
+    KNOCK_ON_THE_DOOR(RoomName.VESTIBULE, CONTROL_THE_DOOR, OPEN_THE_DOR),
+    FIRE_ALARM_WENT_OFF(RoomName.COMMON, DEVICE_FIRE_SENSOR_OFF, CALL_THE_RESCUE_SERVICE),
+    BULB_BURNED_OUT(RoomName.COMMON,  CHANGE_BULB),
+    RAIN(RoomName.STUB, HOME_POWER_OFF, DEVICE_CURCUIT_BREAKER_ON);
 
 
-    HomeEvent(RoomName roomName, EventType.EventImportance eventImportance, ActivityType...chainToSolve){
+    HomeEvent(RoomName roomName,  ActivityType...chainToSolve){
         this.roomName = roomName;
         this.chainToSolve = Arrays.asList(chainToSolve);
-        this.eventImportance = eventImportance;
     }
-
-    @Getter
-    private final EventType.EventImportance eventImportance;
 
     @Getter
     private final List<ActivityType> chainToSolve;
@@ -37,8 +33,4 @@ public enum HomeEvent implements EventType {
     @Getter
     private final RoomName roomName;
 
-    public enum Importance {
-        EMERGENCY,
-        NOT_EMERGENCY
-    }
 }

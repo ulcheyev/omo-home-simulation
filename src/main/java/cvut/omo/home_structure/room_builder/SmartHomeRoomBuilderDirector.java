@@ -23,7 +23,9 @@ public final class SmartHomeRoomBuilderDirector {
                 .setWindow()
                 .setFloor(floor)
                 .setHomeDevice(homeDeviceFactory.createWashingMachine())
-                .setHomeDevice(homeDeviceFactory.createWaterLeakSensor());
+                .setHomeDevice(homeDeviceFactory.createWaterLeakSensor())
+                .setHomeDevice(homeDeviceFactory.createFireSensor());
+
     }
 
     public void createVestibule(RoomBuilder roomBuilder, Floor floor){
@@ -32,7 +34,8 @@ public final class SmartHomeRoomBuilderDirector {
                 .setRoomType(RoomName.VESTIBULE)
                 .setWindow()
                 .setFloor(floor)
-                .setHomeDevice(homeDeviceFactory.createFireSensor());
+                .setHomeDevice(homeDeviceFactory.createFireSensor())
+                .setHomeDevice(homeDeviceFactory.createCircuitBreaker());
     }
 
     public void createKitchen(RoomBuilder roomBuilder, Floor floor){
@@ -81,7 +84,6 @@ public final class SmartHomeRoomBuilderDirector {
                 .setWindow()
                 .setFloor(floor)
                 .setHomeDevice(homeDeviceFactory.createFireSensor())
-                .setHomeDevice(homeDeviceFactory.createCircuitBreaker())
                 .addItem(new PetToy());
     }
 

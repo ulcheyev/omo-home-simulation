@@ -1,0 +1,96 @@
+*************************
+HOME CONFIGURATION REPORT
+*************************
+
+-Floor 1 contains: 
+---Room BATHROOM with 1 windows and contains: 
+-----Home device WashingMachine
+-----Home device WaterLeakSensor
+-----Home device FireSensor
+---Room HALL with 1 windows and contains: 
+-----Home device FireSensor
+---Room VESTIBULE with 1 windows and contains: 
+-----Home device FireSensor
+-----Home device CircuitBreaker
+---Room KITCHEN with 2 windows and contains: 
+-----Home device Oven
+-----Home device FireSensor
+-----Home device WaterLeakSensor
+-----Home device Fridge
+-----Home device TV
+---Room GARAGE with 1 windows and contains: 
+-----Home device FireSensor
+-Floor 2 contains: 
+---Room CHILDRENS_ROOM with 1 windows and contains: 
+-----Home device FireSensor
+-----Home device TV
+-----Home device Computer
+---Room BEDROOM with 1 windows and contains: 
+-----Home device FireSensor
+-----Home device WaterLeakSensor
+-----Home device TV
+-----Home device Computer
+---Room HALL with 1 windows and contains: 
+-----Home device FireSensor
+---Room BATHROOM with 1 windows and contains: 
+-----Home device WashingMachine
+-----Home device WaterLeakSensor
+-----Home device FireSensor
+---Room BATHROOM with 1 windows and contains: 
+-----Home device WashingMachine
+-----Home device WaterLeakSensor
+-----Home device FireSensor
+-Floor 3 contains: 
+---Room CHILDRENS_ROOM with 1 windows and contains: 
+-----Home device FireSensor
+-----Home device TV
+-----Home device Computer
+---Room BEDROOM with 1 windows and contains: 
+-----Home device FireSensor
+-----Home device WaterLeakSensor
+-----Home device TV
+-----Home device Computer
+---Room BEDROOM with 1 windows and contains: 
+-----Home device FireSensor
+-----Home device WaterLeakSensor
+-----Home device TV
+-----Home device Computer
+---Room HALL with 1 windows and contains: 
+-----Home device FireSensor
+---Room BATHROOM with 1 windows and contains: 
+-----Home device WashingMachine
+-----Home device WaterLeakSensor
+-----Home device FireSensor
+---Room BATHROOM with 1 windows and contains: 
+-----Home device WashingMachine
+-----Home device WaterLeakSensor
+-----Home device FireSensor
+
+***Pet lives in the house with a role CAT
+***Pet lives in the house with a role DOG
++++Person Popa lives in the home with a role DAUGHTER
++++Person Boba lives in the home with a role FATHER
+***Pet lives in the house with a role CAT
+***Pet lives in the house with a role DOG
++++Person Eliot lives in the home with a role SON
++++Person Mr. Lolo lives in the home with a role GRANDMOTHER
++++Person Pipa lives in the home with a role SON
+***Pet lives in the house with a role MINI_PIG
++++Person Mr. Pepa lives in the home with a role GRANDFATHER
++++Person Male zlo lives in the home with a role DAUGHTER
++++Person Lola lives in the home with a role MOTHER
+
+************************************************************************************
+Home has Person in the amount of 8 pieces.
+Home has Pet in the amount of 5 pieces.
+Home has CircuitBreaker in the amount of 1 pieces.
+Home has Room in the amount of 16 pieces.
+Home has Oven in the amount of 1 pieces.
+Home has FireSensor in the amount of 16 pieces.
+Home has WashingMachine in the amount of 5 pieces.
+Home has TV in the amount of 6 pieces.
+Home has Floor in the amount of 3 pieces.
+Home has Computer in the amount of 5 pieces.
+Home has WaterLeakSensor in the amount of 9 pieces.
+Home has Fridge in the amount of 1 pieces.
+************************************************************************************

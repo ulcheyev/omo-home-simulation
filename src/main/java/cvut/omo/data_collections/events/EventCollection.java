@@ -8,6 +8,7 @@ import org.apache.commons.lang3.tuple.Pair;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class EventCollection {
@@ -41,6 +42,16 @@ public class EventCollection {
             };
         }
         return true;
+    }
+
+    public static void swapTwoEndActivities(Event event){
+        for(Event event1: events){
+            if(event.equals(event1)){
+                int last = event.getChainToSolve().size() - 1;
+                int predLast = Math.max(last - 1, 0);
+                Collections.swap(event.getChainToSolve(), predLast, last);
+            }
+        }
     }
 
     public static void generateReport() throws IOException {

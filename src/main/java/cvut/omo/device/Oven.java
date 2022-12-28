@@ -10,7 +10,7 @@ public class Oven extends HomeAppliances{
 
     @Override
     protected void identify() {
-        this.currentConsumption.put(SourceType.ENERGY, Constants.DEVICE_OFF_STATE);
+        this.currentConsumption.put(SourceType.ENERGY, Constants.DEVICE_DISCONNECTED_STATE);
         ConsumptionCollection.getInstance().put(this);
     }
 

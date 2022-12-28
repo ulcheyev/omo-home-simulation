@@ -9,10 +9,9 @@ import cvut.omo.home_structure.room_builder.Room;
 public class NullResponsible extends Responsible {
 
     public final static NullResponsible INSTANCE = new NullResponsible();
-    private final static ResponsibleType stub = new NullResponsibleType();
 
     private NullResponsible(){
-        super(stub);
+        super(new NullResponsibleType());
     }
 
     @Override
@@ -25,10 +24,6 @@ public class NullResponsible extends Responsible {
         return true;
     }
 
-    @Override
-    public ResponsibleType getResponsibleType(){
-        return stub;
-    }
 
     @Override
     public void handle(Activity activity){}

@@ -1,10 +1,14 @@
 package cvut.omo.app_utils;
 
+import java.util.List;
+
 public class Constants {
 
     public final static int DAY_IN_HOUR = 24;
 
     public final static char CURRENCY = '$';
+
+    public final static double DEVICE_CONNECTED_ELECTRICITY_CONSUMPTION = 1;
 
     public final static double COMPUTER_RUN_STATE_ELECTRICITY_CONSUMPTION = 14;
     public final static double TV_ELECTRICITY_RUN_STATE_CONSUMPTION = 12;
@@ -30,7 +34,7 @@ public class Constants {
     public final static double OVEN_LIFE_TIME = 15;
     public final static double WASHING_MACHINE_LIFE_TIME = 7;
 
-    public final static double DEVICE_OFF_STATE = 0;
+    public final static double DEVICE_DISCONNECTED_STATE = 0;
     public final static double DEVICE_BROKEN_STATE = 0;
     public final static double DEVICE_DOES_NOT_CONSUME = 0;
 
@@ -41,5 +45,14 @@ public class Constants {
     public final static String STARS_UP = "\n\n************************************************************************************\n";
     public final static String STARS = "\n************************************************************************************\n";
     public final static String STARS_DOWN = "************************************************************************************";
+
+
+    //FLAGS
+    public final static String ON = "ON";
+    public final static String OFF = "OFF";
+    public final static String RUN = "RUN";
+    public final static String REPAIR = "REPAIR";
+    public final static String PAUSE = "PAUSE";
+    public final static List<String> flags = List.of(ON, OFF, RUN, REPAIR, PAUSE);
 
 }

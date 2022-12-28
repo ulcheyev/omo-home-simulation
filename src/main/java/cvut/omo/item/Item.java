@@ -1,5 +1,5 @@
 package cvut.omo.item;
 
 
-public interface Item {
+public interface Item extends Usable{
 }

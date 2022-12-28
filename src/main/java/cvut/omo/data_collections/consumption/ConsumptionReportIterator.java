@@ -30,7 +30,8 @@ public class ConsumptionReportIterator implements Iterator {
         if(!curr.isNotConsume()) {
             List<ConsumptionData> dataAbout = data.getDataAbout(curr);
 
-            res.append(curr.getClass().getSimpleName() + //NAME OF DEVICE
+            res.append("[").append(currIdx+1).append("] ")
+                    .append(curr.getClass().getSimpleName() + //NAME OF DEVICE
                     " in " + curr.getRoom().getRoomName() + // NAME OF ROOM
                     " on the " + curr.getRoom().getFloor().getNumberOfFloor() + " floor" + //NUMBER OF FLOOR
                     " has consumed ");
@@ -67,6 +68,7 @@ public class ConsumptionReportIterator implements Iterator {
     }
 
     private void addInfoAboutConsumptionFromAllTime(StringBuilder res){
+        res.append("\n");
         for (java.util.Iterator<SourceType> it = sourceTypes.keys().asIterator(); it.hasNext(); ){
             SourceType sourceType = it.next();
             if(!sourceType.equals(SourceType.NOT_CONSUME)) {

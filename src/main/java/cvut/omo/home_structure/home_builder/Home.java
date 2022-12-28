@@ -16,6 +16,7 @@ import cvut.omo.home_structure.HomeComponent;
 import cvut.omo.home_structure.nulls.NullRoom;
 import cvut.omo.home_structure.room_builder.Room;
 import cvut.omo.home_structure.room_builder.RoomName;
+import cvut.omo.item.Usable;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -56,7 +57,19 @@ public class Home {
         return res;
     }
 
-    public List<HomeAppliances> getHomeAppliancesByClass(Class<? extends HomeDevice> clazz){
+    public void connectAllDevices(){
+        for(HomeDevice hd: getHomeDevices()){
+            hd.connect();
+        }
+    }
+
+    public void disconectAllDevices(){
+        for(HomeDevice hd: getHomeDevices()){
+            hd.disconnect();
+        }
+    }
+
+    public List<HomeAppliances> getHomeAppliancesByClass(Class<? extends Usable> clazz){
         List<HomeDevice> hds = getHomeDevices();
         List<HomeAppliances> res = new ArrayList<>();
         for(HomeDevice hd: hds){
@@ -145,8 +158,17 @@ public class Home {
     }
 
     public void update() throws InterruptedException {
-      for(Floor floor: floors){
-          floor.update();
-      }
+        Thread thread = new Thread(
+                () -> {
+                    for(Floor floor: floors){
+                        try {
+                            floor.update();
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }
+        );
+        thread.start();
     };
 }

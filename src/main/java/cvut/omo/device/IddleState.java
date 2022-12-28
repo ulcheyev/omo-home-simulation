@@ -10,6 +10,9 @@ public class IddleState extends HomeDeviceState{
     }
 
     @Override
+    public void connect(HomeAppliances homeAppliances) {}
+
+    @Override
     public void switchOn(HomeAppliances homeAppliances) {}
 
     @Override

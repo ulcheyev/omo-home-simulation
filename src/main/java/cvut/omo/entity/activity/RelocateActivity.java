@@ -12,7 +12,7 @@ public class RelocateActivity extends Activity {
     @Getter
     private Room from;
 
-    public RelocateActivity(Responsible responsible, Event event, Room toRoom, ActivityType activityType) throws InterruptedException {
+    public RelocateActivity(Responsible responsible, Event event, Room toRoom, ActivityType activityType)  {
         super(responsible, event, activityType);
         from = responsible.getRoom();
         this.room = toRoom;
@@ -20,7 +20,7 @@ public class RelocateActivity extends Activity {
 
     @Override
     public void doWork(Responsible responsible) {
-        responsible.relocate(room);
+        responsible.relocate(event, room);
     }
 
 

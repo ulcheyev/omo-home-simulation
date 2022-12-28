@@ -1,5 +1,6 @@
 package cvut.omo.device;
 
+import cvut.omo.app_utils.Constants;
 import cvut.omo.app_utils.Utils;
 import cvut.omo.data_collections.consumption.ConsumptionCollection;
 import cvut.omo.data_collections.consumption.ConsumptionData;
@@ -17,8 +18,7 @@ import lombok.Getter;
 import java.io.IOException;
 import java.util.*;
 
-import static cvut.omo.app_utils.Constants.DEVICE_BROKEN_STATE;
-import static cvut.omo.app_utils.Constants.DEVICE_OFF_STATE;
+import static cvut.omo.app_utils.Constants.*;
 
 
 @Getter
@@ -40,7 +40,7 @@ public abstract class HomeAppliances extends Responsible implements HomeDevice{
     public HomeAppliances(double lifeTime){
         super(new NullResponsibleType());
         currentConsumption = new Hashtable<>();
-        homeDeviceState = new OffState(this);
+        homeDeviceState = new DisconnectedState(this);
         persons = new ArrayList<>();
         this.lifeTimeInYear = lifeTime;
         isEnabled = false;
@@ -49,27 +49,28 @@ public abstract class HomeAppliances extends Responsible implements HomeDevice{
 
     //TODO
     //API METHODS
-    public void clickOn(){
-        if(Home.INSTANCE.isPowerEnable()) homeDeviceState.switchOn(this);
-    };
-    public void clickOff(){
-        if(Home.INSTANCE.isPowerEnable())
-        homeDeviceState.switchOff(this);}
-
-    public void clickPause(){
-        if(Home.INSTANCE.isPowerEnable())
-        homeDeviceState.pause(this);};
-
+    public void connect(){
+        homeDeviceState.connect(this);
+    }
+    public void disconnect(){
+        setCurrentConsumption(SourceType.ENERGY, DEVICE_DISCONNECTED_STATE);
+        homeDeviceState = new DisconnectedState(this);
+    }
+    public void clickOn(){homeDeviceState.switchOn(this); update();};
+    public void clickOff(){homeDeviceState.switchOff(this); update();}
+    public void clickPause(){homeDeviceState.pause(this); update();};
     public void clickStart(Person person){
-        if(Home.INSTANCE.isPowerEnable())
         this.persons.add(person);
         homeDeviceState.use(person, this);
+        update();
     };
     public void repair(Person person){
         homeDeviceState.repair(person, this);
+        update();
     };
     public void breakDevice(){
         homeDeviceState._break(this);
+        update();
     };
 
     public void setCurrentConsumption(SourceType sourceType, double currentConsumption){
@@ -81,7 +82,7 @@ public abstract class HomeAppliances extends Responsible implements HomeDevice{
     }
 
     //TODO update working hours and check life time
-    public void update() throws InterruptedException {
+    public void update(){
         super.update();
         this.workingHours++;
         ConsumptionCollection.getInstance().update(this);
@@ -124,7 +125,7 @@ public abstract class HomeAppliances extends Responsible implements HomeDevice{
     protected void disable(){
         for (Iterator<SourceType> it = currentConsumption.keys().asIterator(); it.hasNext(); ) {
             SourceType sourceType = it.next();
-            setCurrentConsumption(sourceType, DEVICE_OFF_STATE);
+            setCurrentConsumption(sourceType, DEVICE_CONNECTED_ELECTRICITY_CONSUMPTION);
         }
     }
     protected void breakDown(){
@@ -133,6 +134,9 @@ public abstract class HomeAppliances extends Responsible implements HomeDevice{
             setCurrentConsumption(sourceType, DEVICE_BROKEN_STATE);
             this.setBrokennessLevel(Utils.getRandomBrokennessLevel());
         }
+    }
+    protected void connectDevice(){
+        setCurrentConsumption(SourceType.ENERGY, DEVICE_CONNECTED_ELECTRICITY_CONSUMPTION);
     }
 
     @Override

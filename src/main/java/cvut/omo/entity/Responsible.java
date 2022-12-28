@@ -1,6 +1,7 @@
 package cvut.omo.entity;
 import cvut.omo.data_collections.visitor.SmartHomeVisitor;
 import cvut.omo.entity.activity.Activity;
+import cvut.omo.entity.activity.ActivityFactory;
 import cvut.omo.entity.nulls.NullResponsible;
 import cvut.omo.entity.nulls.NullResponsibleType;
 import cvut.omo.event.Event;
@@ -47,20 +48,22 @@ public abstract class Responsible implements HomeComponent  {
         setEntityStatus(EntityStatus.BUSY);
     }
 
-    public void unlock() throws InterruptedException {
+    public void unlock() {
         setEntityStatus(EntityStatus.FREE);
         update();
     }
 
-    public void relocate(Room room) {
+    public void relocate(Event event, Room room) {
         this.room.removeResponsible(this);
         room.addResponsible(this);
     }
 
-    public void update() throws InterruptedException {
+    public void update() {
         if(isFree()) {
             Activity peek = activities.poll();
-            if (peek != null && !peek.isExecuted()) peek.execute();
+            if (peek != null && !peek.isExecuted()) {
+                peek.execute();
+            }
         }
     }
 

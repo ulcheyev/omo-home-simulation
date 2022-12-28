@@ -4,15 +4,13 @@ import cvut.omo.app_utils.Constants;
 import cvut.omo.data_collections.consumption.ConsumptionCollection;
 import cvut.omo.entity.person.Person;
 
-import static cvut.omo.app_utils.Constants.DEVICE_OFF_STATE;
-
 public abstract class Sensor extends HomeAppliances {
 
     public Sensor(double lifeTime) {super(lifeTime);}
 
     @Override
     protected void identify() {
-        this.currentConsumption.put(SourceType.ENERGY, Constants.DEVICE_OFF_STATE);
+        this.currentConsumption.put(SourceType.ENERGY, Constants.DEVICE_DISCONNECTED_STATE);
         ConsumptionCollection.getInstance().put(this);
     }
 

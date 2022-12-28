@@ -10,6 +10,7 @@ public abstract class HomeDeviceState {
         this.homeAppliances = homeAppliances;
     }
 
+    public abstract void connect(HomeAppliances homeAppliances);
     public abstract void switchOn(HomeAppliances homeAppliances);
     public abstract void switchOff(HomeAppliances homeAppliances);
     public abstract void repair(Person person, HomeAppliances homeAppliances);
