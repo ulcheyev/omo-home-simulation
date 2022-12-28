@@ -59,7 +59,6 @@ public final class SmartHomeRoomBuilderDirector {
                 .setWindow()
                 .setFloor(floor)
                 .setHomeDevice(homeDeviceFactory.createFireSensor())
-                .setHomeDevice(homeDeviceFactory.createWaterLeakSensor())
                 .setHomeDevice(homeDeviceFactory.createTV())
                 .setHomeDevice(homeDeviceFactory.createComputer())
                 .addItem(new PetToy());

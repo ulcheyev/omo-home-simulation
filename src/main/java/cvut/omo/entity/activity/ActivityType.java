@@ -38,7 +38,7 @@ public enum ActivityType {
     DEVICE_COMPUTER_ON(RoomType.CHILL.getRooms(), Computer.class, DeviceActivity.class),
     DEVICE_OVEN_ON(of(RoomName.KITCHEN), Oven.class, DeviceActivity.class),
     DEVICE_WASHING_MACHINE_ON(of(RoomName.BATHROOM), WashingMachine.class, DeviceActivity.class),
-    DEVICE_WATER_LEAK_SENSOR_ON(RoomType.getAll(), WaterLeakSensor.class, DeviceActivity.class, FATHER, GRANDFATHER),
+    DEVICE_WATER_LEAK_SENSOR_ON(of(RoomName.KITCHEN, RoomName.BATHROOM), WaterLeakSensor.class, DeviceActivity.class, FATHER, GRANDFATHER),
     DEVICE_FIRE_SENSOR_ON(RoomType.getAll(), FireSensor.class, DeviceActivity.class, FATHER, GRANDFATHER),
     DEVICE_TV_ON(RoomType.CHILL.getRooms(), TV.class, DeviceActivity.class),
     DEVICE_CURCUIT_BREAKER_ON(of(RoomName.VESTIBULE), CircuitBreaker.class, DeviceActivity.class, FATHER, GRANDFATHER),
@@ -65,7 +65,6 @@ public enum ActivityType {
     DEVICE_OVEN_PAUSE(DEVICE_OVEN_ON),
     DEVICE_WASHING_MACHINE_PAUSE(DEVICE_WASHING_MACHINE_ON),
     DEVICE_TV_PAUSE(DEVICE_TV_ON),
-
 
     //REPAIR
     DEVICE_REPAIR(of(RoomName.COMMON), null, DeviceActivity.class,  FATHER, GRANDFATHER),

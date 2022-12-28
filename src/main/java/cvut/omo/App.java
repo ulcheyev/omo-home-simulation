@@ -18,7 +18,6 @@ public class App {
         SmartHomeBuilderDirector.createLargeHomeConfiguration(SmartHomeBuilder.INSTANCE);
         Home home = SmartHomeBuilder.INSTANCE.getResult();
         home.connectAllDevices();
-        home.disconectAllDevices();
         //GENERATE EVENTS FOR PERSONS, HOMEDEVICES AND ROOMS
         EventGenerator.generateRandomEvents(10000);
 

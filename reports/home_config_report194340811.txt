@@ -66,23 +66,23 @@ HOME CONFIGURATION REPORT
 -----Home device WaterLeakSensor
 -----Home device FireSensor
 
-***Pet lives in the house with a role CAT
-***Pet lives in the house with a role DOG
 +++Person Popa lives in the home with a role DAUGHTER
-+++Person Boba lives in the home with a role FATHER
++++Person Lola lives in the home with a role MOTHER
 ***Pet lives in the house with a role CAT
 ***Pet lives in the house with a role DOG
+***Pet lives in the house with a role MINI_PIG
++++Person Boba lives in the home with a role FATHER
 +++Person Eliot lives in the home with a role SON
 +++Person Mr. Lolo lives in the home with a role GRANDMOTHER
-+++Person Pipa lives in the home with a role SON
-***Pet lives in the house with a role MINI_PIG
-+++Person Mr. Pepa lives in the home with a role GRANDFATHER
+***Pet lives in the house with a role CAT
 +++Person Male zlo lives in the home with a role DAUGHTER
-+++Person Lola lives in the home with a role MOTHER
+***Pet lives in the house with a role DOG
++++Person Pipa lives in the home with a role SON
++++Person Mr. Pepa lives in the home with a role GRANDFATHER
 
 ************************************************************************************
-Home has Person in the amount of 8 pieces.
 Home has Pet in the amount of 5 pieces.
+Home has Person in the amount of 8 pieces.
 Home has CircuitBreaker in the amount of 1 pieces.
 Home has Room in the amount of 16 pieces.
 Home has Oven in the amount of 1 pieces.
