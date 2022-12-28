@@ -22,6 +22,7 @@ public abstract class Activity {
     protected Event event;
 
 
+
     public Activity(Responsible responsible, Event event, ActivityType activityType) throws InterruptedException {
 
         this.event = event;
@@ -32,8 +33,17 @@ public abstract class Activity {
         assignRoom();
     }
 
+    private void checkResponsibleLocation() throws InterruptedException {
+        if(!room.isNull() &&
+           !responsible.getRoom().equals(room))
+        {
+            responsible.handle(ActivityFactory.createRelocateActivity(responsible,event,event.getRoom()));
+        }
+    }
+
     public void execute() throws InterruptedException {
         responsible.lock();
+        checkResponsibleLocation();
         doWork(responsible);
         responsible.unlock();
         isExecuted = true;
@@ -52,17 +62,14 @@ public abstract class Activity {
         if(checkIfActivityTypeContainsStubRoom()){
             return;
         }
-
         else if(checkIfActivityTypeContainsCommonRoom()){
             this.room = event.getRoom();
             return;
         }
-
         else if(checkResponsibleRoom()){
             this.room = responsible.getRoom();
             return;
         }
-
         else{
             this.room = responsible.getRoom();
         }
@@ -87,4 +94,20 @@ public abstract class Activity {
         return res;
     }
 
+    @Override
+    public String toString() {
+
+        String type = responsible.getResponsibleType().isNull()
+                ? responsible.getClass().getSimpleName()
+                : responsible.getResponsibleType().toString();
+
+        Room location = room.isNull()
+                ? responsible.getRoom()
+                : room;
+
+        return "Responsible " + type +
+                " in room " + location.getRoomName() +
+                " on the " + location.getFloor().getNumberOfFloor() + " floor " +
+                "did " + activityType.name();
+    }
 }

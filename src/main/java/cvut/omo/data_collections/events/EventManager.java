@@ -6,11 +6,19 @@ public class EventManager {
 
 
     public static void listenTo(Event event) {
-        try {
-            System.out.println("Solving...");
-            event.solve();
-        }catch (InterruptedException e){
-            e.printStackTrace();
-        }
+      Thread thread = new Thread(() -> {
+          try {
+              event.solve();
+          } catch (InterruptedException e) {
+              e.printStackTrace();
+          }
+      });
+      thread.start();
+      try {
+          thread.join();
+      }catch (InterruptedException e){
+          e.printStackTrace();
+      }
     }
 }
+

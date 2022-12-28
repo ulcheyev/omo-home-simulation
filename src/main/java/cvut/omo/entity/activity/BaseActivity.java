@@ -15,4 +15,9 @@ public class BaseActivity extends Activity {
         System.out.println("Executing base activity " + activityType.name() + " by " + responsible.getResponsibleType() +
                 " on the floor "  + " in room ");
     }
+
+    @Override
+    public String toString() {
+        return super.toString();
+    }
 }

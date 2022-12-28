@@ -36,6 +36,7 @@ public class Constants {
 
     public final static String CONSUMPTION_REPORT_HEADER = "******************\nCONSUMPTION REPORT\n******************\n\n";
     public final static String HOME_CONFIG_REPORT_HEADER = "*************************\nHOME CONFIGURATION REPORT\n*************************\n\n";
+    public final static String EVENT_REPORT_HEADER = "*************************\nEVENTS REPORT\n*************************\n\n";
     public final static String PDF_DOCUMENTATION_HEADER = "********************\nDOCUMENTATION\n********************\n\n";
     public final static String STARS_UP = "\n\n************************************************************************************\n";
     public final static String STARS = "\n************************************************************************************\n";

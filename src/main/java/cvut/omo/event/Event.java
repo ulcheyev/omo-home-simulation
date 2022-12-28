@@ -70,7 +70,6 @@ public class Event {
             solveStrategy = new DeviceEventSolveStrategy();
             solveStrategy.solve(this);
         }
-        checkSolving();
     }
 
     public void addActivity(Activity activity){
@@ -92,12 +91,19 @@ public class Event {
        return true;
     }
 
-    public List<Activity> getChainToSolve(){
+    public List<Activity> getSolvesChain(){
         List<Activity> res = chainToSolve;
         Collections.reverse(res);
         return res;
     }
 
+    @Override
+    public String toString() {
 
+        String location;
+        String resp;
 
+        return "Event with type " +
+                eventType.toString();
+    }
 }

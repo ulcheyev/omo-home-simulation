@@ -19,10 +19,14 @@ public class DeviceActivity extends Activity {
         if(activityType.getToUse() != null) {
             System.out.println("Executing " + activityType.name() + " activity on device " + activityType.getToUse().getSimpleName() + "\n");
         }
-        else{
-            System.out.println("Executing " + activityType.name() + " activity"  + "\n");
+        else {
+            System.out.println("Executing " + activityType.name() + " activity" + "\n");
         }
+    }
 
-
+    @Override
+    public String toString() {
+        return super.toString();
+//                " on " + toUse.getSimpleName();
     }
 }

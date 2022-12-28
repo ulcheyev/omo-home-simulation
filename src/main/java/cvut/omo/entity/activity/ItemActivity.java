@@ -13,4 +13,10 @@ public class ItemActivity extends Activity{
     public void doWork(Responsible responsible){
         System.out.println("Executing user item activity...");
     }
+
+
+    @Override
+    public String toString() {
+        return  super.toString();
+    }
 }

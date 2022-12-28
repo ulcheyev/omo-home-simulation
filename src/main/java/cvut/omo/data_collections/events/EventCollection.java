@@ -1,5 +1,6 @@
 package cvut.omo.data_collections.events;
 
+import cvut.omo.app_utils.Constants;
 import cvut.omo.app_utils.FileWriter;
 import cvut.omo.app_utils.Utils;
 import cvut.omo.event.Event;
@@ -45,7 +46,7 @@ public class EventCollection {
     public static void generateReport() throws IOException {
         StringBuilder sb = new StringBuilder();
         EventCollectionReportIterator iterator = createReportIterator();
-
+        sb.append(Constants.EVENT_REPORT_HEADER);
         while (iterator.hasNext()){
             sb.append(iterator.next()).append("\n");
         }
