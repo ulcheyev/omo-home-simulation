@@ -20,6 +20,10 @@ public class FileWriter {
         writeToFile(openFile("documentation/", fileName), text);
     }
 
+    public static void generateNewEmail(String fileName, String text) throws IOException {
+        writeToFile(openFile("email/", fileName), text);
+    }
+
     private static File openFile(String path, String fileName) throws IOException {
         File file = new File(path+fileName+".txt");
         file.getParentFile().mkdirs(); //create parent directory

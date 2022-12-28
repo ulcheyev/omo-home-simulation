@@ -2,9 +2,9 @@ package cvut.omo.device;
 
 import cvut.omo.app_utils.Constants;
 import cvut.omo.data_collections.consumption.ConsumptionCollection;
-import cvut.omo.entity.person.Person;
+import cvut.omo.device.notifier.EventListener;
+import java.io.IOException;
 
-import static cvut.omo.app_utils.Constants.DEVICE_OFF_STATE;
 
 public abstract class Sensor extends HomeAppliances {
 
@@ -29,5 +29,7 @@ public abstract class Sensor extends HomeAppliances {
         this.setCurrentConsumption(SourceType.ENERGY, Constants.SENSOR_ELECTRICITY_RUN_STATE_CONSUMPTION);
     };
 
-    public abstract void alert();
+    public abstract void addListener(EventListener listener);
+    public abstract void removeListener(EventListener listener);
+    public abstract void alert() throws IOException;
 }
