@@ -2,8 +2,8 @@ package cvut.omo.device;
 
 import cvut.omo.app_utils.Constants;
 import cvut.omo.data_collections.consumption.ConsumptionCollection;
+import cvut.omo.home_structure.home_builder.Home;
 
-import java.util.concurrent.CompletionService;
 
 public class CircuitBreaker extends HomeAppliances{
 
@@ -18,18 +18,19 @@ public class CircuitBreaker extends HomeAppliances{
     }
 
     @Override
-    public void turnOn(){}
+    public void enable(){
+        Home.INSTANCE.setPowerEnable(true);
+    }
 
     @Override
-    public void turnOff(){}
+    public void disable(){
+        Home.INSTANCE.setPowerEnable(false);
+    }
 
     @Override
     public void goIntoPauseMode(){}
 
     @Override
     public void run(){}
-
-//    @Override
-//    public void accept() {}
 
 }

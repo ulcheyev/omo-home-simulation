@@ -1,13 +1,7 @@
 package cvut.omo;
-import cvut.omo.app_utils.FileWriter;
-import cvut.omo.data_collections.visitor.HomeConfigurationReportVisitor;
-import cvut.omo.device.HomeDevice;
-import cvut.omo.data_collections.consumption.ConsumptionCollection;
-import cvut.omo.entity.person.Person;
-import cvut.omo.event.Event;
+import cvut.omo.data_collections.events.EventCollection;
 import cvut.omo.event.EventGenerator;
-import cvut.omo.event.HomeEvent;
-import cvut.omo.home_structure.*;
+import cvut.omo.home_structure.home_builder.Home;
 import cvut.omo.home_structure.home_builder.SmartHomeBuilder;
 import cvut.omo.home_structure.home_builder.SmartHomeBuilderDirector;
 
@@ -16,92 +10,77 @@ import java.io.IOException;
 public class App {
 
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, InterruptedException {
 
 
         SmartHomeBuilderDirector.createLargeHomeConfiguration(SmartHomeBuilder.INSTANCE);
         Home home = SmartHomeBuilder.INSTANCE.getResult();
 
 
-        int count = 0;
-        for(Floor floor: home.getFloors()){
-            for(Room room: floor.getRooms()){
-                EventGenerator.generateRandomHomeEvent(room);
-                System.out.println(room.getRoomType() + " " + room.getFloor().getNumberOfFloor());
-                System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-                for(Person person: room.getPersons()){
-                    Event eventPerson = EventGenerator.generateRandomPersonEvent(person);
-                    room.getEvents().add(eventPerson);
-                    System.out.println(person.getName() + " have event: " + eventPerson.getEventType());
-                }
 
-                for (Event event: room.getEvents()){
-                    if(event.getEventType() instanceof HomeEvent){
-                        System.out.println(event.getEventType());
-                    }
-                }
-                System.out.println("___________________________________________________________");
-                room.update();
-                System.out.println("___________________________________________________________");
+        //GENERATE EVENTS FOR PERSONS, HOMEDEVICES AND ROOMS
+        EventGenerator.generateRandomEvents(15);
+        EventCollection.generateReport();
 
-
-                for(HomeDevice homeDevice: room.getHomeDevices()){
-                    count++;
-                }
-            }
+        while(!EventCollection.allSolved()){
+            home.update();
         }
 
-        HomeConfigurationReportVisitor visitor = new HomeConfigurationReportVisitor();
-        visitor.generateReport();
 
-//        System.out.println(count);
-//        System.out.println(ConsumptionAndUsageCollection.generateReport());
-//        System.out.println("___________________________________________________________");
 
-//        for(Floor floor: home.getFloors()){
+//        Thread.sleep(500);
+
+//        home.testRep2();
+
+    }
+}
 //            for(Room room: floor.getRooms()){
-//                for(int i = 0; i < 48; i ++) {
-//                    for (HomeDevice homeDevice : room.getHomeDevices()) {
-//                        homeDevice.update();
-////                        homeDevice.breakDevice();
-////                        homeDevice.getDocumentation();
-//                        homeDevice.clickOn();
+//                System.out.println("++++++++++++++++++++++++++ROOM++++++++++++++++++++++++");
+//                System.out.println(room.getRoomName() + " on floor " + room.getFloor().getNumberOfFloor());
+//                System.out.println("******************PERSONS IN ROOM*********************");
+//                for(Person person: room.getPersons()){
+//                    System.out.println(person.getName() + " " + person.getResponsibleType());
+//                }
+//                System.out.println("******************************************************");
+//                System.out.println("******************DEVICES IN ROOM*********************");
+//                for(HomeDevice device: room.getHomeDevices()){
+//                    System.out.println(device.getClass().getSimpleName());
+//                }
+//                System.out.println("******************************************************");
+//                for(Person person2: room.getPersons()){
+//                    System.out.println("******************PERSONS EVENTS**********************");
+//                    for(Event event: person2.getSelfEvents()){
+//                        System.out.print(person2.getName() + " has event: " +  event.getEventType() + "|");
+//                        for(ActivityType activityType: event.getEventType().getChainToSolve()){
+//                            System.out.print("-> " + activityType);
+//                        }
+//                        System.out.println();
+//                    }
+//
+//                    System.out.println("******************************************************");
+//                }
+//                System.out.println("******************HOMEDEVICES EVENTS**********************");
+//                for(HomeDevice homeDevice: room.getHomeDevices()){
+//                    for(Event event: ((HomeAppliances)homeDevice).getSelfEvents()){
+//                        System.out.print(homeDevice.getClass() + " has event: " + event.getEventType() + "|");
+//                        for(ActivityType activityType: event.getEventType().getChainToSolve()){
+//                            System.out.print("->" + activityType);
+//                        }
+//                        System.out.println();
 //                    }
 //                }
-//            }
-//        }
-        ConsumptionCollection.getInstance().generateReport();
-        FileWriter.cleanDirectory("documentation/");
-
-
+//                System.out.println("******************************************************");
 //
-//        for(Person person: home.getPersons()){
-//            System.out.println(person.getName());
-//        }
-
-//        System.out.println(count);
-
-
-
-//        SmartHomeBuilderDirector.createLargeHomeConfiguration(SmartHomeBuilder.INSTANCE);
-//        home = SmartHomeBuilder.INSTANCE.getResult();
-//
-//       count = 0;
-//        for(Floor floor: home.getFloors()){
-//            for(Room room: floor.getRooms()){
-//                System.out.println(room.getRoomType());
-//                for(HomeDevice homeDevice: room.getHomeDevices()){
-//                    count++;
+//                System.out.println("******************ROOM EVENTS**********************");
+//                for(Event event: room.getEvents()){
+//                    System.out.println(event.getEventType());
 //                }
 //            }
 //        }
-//
-//        for(Person person: home.getPersons()){
-//            System.out.println(person.getName());
 //        }
-//
-//        System.out.println(count);
-    }
+
+//        ConsumptionCollection.getInstance().generateReport();
+//        HomeConfigurationReportVisitor visitor = new HomeConfigurationReportVisitor();
+//        visitor.generateReport();
 
 
-}

@@ -1,0 +1,47 @@
+Event with type BULB_BURNED_OUT. Solved by chain:
+1)FATHER did CHANGE_BULB in VESTIBULE on 1 floor
+
+Event with type DEVICE_BROKEN by WaterLeakSensor in  in BATHROOM on 2 floor. Solved by chain:
+1)FATHER did DEVICE_REPAIR in BATHROOM on 2 floor
+
+Event with type PET_NEED_PET by DOG in  in BEDROOM on 2 floor. Solved by chain:
+1)FATHER did PET_A_PET in BEDROOM on 2 floor
+
+Event with type DEVICE_BROKEN by Computer in  in BEDROOM on 3 floor. Solved by chain:
+1)FATHER did DEVICE_REPAIR in BEDROOM on 3 floor
+
+Event with type DEVICE_BROKEN by FireSensor in  in HALL on 2 floor. Solved by chain:
+1)FATHER did DEVICE_REPAIR in HALL on 2 floor
+
+Event with type NEED_GO_FOR_A_WALK by MINI_PIG in  in BATHROOM on 3 floor. Solved by chain:
+1)DAUGHTER did TAKE_A_WALK_WITH_PET located in KITCHEN
+
+Event with type DEVICE_BROKEN by FireSensor in  in BEDROOM on 2 floor. Solved by chain:
+1)FATHER did DEVICE_REPAIR in BEDROOM on 2 floor
+
+Event with type BULB_BURNED_OUT. Solved by chain:
+1)FATHER did CHANGE_BULB in CHILDRENS_ROOM on 2 floor
+
+Event with type BULB_BURNED_OUT. Solved by chain:
+1)FATHER did CHANGE_BULB in CHILDRENS_ROOM on 2 floor
+
+Event with type DEVICE_BROKEN by FireSensor in  in HALL on 3 floor. Solved by chain:
+1)FATHER did DEVICE_REPAIR in HALL on 3 floor
+
+Event with type NEED_PLAY_COMPUTER by GRANDFATHER in  in BATHROOM on 1 floor. Solved by chain:
+1)GRANDFATHER did DEVICE_COMPUTER_ON in BATHROOM on 1 floor
+
+Event with type DEVICE_BROKEN by Fridge in  in KITCHEN on 1 floor. Solved by chain:
+1)FATHER did DEVICE_REPAIR in KITCHEN on 1 floor
+
+Event with type DEVICE_BROKEN by CircuitBreaker in  in HALL on 3 floor. Solved by chain:
+1)FATHER did DEVICE_REPAIR in HALL on 3 floor
+
+Event with type BULB_BURNED_OUT. Solved by chain:
+1)FATHER did CHANGE_BULB in BEDROOM on 2 floor
+
+Event with type STORM. Solved by chain:
+1)CircuitBreaker did HOME_POWER_OFF located in HALL
+2)CircuitBreaker did HOME_POWER_OFF located in HALL
+3)CircuitBreaker did HOME_POWER_OFF located in HALL
+

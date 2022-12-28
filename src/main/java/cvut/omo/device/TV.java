@@ -15,7 +15,7 @@ public class TV extends HomeAppliances {
     }
 
     @Override
-    public void turnOn() {
+    public void enable() {
         this.setCurrentConsumption(SourceType.ENERGY, Constants.TV_ELECTRICITY_IDDLE_STATE_CONSUMPTION);
     }
 
@@ -30,6 +30,4 @@ public class TV extends HomeAppliances {
         this.setCurrentConsumption(SourceType.ENERGY, Constants.TV_ELECTRICITY_RUN_STATE_CONSUMPTION);
     }
 
-//    @Override
-//    public void accept() {}
 }

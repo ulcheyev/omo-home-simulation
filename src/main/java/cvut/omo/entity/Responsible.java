@@ -1,29 +1,37 @@
 package cvut.omo.entity;
+import cvut.omo.data_collections.visitor.SmartHomeVisitor;
 import cvut.omo.entity.activity.Activity;
-import cvut.omo.entity.person.Person;
-import cvut.omo.home_structure.Home;
-import cvut.omo.home_structure.Room;
+import cvut.omo.entity.nulls.NullResponsible;
+import cvut.omo.entity.nulls.NullResponsibleType;
+import cvut.omo.event.Event;
+import cvut.omo.home_structure.HomeComponent;
+import cvut.omo.home_structure.nulls.NullRoom;
+import cvut.omo.home_structure.room_builder.Room;
 import lombok.Getter;
 import lombok.Setter;
+
+import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Queue;
 
 @Getter
 @Setter
-public abstract class Responsible {
+public abstract class Responsible implements HomeComponent  {
 
     private Queue<Activity> activities;
+    private ResponsibleType responsibleType;
     private EntityStatus entityStatus = EntityStatus.FREE;
-    private Room room;
-    private String personName;
+    private Room room = new NullRoom();
 
-    protected Responsible(){
+    protected Responsible(ResponsibleType responsibleType){
+        this.responsibleType = responsibleType;
         activities = new LinkedList<>();
     }
 
-    public void handle(Activity activity){
+    public void handle(Activity activity) throws InterruptedException {
         if(isFree()){
-            activity.execute(this);
+            activity.execute();
         }
         else{
             activities.add(activity);
@@ -34,24 +42,32 @@ public abstract class Responsible {
         return entityStatus == EntityStatus.FREE;
     }
 
-    public void setStatus(EntityStatus entityStatus) {
-        this.entityStatus = entityStatus;
+
+    public void lock()  {
+        setEntityStatus(EntityStatus.BUSY);
     }
 
-    public void lock(){
-        this.entityStatus = EntityStatus.BUSY;
-    }
-
-    public void unlock(){
-        this.entityStatus = EntityStatus.FREE;
-        Activity peek = activities.peek();
-        if(peek != null) peek.execute(this);
+    public void unlock() throws InterruptedException {
+        setEntityStatus(EntityStatus.FREE);
+        update();
     }
 
     public void relocate(Room room) {
-
+        this.room.removeResponsible(this);
+        room.addResponsible(this);
     }
 
-    public void update(){};
+    public void update() throws InterruptedException {
+        if(isFree()) {
+            Activity peek = activities.poll();
+            if (peek != null && !peek.isExecuted()) peek.execute();
+        }
+    }
+
+    public abstract boolean isNull();
+
+    public String accept(SmartHomeVisitor visitor){
+        return null;
+    }
 
 }

@@ -1,8 +1,7 @@
 package cvut.omo.home_structure.home_builder;
 import cvut.omo.entity.person.FamilyRoleType;
-import cvut.omo.entity.EntityStatus;
 import cvut.omo.entity.pet.PetType;
-import cvut.omo.home_structure.RoomType;
+import cvut.omo.home_structure.room_builder.RoomName;
 
 public final class SmartHomeBuilderDirector {
 
@@ -15,16 +14,17 @@ public final class SmartHomeBuilderDirector {
                 .reset()
                 //Floors
                 .addFloor(1)
-                .addRoom( RoomType.BATHROOM)
-                .addRoom(RoomType.HALL)
-                .addRoom(RoomType.KITCHEN)
-                .addRoom(RoomType.GARAGE)
+                .addRoom(RoomName.BATHROOM)
+                .addRoom(RoomName.HALL)
+                .addRoom(RoomName.KITCHEN)
+                .addRoom(RoomName.GARAGE)
+                .addRoom(RoomName.VESTIBULE)
                 .and()
                 .addFloor(2)
-                .addRoom(RoomType.CHILDRENS_ROOM)
-                .addRoom(RoomType.BEDROOM)
-                .addRoom(RoomType.HALL)
-                .addRoom(RoomType.BATHROOM)
+                .addRoom(RoomName.CHILDRENS_ROOM)
+                .addRoom(RoomName.BEDROOM)
+                .addRoom(RoomName.HALL)
+                .addRoom(RoomName.BATHROOM)
                 .and()
                 //Persons
                 .addPerson("Lola", FamilyRoleType.MOTHER)
@@ -45,25 +45,26 @@ public final class SmartHomeBuilderDirector {
                 .reset()
                 //Floors
                 .addFloor(1)
-                .addRoom( RoomType.BATHROOM)
-                .addRoom(RoomType.HALL)
-                .addRoom(RoomType.KITCHEN)
-                .addRoom(RoomType.GARAGE)
+                .addRoom( RoomName.BATHROOM)
+                .addRoom(RoomName.HALL)
+                .addRoom(RoomName.VESTIBULE)
+                .addRoom(RoomName.KITCHEN)
+                .addRoom(RoomName.GARAGE)
                 .and()
                 .addFloor(2)
-                .addRoom(RoomType.CHILDRENS_ROOM)
-                .addRoom(RoomType.BEDROOM)
-                .addRoom(RoomType.HALL)
-                .addRoom(RoomType.BATHROOM)
-                .addRoom(RoomType.BATHROOM)
+                .addRoom(RoomName.CHILDRENS_ROOM)
+                .addRoom(RoomName.BEDROOM)
+                .addRoom(RoomName.HALL)
+                .addRoom(RoomName.BATHROOM)
+                .addRoom(RoomName.BATHROOM)
                 .and()
                 .addFloor(3)
-                .addRoom(RoomType.CHILDRENS_ROOM)
-                .addRoom(RoomType.BEDROOM)
-                .addRoom(RoomType.BEDROOM)
-                .addRoom(RoomType.HALL)
-                .addRoom(RoomType.BATHROOM)
-                .addRoom(RoomType.BATHROOM)
+                .addRoom(RoomName.CHILDRENS_ROOM)
+                .addRoom(RoomName.BEDROOM)
+                .addRoom(RoomName.BEDROOM)
+                .addRoom(RoomName.HALL)
+                .addRoom(RoomName.BATHROOM)
+                .addRoom(RoomName.BATHROOM)
                 .and()
                 //Persons
                 .addPerson("Lola", FamilyRoleType.MOTHER)

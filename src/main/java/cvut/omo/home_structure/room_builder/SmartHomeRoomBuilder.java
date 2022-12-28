@@ -1,11 +1,8 @@
 package cvut.omo.home_structure.room_builder;
 
 import cvut.omo.device.HomeDevice;
-import cvut.omo.device.factory.SmartHomeDeviceFactory;
 import cvut.omo.item.Item;
 import cvut.omo.home_structure.Floor;
-import cvut.omo.home_structure.Room;
-import cvut.omo.home_structure.RoomType;
 
 import java.util.List;
 
@@ -57,8 +54,8 @@ public final class SmartHomeRoomBuilder implements RoomBuilder {
     }
 
     @Override
-    public RoomBuilder setRoomType(RoomType roomType) {
-        room.setRoomType(roomType);
+    public RoomBuilder setRoomType(RoomName roomName) {
+        room.setRoomName(roomName);
         return this;
     }
 

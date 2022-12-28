@@ -2,17 +2,17 @@ package cvut.omo.entity.activity;
 
 
 import cvut.omo.entity.Responsible;
+import cvut.omo.event.Event;
 
 public class BaseActivity extends Activity {
 
-    public BaseActivity(ActivityType activityType) {
-        super(activityType);
+    public BaseActivity(Responsible res, Event event, ActivityType activityType) throws InterruptedException {
+        super(res, event, activityType);
     }
 
     @Override
-    public void execute(Responsible responsible) {
-        responsible.lock();
-        System.out.println("Executing base activity " + activityType.name());
-        responsible.unlock();
+    public void doWork(Responsible responsible){
+        System.out.println("Executing base activity " + activityType.name() + " by " + responsible.getResponsibleType() +
+                " on the floor "  + " in room ");
     }
 }

@@ -11,9 +11,10 @@ public class FileWriter {
         writeToFile(openFile("reports/", fileName), report);
     }
 
-    public static void generateNewHomeConfigReport(String fileName, String report) throws IOException {
+    public static void generateNewReport(String fileName, String report) throws IOException {
         writeToFile(openFile("reports/", fileName), report);
     }
+
 
     public static void generateNewDocumentation(String fileName, String text) throws IOException {
         writeToFile(openFile("documentation/", fileName), text);

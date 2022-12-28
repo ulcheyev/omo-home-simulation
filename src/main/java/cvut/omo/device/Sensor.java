@@ -16,7 +16,7 @@ public abstract class Sensor extends HomeAppliances {
         ConsumptionCollection.getInstance().put(this);
     }
 
-    public  void turnOn(){
+    public  void enable(){
         this.setCurrentConsumption(SourceType.ENERGY, Constants.SENSOR_ELECTRICITY_IDDLE_STATE_CONSUMPTION);
     };
 

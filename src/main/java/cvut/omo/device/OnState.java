@@ -6,7 +6,7 @@ public class OnState extends HomeDeviceState{
 
     public OnState(HomeAppliances homeAppliances){
         super(homeAppliances);
-        homeAppliances.turnOn();
+        homeAppliances.enable();
     }
 
     @Override

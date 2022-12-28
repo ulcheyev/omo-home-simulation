@@ -7,7 +7,6 @@ import cvut.omo.item.Car;
 import cvut.omo.item.PetToy;
 import cvut.omo.item.Ski;
 import cvut.omo.home_structure.Floor;
-import cvut.omo.home_structure.RoomType;
 
 
 public final class SmartHomeRoomBuilderDirector {
@@ -20,17 +19,26 @@ public final class SmartHomeRoomBuilderDirector {
     public void createBathRoom(RoomBuilder roomBuilder, Floor floor){
         roomBuilder
                 .reset()
-                .setRoomType(RoomType.BATHROOM)
+                .setRoomType(RoomName.BATHROOM)
                 .setWindow()
                 .setFloor(floor)
                 .setHomeDevice(homeDeviceFactory.createWashingMachine())
                 .setHomeDevice(homeDeviceFactory.createWaterLeakSensor());
     }
 
+    public void createVestibule(RoomBuilder roomBuilder, Floor floor){
+        roomBuilder
+                .reset()
+                .setRoomType(RoomName.VESTIBULE)
+                .setWindow()
+                .setFloor(floor)
+                .setHomeDevice(homeDeviceFactory.createFireSensor());
+    }
+
     public void createKitchen(RoomBuilder roomBuilder, Floor floor){
         roomBuilder
                 .reset()
-                .setRoomType(RoomType.KITCHEN)
+                .setRoomType(RoomName.KITCHEN)
                 .setWindow()
                 .setWindow()
                 .setFloor(floor)
@@ -44,7 +52,7 @@ public final class SmartHomeRoomBuilderDirector {
     public void createBedRoom(RoomBuilder roomBuilder, Floor floor){
         roomBuilder
                 .reset()
-                .setRoomType(RoomType.BEDROOM)
+                .setRoomType(RoomName.BEDROOM)
                 .setWindow()
                 .setFloor(floor)
                 .setHomeDevice(homeDeviceFactory.createFireSensor())
@@ -57,7 +65,7 @@ public final class SmartHomeRoomBuilderDirector {
     public void createGarage(RoomBuilder roomBuilder, Floor floor){
         roomBuilder
                 .reset()
-                .setRoomType(RoomType.GARAGE)
+                .setRoomType(RoomName.GARAGE)
                 .setWindow()
                 .setFloor(floor)
                 .setHomeDevice(homeDeviceFactory.createFireSensor())
@@ -69,7 +77,7 @@ public final class SmartHomeRoomBuilderDirector {
     public void createHall(RoomBuilder roomBuilder, Floor floor){
         roomBuilder
                 .reset()
-                .setRoomType(RoomType.HALL)
+                .setRoomType(RoomName.HALL)
                 .setWindow()
                 .setFloor(floor)
                 .setHomeDevice(homeDeviceFactory.createFireSensor())
@@ -80,7 +88,7 @@ public final class SmartHomeRoomBuilderDirector {
     public void createChildrensRoom(RoomBuilder roomBuilder, Floor floor){
         roomBuilder
                 .reset()
-                .setRoomType(RoomType.CHILDRENS_ROOM)
+                .setRoomType(RoomName.CHILDRENS_ROOM)
                 .setWindow()
                 .setFloor(floor)
                 .setHomeDevice(homeDeviceFactory.createFireSensor())
@@ -89,8 +97,8 @@ public final class SmartHomeRoomBuilderDirector {
                 .addItem(new PetToy());
     }
 
-    public void createRoom(RoomBuilder roomBuilder, RoomType roomType, Floor floor){
-        switch (roomType){
+    public void createRoom(RoomBuilder roomBuilder, RoomName roomName, Floor floor){
+        switch (roomName){
             case BATHROOM -> {
                 createBathRoom(roomBuilder, floor);
                 break;
@@ -113,6 +121,10 @@ public final class SmartHomeRoomBuilderDirector {
             }
             case GARAGE -> {
                 createGarage(roomBuilder, floor);
+                break;
+            }
+            case VESTIBULE -> {
+                createVestibule(roomBuilder, floor);
                 break;
             }
         }

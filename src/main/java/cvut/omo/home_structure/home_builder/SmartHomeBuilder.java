@@ -2,14 +2,12 @@ package cvut.omo.home_structure.home_builder;
 
 import cvut.omo.entity.person.FamilyRoleType;
 import cvut.omo.entity.person.Person;
-import cvut.omo.entity.EntityStatus;
 import cvut.omo.entity.pet.Pet;
 import cvut.omo.entity.pet.PetType;
 import cvut.omo.exceptions.FloorException;
 import cvut.omo.home_structure.Floor;
-import cvut.omo.home_structure.Home;
-import cvut.omo.home_structure.Room;
-import cvut.omo.home_structure.RoomType;
+import cvut.omo.home_structure.room_builder.Room;
+import cvut.omo.home_structure.room_builder.RoomName;
 import cvut.omo.home_structure.room_builder.RoomBuilder;
 import cvut.omo.home_structure.room_builder.SmartHomeRoomBuilder;
 import cvut.omo.home_structure.room_builder.SmartHomeRoomBuilderDirector;
@@ -30,13 +28,13 @@ public final class SmartHomeBuilder implements HomeBuilder{
     //TODO proverka, esli roli uzhe est. Napr 2 mamy 2 papy
     @Override
     public HomeBuilder addPerson(String name, FamilyRoleType familyRoleType) {
-       home.addPerson(new Person(name, familyRoleType));
+       home.addEntity(new Person(name, familyRoleType));
        return this;
     }
 
     @Override
     public HomeBuilder addPet(PetType petType) {
-        home.addPet(new Pet(petType));
+        home.addEntity(new Pet(petType));
         return this;
     }
 
@@ -73,8 +71,8 @@ public final class SmartHomeBuilder implements HomeBuilder{
             this.floor = floor;
         }
 
-        public FloorStub addRoom(RoomType roomType) {
-            SmartHomeBuilder.this.smartHomeRoomBuilderDirector.createRoom(defaultRoomBuilder, roomType, floor);
+        public FloorStub addRoom(RoomName roomName) {
+            SmartHomeBuilder.this.smartHomeRoomBuilderDirector.createRoom(defaultRoomBuilder, roomName, floor);
             return this;
         }
 

@@ -2,20 +2,19 @@ package cvut.omo.data_collections.visitor;
 
 import cvut.omo.app_utils.Constants;
 import cvut.omo.app_utils.FileWriter;
-import cvut.omo.app_utils.Randomizer;
+import cvut.omo.app_utils.Utils;
 import cvut.omo.device.HomeDevice;
 import cvut.omo.entity.person.Person;
 import cvut.omo.entity.pet.Pet;
 import cvut.omo.home_structure.Floor;
-import cvut.omo.home_structure.Home;
+import cvut.omo.home_structure.home_builder.Home;
 import cvut.omo.home_structure.HomeComponent;
-import cvut.omo.home_structure.Room;
+import cvut.omo.home_structure.room_builder.Room;
 
 import java.io.IOException;
 import java.util.Dictionary;
 import java.util.Hashtable;
 import java.util.Iterator;
-import java.util.List;
 
 
 public class HomeConfigurationReportVisitor implements SmartHomeVisitor{
@@ -29,7 +28,7 @@ public class HomeConfigurationReportVisitor implements SmartHomeVisitor{
             sb.append(homeComponent.accept(this));
         }
         sb.append(getComponentQuantity());
-        FileWriter.generateNewConsumptionReport("home_config_report" + Randomizer.getRandomInt(), sb.toString());
+        FileWriter.generateNewConsumptionReport("home_config_report" + Utils.getRandomInt(), sb.toString());
     }
 
     @Override
@@ -47,7 +46,7 @@ public class HomeConfigurationReportVisitor implements SmartHomeVisitor{
     public String visitRoom(Room room) {
         StringBuilder sb = new StringBuilder();
         registerComponentQuantity(room);
-        sb.append("---Room " +  room.getRoomType() + " with " + room.getWindows().size() + " windows and room contains: \n");
+        sb.append("---Room " +  room.getRoomName() + " with " + room.getWindows().size() + " windows and contains: \n");
         if(room.getHomeDevices().isEmpty()){
             sb.append("nothing\n");
         }else{
@@ -68,13 +67,13 @@ public class HomeConfigurationReportVisitor implements SmartHomeVisitor{
     @Override
     public String visitPerson(Person person) {
         registerComponentQuantity(person);
-        return "\n+++Person " + person.getName() + " lives in the home with a role " + person.getFamilyRoleType();
+        return "\n+++Person " + person.getName() + " lives in the home with a role " + person.getResponsibleType();
     }
 
     @Override
     public String visitPet(Pet pet) {
         registerComponentQuantity(pet);
-        return "\n***Pet lives in the house with a role "  + pet.getPetType();
+        return "\n***Pet lives in the house with a role "  + pet.getResponsibleType();
     }
 
     private void registerComponentQuantity(HomeComponent component){

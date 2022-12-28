@@ -1,0 +1,48 @@
+Event with type DEVICE_BROKEN by TV in  in BEDROOM on 3 floor. Solved by chain:
+1)FATHER did DEVICE_REPAIR in BEDROOM on 3 floor
+
+Event with type STORM. Solved by chain:
+1)CircuitBreaker did HOME_POWER_OFF located in HALL on the 1 floor 
+2)CircuitBreaker did HOME_POWER_OFF located in HALL on the 2 floor 
+3)CircuitBreaker did HOME_POWER_OFF located in HALL on the 3 floor 
+
+Event with type BULB_BURNED_OUT. Solved by chain:
+1)FATHER did CHANGE_BULB in BEDROOM on 3 floor
+
+Event with type DEVICE_BROKEN by Fridge in  in KITCHEN on 1 floor. Solved by chain:
+1)FATHER did DEVICE_REPAIR in KITCHEN on 1 floor
+
+Event with type BULB_BURNED_OUT. Solved by chain:
+1)GRANDFATHER did CHANGE_BULB in HALL on 2 floor
+
+Event with type BULB_BURNED_OUT. Solved by chain:
+1)FATHER did CHANGE_BULB in BATHROOM on 3 floor
+
+Event with type DEVICE_BROKEN by FireSensor in  in VESTIBULE on 1 floor. Solved by chain:
+1)FATHER did DEVICE_REPAIR in VESTIBULE on 1 floor
+
+Event with type PET_NEED_PET by MINI_PIG in  in VESTIBULE on 1 floor. Solved by chain:
+1)FATHER did PET_A_PET in VESTIBULE on 1 floor
+
+Event with type DEVICE_BROKEN by FireSensor in  in BEDROOM on 3 floor. Solved by chain:
+1)FATHER did DEVICE_REPAIR in BEDROOM on 3 floor
+
+Event with type DEVICE_BROKEN by WaterLeakSensor in  in BATHROOM on 2 floor. Solved by chain:
+1)FATHER did DEVICE_REPAIR in BATHROOM on 2 floor
+
+Event with type DEVICE_BROKEN by WaterLeakSensor in  in BATHROOM on 2 floor. Solved by chain:
+1)FATHER did DEVICE_REPAIR in BATHROOM on 2 floor
+
+Event with type FIRE_ALARM_WENT_OFF. Solved by chain:
+1)FATHER did DEVICE_FIRE_SENSOR_OFF in VESTIBULE on 1 floor
+2)FATHER did CALL_THE_RESCUE_SERVICE located in VESTIBULE on the 1 floor 
+
+Event with type NEED_EAT by SON in  in KITCHEN on 1 floor. Solved by chain:
+1)SON did DEVICE_FRIDGE_ON in KITCHEN on 1 floor
+
+Event with type NEED_WATCH_TV by FATHER in  in VESTIBULE on 1 floor. Solved by chain:
+1)FATHER did DEVICE_TV_ON in VESTIBULE on 1 floor
+
+Event with type BULB_BURNED_OUT. Solved by chain:
+1)FATHER did CHANGE_BULB in BATHROOM on 2 floor
+

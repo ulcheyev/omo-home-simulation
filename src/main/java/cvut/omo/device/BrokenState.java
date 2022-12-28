@@ -19,7 +19,7 @@ public class BrokenState extends HomeDeviceState {
 
     @Override
     public void repair(Person person, HomeAppliances homeAppliances) {
-        if(person.getFamilyRoleType() == FamilyRoleType.SON || person.getFamilyRoleType() == FamilyRoleType.FATHER){
+        if(person.getResponsibleType() == FamilyRoleType.SON || person.getResponsibleType() == FamilyRoleType.FATHER){
             person.setEntityStatus(EntityStatus.BUSY);
         }
         homeAppliances.setHomeDeviceState(new OffState(homeAppliances));

@@ -31,7 +31,7 @@ public class ConsumptionReportIterator implements Iterator {
             List<ConsumptionData> dataAbout = data.getDataAbout(curr);
 
             res.append(curr.getClass().getSimpleName() + //NAME OF DEVICE
-                    " in " + curr.getRoom().getRoomType() + // NAME OF ROOM
+                    " in " + curr.getRoom().getRoomName() + // NAME OF ROOM
                     " on the " + curr.getRoom().getFloor().getNumberOfFloor() + " floor" + //NUMBER OF FLOOR
                     " has consumed ");
 
@@ -63,7 +63,7 @@ public class ConsumptionReportIterator implements Iterator {
         res.append(sourceType.name()).append(": ")
                 .append(sumStub)
                 .append(sourceType.getUNIT_OF_MEASUREMENT()).append(" (SUM = ").append(sourceType.getPRICE_FOR_UNIT() * sumStub)
-                .append(currency).append(")\n");
+                .append(currency).append(") ");
     }
 
     private void addInfoAboutConsumptionFromAllTime(StringBuilder res){

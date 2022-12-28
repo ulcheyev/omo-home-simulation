@@ -15,7 +15,7 @@ public class Oven extends HomeAppliances{
     }
 
     @Override
-    public void turnOn() {
+    public void enable() {
         this.setCurrentConsumption(SourceType.ENERGY, Constants.OVEN_ELECTRICITY_IDDLE_STATE_CONSUMPTION);
     }
 
@@ -29,6 +29,4 @@ public class Oven extends HomeAppliances{
         this.setCurrentConsumption(SourceType.ENERGY, Constants.OVEN_ELECTRICITY_RUN_STATE_CONSUMPTION);
     }
 
-//     @Override
-//    public void accept() {}
 }

@@ -5,7 +5,7 @@ import cvut.omo.device.HomeDevice;
 import cvut.omo.entity.person.Person;
 import cvut.omo.entity.pet.Pet;
 import cvut.omo.home_structure.Floor;
-import cvut.omo.home_structure.Room;
+import cvut.omo.home_structure.room_builder.Room;
 
 public interface SmartHomeVisitor {
 

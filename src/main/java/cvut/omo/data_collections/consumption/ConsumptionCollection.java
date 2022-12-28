@@ -2,7 +2,7 @@ package cvut.omo.data_collections.consumption;
 
 import cvut.omo.app_utils.Constants;
 import cvut.omo.app_utils.FileWriter;
-import cvut.omo.app_utils.Randomizer;
+import cvut.omo.app_utils.Utils;
 import cvut.omo.device.HomeDevice;
 import cvut.omo.device.SourceType;
 import lombok.Getter;
@@ -68,10 +68,10 @@ public class ConsumptionCollection implements IConsumptionCollection {
         while (iterator.hasNext()){
             String next = iterator.next();
             if(!next.isBlank()) {
-                res.append(next);
+                res.append(next).append("\n");
             }
         }
-        FileWriter.generateNewConsumptionReport("consumption_report" + Randomizer.getRandomInt(), res.toString());
+        FileWriter.generateNewConsumptionReport("consumption_report" + Utils.getRandomInt(), res.toString());
     }
 
 
