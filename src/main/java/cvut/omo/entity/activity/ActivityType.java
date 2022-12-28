@@ -1,18 +1,13 @@
 package cvut.omo.entity.activity;
-
 import cvut.omo.device.*;
 import cvut.omo.entity.ResponsibleType;
 import cvut.omo.entity.person.FamilyRoleType;
-import cvut.omo.entity.pet.Pet;
 import cvut.omo.entity.pet.PetType;
 import static cvut.omo.entity.person.FamilyRoleType.*;
 import static java.util.List.of;
-
 import cvut.omo.home_structure.room_builder.RoomName;
 import cvut.omo.item.Usable;
 import lombok.Getter;
-import org.checkerframework.checker.units.qual.A;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -76,6 +71,10 @@ public enum ActivityType {
     OPEN_THE_DOR(of(RoomName.VESTIBULE), null),
     MAKE_TEA(of(RoomName.KITCHEN),  Fridge.class),
     PERSON_EAT(of(RoomName.KITCHEN),  null),
+    PERSON_CRY(of(RoomName.BATHROOM), null, MOTHER, GRANDMOTHER),
+    CALL_GRANDPA_FOR_HELP(of(RoomName.BEDROOM, RoomName.CHILDRENS_ROOM), null, DeviceActivity.class, GRANDFATHER),
+    TIDY_UP(of(RoomName.COMMON), null, BaseActivity.class, MOTHER, DAUGHTER),
+    DECORATE_A_CHRISTMAS_TREE(of(RoomName.HALL), null, BaseActivity.class, MOTHER, DAUGHTER, SON),
 
     //PETS
     PET_SAY(of(RoomName.STUB), BaseActivity.class, null, PetType.class.getEnumConstants()),

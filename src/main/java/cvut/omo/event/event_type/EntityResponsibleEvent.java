@@ -5,6 +5,7 @@ import static cvut.omo.entity.activity.ActivityType.*;
 import cvut.omo.entity.activity.ActivityType;
 import cvut.omo.entity.person.Person;
 import cvut.omo.entity.pet.Pet;
+import cvut.omo.home_structure.room_builder.RoomName;
 import lombok.Getter;
 
 import java.util.Arrays;
@@ -18,6 +19,7 @@ public enum EntityResponsibleEvent implements EventType {
     NEED_COOKING(Person.class, DEVICE_FRIDGE_RUN, DEVICE_OVEN_ON, DEVICE_FRIDGE_PAUSE, DEVICE_OVEN_PAUSE),
     NEED_PLAY_COMPUTER(Person.class, DEVICE_COMPUTER_RUN, DEVICE_COMPUTER_PAUSE),
     NEED_WASH_CLOTHES(Person.class,  DEVICE_WASHING_MACHINE_RUN, DEVICE_WASHING_MACHINE_PAUSE),
+    PERSON_WANTS_TO_PLAY_TETRIS(Person.class, DEVICE_COMPUTER_ON, CALL_GRANDPA_FOR_HELP),
 
 
     //PET

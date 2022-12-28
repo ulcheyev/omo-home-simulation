@@ -12,8 +12,14 @@ import java.util.Random;
 
 public class Utils {
 
+
     private static final Random PRNG = new Random();
 
+    /**
+     *
+     * @param to
+     * @return
+     */
     public static int getRandomInt(int to){
         return PRNG.nextInt(to);
     }

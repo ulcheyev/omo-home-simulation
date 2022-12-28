@@ -2,6 +2,10 @@ package cvut.omo.app_utils;
 
 import java.util.List;
 
+/**
+ *
+ */
+
 public class Constants {
 
     public final static int DAY_IN_HOUR = 24;
