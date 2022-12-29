@@ -11,30 +11,49 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ *
+ */
 public class EventCollection {
 
     public static final EventCollection INSTANCE = new EventCollection();
     private EventCollection(){};
     private static List<Event> events = new ArrayList<>();
 
+    /**
+     * @param event
+     */
     public static void addEvent(Event event){
         events.add(event);
         EventManager.listenTo(event);
     }
 
+    /**
+     * @param event
+     */
     public static void removeEvent(Event event){
         events.remove(event);
     }
 
+    /**
+     * @param idx
+     * @return
+     */
     public static Event at(int idx){
         return events.get(idx);
     }
 
+    /**
+     * @return
+     */
     public static int size(){
         return events.size();
     }
 
 
+    /**
+     * @return
+     */
     public static boolean allSolved() {
         for(Event event: events){
             if(!event.checkSolving()){
@@ -44,6 +63,9 @@ public class EventCollection {
         return true;
     }
 
+    /**
+     * @param event
+     */
     public static void swapTwoEndActivities(Event event){
         for(Event event1: events){
             if(event.equals(event1)){
@@ -54,6 +76,9 @@ public class EventCollection {
         }
     }
 
+    /**
+     * @throws IOException
+     */
     public static void generateReport() throws IOException {
         StringBuilder sb = new StringBuilder();
         EventCollectionReportIterator iterator = createReportIterator();
@@ -66,6 +91,9 @@ public class EventCollection {
 
     }
 
+    /**
+     * @return
+     */
     public static EventCollectionReportIterator createReportIterator(){
         return new EventCollectionReportIterator();
     }

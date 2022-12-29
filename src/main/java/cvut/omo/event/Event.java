@@ -22,6 +22,9 @@ import java.util.Collections;
 import java.util.List;
 
 
+/**
+ *
+ */
 @Getter
 @Setter
 public class Event {
@@ -49,11 +52,17 @@ public class Event {
         EventCollection.addEvent(this);
     }
 
+    /**
+     * @return
+     */
     public boolean isSolved(){
         return isSolved;
     }
     private Event(){}
 
+    /**
+     * @throws InterruptedException
+     */
     public void solve() throws InterruptedException {
 
         if (eventType instanceof EntityResponsibleEvent) {
@@ -72,10 +81,16 @@ public class Event {
         }
     }
 
+    /**
+     * @param activity
+     */
     public void addActivity(Activity activity){
         chainToSolve.add(activity);
     }
 
+    /**
+     * @return
+     */
     //TODO
     public boolean checkSolving(){
        List<ActivityType> activityTypes = new ArrayList<>();
@@ -91,12 +106,18 @@ public class Event {
        return true;
     }
 
+    /**
+     * @return
+     */
     public List<Activity> getReversedChainToSolve(){
         List<Activity> res = chainToSolve;
         Collections.reverse(res);
         return res;
     }
 
+    /**
+     * @return
+     */
     @Override
     public String toString() {
 

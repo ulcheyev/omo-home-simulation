@@ -1,5 +1,8 @@
 package cvut.omo.exceptions;
 
+/**
+ *
+ */
 public class FloorException extends RuntimeException{
 
     public FloorException(String str) {

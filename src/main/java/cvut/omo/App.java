@@ -9,9 +9,17 @@ import cvut.omo.home_structure.home_builder.SmartHomeBuilderDirector;
 
 import java.io.IOException;
 
+/**
+ *
+ */
 public class App {
 
 
+    /**
+     * @param args
+     * @throws IOException
+     * @throws InterruptedException
+     */
     public static void main(String[] args) throws IOException, InterruptedException {
 
 

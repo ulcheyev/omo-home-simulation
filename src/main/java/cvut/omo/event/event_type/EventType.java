@@ -5,6 +5,9 @@ import cvut.omo.entity.activity.ActivityType;
 
 import java.util.List;
 
+/**
+ *
+ */
 public interface EventType {
     List<ActivityType> getChainToSolve();
 }

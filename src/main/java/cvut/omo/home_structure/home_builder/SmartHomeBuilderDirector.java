@@ -3,11 +3,17 @@ import cvut.omo.entity.person.FamilyRoleType;
 import cvut.omo.entity.pet.PetType;
 import cvut.omo.home_structure.room_builder.RoomName;
 
+/**
+ *
+ */
 public final class SmartHomeBuilderDirector {
 
     public final static SmartHomeBuilderDirector INSTANCE = new SmartHomeBuilderDirector();
     private SmartHomeBuilderDirector(){}
 
+    /**
+     * @param homeBuilder
+     */
     public static void createSmallHomeConfiguration(HomeBuilder homeBuilder){
 
         homeBuilder
@@ -39,6 +45,9 @@ public final class SmartHomeBuilderDirector {
                 .addPet(PetType.MINI_PIG);
     }
 
+    /**
+     * @param homeBuilder
+     */
     public static void createLargeHomeConfiguration(HomeBuilder homeBuilder){
 
         homeBuilder

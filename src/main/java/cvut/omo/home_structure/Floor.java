@@ -10,6 +10,9 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
+/**
+ *
+ */
 @Getter
 @Setter
 @NoArgsConstructor
@@ -23,20 +26,33 @@ public class Floor implements HomeComponent {
         this.numberOfFloor = numberOfFloor;
     }
 
+    /**
+     * @param room
+     */
     public void addRoom(Room room){
         rooms.add(room);
     }
 
+    /**
+     * @param visitor
+     * @return
+     */
     @Override
     public String accept(SmartHomeVisitor visitor) {
         return visitor.visitFloor(this);
     }
 
+    /**
+     * @return
+     */
     @Override
     public boolean isNull() {
         return false;
     }
 
+    /**
+     * @throws InterruptedException
+     */
     public void update() throws InterruptedException {
         for (Room room : rooms) {
             room.update();

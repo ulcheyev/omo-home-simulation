@@ -10,6 +10,9 @@ import org.reflections.Reflections;
 import java.util.List;
 import java.util.Set;
 
+/**
+ *
+ */
 public enum DeviceResponsibleEvent implements EventType {
 
     /*
@@ -42,6 +45,9 @@ public enum DeviceResponsibleEvent implements EventType {
 
     private final List<ActivityType> chainToSolve;
 
+    /**
+     * @return
+     */
     @Override
     public List<ActivityType> getChainToSolve() {
         return this.chainToSolve;

@@ -3,6 +3,9 @@ package cvut.omo.entity.person;
 
 import cvut.omo.entity.ResponsibleType;
 
+/**
+ *
+ */
 public enum FamilyRoleType implements ResponsibleType{
     FATHER,
     MOTHER,
@@ -11,6 +14,9 @@ public enum FamilyRoleType implements ResponsibleType{
     GRANDMOTHER,
     GRANDFATHER;
 
+    /**
+     * @return
+     */
     @Override
     public boolean isNull() {
         return false;

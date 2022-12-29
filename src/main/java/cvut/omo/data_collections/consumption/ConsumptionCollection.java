@@ -10,6 +10,9 @@ import lombok.Getter;
 import java.io.IOException;
 import java.util.*;
 
+/**
+ *
+ */
 @Getter
 public class ConsumptionCollection implements IConsumptionCollection {
 
@@ -19,6 +22,9 @@ public class ConsumptionCollection implements IConsumptionCollection {
 
     private ConsumptionCollection(){}
 
+    /**
+     * @return
+     */
     public static ConsumptionCollection getInstance(){
         if(collection == null){
             return new ConsumptionCollection();
@@ -26,6 +32,9 @@ public class ConsumptionCollection implements IConsumptionCollection {
         return collection;
     }
 
+    /**
+     * @param homeDevice
+     */
     @Override
     public void put(HomeDevice homeDevice) {
         if(!data.containsKey(homeDevice)) {
@@ -39,6 +48,9 @@ public class ConsumptionCollection implements IConsumptionCollection {
     }
 
 
+    /**
+     * @param homeDevice
+     */
     @Override
     public void update(HomeDevice homeDevice) {
         for(ConsumptionData consumptionData: data.get(homeDevice)){
@@ -46,20 +58,34 @@ public class ConsumptionCollection implements IConsumptionCollection {
         }
     }
 
+    /**
+     * @param idx
+     * @return
+     */
     @Override
     public HomeDevice getAt(int idx){
         return (HomeDevice) data.keySet().toArray()[idx];
     }
 
+    /**
+     * @param homeDevice
+     * @return
+     */
     @Override
     public List<ConsumptionData> getDataAbout(HomeDevice homeDevice){
         return data.get(homeDevice);
     }
 
+    /**
+     * @return
+     */
     @Override
     public int getSize() {return size;}
 
 
+    /**
+     * @throws IOException
+     */
     @Override
     public void generateReport() throws IOException {
         StringBuilder res = new StringBuilder();
@@ -75,6 +101,9 @@ public class ConsumptionCollection implements IConsumptionCollection {
     }
 
 
+    /**
+     * @return
+     */
     public ConsumptionReportIterator createConsumptionReportIterator() {
         return new ConsumptionReportIterator();
     }

@@ -11,6 +11,9 @@ import lombok.Getter;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ *
+ */
 public enum EntityResponsibleEvent implements EventType {
 
     //PERSON

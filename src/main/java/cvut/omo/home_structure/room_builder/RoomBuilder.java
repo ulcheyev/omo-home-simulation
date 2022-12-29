@@ -7,6 +7,9 @@ import cvut.omo.home_structure.Floor;
 
 import java.util.List;
 
+/**
+ *
+ */
 public interface RoomBuilder {
     RoomBuilder reset();
     RoomBuilder setWindow();

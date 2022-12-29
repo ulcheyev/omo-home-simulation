@@ -3,7 +3,7 @@ package cvut.omo.app_utils;
 import java.util.List;
 
 /**
- *
+ *A class of constant values for calculating resource consumption and generating reports.
  */
 
 public class Constants {

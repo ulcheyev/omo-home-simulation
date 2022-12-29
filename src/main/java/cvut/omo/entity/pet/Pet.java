@@ -11,6 +11,9 @@ import lombok.Setter;
 
 import java.util.List;
 
+/**
+ *
+ */
 @Getter
 @Setter
 public class Pet extends Responsible implements HomeComponent {
@@ -21,11 +24,18 @@ public class Pet extends Responsible implements HomeComponent {
         super(petType);
     }
 
+    /**
+     * @param visitor
+     * @return
+     */
     @Override
     public String accept(SmartHomeVisitor visitor) {
         return visitor.visitPet(this);
     }
 
+    /**
+     * @return
+     */
     @Override
     public boolean isNull() {
         return false;

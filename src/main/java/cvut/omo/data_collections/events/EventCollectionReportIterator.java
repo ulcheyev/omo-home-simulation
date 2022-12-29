@@ -6,10 +6,16 @@ import cvut.omo.event.Event;
 
 import java.util.List;
 
+/**
+ *
+ */
 public class EventCollectionReportIterator implements Iterator {
 
     private static int currIdx = 0;
 
+    /**
+     * @return
+     */
     @Override
     public Object next() {
         StringBuilder sb = new StringBuilder();
@@ -35,6 +41,9 @@ public class EventCollectionReportIterator implements Iterator {
 
     }
 
+    /**
+     * @return
+     */
     @Override
     public boolean hasNext() {
         return currIdx != EventCollection.size();

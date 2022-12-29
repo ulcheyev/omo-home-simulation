@@ -16,6 +16,9 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
+/**
+ *
+ */
 @Getter
 @Setter
 public abstract class Responsible implements HomeComponent  {
@@ -30,6 +33,10 @@ public abstract class Responsible implements HomeComponent  {
         activities = new LinkedList<>();
     }
 
+    /**
+     * @param activity
+     * @throws InterruptedException
+     */
     public void handle(Activity activity) throws InterruptedException {
         if(isFree()){
             activity.execute();
@@ -39,25 +46,41 @@ public abstract class Responsible implements HomeComponent  {
         }
     }
 
+    /**
+     * @return
+     */
     public boolean isFree(){
         return entityStatus == EntityStatus.FREE;
     }
 
 
+    /**
+     *
+     */
     public void lock()  {
         setEntityStatus(EntityStatus.BUSY);
     }
 
+    /**
+     *
+     */
     public void unlock() {
         setEntityStatus(EntityStatus.FREE);
         update();
     }
 
+    /**
+     * @param event
+     * @param room
+     */
     public void relocate(Event event, Room room) {
         this.room.removeResponsible(this);
         room.addResponsible(this);
     }
 
+    /**
+     *
+     */
     public void update() {
         if(isFree()) {
             Activity peek = activities.poll();
@@ -67,8 +90,15 @@ public abstract class Responsible implements HomeComponent  {
         }
     }
 
+    /**
+     * @return
+     */
     public abstract boolean isNull();
 
+    /**
+     * @param visitor
+     * @return
+     */
     public String accept(SmartHomeVisitor visitor){
         return null;
     }

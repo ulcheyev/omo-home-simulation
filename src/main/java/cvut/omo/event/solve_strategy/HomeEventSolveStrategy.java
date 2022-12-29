@@ -17,12 +17,19 @@ import static cvut.omo.entity.activity.ActivityFactory.*;
 
 import java.util.List;
 
+/**
+ *
+ */
 public class HomeEventSolveStrategy extends SolveStrategy {
 
     private EventType eventType;
     private Room room;
     private Event event;
 
+    /**
+     * @param event
+     * @throws InterruptedException
+     */
     @Override
     public void solve(Event event) throws InterruptedException {
 

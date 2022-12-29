@@ -11,6 +11,9 @@ import java.util.Arrays;
 import java.util.List;
 import static cvut.omo.home_structure.room_builder.RoomName.*;
 
+/**
+ *
+ */
 public enum RoomType {
 
     CHILL(BEDROOM, CHILDRENS_ROOM),
@@ -24,6 +27,9 @@ public enum RoomType {
     @Getter
     private final List<RoomName> rooms = new ArrayList<>();
 
+    /**
+     * @return
+     */
     public static List<RoomName> getAll(){
         List<RoomName> res = new ArrayList<>();
         res.addAll(CHILL.rooms);

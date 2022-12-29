@@ -4,6 +4,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ *
+ */
 public class FireSensor extends Sensor  {
 
     List<EventListener> listenerList = new ArrayList<>();
@@ -11,16 +14,25 @@ public class FireSensor extends Sensor  {
 
     public FireSensor(double lifeTime) {super(lifeTime);}
 
+    /**
+     * @param listener
+     */
     @Override
     public void addListener(EventListener listener) {
         listenerList.add(listener);
     }
 
+    /**
+     * @param listener
+     */
     @Override
     public void removeListener(EventListener listener) {
         listenerList.remove(listener);
     }
 
+    /**
+     * @throws IOException
+     */
     @Override
     public void alert() throws IOException {
         for (EventListener listener :listenerList){

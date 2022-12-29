@@ -12,6 +12,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ *
+ */
 public enum ActivityType {
 
     /*
@@ -166,11 +169,17 @@ public enum ActivityType {
     private List<RoomName> roomNames;
 
 
+    /**
+     * @return
+     */
     @Override
     public String toString() {
         return "";
     }
 
+    /**
+     *
+     */
     public enum Device implements ResponsibleType{
         CIRCUIT_BREAKER(CircuitBreaker.class);
         Device(Class<? extends HomeDevice> clazz) {

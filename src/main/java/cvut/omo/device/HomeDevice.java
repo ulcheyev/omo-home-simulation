@@ -9,6 +9,10 @@ import cvut.omo.item.Usable;
 
 import java.util.List;
 import java.util.Set;
+
+/**
+ *
+ */
 public interface HomeDevice extends HomeComponent, Usable {
 
      void connect();

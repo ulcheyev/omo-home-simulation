@@ -5,6 +5,9 @@ import cvut.omo.device.HomeAppliances;
 import java.io.IOException;
 import java.util.Random;
 
+/**
+ *
+ */
 public class Documentation {
 
     private HomeAppliances homeAppliances;
@@ -14,10 +17,16 @@ public class Documentation {
     protected String nameOfDocumentation;
 
 
+    /**
+     * @param homeAppliances
+     */
     public Documentation(HomeAppliances homeAppliances){
         this.homeAppliances = homeAppliances;
     }
 
+    /**
+     * @throws IOException
+     */
     public void generateDocumentation() throws IOException {
         name_device = homeAppliances.getClass().getSimpleName();
         level_of_damage = homeAppliances.getBrokennessLevel();

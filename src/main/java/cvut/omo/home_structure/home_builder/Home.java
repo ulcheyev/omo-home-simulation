@@ -24,6 +24,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ *
+ */
 @Getter
 @Setter
 public class Home {
@@ -43,6 +46,9 @@ public class Home {
         pets = new ArrayList<>();
     }
 
+    /**
+     * @param floor
+     */
     public void addFloor(Floor floor){floors.add(floor);}
     public <T extends Responsible> void  addEntity( T obj ){
         int idxForFloor = Utils.getRandomInt(floors.size());
@@ -50,6 +56,9 @@ public class Home {
         floors.get(idxForFloor).getRooms().get(idxForRoom).addResponsible(obj);
     }
 
+    /**
+     * @return
+     */
     public List<HomeDevice> getHomeDevices(){
         List<HomeDevice> res = new ArrayList<>();
         floors.forEach(floor -> floor.getRooms()
@@ -57,18 +66,28 @@ public class Home {
         return res;
     }
 
+    /**
+     *
+     */
     public void connectAllDevices(){
         for(HomeDevice hd: getHomeDevices()){
             hd.connect();
         }
     }
 
+    /**
+     *
+     */
     public void disconectAllDevices(){
         for(HomeDevice hd: getHomeDevices()){
             hd.disconnect();
         }
     }
 
+    /**
+     * @param clazz
+     * @return
+     */
     public List<HomeAppliances> getHomeAppliancesByClass(Class<? extends Usable> clazz){
         List<HomeDevice> hds = getHomeDevices();
         List<HomeAppliances> res = new ArrayList<>();
@@ -80,6 +99,9 @@ public class Home {
         return res;
     }
 
+    /**
+     * @return
+     */
     public List<Responsible> getAllEntityResponsibles(){
         List<Responsible> responsibles = new ArrayList<>();
         for(Floor floor: floors){
@@ -90,6 +112,9 @@ public class Home {
         return responsibles;
     }
 
+    /**
+     * @return
+     */
     /* ROOM -> PERSONS -> PETS*/
     public List<HomeComponent> getComponentsForReport(){
         List<HomeComponent> homeComponents = new ArrayList<>();
@@ -99,6 +124,9 @@ public class Home {
     }
 
 
+    /**
+     * @return
+     */
     public List<Room> getAllRooms(){
         List<Room> rooms = new ArrayList<>();
         for(Floor floor: floors){
@@ -107,6 +135,10 @@ public class Home {
         return rooms;
     }
 
+    /**
+     * @param role
+     * @return
+     */
     public Responsible searchResponsibleByType(ResponsibleType role) {
         for(Floor floor: floors) {
             for (Room room : floor.getRooms()) {
@@ -119,7 +151,9 @@ public class Home {
     }
 
 
-
+    /**
+     * @return
+     */
     //TODO
     public List<Pet> getPets(){
         if(pets.size() == 0){
@@ -133,6 +167,9 @@ public class Home {
     }
 
 
+    /**
+     * @return
+     */
     public List<Person> getPersons(){
         if(persons.size() == 0){
             for(Floor floor: floors){
@@ -145,6 +182,10 @@ public class Home {
     }
 
 
+    /**
+     * @param type
+     * @return
+     */
     public Room searchRoomByType(RoomName type) {
         Room res = new NullRoom();
         for (Floor floor : floors) {
@@ -157,6 +198,9 @@ public class Home {
         return res;
     }
 
+    /**
+     * @throws InterruptedException
+     */
     public void update() throws InterruptedException {
         Thread thread = new Thread(
                 () -> {

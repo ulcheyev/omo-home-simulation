@@ -13,8 +13,14 @@ import cvut.omo.home_structure.room_builder.RoomName;
 import static cvut.omo.app_utils.Utils.getRandomInt;
 import static cvut.omo.app_utils.Utils.getRandomObjFromList;
 
+/**
+ *
+ */
 public class EventGenerator {
 
+    /**
+     *
+     */
     public static void generateRandomPersonEvent(){
         EntityResponsibleEvent[] values = EntityResponsibleEvent.values();
         EntityResponsibleEvent value = values[getRandomInt(values.length)];
@@ -30,6 +36,9 @@ public class EventGenerator {
         event.setRoom(responsible.getRoom());
     }
 
+    /**
+     *
+     */
     public static void generateRandomHomeEvent(){
         HomeEvent[] values = HomeEvent.values();
         HomeEvent value = values[Utils.getRandomInt(values.length)];
@@ -56,6 +65,9 @@ public class EventGenerator {
         }
     }
 
+    /**
+     *
+     */
     public static void generateRandomDeviceEvent(){
 
         DeviceResponsibleEvent[] values = DeviceResponsibleEvent.values();
@@ -72,6 +84,9 @@ public class EventGenerator {
         event.setRoom(room);
     }
 
+    /**
+     * @param numberOfEvents
+     */
     public static void generateRandomEvents(int numberOfEvents){
 
         int localNum = numberOfEvents;

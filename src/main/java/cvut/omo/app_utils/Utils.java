@@ -10,6 +10,10 @@ import cvut.omo.home_structure.room_builder.Room;
 import java.util.List;
 import java.util.Random;
 
+
+/**
+ *
+ */
 public class Utils {
 
 
@@ -24,20 +28,36 @@ public class Utils {
         return PRNG.nextInt(to);
     }
 
+
+    /**
+     * @return
+     */
     public static int getRandomInt(){
         return PRNG.nextInt();
     }
 
+    /**
+     * @return
+     */
     public static BrokennessLevel getRandomBrokennessLevel()  {
         BrokennessLevel[] brokennessLevels = BrokennessLevel.values();
         return brokennessLevels[getRandomInt(brokennessLevels.length)];
     }
 
+    /**
+     * @param probabilityOfYes
+     * @return
+     */
     public static boolean yesOrNo(float probabilityOfYes) {
         return PRNG.nextInt()%100 < (probabilityOfYes * 100);
     }
 
 
+    /**
+     * @param objs
+     * @param <T>
+     * @return
+     */
     public static <T> T getRandomObjFromList(List<T> objs) {
         return objs.get(getRandomInt(objs.size()));
     }

@@ -21,6 +21,9 @@ import java.util.*;
 import static cvut.omo.app_utils.Constants.*;
 
 
+/**
+ *
+ */
 @Getter
 public abstract class HomeAppliances extends Responsible implements HomeDevice{
 
@@ -37,6 +40,9 @@ public abstract class HomeAppliances extends Responsible implements HomeDevice{
 
     protected boolean isEnabled;
 
+    /**
+     * @param lifeTime
+     */
     public HomeAppliances(double lifeTime){
         super(new NullResponsibleType());
         currentConsumption = new Hashtable<>();
@@ -47,40 +53,82 @@ public abstract class HomeAppliances extends Responsible implements HomeDevice{
         identify();
     }
 
+    /**
+     *
+     */
     //TODO
     //API METHODS
     public void connect(){
         homeDeviceState.connect(this);
     }
+
+    /**
+     *
+     */
     public void disconnect(){
         setCurrentConsumption(SourceType.ENERGY, DEVICE_DISCONNECTED_STATE);
         homeDeviceState = new DisconnectedState(this);
     }
+
+    /**
+     *
+     */
     public void clickOn(){homeDeviceState.switchOn(this); update();};
+
+    /**
+     *
+     */
     public void clickOff(){homeDeviceState.switchOff(this); update();}
+
+    /**
+     *
+     */
     public void clickPause(){homeDeviceState.pause(this); update();};
+
+    /**
+     * @param person
+     */
     public void clickStart(Person person){
         this.persons.add(person);
         homeDeviceState.use(person, this);
         update();
     };
+
+    /**
+     * @param person
+     */
     public void repair(Person person){
         homeDeviceState.repair(person, this);
         update();
     };
+
+    /**
+     *
+     */
     public void breakDevice(){
         homeDeviceState._break(this);
         update();
     };
 
+    /**
+     * @param sourceType
+     * @param currentConsumption
+     */
     public void setCurrentConsumption(SourceType sourceType, double currentConsumption){
         this.currentConsumption.put(sourceType, currentConsumption);
     }
 
+    /**
+     * @param sourceType
+     * @return
+     */
     public double getCurrentConsumption(SourceType sourceType){
         return currentConsumption.get(sourceType);
     }
 
+    /**
+     *
+     */
     //TODO update working hours and check life time
     public void update(){
         super.update();
@@ -88,6 +136,9 @@ public abstract class HomeAppliances extends Responsible implements HomeDevice{
         ConsumptionCollection.getInstance().update(this);
     }
 
+    /**
+     * @return
+     */
     public Documentation getDocumentation(){
         if (homeDeviceState instanceof BrokenState && this.documentation == null){
             try {
@@ -101,10 +152,16 @@ public abstract class HomeAppliances extends Responsible implements HomeDevice{
         return documentation;
     }
 
+    /**
+     * @return
+     */
     public boolean isNotConsume(){
         return currentConsumption.get(SourceType.NOT_CONSUME) != null;
     }
 
+    /**
+     * @return
+     */
     public Set<SourceType> getSourceTypes(){
         Set<SourceType> sourceTypes = new HashSet<>();
         for (Iterator<SourceType> it = currentConsumption.keys().asIterator(); it.hasNext(); ) {
@@ -114,6 +171,10 @@ public abstract class HomeAppliances extends Responsible implements HomeDevice{
         return sourceTypes;
     }
 
+    /**
+     * @param visitor
+     * @return
+     */
     public String accept(SmartHomeVisitor visitor){
         return visitor.visitHomeDevice(this);
     };
@@ -139,6 +200,9 @@ public abstract class HomeAppliances extends Responsible implements HomeDevice{
         setCurrentConsumption(SourceType.ENERGY, DEVICE_CONNECTED_ELECTRICITY_CONSUMPTION);
     }
 
+    /**
+     * @return
+     */
     @Override
     public boolean isNull(){
         return false;
@@ -146,42 +210,72 @@ public abstract class HomeAppliances extends Responsible implements HomeDevice{
 
     protected abstract void identify();
 
+    /**
+     * @param currentConsumption
+     */
     public void setCurrentConsumption(Dictionary<SourceType, Double> currentConsumption) {
         this.currentConsumption = currentConsumption;
     }
 
+    /**
+     * @param persons
+     */
     public void setPersons(List<Person> persons) {
         this.persons = persons;
     }
 
+    /**
+     * @param lifeTimeInYear
+     */
     public void setLifeTimeInYear(double lifeTimeInYear) {
         this.lifeTimeInYear = lifeTimeInYear;
     }
 
+    /**
+     * @param workingHours
+     */
     public void setWorkingHours(double workingHours) {
         this.workingHours = workingHours;
     }
 
+    /**
+     * @param room
+     */
     public void setRoom(Room room) {
         this.room = room;
     }
 
+    /**
+     * @param documentation
+     */
     public void setDocumentation(Documentation documentation) {
         this.documentation = documentation;
     }
 
+    /**
+     * @param consumptionData
+     */
     public void setConsumptionData(ConsumptionData consumptionData) {
         this.consumptionData = consumptionData;
     }
 
+    /**
+     * @param homeDeviceState
+     */
     public void setHomeDeviceState(HomeDeviceState homeDeviceState) {
         this.homeDeviceState = homeDeviceState;
     }
 
+    /**
+     * @param brokennessLevel
+     */
     public void setBrokennessLevel(BrokennessLevel brokennessLevel) {
         this.brokennessLevel = brokennessLevel;
     }
 
+    /**
+     * @param isEnabled
+     */
     public void setEnabled(boolean isEnabled) {
         this.isEnabled = isEnabled;
     }

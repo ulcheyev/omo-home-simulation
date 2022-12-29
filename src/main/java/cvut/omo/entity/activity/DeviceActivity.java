@@ -11,16 +11,29 @@ import cvut.omo.item.Usable;
 
 import static cvut.omo.app_utils.Constants.*;
 
+/**
+ *
+ */
 public class DeviceActivity extends Activity {
 
     private Class<? extends Usable> toUse;
     private HomeDevice founded = null;
 
+    /**
+     * @param responsible
+     * @param event
+     * @param toUse
+     * @param activityType
+     * @throws InterruptedException
+     */
     public DeviceActivity(Responsible responsible, Event event, Class<? extends Usable> toUse, ActivityType activityType) throws InterruptedException {
         super(responsible, event, activityType);
         this.toUse = toUse;
     }
 
+    /**
+     * @param responsible
+     */
     @Override
     public void doWork(Responsible responsible) {
 
@@ -58,6 +71,9 @@ public class DeviceActivity extends Activity {
 
     }
 
+    /**
+     * @return
+     */
     @Override
     public String toString() {
 

@@ -12,6 +12,9 @@ import lombok.Setter;
 
 import java.util.List;
 
+/**
+ *
+ */
 @Getter
 @Setter
 public class Person extends Responsible implements HomeComponent {
@@ -24,11 +27,18 @@ public class Person extends Responsible implements HomeComponent {
         this.name = name;
     }
 
+    /**
+     * @param visitor
+     * @return
+     */
     @Override
     public String accept(SmartHomeVisitor visitor) {
         return visitor.visitPerson(this);
     }
 
+    /**
+     * @return
+     */
     @Override
     public boolean isNull() {
         return false;

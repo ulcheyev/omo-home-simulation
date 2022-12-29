@@ -6,6 +6,9 @@ import cvut.omo.device.notifier.EventListener;
 import java.io.IOException;
 
 
+/**
+ *
+ */
 public abstract class Sensor extends HomeAppliances {
 
     public Sensor(double lifeTime) {super(lifeTime);}
@@ -16,20 +19,40 @@ public abstract class Sensor extends HomeAppliances {
         ConsumptionCollection.getInstance().put(this);
     }
 
-    public  void enable(){
+    /**
+     *
+     */
+    public void enable(){
         this.setCurrentConsumption(SourceType.ENERGY, Constants.SENSOR_ELECTRICITY_IDDLE_STATE_CONSUMPTION);
     };
 
 
+    /**
+     *
+     */
     public void goIntoPauseMode(){
         this.setCurrentConsumption(SourceType.ENERGY, Constants.SENSOR_ELECTRICITY_IDDLE_STATE_CONSUMPTION);
     };
 
+    /**
+     *
+     */
     public  void run(){
         this.setCurrentConsumption(SourceType.ENERGY, Constants.SENSOR_ELECTRICITY_RUN_STATE_CONSUMPTION);
     };
 
+    /**
+     * @param listener
+     */
     public abstract void addListener(EventListener listener);
+
+    /**
+     * @param listener
+     */
     public abstract void removeListener(EventListener listener);
+
+    /**
+     * @throws IOException
+     */
     public abstract void alert() throws IOException;
 }

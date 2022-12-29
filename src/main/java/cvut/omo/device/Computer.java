@@ -4,6 +4,9 @@ import cvut.omo.app_utils.Constants;
 import cvut.omo.data_collections.consumption.ConsumptionCollection;
 import cvut.omo.entity.person.Person;
 
+/**
+ *
+ */
 public class Computer extends HomeAppliances {
 
     public Computer(double lifeTime) {super(lifeTime);}
@@ -14,16 +17,25 @@ public class Computer extends HomeAppliances {
         ConsumptionCollection.getInstance().put(this);
     }
 
+    /**
+     *
+     */
     @Override
     public void enable() {
         this.setCurrentConsumption(SourceType.ENERGY, Constants.COMPUTER_IDDLE_STATE_ELECTRICITY_CONSUMPTION);
     }
 
+    /**
+     *
+     */
     @Override
     public void goIntoPauseMode() {
         this.setCurrentConsumption(SourceType.ENERGY, Constants.COMPUTER_IDDLE_STATE_ELECTRICITY_CONSUMPTION);
     }
 
+    /**
+     *
+     */
     @Override
     public void run() {
         this.setCurrentConsumption(SourceType.ENERGY, Constants.COMPUTER_RUN_STATE_ELECTRICITY_CONSUMPTION);

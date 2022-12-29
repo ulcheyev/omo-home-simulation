@@ -9,18 +9,27 @@ import java.util.Dictionary;
 import java.util.Hashtable;
 import java.util.List;
 
+/**
+ *
+ */
 public class ConsumptionReportIterator implements Iterator {
 
     private int currIdx = 0;
     private static ConsumptionCollection data = ConsumptionCollection.getInstance();
     private final Dictionary<SourceType, Double> sourceTypes = new Hashtable<>();
 
+    /**
+     *
+     */
     public ConsumptionReportIterator() {
         for (SourceType sourceType : SourceType.values()) {
             sourceTypes.put(sourceType, 0.0);
         }
     }
 
+    /**
+     * @return
+     */
     @Override
     public String next() {
         StringBuilder res = new StringBuilder();
@@ -84,6 +93,9 @@ public class ConsumptionReportIterator implements Iterator {
         res.append(Constants.STARS);
     }
 
+    /**
+     * @return
+     */
     @Override
     public boolean hasNext() {
         return currIdx != data.getSize();
