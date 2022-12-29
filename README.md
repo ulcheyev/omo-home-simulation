@@ -15,8 +15,6 @@ Neco
 
 - **F2.** [+] Jednotlivá zařízení v domu mají API na ovládání. Zařízení mají stav, který lze měnit pomocí API na jeho ovládání. Akce z API jsou použitelné podle stavu zařízení. Vybraná zařízení mohou mít i obsah - lednice má jídlo, CD přehrávač má CD.
 
-[-] Zařízení nemají obsah.
-
 - **F3.** [+] Spotřebiče mají svojí spotřebu v aktivním stavu, idle stavu, vypnutém stavu.
 
 - **F4.** [+] Jednotlivá zařízení mají API na sběr dat o tomto zařízení. O zařízeních sbíráme data jako spotřeba elektřiny, plynu, vody a funkčnost (klesá lineárně s časem).
@@ -29,11 +27,11 @@ Neco
 
 - **F8.** [+] Vygenerování reportů:
 
-    - [+] HouseConfigurationReport: veškerá konfigurační data domu.
+  - [+] HouseConfigurationReport: veškerá konfigurační data domu.
 
-    - [+] EventReport: report eventů.
-    -	[-] ActivityAndUsageReport: Report akcí (aktivit) jednotlivých osob a zvířat.
-    -	[+] ConsumptionReport: Kolik jednotlivé spotřebiče spotřebovaly elektřiny, plynu, vody. Včetně finančního vyčíslení.
+  - [+] EventReport: report eventů.
+  -	[-] ActivityAndUsageReport: Report akcí (aktivit) jednotlivých osob a zvířat.
+  -	[+] ConsumptionReport: Kolik jednotlivé spotřebiče spotřebovaly elektřiny, plynu, vody. Včetně finančního vyčíslení.
 
 - **F9.** [+] Při rozbití zařízení musí obyvatel domu prozkoumat dokumentaci k zařízení - najít záruční list, projít manuál na opravu a provést nápravnou akcí.
 
@@ -62,18 +60,28 @@ Neco
 <details> <summary>Koukni se</summary> 
 
 - **DP1.**  State machine
+  - Mění spotřebu určitých zdrojů zařízeními v závislosti na jejich stavu.
 - **DP2.**  Iterator
+  - Používá se při vytváření EventReport, ConsummentReport. Umožňuje iterativně obejít všechny objekty a shromáždit všechny data v kolekci s následným generováním reportu.
 - **DP3.**  Factory/Factory method
 - **DP4.**  Singleton
-- **DP5.**  Chain of responsibility
+  - Používá se ve třídě vytváření náhodných celočíselných hodnot pro účely následného použití při generování eventu. To zaručuje jedinečnou hodnotu.
+- **DP5.**  Null Object Pattern
 - **DP6.**  Observer
+  - Pokud jsou aktivovány senzory bezpečnostní , bude to oznámeno všemi nezbytnými prostředky.
 - **DP7.**  Lazy Initialization
+  - Používá se ke generování dokumentace pouze v případě, že je zařízení rozbité.
 - **DP8.**  Visitor
+  - Používá se při vytváření HouseConfigurationReport. Umožňuje přidat operaci pro získání všech dat o objektů bez provádění změn ve stávající struktuře objektů.
 - **DP9.**  Builder
+  - Používá se k postupnému vytváření objektů, jako je zařízení, osoba, zvíře, vozidlo.
+- **DP10.**  Composite
+- **DP11.**  Strategy
 
  </details>
 
-## Class Diagram
-
-## Use-case diagram
+## Class Diagram :bar_chart:
+[Class diagram](https://gitlab.fel.cvut.cz/ulcheyev/lupenmar_ulcheyev_omo/-/blob/8ca68f36d484200e58f284b05b50ff08e2ec2a9c/diagrams/class_diagram_omo.drawio.pdf)
+## Use-case diagram :construction_worker:
+[Use-case diagram](https://gitlab.fel.cvut.cz/ulcheyev/lupenmar_ulcheyev_omo/-/blob/main/diagrams/use_case_omo.drawio.pdf)
 
