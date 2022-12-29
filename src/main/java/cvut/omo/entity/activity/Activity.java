@@ -15,9 +15,6 @@ import lombok.Setter;
 import java.util.List;
 
 
-/**
- *
- */
 @Getter
 @Setter
 @NoArgsConstructor
@@ -29,11 +26,6 @@ public abstract class Activity {
     protected Responsible responsible;
     protected Event event;
 
-    /**
-     * @param responsible
-     * @param event
-     * @param activityType
-     */
     public Activity(Responsible responsible, Event event, ActivityType activityType) {
 
         this.event = event;
@@ -45,9 +37,6 @@ public abstract class Activity {
     }
 
 
-    /**
-     *
-     */
     public void execute()
     {
         responsible.lock();
@@ -61,9 +50,6 @@ public abstract class Activity {
     protected abstract void doWork(Responsible responsible);
 
 
-    /**
-     * @return
-     */
     public  boolean isExecuted(){
         return isExecuted;
     }
@@ -106,9 +92,6 @@ public abstract class Activity {
         return res;
     }
 
-    /**
-     * @return
-     */
     @Override
     public String toString() {
 

@@ -6,30 +6,28 @@ import cvut.omo.entity.pet.PetType;
 import static cvut.omo.entity.person.FamilyRoleType.*;
 import static java.util.List.of;
 import cvut.omo.home_structure.room_builder.RoomName;
-import cvut.omo.item.Usable;
+import cvut.omo.usable.Usable;
 import lombok.Getter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-/**
- *
- */
 public enum ActivityType {
 
     /*
     * RoomName.STUB -> Activity does not need specified room to self-execute
-    * RoomName.COMMON -> Activity need specified rooms, but depends on event room
+    * RoomName.COMMON -> Activity need specified rooms, but depends on event room/ e.g responsible location room
     *
     * */
 
     //DEVICE
-    HOME_POWER_OFF(of(RoomName.STUB), CircuitBreaker.class,  DeviceActivity.class, Device.CIRCUIT_BREAKER),
+    HOME_POWER_OFF(of(RoomName.STUB), CircuitBreaker.class, DeviceActivity.class, Device.CIRCUIT_BREAKER),
 
     //PERSON
-    PET_A_PET(of(RoomName.COMMON),null, FamilyRoleType.class.getEnumConstants()),
+    PET_A_PET(of(RoomName.COMMON),null),
     TAKE_A_WALK_WITH_PET(of(RoomName.STUB), null,  DAUGHTER, SON),
-    FEED_PET(of(RoomName.COMMON), null, FamilyRoleType.class.getEnumConstants()),
+    FEED_PET(of(RoomName.COMMON), null),
+    PERSON_SLEEP(of(RoomName.BEDROOM), null),
 
     //ON DEVICE
     DEVICE_FRIDGE_ON(of(RoomName.KITCHEN),Fridge.class, DeviceActivity.class),
@@ -39,7 +37,6 @@ public enum ActivityType {
     DEVICE_WATER_LEAK_SENSOR_ON(of(RoomName.KITCHEN, RoomName.BATHROOM), WaterLeakSensor.class, DeviceActivity.class, FATHER, GRANDFATHER),
     DEVICE_FIRE_SENSOR_ON(RoomType.getAll(), FireSensor.class, DeviceActivity.class, FATHER, GRANDFATHER),
     DEVICE_TV_ON(RoomType.CHILL.getRooms(), TV.class, DeviceActivity.class),
-    DEVICE_CURCUIT_BREAKER_ON(of(RoomName.VESTIBULE), CircuitBreaker.class, DeviceActivity.class, FATHER, GRANDFATHER),
 
     //OFF Device -> CONF THE SAME AS ON
     DEVICE_FRIDGE_OFF(DEVICE_FRIDGE_ON),
@@ -56,6 +53,7 @@ public enum ActivityType {
     DEVICE_OVEN_RUN(DEVICE_OVEN_ON),
     DEVICE_WASHING_MACHINE_RUN(DEVICE_WASHING_MACHINE_ON),
     DEVICE_TV_RUN(DEVICE_TV_ON),
+    DEVICE_CURCUIT_BREAKER_RUN(of(RoomName.VESTIBULE), CircuitBreaker.class, DeviceActivity.class, FATHER, GRANDFATHER),
 
     //PAUSE DEVICES -> CONF THE SAME AS ON
     DEVICE_FRIDGE_PAUSE(DEVICE_FRIDGE_ON),
@@ -75,7 +73,7 @@ public enum ActivityType {
     MAKE_TEA(of(RoomName.KITCHEN),  Fridge.class),
     PERSON_EAT(of(RoomName.KITCHEN),  null),
     PERSON_CRY(of(RoomName.BATHROOM), null, MOTHER, GRANDMOTHER),
-    CALL_GRANDPA_FOR_HELP(of(RoomName.BEDROOM, RoomName.CHILDRENS_ROOM), null, DeviceActivity.class, GRANDFATHER),
+    CALL_GRANDPA_FOR_HELP(of(RoomName.BEDROOM, RoomName.CHILDRENS_ROOM), null, BaseActivity.class, GRANDFATHER),
     TIDY_UP(of(RoomName.COMMON), null, BaseActivity.class, MOTHER, DAUGHTER),
     DECORATE_A_CHRISTMAS_TREE(of(RoomName.HALL), null, BaseActivity.class, MOTHER, DAUGHTER, SON),
 
@@ -86,9 +84,8 @@ public enum ActivityType {
     PLAY_WITH_TOY(of(RoomName.COMMON), BaseActivity.class, null, PetType.class.getEnumConstants()),
 
     //PERSON AND PETS
-    BREAK_DEVICE(RoomType.getAll(),  null ,PetType.class.getEnumConstants()),
     RELOCATE(of(RoomName.STUB), RelocateActivity.class, null, FamilyRoleType.class.getEnumConstants(), PetType.class.getEnumConstants());
-    //    USE_BIKE(UseItem.class, FamilyRoleType.class.getEnumConstants()),
+//    USE_BIKE(UseItem.class, FamilyRoleType.class.getEnumConstants()),
 //    USE_SKIS(UseItem.class, FamilyRoleType.class.getEnumConstants()),
 //    USE_CAR(UseItem.class, FamilyRoleType.FATHER, FamilyRoleType.GRANDFATHER, FamilyRoleType.MOTHER, FamilyRoleType.GRANDMOTHER),
 //    PERSON_SPORT(BaseActivity.class, FamilyRoleType.class.getEnumConstants()),
@@ -169,17 +166,6 @@ public enum ActivityType {
     private List<RoomName> roomNames;
 
 
-    /**
-     * @return
-     */
-    @Override
-    public String toString() {
-        return "";
-    }
-
-    /**
-     *
-     */
     public enum Device implements ResponsibleType{
         CIRCUIT_BREAKER(CircuitBreaker.class);
         Device(Class<? extends HomeDevice> clazz) {

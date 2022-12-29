@@ -7,9 +7,6 @@ import cvut.omo.entity.pet.Pet;
 import cvut.omo.home_structure.Floor;
 import cvut.omo.home_structure.room_builder.Room;
 
-/**
- *
- */
 public interface SmartHomeVisitor {
 
     String visitFloor(Floor floor);

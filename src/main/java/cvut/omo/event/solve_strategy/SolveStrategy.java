@@ -14,16 +14,9 @@ import static cvut.omo.entity.activity.ActivityFactory.*;
 
 import java.util.List;
 
-/**
- *
- */
 public abstract class SolveStrategy {
 
 
-    /**
-     * @param event
-     * @throws InterruptedException
-     */
     public abstract void solve(Event event) throws InterruptedException;
 
 

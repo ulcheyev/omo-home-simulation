@@ -5,15 +5,12 @@ import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-/**
- * A class implemented to generate certain reports and work with a file
- */
 public class FileWriter {
 
     /**
      *
-     * @param fileName contains a unique file name
-     * @param report stores the value that will be written before the report
+     * @param fileName
+     * @param report
      * @throws IOException
      */
     public static void generateNewConsumptionReport(String fileName, String report) throws IOException {
@@ -22,8 +19,8 @@ public class FileWriter {
 
     /**
      *
-     * @param fileName fileName contains a unique file name
-     * @param report stores the value that will be written before the report
+     * @param fileName
+     * @param report
      * @throws IOException
      */
     public static void generateNewReport(String fileName, String report) throws IOException {
@@ -50,6 +47,13 @@ public class FileWriter {
         writeToFile(openFile("email/", fileName), text);
     }
 
+    /**
+     *
+     * @param path
+     * @param fileName
+     * @return
+     * @throws IOException
+     */
     private static File openFile(String path, String fileName) throws IOException {
         File file = new File(path+fileName+".txt");
         file.getParentFile().mkdirs(); //create parent directory
@@ -57,6 +61,12 @@ public class FileWriter {
         return file;
     }
 
+    /**
+     *
+     * @param file
+     * @param string
+     * @throws IOException
+     */
     private static void writeToFile(File file, String string) throws IOException {
         java.io.FileWriter fileWriter = new java.io.FileWriter(file.getCanonicalPath());
         PrintWriter printWriter = new PrintWriter(fileWriter);

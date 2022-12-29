@@ -2,16 +2,13 @@ package cvut.omo.home_structure.room_builder;
 
 import cvut.omo.device.factory.HomeDeviceFactory;
 import cvut.omo.device.factory.SmartHomeDeviceFactory;
-import cvut.omo.item.Bike;
-import cvut.omo.item.Car;
-import cvut.omo.item.PetToy;
-import cvut.omo.item.Ski;
+import cvut.omo.usable.item.Bike;
+import cvut.omo.usable.item.Car;
+import cvut.omo.usable.item.PetToy;
+import cvut.omo.usable.item.Ski;
 import cvut.omo.home_structure.Floor;
 
 
-/**
- *
- */
 public final class SmartHomeRoomBuilderDirector {
 
     public static final SmartHomeRoomBuilderDirector INSTANCE = new SmartHomeRoomBuilderDirector();
@@ -19,10 +16,6 @@ public final class SmartHomeRoomBuilderDirector {
     private HomeDeviceFactory homeDeviceFactory = SmartHomeDeviceFactory.INSTANCE;
 
 
-    /**
-     * @param roomBuilder
-     * @param floor
-     */
     public void createBathRoom(RoomBuilder roomBuilder, Floor floor){
         roomBuilder
                 .reset()
@@ -35,10 +28,6 @@ public final class SmartHomeRoomBuilderDirector {
 
     }
 
-    /**
-     * @param roomBuilder
-     * @param floor
-     */
     public void createVestibule(RoomBuilder roomBuilder, Floor floor){
         roomBuilder
                 .reset()
@@ -49,10 +38,6 @@ public final class SmartHomeRoomBuilderDirector {
                 .setHomeDevice(homeDeviceFactory.createCircuitBreaker());
     }
 
-    /**
-     * @param roomBuilder
-     * @param floor
-     */
     public void createKitchen(RoomBuilder roomBuilder, Floor floor){
         roomBuilder
                 .reset()
@@ -67,10 +52,6 @@ public final class SmartHomeRoomBuilderDirector {
                 .setHomeDevice(homeDeviceFactory.createTV());
     }
 
-    /**
-     * @param roomBuilder
-     * @param floor
-     */
     public void createBedRoom(RoomBuilder roomBuilder, Floor floor){
         roomBuilder
                 .reset()
@@ -83,10 +64,6 @@ public final class SmartHomeRoomBuilderDirector {
                 .addItem(new PetToy());
     }
 
-    /**
-     * @param roomBuilder
-     * @param floor
-     */
     public void createGarage(RoomBuilder roomBuilder, Floor floor){
         roomBuilder
                 .reset()
@@ -99,10 +76,6 @@ public final class SmartHomeRoomBuilderDirector {
                 .addItem(new Ski());
     }
 
-    /**
-     * @param roomBuilder
-     * @param floor
-     */
     public void createHall(RoomBuilder roomBuilder, Floor floor){
         roomBuilder
                 .reset()
@@ -113,10 +86,6 @@ public final class SmartHomeRoomBuilderDirector {
                 .addItem(new PetToy());
     }
 
-    /**
-     * @param roomBuilder
-     * @param floor
-     */
     public void createChildrensRoom(RoomBuilder roomBuilder, Floor floor){
         roomBuilder
                 .reset()
@@ -129,11 +98,6 @@ public final class SmartHomeRoomBuilderDirector {
                 .addItem(new PetToy());
     }
 
-    /**
-     * @param roomBuilder
-     * @param roomName
-     * @param floor
-     */
     public void createRoom(RoomBuilder roomBuilder, RoomName roomName, Floor floor){
         switch (roomName){
             case BATHROOM -> {

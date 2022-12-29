@@ -5,6 +5,8 @@ import cvut.omo.entity.activity.ActivityFactory;
 import cvut.omo.entity.nulls.NullResponsible;
 import cvut.omo.entity.nulls.NullResponsibleType;
 import cvut.omo.event.Event;
+import cvut.omo.event.EventGenerator;
+import cvut.omo.event.event_type.HomeEvent;
 import cvut.omo.home_structure.HomeComponent;
 import cvut.omo.home_structure.nulls.NullRoom;
 import cvut.omo.home_structure.room_builder.Room;
@@ -16,9 +18,6 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-/**
- *
- */
 @Getter
 @Setter
 public abstract class Responsible implements HomeComponent  {
@@ -33,54 +32,38 @@ public abstract class Responsible implements HomeComponent  {
         activities = new LinkedList<>();
     }
 
-    /**
-     * @param activity
-     * @throws InterruptedException
-     */
-    public void handle(Activity activity) throws InterruptedException {
+    public void handle(Activity activity){
         if(isFree()){
             activity.execute();
         }
         else{
+            String some_text = "Is busy. The activity "
+            + activity.getActivityType() + " will wait...";
+            EventGenerator.generateEventWithResponsible(this, HomeEvent.INFO,
+            some_text);
             activities.add(activity);
         }
     }
 
-    /**
-     * @return
-     */
     public boolean isFree(){
         return entityStatus == EntityStatus.FREE;
     }
 
 
-    /**
-     *
-     */
     public void lock()  {
         setEntityStatus(EntityStatus.BUSY);
     }
 
-    /**
-     *
-     */
     public void unlock() {
         setEntityStatus(EntityStatus.FREE);
         update();
     }
 
-    /**
-     * @param event
-     * @param room
-     */
     public void relocate(Event event, Room room) {
         this.room.removeResponsible(this);
         room.addResponsible(this);
     }
 
-    /**
-     *
-     */
     public void update() {
         if(isFree()) {
             Activity peek = activities.poll();
@@ -90,15 +73,25 @@ public abstract class Responsible implements HomeComponent  {
         }
     }
 
-    /**
-     * @return
-     */
+    public void goToSleep(){
+        lock();
+        Thread thread = new Thread(() -> {
+            int sleep_count = 8;
+            while(sleep_count > 0){
+                try {
+                    Thread.sleep(3);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                sleep_count--;
+            }
+            unlock();
+        });
+        thread.start();
+    }
+
     public abstract boolean isNull();
 
-    /**
-     * @param visitor
-     * @return
-     */
     public String accept(SmartHomeVisitor visitor){
         return null;
     }

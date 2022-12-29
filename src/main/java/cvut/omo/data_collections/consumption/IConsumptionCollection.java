@@ -5,9 +5,6 @@ import cvut.omo.device.HomeDevice;
 import java.io.IOException;
 import java.util.List;
 
-/**
- *
- */
 public interface IConsumptionCollection {
 
     void put(HomeDevice homeDevice);

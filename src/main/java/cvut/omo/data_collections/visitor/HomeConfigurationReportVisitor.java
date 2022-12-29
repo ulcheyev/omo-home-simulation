@@ -17,16 +17,10 @@ import java.util.Hashtable;
 import java.util.Iterator;
 
 
-/**
- *
- */
 public class HomeConfigurationReportVisitor implements SmartHomeVisitor{
 
     private final Dictionary<Class<? extends HomeComponent>, Integer> quantities = new Hashtable<>();
 
-    /**
-     * @throws IOException
-     */
     public void generateReport() throws IOException {
         StringBuilder sb = new StringBuilder();
         sb.append(Constants.HOME_CONFIG_REPORT_HEADER);
@@ -37,10 +31,6 @@ public class HomeConfigurationReportVisitor implements SmartHomeVisitor{
         FileWriter.generateNewConsumptionReport("home_config_report" + Utils.getRandomInt(), sb.toString());
     }
 
-    /**
-     * @param floor
-     * @return
-     */
     @Override
     public String visitFloor(Floor floor) {
         StringBuilder sb = new StringBuilder();
@@ -52,10 +42,6 @@ public class HomeConfigurationReportVisitor implements SmartHomeVisitor{
         return sb.toString();
     }
 
-    /**
-     * @param room
-     * @return
-     */
     @Override
     public String visitRoom(Room room) {
         StringBuilder sb = new StringBuilder();
@@ -72,30 +58,18 @@ public class HomeConfigurationReportVisitor implements SmartHomeVisitor{
 
     }
 
-    /**
-     * @param homeDevice
-     * @return
-     */
     @Override
     public String visitHomeDevice(HomeDevice homeDevice) {
         registerComponentQuantity(homeDevice);
         return "-----Home device " + homeDevice.getClass().getSimpleName() + "\n";
     }
 
-    /**
-     * @param person
-     * @return
-     */
     @Override
     public String visitPerson(Person person) {
         registerComponentQuantity(person);
         return "\n+++Person " + person.getName() + " lives in the home with a role " + person.getResponsibleType();
     }
 
-    /**
-     * @param pet
-     * @return
-     */
     @Override
     public String visitPet(Pet pet) {
         registerComponentQuantity(pet);

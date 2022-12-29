@@ -3,9 +3,6 @@ package cvut.omo.device.factory;
 import cvut.omo.device.*;
 import cvut.omo.device.Sensor;
 
-/**
- *
- */
 public interface HomeDeviceFactory {
 
      Sensor createFireSensor();

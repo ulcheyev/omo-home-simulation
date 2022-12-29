@@ -7,19 +7,14 @@ import cvut.omo.entity.Responsible;
 import cvut.omo.entity.ResponsibleType;
 import cvut.omo.entity.person.Person;
 import cvut.omo.entity.pet.Pet;
-import cvut.omo.event.Event;
 import cvut.omo.home_structure.Floor;
 import cvut.omo.home_structure.HomeComponent;
 import cvut.omo.home_structure.Window;
-import cvut.omo.home_structure.home_builder.Home;
-import cvut.omo.item.Item;
+import cvut.omo.usable.item.Item;
 import lombok.*;
 
 import java.util.*;
 
-/**
- *
- */
 @Setter
 @Getter
 @NoArgsConstructor
@@ -39,39 +34,22 @@ public class Room implements HomeComponent {
         this.roomName = roomName;
     }
 
-    /**
-     * @param responsible
-     */
     public void addResponsible(Responsible responsible){
         responsible.setRoom(this);
         responsibles.add(responsible);
     }
 
-    /**
-     * @param homeDevice
-     */
     public void addHomeDevice(HomeDevice homeDevice){
         homeDevices.add(homeDevice);
         homeDevice.setRoom(this);
     }
 
-
-    /**
-     *
-     */
     public void addWindow(){
         windows.add(new Window());
     }
 
-    /**
-     * @param item
-     */
     public void addItem(Item item){items.add(item);}
 
-    /**
-     * @param type
-     * @return
-     */
     public Responsible getResponsible(ResponsibleType type){
         for(Responsible resp: responsibles){
             if(resp.getResponsibleType().equals(type)){
@@ -81,15 +59,8 @@ public class Room implements HomeComponent {
         return NullResponsible.INSTANCE;
     }
 
-    /**
-     * @return
-     */
     public boolean isEmpty(){return responsibles.isEmpty();}
 
-    /**
-     * @param roleType
-     * @return
-     */
     public boolean contains(ResponsibleType roleType){
         for(Responsible resp: responsibles){
             if (resp.getResponsibleType().equals(roleType)){
@@ -99,9 +70,6 @@ public class Room implements HomeComponent {
         return false;
     }
 
-    /**
-     * @return
-     */
    public List<Person> getPersons(){
         List<Person> persons = new ArrayList<>();
         for(Responsible responsible:responsibles){
@@ -112,9 +80,6 @@ public class Room implements HomeComponent {
         return persons;
    }
 
-    /**
-     * @return
-     */
     public List<Pet> getPets(){
         List<Pet> persons = new ArrayList<>();
         for(Responsible responsible:responsibles){
@@ -125,58 +90,26 @@ public class Room implements HomeComponent {
         return persons;
     }
 
-    /**
-     * @param window
-     */
     public void removeWindow(Window window){windows.remove(window);}
-
-    /**
-     * @param homeDevice
-     */
     public void removeHomeDevice(HomeDevice homeDevice){homeDevices.remove(homeDevice);}
-
-    /**
-     * @param item
-     */
     public void removeItem(Item item){items.remove(item);}
 
-    /**
-     * @param responsible
-     */
     public void removeResponsible(Responsible responsible){
         responsible.setRoom(null);
         responsibles.remove(responsible);
     }
-
-    /**
-     * @param person
-     */
     public void removePerson(Person person){responsibles.remove(person);}
-
-    /**
-     * @param pet
-     */
     public void removePet(Pet pet){responsibles.remove(pet);}
 
 
-    /**
-     *
-     */
     public void close(){
         setOpened(false);
     }
-
-    /**
-     *
-     */
     public void open(){
         setOpened(true);
     }
 
 
-    /**
-     * @throws InterruptedException
-     */
     //ToDO
     public void update() throws InterruptedException {
     Thread thread = new Thread(
@@ -198,28 +131,17 @@ public class Room implements HomeComponent {
 
     }
 
-    /**
-     * @param visitor
-     * @return
-     */
     @Override
     public String accept(SmartHomeVisitor visitor) {
         return visitor.visitRoom(this);
     }
 
-    /**
-     * @return
-     */
     @Override
     public boolean isNull() {
         return false;
     }
 
 
-    /**
-     * @param o
-     * @return
-     */
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

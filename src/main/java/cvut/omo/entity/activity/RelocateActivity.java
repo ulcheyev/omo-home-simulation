@@ -7,9 +7,6 @@ import cvut.omo.event.Event;
 import cvut.omo.home_structure.room_builder.Room;
 import lombok.Getter;
 
-/**
- *
- */
 public class RelocateActivity extends Activity {
 
     @Getter
@@ -21,25 +18,18 @@ public class RelocateActivity extends Activity {
         this.room = toRoom;
     }
 
-    /**
-     * @param responsible
-     */
     @Override
     public void doWork(Responsible responsible) {
         responsible.relocate(event, room);
     }
 
 
-    /**
-     * @return
-     */
     @Override
     public String toString() {
         return  super.toString() +
                 " from room " + from.getRoomName() +
-                " on the " + from.getFloor().getNumberOfFloor()+
-                " to " + room.getRoomName() +
-                " on the " + room.getFloor().getNumberOfFloor() +
-                " floor ";
+                " on the " + from.getFloor().getNumberOfFloor()
+                + " floor";
+
     }
 }

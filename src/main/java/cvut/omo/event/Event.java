@@ -22,9 +22,6 @@ import java.util.Collections;
 import java.util.List;
 
 
-/**
- *
- */
 @Getter
 @Setter
 public class Event {
@@ -34,6 +31,7 @@ public class Event {
     private EventType eventType;
     private  boolean isSolved = false;
     private SolveStrategy solveStrategy;
+    private String description;
 
     private List<Activity> chainToSolve = new ArrayList<>();
     private Responsible responsible = NullResponsible.INSTANCE;
@@ -52,17 +50,11 @@ public class Event {
         EventCollection.addEvent(this);
     }
 
-    /**
-     * @return
-     */
     public boolean isSolved(){
         return isSolved;
     }
     private Event(){}
 
-    /**
-     * @throws InterruptedException
-     */
     public void solve() throws InterruptedException {
 
         if (eventType instanceof EntityResponsibleEvent) {
@@ -81,16 +73,10 @@ public class Event {
         }
     }
 
-    /**
-     * @param activity
-     */
     public void addActivity(Activity activity){
         chainToSolve.add(activity);
     }
 
-    /**
-     * @return
-     */
     //TODO
     public boolean checkSolving(){
        List<ActivityType> activityTypes = new ArrayList<>();
@@ -106,22 +92,21 @@ public class Event {
        return true;
     }
 
-    /**
-     * @return
-     */
     public List<Activity> getReversedChainToSolve(){
         List<Activity> res = chainToSolve;
         Collections.reverse(res);
         return res;
     }
 
-    /**
-     * @return
-     */
     @Override
     public String toString() {
 
-        String type =
+        String decs =
+                description==null
+                ? ""
+                : " (" + description + ")\n";
+
+        String resp_type =
                 !responsible.getResponsibleType().isNull()
                 ? " by "  + responsible.getResponsibleType().toString()
                 : !responsible.getClass().equals(NullResponsible.class)
@@ -129,16 +114,16 @@ public class Event {
                 : "";
 
         String location = room.isNull()
-                ? "Home"
-                : room.getRoomName().toString()
+                ? ""
+                : " in " + room.getRoomName().toString()
                 + " on the "
                 + room.getFloor().getNumberOfFloor()
                 + " floor";
 
         return "Event with type " +
-                eventType.toString()+
-                type +
-                " in " +
-                location;
+                eventType.toString() +
+                resp_type +
+                location +
+                decs;
     }
 }

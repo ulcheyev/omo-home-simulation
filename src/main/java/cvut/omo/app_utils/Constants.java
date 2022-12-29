@@ -1,9 +1,11 @@
 package cvut.omo.app_utils;
 
+import com.google.common.collect.ImmutableList;
+
 import java.util.List;
 
 /**
- *A class of constant values for calculating resource consumption and generating reports.
+ *
  */
 
 public class Constants {
@@ -12,7 +14,6 @@ public class Constants {
 
     public final static char CURRENCY = '$';
 
-    public final static double DEVICE_CONNECTED_ELECTRICITY_CONSUMPTION = 1;
 
     public final static double COMPUTER_RUN_STATE_ELECTRICITY_CONSUMPTION = 14;
     public final static double TV_ELECTRICITY_RUN_STATE_CONSUMPTION = 12;
@@ -38,7 +39,7 @@ public class Constants {
     public final static double OVEN_LIFE_TIME = 15;
     public final static double WASHING_MACHINE_LIFE_TIME = 7;
 
-    public final static double DEVICE_DISCONNECTED_STATE = 0;
+    public final static double DEVICE_OFF_STATE = 0;
     public final static double DEVICE_BROKEN_STATE = 0;
     public final static double DEVICE_DOES_NOT_CONSUME = 0;
 
@@ -58,6 +59,7 @@ public class Constants {
     public final static String RUN = "RUN";
     public final static String REPAIR = "REPAIR";
     public final static String PAUSE = "PAUSE";
-    public final static List<String> flags = List.of(ON, OFF, RUN, REPAIR, PAUSE);
+    public final static String BROKEN = "BROKEN";
+    public final static ImmutableList<String> flags = ImmutableList.of(ON, OFF, RUN, REPAIR, PAUSE, BROKEN);
 
 }

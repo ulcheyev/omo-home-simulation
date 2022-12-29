@@ -5,29 +5,15 @@ import cvut.omo.entity.Responsible;
 import cvut.omo.event.Event;
 import cvut.omo.home_structure.room_builder.Room;
 
-/**
- *
- */
 public class ActivityFactory {
 
-    /**
-     * @param res
-     * @param event
-     * @param room
-     * @return
-     */
     public static RelocateActivity createRelocateActivity(Responsible res, Event event, Room room){
         return new RelocateActivity(res, event, room, ActivityType.RELOCATE);
     }
 
 
-    /**
-     * @param res
-     * @param event
-     * @param activityType
-     * @return
-     * @throws InterruptedException
-     */
+
+
     public static Activity createActivity(Responsible res,
                                           Event event,
                                           ActivityType activityType) throws InterruptedException

@@ -2,14 +2,11 @@ package cvut.omo.home_structure.room_builder;
 
 
 import cvut.omo.device.HomeDevice;
-import cvut.omo.item.Item;
+import cvut.omo.usable.item.Item;
 import cvut.omo.home_structure.Floor;
 
 import java.util.List;
 
-/**
- *
- */
 public interface RoomBuilder {
     RoomBuilder reset();
     RoomBuilder setWindow();

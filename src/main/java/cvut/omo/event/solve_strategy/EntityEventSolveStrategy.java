@@ -8,9 +8,6 @@ import cvut.omo.home_structure.home_builder.Home;
 import lombok.NoArgsConstructor;
 import static cvut.omo.entity.activity.ActivityFactory.*;
 
-/**
- *
- */
 @NoArgsConstructor
 public class EntityEventSolveStrategy extends SolveStrategy {
 
@@ -20,10 +17,6 @@ public class EntityEventSolveStrategy extends SolveStrategy {
     }
 
 
-    /**
-     * @param event
-     * @throws InterruptedException
-     */
     @Override
     public void solve(Event event) throws InterruptedException {
 

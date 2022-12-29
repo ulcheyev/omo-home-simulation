@@ -8,15 +8,8 @@ import cvut.omo.entity.activity.ActivityType;
 import cvut.omo.event.Event;
 import cvut.omo.home_structure.room_builder.Room;
 
-/**
- *
- */
 public class DeviceEventSolveStrategy extends SolveStrategy {
 
-    /**
-     * @param event
-     * @throws InterruptedException
-     */
     @Override
     public void solve(Event event) throws InterruptedException {
         Room room = event.getRoom();

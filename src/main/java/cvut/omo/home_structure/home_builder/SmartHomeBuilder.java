@@ -12,9 +12,6 @@ import cvut.omo.home_structure.room_builder.RoomBuilder;
 import cvut.omo.home_structure.room_builder.SmartHomeRoomBuilder;
 import cvut.omo.home_structure.room_builder.SmartHomeRoomBuilderDirector;
 
-/**
- *
- */
 public final class SmartHomeBuilder implements HomeBuilder{
 
     public static final SmartHomeBuilder INSTANCE = new SmartHomeBuilder();
@@ -22,20 +19,12 @@ public final class SmartHomeBuilder implements HomeBuilder{
     private Home home = Home.INSTANCE;
     private SmartHomeBuilder(){}
 
-    /**
-     * @return
-     */
     @Override
     public HomeBuilder reset() {
         home = Home.INSTANCE;
         return this;
     }
 
-    /**
-     * @param name
-     * @param familyRoleType
-     * @return
-     */
     //TODO proverka, esli roli uzhe est. Napr 2 mamy 2 papy
     @Override
     public HomeBuilder addPerson(String name, FamilyRoleType familyRoleType) {
@@ -43,20 +32,12 @@ public final class SmartHomeBuilder implements HomeBuilder{
        return this;
     }
 
-    /**
-     * @param petType
-     * @return
-     */
     @Override
     public HomeBuilder addPet(PetType petType) {
         home.addEntity(new Pet(petType));
         return this;
     }
 
-    /**
-     * @param floorNumber
-     * @return
-     */
     //TODO kontrola esli dobavit 4 no net 3 -> exception
     @Override
     public FloorStub addFloor(int floorNumber) {
@@ -72,9 +53,6 @@ public final class SmartHomeBuilder implements HomeBuilder{
         return new FloorStub(floor);
     }
 
-    /**
-     * @return
-     */
     public Home getResult(){
         return this.home;
     }
@@ -89,34 +67,20 @@ public final class SmartHomeBuilder implements HomeBuilder{
             return this;
         }
 
-        /**
-         * @param floor
-         */
         public FloorStub(Floor floor) {
             this.floor = floor;
         }
 
-        /**
-         * @param roomName
-         * @return
-         */
         public FloorStub addRoom(RoomName roomName) {
             SmartHomeBuilder.this.smartHomeRoomBuilderDirector.createRoom(defaultRoomBuilder, roomName, floor);
             return this;
         }
 
-        /**
-         * @param room
-         * @return
-         */
         public FloorStub addRoom(Room room) {
             floor.addRoom(room);
             return this;
         }
 
-        /**
-         * @return
-         */
         public SmartHomeBuilder and(){
             return SmartHomeBuilder.this;
         }

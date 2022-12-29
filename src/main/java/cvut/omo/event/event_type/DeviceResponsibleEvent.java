@@ -4,15 +4,14 @@ import cvut.omo.device.FireSensor;
 import cvut.omo.device.HomeDevice;
 import cvut.omo.device.Sensor;
 import cvut.omo.entity.activity.ActivityType;
+import static cvut.omo.entity.activity.ActivityType.*;
+import static java.util.List.of;
 import lombok.Getter;
 import org.reflections.Reflections;
 
 import java.util.List;
 import java.util.Set;
 
-/**
- *
- */
 public enum DeviceResponsibleEvent implements EventType {
 
     /*
@@ -20,9 +19,8 @@ public enum DeviceResponsibleEvent implements EventType {
     *
     * */
 
-
-    DEVICE_BROKEN(List.of(ActivityType.DEVICE_REPAIR)),
-    FIRE_SENSOR_ALARM(List.of(ActivityType.DEVICE_REPAIR), FireSensor.class);
+    DEVICE_BROKEN(of(DEVICE_REPAIR)),
+    FIRE_SENSOR_ALARM(of(DEVICE_FIRE_SENSOR_OFF, CALL_GRANDPA_FOR_HELP), FireSensor.class);
 
 
     @Getter
@@ -45,9 +43,6 @@ public enum DeviceResponsibleEvent implements EventType {
 
     private final List<ActivityType> chainToSolve;
 
-    /**
-     * @return
-     */
     @Override
     public List<ActivityType> getChainToSolve() {
         return this.chainToSolve;
