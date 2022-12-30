@@ -1,4 +1,6 @@
 package cvut.omo.device.notifier;
+import cvut.omo.device.Sensor;
+import lombok.Setter;
 
 import cvut.omo.device.Sensor;
 import lombok.Setter;
@@ -25,6 +27,8 @@ public class EmailListener implements EventListener{
      * @param sensor
      * @throws IOException
      */
+
+
     @Override
     public void update(String message, Sensor sensor) throws IOException, MessagingException {
 //        final Properties properties = new Properties();
@@ -43,7 +47,6 @@ public class EmailListener implements EventListener{
 //        tr.connect("marinaloki123@gmail.com", "otiqrytddmprpkmq");
 //        tr.sendMessage(msg, msg.getAllRecipients());
 //        tr.close();
-
     }
 
 }

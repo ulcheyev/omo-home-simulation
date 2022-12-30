@@ -34,15 +34,18 @@ public final class SmartHomeBuilder implements HomeBuilder{
         return this;
     }
 
-    //TODO kontrola esli dobavit 4 no net 3 -> exception
     @Override
     public FloorStub addFloor(int floorNumber) {
         if(home.getFloors()
                 .stream()
                 .anyMatch(floor -> floor.getNumberOfFloor().equals(floorNumber))
-                )
+        )
         {
             throw new FloorException("Floor with number " + floorNumber + " already exists");
+        }else if(!home.getFloors()
+                .stream()
+                .anyMatch(floor -> floor.getNumberOfFloor().equals(floorNumber-1)) && floorNumber != 1){
+            throw new FloorException("First you need to add a floor with a number " + (floorNumber-1));
         }
         Floor floor = new Floor(floorNumber);
         home.addFloor(floor);

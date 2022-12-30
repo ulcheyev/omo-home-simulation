@@ -1,0 +1,32 @@
+******************
+CONSUMPTION REPORT
+******************
+
+[1] Fridge in KITCHEN on the 1 floor has consumed ENERGY: 1844.8KWH (SUM = 7379.2$) 
+[2] Computer in CHILDRENS_ROOM on the 2 floor has consumed ENERGY: 1.5000000000000002KWH (SUM = 6.000000000000001$) 
+[3] FireSensor in HALL on the 2 floor has consumed ENERGY: 0.2KWH (SUM = 0.8$) 
+[4] WashingMachine in BATHROOM on the 1 floor has consumed ENERGY: 0.9999999999999999KWH (SUM = 3.9999999999999996$) WATER: 0.0M3 (SUM = 0.0$) 
+[6] FireSensor in GARAGE on the 1 floor has consumed ENERGY: 0.2KWH (SUM = 0.8$) 
+[7] FireSensor in KITCHEN on the 1 floor has consumed ENERGY: 0.2KWH (SUM = 0.8$) 
+[8] WaterLeakSensor in KITCHEN on the 1 floor has consumed ENERGY: 0.2KWH (SUM = 0.8$) 
+[9] TV in CHILDRENS_ROOM on the 2 floor has consumed ENERGY: 0.9999999999999999KWH (SUM = 3.9999999999999996$) 
+[10] WaterLeakSensor in BATHROOM on the 2 floor has consumed ENERGY: 0.2KWH (SUM = 0.8$) 
+[11] FireSensor in BATHROOM on the 1 floor has consumed ENERGY: 0.2KWH (SUM = 0.8$) 
+[12] TV in BEDROOM on the 2 floor has consumed ENERGY: 0.9999999999999999KWH (SUM = 3.9999999999999996$) 
+[13] FireSensor in VESTIBULE on the 1 floor has consumed ENERGY: 0.2KWH (SUM = 0.8$) 
+[14] WaterLeakSensor in BATHROOM on the 1 floor has consumed ENERGY: 0.2KWH (SUM = 0.8$) 
+[15] TV in KITCHEN on the 1 floor has consumed ENERGY: 0.9999999999999999KWH (SUM = 3.9999999999999996$) 
+[16] FireSensor in CHILDRENS_ROOM on the 2 floor has consumed ENERGY: 0.2KWH (SUM = 0.8$) 
+[17] WashingMachine in BATHROOM on the 2 floor has consumed ENERGY: 0.9999999999999999KWH (SUM = 3.9999999999999996$) WATER: 0.0M3 (SUM = 0.0$) 
+[18] Oven in KITCHEN on the 1 floor has consumed ENERGY: 0.9999999999999999KWH (SUM = 3.9999999999999996$) 
+[19] FireSensor in HALL on the 1 floor has consumed ENERGY: 0.2KWH (SUM = 0.8$) 
+[20] Computer in BEDROOM on the 2 floor has consumed ENERGY: 1.5000000000000002KWH (SUM = 6.000000000000001$) 
+[21] FireSensor in BATHROOM on the 2 floor has consumed ENERGY: 0.2KWH (SUM = 0.8$) 
+[22] FireSensor in BEDROOM on the 2 floor has consumed ENERGY: 0.2KWH (SUM = 0.8$) 
+
+************************************************************************************
+1856.2000000000005KWH of ENERGY was consumed during the whole time. (SUM = 7424.800000000002$) 
+************************************************************************************
+0.0M3 of WATER was consumed during the whole time. (SUM = 0.0$) 
+************************************************************************************
+
