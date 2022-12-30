@@ -19,9 +19,8 @@ public enum DeviceResponsibleEvent implements EventType {
     *
     * */
 
-    DEVICE_BROKEN(of(DEVICE_REPAIR)),
+    DEVICE_BROKEN(of(DEVICE_BREAK, READ_A_DOCUMENTATION, DEVICE_REPAIR)),
     FIRE_SENSOR_ALARM(of(DEVICE_FIRE_SENSOR_OFF, CALL_GRANDPA_FOR_HELP), FireSensor.class);
-
 
     @Getter
     private final Set<Class <? extends HomeDevice>> homeDevices;

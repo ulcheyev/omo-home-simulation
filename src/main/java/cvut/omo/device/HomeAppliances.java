@@ -11,6 +11,7 @@ import cvut.omo.entity.nulls.NullResponsibleType;
 import cvut.omo.entity.person.Person;
 import cvut.omo.home_structure.room_builder.Room;
 import lombok.Getter;
+import lombok.Setter;
 
 import java.io.IOException;
 import java.util.*;
@@ -19,6 +20,7 @@ import static cvut.omo.app_utils.Constants.*;
 
 
 @Getter
+@Setter
 public abstract class HomeAppliances extends Responsible implements HomeDevice{
 
     protected Dictionary<SourceType, Double> currentConsumption;
@@ -52,10 +54,20 @@ public abstract class HomeAppliances extends Responsible implements HomeDevice{
         update();
     };
 
-    public void repair(Person person){
+    public void repair(Person person)  {
+        if (homeDeviceState instanceof BrokenState && this.documentation == null) {
+            try {
+                Documentation doc = new Documentation(this);
+                doc.generateDocumentation();
+                this.documentation = doc;
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
         homeDeviceState.repair(person, this);
         update();
     };
+
     public void breakDevice(){
         homeDeviceState._break(this);
         update();
@@ -76,18 +88,6 @@ public abstract class HomeAppliances extends Responsible implements HomeDevice{
         ConsumptionCollection.getInstance().update(this);
     }
 
-    public Documentation getDocumentation(){
-        if (homeDeviceState instanceof BrokenState && this.documentation == null){
-            try {
-                Documentation doc = new Documentation(this);
-                doc.generateDocumentation();
-                this.documentation = doc;
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-        return documentation;
-    }
 
     public boolean isNotConsume(){
         return currentConsumption.get(SourceType.NOT_CONSUME) != null;
@@ -117,10 +117,10 @@ public abstract class HomeAppliances extends Responsible implements HomeDevice{
         }
     }
     protected void breakDown(){
+        setBrokennessLevel(Utils.getRandomBrokennessLevel());
         for (Iterator<SourceType> it = currentConsumption.keys().asIterator(); it.hasNext(); ) {
             SourceType sourceType = it.next();
             setCurrentConsumption(sourceType, DEVICE_BROKEN_STATE);
-            this.setBrokennessLevel(Utils.getRandomBrokennessLevel());
         }
     }
 
@@ -140,8 +140,5 @@ public abstract class HomeAppliances extends Responsible implements HomeDevice{
         this.homeDeviceState = homeDeviceState;
     }
 
-    public void setBrokennessLevel(BrokennessLevel brokennessLevel) {
-        this.brokennessLevel = brokennessLevel;
-    }
 
 }

@@ -64,7 +64,9 @@ public enum ActivityType {
 
     //REPAIR
     DEVICE_REPAIR(of(RoomName.COMMON), null, DeviceActivity.class,  FATHER, GRANDFATHER),
+    DEVICE_BREAK(of(RoomName.COMMON), null, DeviceActivity.class),
     CHANGE_BULB(of(RoomName.COMMON), null, BaseActivity.class, FATHER, GRANDFATHER),
+    READ_A_DOCUMENTATION(of(RoomName.COMMON), null, BaseActivity.class, FATHER),
 
     //OTHER
     CONTROL_THE_DOOR(of(RoomName.VESTIBULE), null),

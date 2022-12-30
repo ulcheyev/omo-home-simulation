@@ -1,0 +1,51 @@
+******************
+CONSUMPTION REPORT
+******************
+
+[1] Fridge in KITCHEN on the 1 floor has consumed ENERGY: 0.0KWH (SUM = 0.0$) 
+[2] WaterLeakSensor in BATHROOM on the 2 floor has consumed ENERGY: 0.0KWH (SUM = 0.0$) 
+[3] FireSensor in VESTIBULE on the 1 floor has consumed ENERGY: 0.0KWH (SUM = 0.0$) 
+[4] WaterLeakSensor in BATHROOM on the 2 floor has consumed ENERGY: 0.0KWH (SUM = 0.0$) 
+[5] FireSensor in KITCHEN on the 1 floor has consumed ENERGY: 0.0KWH (SUM = 0.0$) 
+[6] FireSensor in BATHROOM on the 2 floor has consumed ENERGY: 0.0KWH (SUM = 0.0$) 
+[8] FireSensor in BATHROOM on the 3 floor has consumed ENERGY: 0.0KWH (SUM = 0.0$) 
+[9] Computer in CHILDRENS_ROOM on the 3 floor has consumed ENERGY: 98.0KWH (SUM = 1372.0$) 
+[10] FireSensor in HALL on the 2 floor has consumed ENERGY: 0.0KWH (SUM = 0.0$) 
+[11] FireSensor in HALL on the 3 floor has consumed ENERGY: 0.0KWH (SUM = 0.0$) 
+[12] WashingMachine in BATHROOM on the 2 floor has consumed ENERGY: 0.0KWH (SUM = 0.0$) WATER: 0.0M3 (SUM = 0.0$) 
+[13] FireSensor in CHILDRENS_ROOM on the 3 floor has consumed ENERGY: 0.0KWH (SUM = 0.0$) 
+[14] Oven in KITCHEN on the 1 floor has consumed ENERGY: 0.0KWH (SUM = 0.0$) 
+[15] WashingMachine in BATHROOM on the 1 floor has consumed ENERGY: 0.0KWH (SUM = 0.0$) WATER: 0.0M3 (SUM = 0.0$) 
+[16] FireSensor in BEDROOM on the 3 floor has consumed ENERGY: 0.0KWH (SUM = 0.0$) 
+[17] FireSensor in HALL on the 1 floor has consumed ENERGY: 0.0KWH (SUM = 0.0$) 
+[18] TV in CHILDRENS_ROOM on the 2 floor has consumed ENERGY: 12.0KWH (SUM = 168.0$) 
+[19] Computer in CHILDRENS_ROOM on the 2 floor has consumed ENERGY: 14.0KWH (SUM = 196.0$) 
+[20] TV in CHILDRENS_ROOM on the 3 floor has consumed ENERGY: 192.0KWH (SUM = 2688.0$) 
+[21] WaterLeakSensor in BATHROOM on the 3 floor has consumed ENERGY: 0.0KWH (SUM = 0.0$) 
+[22] TV in KITCHEN on the 1 floor has consumed ENERGY: 0.0KWH (SUM = 0.0$) 
+[23] WashingMachine in BATHROOM on the 2 floor has consumed ENERGY: 0.0KWH (SUM = 0.0$) WATER: 0.0M3 (SUM = 0.0$) 
+[24] WashingMachine in BATHROOM on the 3 floor has consumed ENERGY: 0.0KWH (SUM = 0.0$) WATER: 0.0M3 (SUM = 0.0$) 
+[25] FireSensor in BATHROOM on the 1 floor has consumed ENERGY: 0.0KWH (SUM = 0.0$) 
+[26] Computer in BEDROOM on the 2 floor has consumed ENERGY: 0.0KWH (SUM = 0.0$) 
+[27] FireSensor in BEDROOM on the 2 floor has consumed ENERGY: 0.0KWH (SUM = 0.0$) 
+[28] WaterLeakSensor in BATHROOM on the 3 floor has consumed ENERGY: 0.0KWH (SUM = 0.0$) 
+[29] WaterLeakSensor in BATHROOM on the 1 floor has consumed ENERGY: 0.0KWH (SUM = 0.0$) 
+[30] FireSensor in GARAGE on the 1 floor has consumed ENERGY: 0.0KWH (SUM = 0.0$) 
+[31] WashingMachine in BATHROOM on the 3 floor has consumed ENERGY: 0.0KWH (SUM = 0.0$) WATER: 0.0M3 (SUM = 0.0$) 
+[32] FireSensor in BATHROOM on the 3 floor has consumed ENERGY: 0.0KWH (SUM = 0.0$) 
+[33] Computer in BEDROOM on the 3 floor has consumed ENERGY: 182.0KWH (SUM = 2548.0$) 
+[34] TV in BEDROOM on the 2 floor has consumed ENERGY: 36.0KWH (SUM = 504.0$) 
+[35] TV in BEDROOM on the 3 floor has consumed ENERGY: 0.0KWH (SUM = 0.0$) 
+[36] Computer in BEDROOM on the 3 floor has consumed ENERGY: 0.0KWH (SUM = 0.0$) 
+[37] FireSensor in BEDROOM on the 3 floor has consumed ENERGY: 0.0KWH (SUM = 0.0$) 
+[38] TV in BEDROOM on the 3 floor has consumed ENERGY: 156.0KWH (SUM = 2184.0$) 
+[39] WaterLeakSensor in KITCHEN on the 1 floor has consumed ENERGY: 0.0KWH (SUM = 0.0$) 
+[40] FireSensor in BATHROOM on the 2 floor has consumed ENERGY: 0.0KWH (SUM = 0.0$) 
+[41] FireSensor in CHILDRENS_ROOM on the 2 floor has consumed ENERGY: 0.0KWH (SUM = 0.0$) 
+
+************************************************************************************
+690.0KWH of ENERGY was consumed during the whole time. (SUM = 9660.0$) 
+************************************************************************************
+0.0M3 of WATER was consumed during the whole time. (SUM = 0.0$) 
+************************************************************************************
+

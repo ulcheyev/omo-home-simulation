@@ -7,6 +7,7 @@ import cvut.omo.home_structure.room_builder.Room;
 import cvut.omo.usable.Usable;
 import cvut.omo.usable.stuff.Stuff;
 
+import java.io.IOException;
 import java.util.Set;
 public interface HomeDevice extends HomeComponent, Usable {
 

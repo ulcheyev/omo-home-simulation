@@ -2,6 +2,7 @@ package cvut.omo.event;
 
 import cvut.omo.app_utils.Utils;
 import cvut.omo.device.HomeDevice;
+import cvut.omo.device.documentation.Documentation;
 import cvut.omo.entity.Responsible;
 import cvut.omo.event.event_type.DeviceResponsibleEvent;
 import cvut.omo.event.event_type.EventType;

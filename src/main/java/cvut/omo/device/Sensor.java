@@ -3,6 +3,8 @@ package cvut.omo.device;
 import cvut.omo.app_utils.Constants;
 import cvut.omo.data_collections.consumption.ConsumptionCollection;
 import cvut.omo.device.notifier.EventListener;
+
+import javax.mail.MessagingException;
 import java.io.IOException;
 
 
@@ -31,5 +33,5 @@ public abstract class Sensor extends HomeAppliances {
 
     public abstract void addListener(EventListener listener);
     public abstract void removeListener(EventListener listener);
-    public abstract void alert() throws IOException;
+    public abstract void alert() throws IOException, MessagingException;
 }

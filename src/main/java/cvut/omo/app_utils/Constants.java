@@ -59,7 +59,7 @@ public class Constants {
     public final static String RUN = "RUN";
     public final static String REPAIR = "REPAIR";
     public final static String PAUSE = "PAUSE";
-    public final static String BROKEN = "BROKEN";
-    public final static ImmutableList<String> flags = ImmutableList.of(ON, OFF, RUN, REPAIR, PAUSE, BROKEN);
+    public final static String BREAK = "BREAK";
+    public final static ImmutableList<String> flags = ImmutableList.of(ON, OFF, RUN, REPAIR, PAUSE, BREAK);
 
 }
