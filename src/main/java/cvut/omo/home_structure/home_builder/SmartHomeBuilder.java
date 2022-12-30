@@ -25,6 +25,7 @@ public final class SmartHomeBuilder implements HomeBuilder{
         return this;
     }
 
+    //TODO proverka, esli roli uzhe est. Napr 2 mamy 2 papy
     @Override
     public HomeBuilder addPerson(String name, FamilyRoleType familyRoleType) {
        home.addEntity(new Person(name, familyRoleType));
@@ -37,7 +38,7 @@ public final class SmartHomeBuilder implements HomeBuilder{
         return this;
     }
 
-
+    //TODO kontrola esli dobavit 4 no net 3 -> exception
     @Override
     public FloorStub addFloor(int floorNumber) {
         if(home.getFloors()
