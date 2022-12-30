@@ -7,10 +7,14 @@ import cvut.omo.data_collections.visitor.SmartHomeVisitor;
 import cvut.omo.device.documentation.BrokennessLevel;
 import cvut.omo.device.documentation.Documentation;
 import cvut.omo.entity.Responsible;
+import cvut.omo.entity.activity.ActivityFactory;
+import cvut.omo.entity.activity.ActivityType;
 import cvut.omo.entity.nulls.NullResponsibleType;
 import cvut.omo.entity.person.Person;
+import cvut.omo.event.Event;
 import cvut.omo.home_structure.room_builder.Room;
 import lombok.Getter;
+import lombok.Setter;
 
 import java.io.IOException;
 import java.util.*;
@@ -19,6 +23,7 @@ import static cvut.omo.app_utils.Constants.*;
 
 
 @Getter
+@Setter
 public abstract class HomeAppliances extends Responsible implements HomeDevice{
 
     protected Dictionary<SourceType, Double> currentConsumption;
@@ -50,10 +55,30 @@ public abstract class HomeAppliances extends Responsible implements HomeDevice{
         homeDeviceState.use(person, this);
         update();
     };
-    public void repair(Person person){
+    public void repair(Event event, Person person)  {
+        if (homeDeviceState instanceof BrokenState && this.documentation == null) {
+            try {
+                Documentation doc = new Documentation(this);
+                doc.generateDocumentation();
+                this.documentation = doc;
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
         homeDeviceState.repair(person, this);
+
+        person.handle(ActivityFactory.createActivity(
+                person,
+                event,
+                switch (this.getBrokennessLevel()){
+                    case FINE -> ActivityType.TRY_TO_FIX_IT_YOURSELF;
+                    case MEDIUM -> ActivityType.CALL_GRANDFATHER_TO_HELP_REPAIR;
+                    case HARDCORE -> ActivityType.THROW_THE_DEVICE_IN_THE_TRASH;})
+        );
+
         update();
     };
+
     public void breakDevice(){
         homeDeviceState._break(this);
         update();
@@ -74,18 +99,6 @@ public abstract class HomeAppliances extends Responsible implements HomeDevice{
         ConsumptionCollection.getInstance().update(this);
     }
 
-    public Documentation getDocumentation(){
-        if (homeDeviceState instanceof BrokenState && this.documentation == null){
-            try {
-                Documentation doc = new Documentation(this);
-                doc.generateDocumentation();
-                this.documentation = doc;
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-        return documentation;
-    }
 
     public boolean isNotConsume(){
         return currentConsumption.get(SourceType.NOT_CONSUME) != null;
@@ -115,10 +128,10 @@ public abstract class HomeAppliances extends Responsible implements HomeDevice{
         }
     }
     protected void breakDown(){
+        setBrokennessLevel(Utils.getRandomBrokennessLevel());
         for (Iterator<SourceType> it = currentConsumption.keys().asIterator(); it.hasNext(); ) {
             SourceType sourceType = it.next();
             setCurrentConsumption(sourceType, DEVICE_BROKEN_STATE);
-            this.setBrokennessLevel(Utils.getRandomBrokennessLevel());
         }
     }
 
@@ -138,8 +151,5 @@ public abstract class HomeAppliances extends Responsible implements HomeDevice{
         this.homeDeviceState = homeDeviceState;
     }
 
-    public void setBrokennessLevel(BrokennessLevel brokennessLevel) {
-        this.brokennessLevel = brokennessLevel;
-    }
 
 }

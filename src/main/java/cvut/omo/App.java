@@ -1,68 +1,22 @@
 package cvut.omo;
-import cvut.omo.data_collections.consumption.ConsumptionCollection;
-import cvut.omo.data_collections.activity_events.SmartHomeEventCollection;
-import cvut.omo.data_collections.visitor.HomeConfigurationReportVisitor;
-import cvut.omo.event.EventGenerator;
-import cvut.omo.home_structure.home_builder.Home;
-import cvut.omo.home_structure.home_builder.SmartHomeBuilder;
-import cvut.omo.home_structure.home_builder.SmartHomeBuilderDirector;
-
-import java.io.IOException;
 
 public class App {
 
 
-    public static void main(String[] args) throws IOException, InterruptedException {
+    public static void main(String[] args) {
+        OMOSmartHomeSimulationFacade smartHome = OMOSmartHomeSimulationFacade.INSTANCE;
 
+        //CREATE CONFIG
+        smartHome.createSmallConfig();
 
-        SmartHomeBuilderDirector.createLargeHomeConfiguration(SmartHomeBuilder.INSTANCE);
-        Home home = SmartHomeBuilder.INSTANCE.getResult();
-        home.onAllDevices();
+        //DO SIMULATION
+        smartHome.simulate();
 
-        //GENERATE EVENTS FOR PERSONS, HOMEDEVICES AND ROOMS
-        EventGenerator.generateRandomEvents(1000);
-
-        while (!SmartHomeEventCollection.allSolved()) {
-            home.update();
-        }
-
-        SmartHomeEventCollection.generateEventReport();
-        SmartHomeEventCollection.generateActivityAndUsageReport();
-        ConsumptionCollection.getInstance().generateReport();
-        HomeConfigurationReportVisitor visitor = new HomeConfigurationReportVisitor();
-        visitor.generateReport();
+        //GENERATE REPORTS
+        smartHome.generateAllReports();
 
     }
 }
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//System.out.println("\n" +
-//        "███████╗███╗   ███╗ █████╗ ██████╗ ████████╗    ██╗  ██╗ ██████╗ ███╗   ███╗███████╗\n" +
-//        "██╔════╝████╗ ████║██╔══██╗██╔══██╗╚══██╔══╝    ██║  ██║██╔═══██╗████╗ ████║██╔════╝\n" +
-//        "███████╗██╔████╔██║███████║██████╔╝   ██║       ███████║██║   ██║██╔████╔██║█████╗  \n" +
-//        "╚════██║██║╚██╔╝██║██╔══██║██╔══██╗   ██║       ██╔══██║██║   ██║██║╚██╔╝██║██╔══╝  \n" +
-//        "███████║██║ ╚═╝ ██║██║  ██║██║  ██║   ██║       ██║  ██║╚██████╔╝██║ ╚═╝ ██║███████╗\n" +
-//        "╚══════╝╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝       ╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚═╝╚══════╝\n" +
-//        "                                                                                    \n");

@@ -1,12 +1,11 @@
 package cvut.omo.device;
 import cvut.omo.device.notifier.EventListener;
+
+import javax.mail.MessagingException;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 public class FireSensor extends Sensor  {
 
-    List<EventListener> listenerList = new ArrayList<>();
     public String message = "Everyone needs to get out of the house - the house is on fire!";
 
     public FireSensor(double lifeTime) {super(lifeTime);}
@@ -22,7 +21,7 @@ public class FireSensor extends Sensor  {
     }
 
     @Override
-    public void alert() throws IOException {
+    public void alert() throws IOException, MessagingException {
         for (EventListener listener :listenerList){
             listener.update(message, this);
         }

@@ -1,0 +1,32 @@
+******************
+CONSUMPTION REPORT
+******************
+
+[1] WashingMachine in BATHROOM on the 1 floor has consumed ENERGY: 11.799999999999992KWH (SUM = 47.19999999999997$) WATER: 5.799999999999994M3 (SUM = 17.39999999999998$) 
+[2] FireSensor in BEDROOM on the 2 floor has consumed ENERGY: 1.8000000000000005KWH (SUM = 7.200000000000002$) 
+[3] WashingMachine in BATHROOM on the 2 floor has consumed ENERGY: 87.29999999999998KWH (SUM = 349.19999999999993$) WATER: 27.30000000000001M3 (SUM = 81.90000000000003$) 
+[4] FireSensor in CHILDRENS_ROOM on the 2 floor has consumed ENERGY: 4.899999999999998KWH (SUM = 19.59999999999999$) 
+[5] TV in KITCHEN on the 1 floor has consumed ENERGY: 1.7000000000000004KWH (SUM = 6.800000000000002$) 
+[6] WaterLeakSensor in KITCHEN on the 1 floor has consumed ENERGY: 10.799999999999988KWH (SUM = 43.19999999999995$) 
+[8] FireSensor in BATHROOM on the 2 floor has consumed ENERGY: 2.5000000000000013KWH (SUM = 10.000000000000005$) 
+[9] FireSensor in BATHROOM on the 1 floor has consumed ENERGY: 2.1000000000000005KWH (SUM = 8.400000000000002$) 
+[10] FireSensor in HALL on the 1 floor has consumed ENERGY: 3.0000000000000013KWH (SUM = 12.000000000000005$) 
+[11] Computer in BEDROOM on the 2 floor has consumed ENERGY: 42.00000000000002KWH (SUM = 168.00000000000009$) 
+[12] FireSensor in GARAGE on the 1 floor has consumed ENERGY: 1.9000000000000006KWH (SUM = 7.600000000000002$) 
+[13] Fridge in KITCHEN on the 1 floor has consumed ENERGY: 254.70000000000002KWH (SUM = 1018.8000000000001$) 
+[14] WaterLeakSensor in BATHROOM on the 1 floor has consumed ENERGY: 6.299999999999993KWH (SUM = 25.19999999999997$) 
+[15] TV in CHILDRENS_ROOM on the 2 floor has consumed ENERGY: 85.89999999999998KWH (SUM = 343.5999999999999$) 
+[16] WaterLeakSensor in BATHROOM on the 2 floor has consumed ENERGY: 6.799999999999998KWH (SUM = 27.199999999999992$) 
+[17] FireSensor in KITCHEN on the 1 floor has consumed ENERGY: 3.1000000000000014KWH (SUM = 12.400000000000006$) 
+[18] FireSensor in HALL on the 2 floor has consumed ENERGY: 2.0000000000000004KWH (SUM = 8.000000000000002$) 
+[19] Computer in CHILDRENS_ROOM on the 2 floor has consumed ENERGY: 37.50000000000004KWH (SUM = 150.00000000000017$) 
+[20] Oven in KITCHEN on the 1 floor has consumed ENERGY: 198.69999999999987KWH (SUM = 794.7999999999995$) 
+[21] FireSensor in VESTIBULE on the 1 floor has consumed ENERGY: 2.600000000000001KWH (SUM = 10.400000000000004$) 
+[22] TV in BEDROOM on the 2 floor has consumed ENERGY: 92.69999999999996KWH (SUM = 370.79999999999984$) 
+
+************************************************************************************
+860.0999999999999KWH of ENERGY was consumed during the whole time. (SUM = 3440.3999999999996$) 
+************************************************************************************
+33.10000000000001M3 of WATER was consumed during the whole time. (SUM = 99.30000000000003$) 
+************************************************************************************
+

@@ -10,6 +10,7 @@ import cvut.omo.entity.Responsible;
 import cvut.omo.entity.activity.Activity;
 import cvut.omo.entity.activity.DeviceActivity;
 import cvut.omo.entity.activity.ItemActivity;
+import cvut.omo.entity.activity.WaitingActivity;
 import cvut.omo.event.Event;
 import cvut.omo.home_structure.home_builder.Home;
 import cvut.omo.usable.Usable;
@@ -47,7 +48,9 @@ public class ActivityReportIterator implements Iterator {
         for(Event event: SmartHomeEventCollection.getAll()){
             for(Activity activity : event.getChainToSolve()){
                 if(activity.getResponsible().equals(responsible)){
-                    checkOnUsageAktivity(activity);
+                    if(!(activity instanceof WaitingActivity)) {
+                        checkOnUsageAktivity(activity);
+                    }
                     sb.append("----").append(activity).append("\n");
                 }
             }

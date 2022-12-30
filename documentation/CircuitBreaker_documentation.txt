@@ -1,0 +1,7 @@
+********************
+DOCUMENTATION
+********************
+
+This is very clever documentation for the device: CircuitBreaker you just broke.
+ It turned out that your device has a state of damage: HARDCORE.
+ Nothing will help you, throw the device in the trash.

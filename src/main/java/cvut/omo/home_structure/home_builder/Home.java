@@ -55,9 +55,6 @@ public class Home {
         return res;
     }
 
-    public void onAllDevices(){
-    }
-
 
     public List<HomeAppliances> getHomeAppliancesByClass(Class<? extends Usable> clazz){
         List<HomeDevice> hds = getHomeDevices();

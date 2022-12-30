@@ -16,7 +16,7 @@ public class ActivityFactory {
 
     public static Activity createActivity(Responsible res,
                                           Event event,
-                                          ActivityType activityType) throws InterruptedException
+                                          ActivityType activityType)
     {
 
         Class<? extends Activity> solver = activityType.getSolver();

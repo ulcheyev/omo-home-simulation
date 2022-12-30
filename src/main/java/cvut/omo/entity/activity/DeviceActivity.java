@@ -14,6 +14,7 @@ import cvut.omo.usable.stuff.NullStuff;
 import cvut.omo.usable.stuff.Stuff;
 
 
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,7 +35,7 @@ public class DeviceActivity extends Activity {
     public boolean doWork(Responsible responsible) {
 
         if(toUse == null){
-            founded = findHomeDevice(Home.INSTANCE.getHomeDevices());
+            founded = (HomeDevice) event.getResponsible();
         }
 
         else {
@@ -63,9 +64,9 @@ public class DeviceActivity extends Activity {
                     }
                 }
             }
-            case REPAIR -> founded.repair((Person) responsible);
+            case REPAIR -> founded.repair(event, (Person) responsible);
             case PAUSE -> founded.pause();
-            case BROKEN -> founded.breakDevice();
+            case BREAK -> founded.breakDevice();
         }
         return true;
     }

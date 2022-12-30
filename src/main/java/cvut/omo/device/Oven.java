@@ -2,7 +2,6 @@ package cvut.omo.device;
 
 import cvut.omo.app_utils.Constants;
 import cvut.omo.data_collections.consumption.ConsumptionCollection;
-import cvut.omo.entity.person.Person;
 
 public class Oven extends HomeAppliances{
 
