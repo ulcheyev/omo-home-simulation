@@ -15,21 +15,21 @@ public class Constants {
     public final static char CURRENCY = '$';
 
 
-    public final static double COMPUTER_RUN_STATE_ELECTRICITY_CONSUMPTION = 14;
-    public final static double TV_ELECTRICITY_RUN_STATE_CONSUMPTION = 12;
-    public final static double SENSOR_ELECTRICITY_RUN_STATE_CONSUMPTION = 2;
-    public final static double OVEN_ELECTRICITY_RUN_STATE_CONSUMPTION = 15;
-    public final static double WASHING_MACHINE_RUN_STATE_ELECTRICITY_CONSUMPTION = 7;
-    public final static double WASHING_MACHINE_RUN_STATE_WATER_CONSUMPTION = 2;
-    public final static double FRIDGE_RUN_ELECTRICITY_CONSUMPTION = 7;
+    public final static double COMPUTER_RUN_STATE_ELECTRICITY_CONSUMPTION = 250;
+    public final static double TV_ELECTRICITY_RUN_STATE_CONSUMPTION = 166;
+    public final static double SENSOR_ELECTRICITY_RUN_STATE_CONSUMPTION = 101.2;
+    public final static double OVEN_ELECTRICITY_RUN_STATE_CONSUMPTION = 160.3;
+    public final static double WASHING_MACHINE_RUN_STATE_ELECTRICITY_CONSUMPTION = 124.2;
+    public final static double WASHING_MACHINE_RUN_STATE_WATER_CONSUMPTION = 55.7;
+    public final static double FRIDGE_RUN_ELECTRICITY_CONSUMPTION = 201.2;
 
-    public final static double COMPUTER_IDDLE_STATE_ELECTRICITY_CONSUMPTION = 14;
-    public final static double TV_ELECTRICITY_IDDLE_STATE_CONSUMPTION = 12;
-    public final static double SENSOR_ELECTRICITY_IDDLE_STATE_CONSUMPTION = 2;
-    public final static double OVEN_ELECTRICITY_IDDLE_STATE_CONSUMPTION = 15;
-    public final static double WASHING_MACHINE_IDDLE_STATE_ELECTRICITY_CONSUMPTION = 7;
-    public final static double WASHING_MACHINE_IDDLE_STATE_WATER_CONSUMPTION = 2;
-    public final static double FRIDGE_IDDLE_STATE_ELECTRICITY_CONSUMPTION = 7;
+    public final static double COMPUTER_IDDLE_STATE_ELECTRICITY_CONSUMPTION = 50;
+    public final static double TV_ELECTRICITY_IDDLE_STATE_CONSUMPTION = 5.3;
+    public final static double SENSOR_ELECTRICITY_IDDLE_STATE_CONSUMPTION = 55.6;
+    public final static double OVEN_ELECTRICITY_IDDLE_STATE_CONSUMPTION = 2.1;
+    public final static double WASHING_MACHINE_IDDLE_STATE_ELECTRICITY_CONSUMPTION = 24.1;
+    public final static double WASHING_MACHINE_IDDLE_STATE_WATER_CONSUMPTION = 24.7;
+    public final static double FRIDGE_IDDLE_STATE_ELECTRICITY_CONSUMPTION = 103;
 
     public final static double COMPUTER_LIFE_TIME = 14;
     public final static double FRIDGE_LIFE_TIME = 14;
@@ -47,7 +47,6 @@ public class Constants {
     public final static String HOME_CONFIG_REPORT_HEADER = "*************************\nHOME CONFIGURATION REPORT\n*************************\n\n";
     public final static String EVENT_REPORT_HEADER = "*************************\nEVENTS REPORT\n*************************\n\n";
     public final static String PDF_DOCUMENTATION_HEADER = "********************\nDOCUMENTATION\n********************\n\n";
-    public final static String PDF_EMAIL_HEADER = "********************\nGMAIL.COM\n********************\n\n";
     public final static String STARS_UP = "\n\n************************************************************************************\n";
     public final static String STARS = "\n************************************************************************************\n";
     public final static String STARS_DOWN = "************************************************************************************";

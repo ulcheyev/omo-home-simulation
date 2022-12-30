@@ -95,13 +95,14 @@ public abstract class HomeAppliances extends Responsible implements HomeDevice{
         return currentConsumption.get(sourceType);
     }
 
-    //TODO update working hours and check life time
     public void update(){
         super.update();
         this.workingHours++;
+        if(this.workingHours > this.lifeTimeInYear){
+            this.breakDown();
+        }
         ConsumptionCollection.getInstance().update(this);
     }
-
 
     public boolean isNotConsume(){
         return currentConsumption.get(SourceType.NOT_CONSUME) != null;

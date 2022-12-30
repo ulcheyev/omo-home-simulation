@@ -110,7 +110,6 @@ public class Room implements HomeComponent {
     }
 
 
-    //ToDO
     public void update() throws InterruptedException {
     Thread thread = new Thread(
             () -> {

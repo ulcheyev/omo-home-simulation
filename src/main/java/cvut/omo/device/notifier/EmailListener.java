@@ -23,23 +23,23 @@ public class EmailListener implements EventListener{
      */
     @Override
     public void update(String message, Sensor sensor) throws IOException, MessagingException {
-        final Properties properties = new Properties();
-        properties.load(new FileInputStream("mail.properties"));
-        Session mailSession = Session.getDefaultInstance(properties);
-        MimeMessage msg = new MimeMessage(mailSession);
-        msg.setFrom(new InternetAddress("marinaloki123"));
-        msg.addRecipient(Message.RecipientType.TO, new InternetAddress("mrg.lupenko@gmail.com"));
-        final String text =
-                "Hello,\n we notify you that it worked in the house: "
-                        + sensor.getClass().getSimpleName() + message + "\nrespectfully, your Smart Home";
-        msg.setSubject("This is a notification");
-        msg.setText(text);
-
-        Transport tr = mailSession.getTransport();
-        tr.connect("marinaloki123@gmail.com", "otiqrytddmprpkmq");
-        tr.sendMessage(msg, msg.getAllRecipients());
-        tr.close();
-
+//        final Properties properties = new Properties();
+//        properties.load(new FileInputStream("mail.properties"));
+//        Session mailSession = Session.getDefaultInstance(properties);
+//        MimeMessage msg = new MimeMessage(mailSession);
+//        msg.setFrom(new InternetAddress("marinaloki123"));
+//        msg.addRecipient(Message.RecipientType.TO, new InternetAddress("mrg.lupenko@gmail.com"));
+//        final String text =
+//                "Hello,\n we notify you that it worked in the house: "
+//                        + sensor.getClass().getSimpleName() + message + "\nrespectfully, your Smart Home";
+//        msg.setSubject("This is a notification");
+//        msg.setText(text);
+//
+//        Transport tr = mailSession.getTransport();
+//        tr.connect("marinaloki123@gmail.com", "otiqrytddmprpkmq");
+//        tr.sendMessage(msg, msg.getAllRecipients());
+//        tr.close();
+        System.out.println("Bubu");
     }
 
 }

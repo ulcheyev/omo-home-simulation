@@ -77,7 +77,6 @@ public class Event {
         chainToSolve.add(activity);
     }
 
-    //TODO
     public boolean checkSolving(){
        List<ActivityType> activityTypes = new ArrayList<>();
        for(Activity activity: chainToSolve){
