@@ -1,5 +1,6 @@
 package cvut.omo.device.notifier;
 import cvut.omo.device.Sensor;
+import lombok.Setter;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -21,6 +22,10 @@ public class EmailListener implements EventListener{
      * @param sensor
      * @throws IOException
      */
+
+    @Setter
+    private static String email;
+
     @Override
     public void update(String message, Sensor sensor) throws IOException, MessagingException {
         final Properties properties = new Properties();
