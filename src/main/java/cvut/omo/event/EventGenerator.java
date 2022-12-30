@@ -85,7 +85,7 @@ public class EventGenerator {
             homeDevice = (Responsible) getRandomObjFromList(Home.INSTANCE.getHomeDevices());
         }
         if(eventType == DeviceResponsibleEvent.FIRE_SENSOR_ALARM || eventType == DeviceResponsibleEvent.WATER_LEAK_SENSOR_ALARM){
-            int rnd = getRandomInt(100);
+            int rnd = getRandomInt(750);
             if(rnd == 1){
                 Room room = homeDevice.getRoom();
                 Event event = new Event(homeDevice, eventType);
