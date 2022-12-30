@@ -12,7 +12,7 @@ public abstract class Sensor extends HomeAppliances {
 
     @Override
     protected void identify() {
-        this.currentConsumption.put(SourceType.ENERGY, Constants.DEVICE_OFF_STATE);
+        this.currentConsumption.put(SourceType.ENERGY, Constants.DEVICE_OFF_STATE_ELECTRICITY);
         ConsumptionCollection.getInstance().put(this);
     }
 

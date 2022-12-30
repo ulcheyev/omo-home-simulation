@@ -4,6 +4,7 @@ import cvut.omo.app_utils.Constants;
 import cvut.omo.app_utils.Utils;
 import cvut.omo.data_collections.consumption.ConsumptionCollection;
 import cvut.omo.entity.person.Person;
+import cvut.omo.exceptions.OMOException;
 import cvut.omo.usable.stuff.Food;
 import cvut.omo.usable.stuff.Stuff;
 
@@ -45,7 +46,7 @@ public class Fridge extends HomeAppliances implements Capacious{
 
     @Override
     protected void identify() {
-        this.currentConsumption.put(SourceType.ENERGY, Constants.DEVICE_OFF_STATE);
+        this.currentConsumption.put(SourceType.ENERGY, Constants.DEVICE_OFF_STATE_ELECTRICITY);
         ConsumptionCollection.getInstance().put(this);
     }
 
@@ -53,7 +54,7 @@ public class Fridge extends HomeAppliances implements Capacious{
     @Override
     public Stuff giveRandomItem() {
         if(foods.isEmpty()){
-            throw new ArrayIndexOutOfBoundsException("Fridge is empty");
+            throw new OMOException("Fridge is empty");
         }
         Food randomObjFromList = Utils.getRandomObjFromList(foods);
         foods.remove(randomObjFromList);

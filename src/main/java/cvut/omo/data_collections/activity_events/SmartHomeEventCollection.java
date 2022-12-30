@@ -1,20 +1,19 @@
-package cvut.omo.data_collections.events;
+package cvut.omo.data_collections.activity_events;
 
 import cvut.omo.app_utils.Constants;
 import cvut.omo.app_utils.FileWriter;
 import cvut.omo.app_utils.Utils;
 import cvut.omo.event.Event;
-import org.apache.commons.lang3.tuple.Pair;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class EventCollection {
+public class SmartHomeEventCollection {
 
-    public static final EventCollection INSTANCE = new EventCollection();
-    private EventCollection(){};
+    public static final SmartHomeEventCollection INSTANCE = new SmartHomeEventCollection();
+    private SmartHomeEventCollection(){};
     private static List<Event> events = new ArrayList<>();
 
     public static void addEvent(Event event){
@@ -33,6 +32,8 @@ public class EventCollection {
     public static int size(){
         return events.size();
     }
+
+    public static List<Event> getAll(){return events;}
 
 
     public static boolean allSolved() {
@@ -54,19 +55,31 @@ public class EventCollection {
         }
     }
 
-    public static void generateReport() throws IOException {
+    public static void generateEventReport() throws IOException {
         StringBuilder sb = new StringBuilder();
-        EventCollectionReportIterator iterator = createReportIterator();
+        EventReportIterator iterator = createEventReportIterator();
         sb.append(Constants.EVENT_REPORT_HEADER);
         while (iterator.hasNext()){
             sb.append(iterator.next()).append("\n");
         }
-
         FileWriter.generateNewReport("events_report"+ Utils.getRandomInt(), sb.toString());
-
     }
 
-    public static EventCollectionReportIterator createReportIterator(){
-        return new EventCollectionReportIterator();
+    public static void generateActivityAndUsageReport() throws IOException {
+        StringBuilder sb = new StringBuilder();
+        ActivityReportIterator iterator = createActivityReportIterator();
+        sb.append(Constants.ACTIVITY_REPORT_HEADER);
+        while (iterator.hasNext()){
+            sb.append(iterator.next()).append("\n");
+        }
+        FileWriter.generateNewReport("activity_and_usage_report"+ Utils.getRandomInt(), sb.toString());
     }
+
+    public static EventReportIterator createEventReportIterator(){
+        return new EventReportIterator();
+    }
+    public static ActivityReportIterator createActivityReportIterator(){
+        return new ActivityReportIterator();
+    }
+
 }

@@ -7,6 +7,7 @@ import cvut.omo.device.HomeDevice;
 import cvut.omo.entity.Responsible;
 import cvut.omo.entity.person.Person;
 import cvut.omo.event.Event;
+import cvut.omo.exceptions.OMOException;
 import cvut.omo.home_structure.home_builder.Home;
 import cvut.omo.usable.Usable;
 import cvut.omo.usable.stuff.NullStuff;
@@ -24,13 +25,13 @@ public class DeviceActivity extends Activity {
     private HomeDevice founded = null;
     private List<Stuff> stuffList = new ArrayList<>();
 
-    public DeviceActivity(Responsible responsible, Event event, Class<? extends Usable> toUse, ActivityType activityType) throws InterruptedException {
+    public DeviceActivity(Responsible responsible, Event event, Class<? extends Usable> toUse, ActivityType activityType) {
         super(responsible, event, activityType);
         this.toUse = toUse;
     }
 
     @Override
-    public void doWork(Responsible responsible) {
+    public boolean doWork(Responsible responsible) {
 
         if(toUse == null){
             founded = findHomeDevice(Home.INSTANCE.getHomeDevices());
@@ -49,30 +50,35 @@ public class DeviceActivity extends Activity {
         }
 
         switch (containsFlag(activityType)){
-            case ON -> founded.clickOn();
-            case OFF -> founded.clickOff();
+            case ON -> founded.switchOn();
+            case OFF -> founded.switchOff();
             case RUN -> {
                 founded.use((Person) responsible);
                 if(founded instanceof Capacious){
                     try {
                         Capacious founded = ((Capacious) this.founded);
                         stuffList.add(founded.giveRandomItem());
-                    }catch (ArrayIndexOutOfBoundsException e){
+                    }catch (OMOException e){
                         stuffList.add(new NullStuff());
                     }
                 }
             }
             case REPAIR -> founded.repair((Person) responsible);
-            case PAUSE -> founded.clickPause();
+            case PAUSE -> founded.pause();
             case BROKEN -> founded.breakDevice();
         }
-
+        return true;
     }
 
     @Override
     public String toString() {
+
+        String device = responsible instanceof HomeDevice ? ""
+                : " on " + founded.getClass().getSimpleName();
+
         StringBuilder s = new StringBuilder(super.toString() +
-                " on " + founded.getClass().getSimpleName());
+                device);
+
         if(!stuffList.isEmpty()){
             for(Stuff stuff: stuffList) {
                 String padded = String.format("%-6s", " ");

@@ -19,8 +19,9 @@ public class RelocateActivity extends Activity {
     }
 
     @Override
-    public void doWork(Responsible responsible) {
+    public boolean doWork(Responsible responsible) {
         responsible.relocate(event, room);
+        return true;
     }
 
 

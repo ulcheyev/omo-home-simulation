@@ -7,6 +7,10 @@ import static cvut.omo.entity.person.FamilyRoleType.*;
 import static java.util.List.of;
 import cvut.omo.home_structure.room_builder.RoomName;
 import cvut.omo.usable.Usable;
+import cvut.omo.usable.item.Bike;
+import cvut.omo.usable.item.Car;
+import cvut.omo.usable.item.PetToy;
+import cvut.omo.usable.item.Ski;
 import lombok.Getter;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -21,13 +25,16 @@ public enum ActivityType {
     * */
 
     //DEVICE
-    HOME_POWER_OFF(of(RoomName.STUB), CircuitBreaker.class, DeviceActivity.class, Device.CIRCUIT_BREAKER),
 
     //PERSON
     PET_A_PET(of(RoomName.COMMON),null),
     TAKE_A_WALK_WITH_PET(of(RoomName.STUB), null,  DAUGHTER, SON),
     FEED_PET(of(RoomName.COMMON), null),
     PERSON_SLEEP(of(RoomName.BEDROOM), null),
+
+    USE_BIKE(of(RoomName.GARAGE), Bike.class, ItemActivity.class),
+    USE_SKIS(of(RoomName.GARAGE), Ski.class, ItemActivity.class),
+    USE_CAR(of(RoomName.GARAGE), Car.class, ItemActivity.class),
 
     //ON DEVICE
     DEVICE_FRIDGE_ON(of(RoomName.KITCHEN),Fridge.class, DeviceActivity.class),
@@ -38,6 +45,9 @@ public enum ActivityType {
     DEVICE_FIRE_SENSOR_ON(RoomType.getAll(), FireSensor.class, DeviceActivity.class, FATHER, GRANDFATHER),
     DEVICE_TV_ON(RoomType.CHILL.getRooms(), TV.class, DeviceActivity.class),
 
+    DEVICE_CURCUIT_BREAKER_ON(of(RoomName.STUB), CircuitBreaker.class, DeviceActivity.class, Device.CIRCUIT_BREAKER),
+
+
     //OFF Device -> CONF THE SAME AS ON
     DEVICE_FRIDGE_OFF(DEVICE_FRIDGE_ON),
     DEVICE_COMPUTER_OFF(DEVICE_COMPUTER_ON),
@@ -46,6 +56,8 @@ public enum ActivityType {
     DEVICE_WATER_LEAK_SENSOR_OFF(DEVICE_WATER_LEAK_SENSOR_ON),
     DEVICE_FIRE_SENSOR_OFF(DEVICE_FIRE_SENSOR_ON),
     DEVICE_TV_OFF(DEVICE_TV_ON),
+    DEVICE_CURCUIT_BREAKER_OFF(of(RoomName.VESTIBULE), CircuitBreaker.class, DeviceActivity.class, FATHER, GRANDFATHER),
+
 
     //RUN DEVICES -> CONF THE SAME AS ON
     DEVICE_FRIDGE_RUN(DEVICE_FRIDGE_ON),
@@ -53,7 +65,6 @@ public enum ActivityType {
     DEVICE_OVEN_RUN(DEVICE_OVEN_ON),
     DEVICE_WASHING_MACHINE_RUN(DEVICE_WASHING_MACHINE_ON),
     DEVICE_TV_RUN(DEVICE_TV_ON),
-    DEVICE_CURCUIT_BREAKER_RUN(of(RoomName.VESTIBULE), CircuitBreaker.class, DeviceActivity.class, FATHER, GRANDFATHER),
 
     //PAUSE DEVICES -> CONF THE SAME AS ON
     DEVICE_FRIDGE_PAUSE(DEVICE_FRIDGE_ON),
@@ -66,6 +77,8 @@ public enum ActivityType {
     DEVICE_REPAIR(of(RoomName.COMMON), null, DeviceActivity.class,  FATHER, GRANDFATHER),
     CHANGE_BULB(of(RoomName.COMMON), null, BaseActivity.class, FATHER, GRANDFATHER),
 
+
+
     //OTHER
     CONTROL_THE_DOOR(of(RoomName.VESTIBULE), null),
     CALL_THE_RESCUE_SERVICE(of(RoomName.STUB), FireSensor.class),
@@ -77,27 +90,16 @@ public enum ActivityType {
     TIDY_UP(of(RoomName.COMMON), null, BaseActivity.class, MOTHER, DAUGHTER),
     DECORATE_A_CHRISTMAS_TREE(of(RoomName.HALL), null, BaseActivity.class, MOTHER, DAUGHTER, SON),
 
+
     //PETS
     PET_SAY(of(RoomName.STUB), BaseActivity.class, null, PetType.class.getEnumConstants()),
     PET_SLEEP(of(RoomName.COMMON), BaseActivity.class, null, PetType.class.getEnumConstants()),
     PET_EAT(of(RoomName.KITCHEN), BaseActivity.class, null, PetType.class.getEnumConstants()),
-    PLAY_WITH_TOY(of(RoomName.COMMON), BaseActivity.class, null, PetType.class.getEnumConstants()),
+
+    PLAY_WITH_TOY(of(RoomName.STUB), PetToy.class, ItemActivity.class, PetType.class.getEnumConstants()),
 
     //PERSON AND PETS
     RELOCATE(of(RoomName.STUB), RelocateActivity.class, null, FamilyRoleType.class.getEnumConstants(), PetType.class.getEnumConstants());
-//    USE_BIKE(UseItem.class, FamilyRoleType.class.getEnumConstants()),
-//    USE_SKIS(UseItem.class, FamilyRoleType.class.getEnumConstants()),
-//    USE_CAR(UseItem.class, FamilyRoleType.FATHER, FamilyRoleType.GRANDFATHER, FamilyRoleType.MOTHER, FamilyRoleType.GRANDMOTHER),
-//    PERSON_SPORT(BaseActivity.class, FamilyRoleType.class.getEnumConstants()),
-//    PERSON_EAT(BaseActivity.class, FamilyRoleType.class.getEnumConstants()),
-//    PERSON_SLEEP(BaseActivity.class, FamilyRoleType.class.getEnumConstants()),
-//    COOK(BaseActivity.class, FamilyRoleType.MOTHER),
-//    CLEAN_HOME(BaseActivity.class, FamilyRoleType.MOTHER, FamilyRoleType.DAUGHTER),
-//    LOOK_THE_DOCUMENTATION(BaseActivity.class, FamilyRoleType.FATHER, FamilyRoleType.GRANDFATHER),
-//    WALK_THE_PET(BaseActivity.class, FamilyRoleType.DAUGHTER, FamilyRoleType.SON),
-//    WATCH_SERIALS(BaseActivity.class, FamilyRoleType.class.getEnumConstants()),
-//    CALL_FIREFIGHTERS(BaseActivity.class, FamilyRoleType.FATHER, FamilyRoleType.GRANDFATHER, FamilyRoleType.MOTHER, FamilyRoleType.GRANDMOTHER),
-//    PLAY_COMPUTER(BaseActivity.class, FamilyRoleType.DAUGHTER, FamilyRoleType.SON),
 
     ActivityType(List<RoomName > roomNames, Class<? extends Usable> use, Class<? extends Activity> solver, ResponsibleType...roles) {
         assignVariables(roomNames, solver, use, roles);

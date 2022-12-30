@@ -42,16 +42,14 @@ public abstract class HomeAppliances extends Responsible implements HomeDevice{
     }
 
     //API METHODS
-    public void clickOn(){homeDeviceState.switchOn(this); update();};
-    public void clickOff(){homeDeviceState.switchOff(this); update();}
-    public void clickPause(){homeDeviceState.pause(this); update();};
-
+    public void switchOn(){homeDeviceState.switchOn(this); update();};
+    public void switchOff(){homeDeviceState.switchOff(this); update();}
+    public void pause(){homeDeviceState.pause(this); update();};
     public void use(Person person){
         this.persons.add(person);
         homeDeviceState.use(person, this);
         update();
     };
-
     public void repair(Person person){
         homeDeviceState.repair(person, this);
         update();
@@ -113,7 +111,7 @@ public abstract class HomeAppliances extends Responsible implements HomeDevice{
     protected void disable(){
         for (Iterator<SourceType> it = currentConsumption.keys().asIterator(); it.hasNext(); ) {
             SourceType sourceType = it.next();
-            setCurrentConsumption(sourceType, DEVICE_OFF_STATE);
+            setCurrentConsumption(sourceType, DEVICE_OFF_STATE_ELECTRICITY);
         }
     }
     protected void breakDown(){

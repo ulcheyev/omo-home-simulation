@@ -5,14 +5,13 @@ import cvut.omo.entity.person.Person;
 import cvut.omo.home_structure.HomeComponent;
 import cvut.omo.home_structure.room_builder.Room;
 import cvut.omo.usable.Usable;
-import cvut.omo.usable.stuff.Stuff;
 
 import java.util.Set;
 public interface HomeDevice extends HomeComponent, Usable {
 
-     void clickOn();
-     void clickOff();
-     void clickPause();
+     void switchOn();
+     void switchOff();
+     void pause();
      void use(Person person);
      void repair(Person person);
      void breakDevice();

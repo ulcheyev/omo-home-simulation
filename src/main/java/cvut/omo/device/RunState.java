@@ -6,7 +6,7 @@ public class RunState extends HomeDeviceState{
 
     public RunState(Person person, HomeAppliances homeAppliances){
         super(homeAppliances);
-        this.homeAppliances.run();
+        homeAppliances.run();
     }
 
 

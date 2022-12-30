@@ -1,7 +1,7 @@
 package cvut.omo.entity.activity;
 
 import cvut.omo.app_utils.Utils;
-import cvut.omo.data_collections.events.EventCollection;
+import cvut.omo.data_collections.activity_events.SmartHomeEventCollection;
 import cvut.omo.entity.Responsible;
 import cvut.omo.event.Event;
 import cvut.omo.home_structure.home_builder.Home;
@@ -11,8 +11,6 @@ import cvut.omo.home_structure.room_builder.RoomName;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
-import java.util.List;
 
 
 @Getter
@@ -41,13 +39,16 @@ public abstract class Activity {
     {
         responsible.lock();
         checkResponsibleLocation();
-        doWork(responsible);
+
+        if(doWork(responsible)){
+            isExecuted = true;
+        }
+
         responsible.unlock();
-        isExecuted = true;
         event.checkSolving();
     };
 
-    protected abstract void doWork(Responsible responsible);
+    protected abstract boolean doWork(Responsible responsible);
 
 
     public  boolean isExecuted(){
@@ -103,7 +104,7 @@ public abstract class Activity {
                 ? responsible.getRoom()
                 : room;
 
-        return "Responsible " + type +
+        return   type +
                 " in room " + location.getRoomName() +
                 " on the " + location.getFloor().getNumberOfFloor() + " floor " +
                 "did " + activityType.name();
@@ -116,7 +117,7 @@ public abstract class Activity {
             RelocateActivity relocateActivity =
                     ActivityFactory.createRelocateActivity(responsible, event, room);
             relocateActivity.doWork(responsible);
-            EventCollection.swapTwoEndActivities(event);
+            SmartHomeEventCollection.swapTwoEndActivities(event);
         }
     }
 }

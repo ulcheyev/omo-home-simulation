@@ -4,8 +4,8 @@ package cvut.omo.device;
 import lombok.Getter;
 
 public enum SourceType {
-    WATER("M3", 14),
-    ENERGY("KWH", 14),
+    WATER("M3", 3),
+    ENERGY("KWH", 4),
     NOT_CONSUME("", 0);
 
     @Getter

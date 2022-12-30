@@ -40,6 +40,7 @@ public class IddleState extends HomeDeviceState{
     public void use(Person person, HomeAppliances homeAppliances) {
 
         if(Utils.getRandomDouble() < PROBABILITY_OF_BROKE){
+
             homeAppliances.setHomeDeviceState(new BrokenState(homeAppliances));
             String desc = "Person " + person.getName() + " broke this device...";
             EventGenerator.generateEventWithResponsible(homeAppliances, DeviceResponsibleEvent.DEVICE_BROKEN, desc);

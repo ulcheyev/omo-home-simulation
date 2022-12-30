@@ -1,7 +1,6 @@
 package cvut.omo.home_structure.home_builder;
 
 import cvut.omo.app_utils.Utils;
-import cvut.omo.device.CircuitBreaker;
 import cvut.omo.device.HomeAppliances;
 import cvut.omo.device.HomeDevice;
 import cvut.omo.entity.nulls.NullResponsible;
@@ -9,8 +8,6 @@ import cvut.omo.entity.Responsible;
 import cvut.omo.entity.ResponsibleType;
 import cvut.omo.entity.person.Person;
 import cvut.omo.entity.pet.Pet;
-import cvut.omo.event.EventGenerator;
-import cvut.omo.event.event_type.HomeEvent;
 import cvut.omo.home_structure.Floor;
 import cvut.omo.home_structure.HomeComponent;
 import cvut.omo.home_structure.nulls.NullRoom;
@@ -34,7 +31,7 @@ public class Home {
     private List<Pet> pets;
     private boolean isPowerEnable;
     private static int currFloorIdx = 0;
-    private CircuitBreaker circuitBreaker;
+
 
     private Home(){
         isPowerEnable = true;
@@ -44,6 +41,7 @@ public class Home {
     }
 
     public void addFloor(Floor floor){floors.add(floor);}
+
     public <T extends Responsible> void  addEntity( T obj ){
         int idxForFloor = Utils.getRandomInt(floors.size());
         int idxForRoom = Utils.getRandomInt(floors.get(idxForFloor).getRooms().size());
@@ -110,31 +108,6 @@ public class Home {
         return NullResponsible.INSTANCE;
     }
 
-
-
-    //TODO
-    public List<Pet> getPets(){
-        if(pets.size() == 0){
-            for(Floor floor: floors){
-                for(Room room: floor.getRooms()){
-                    pets.addAll(room.getPets());
-                }
-            }
-        }
-        return pets;
-    }
-
-
-    public List<Person> getPersons(){
-        if(persons.size() == 0){
-            for(Floor floor: floors){
-                for(Room room: floor.getRooms()){
-                    persons.addAll(room.getPersons());
-                }
-            }
-        }
-        return persons;
-    }
 
 
     public Room searchRoomByType(RoomName type) {

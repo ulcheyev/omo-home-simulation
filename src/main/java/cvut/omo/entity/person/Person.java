@@ -17,7 +17,6 @@ import java.util.List;
 public class Person extends Responsible implements HomeComponent {
 
     private String name;
-    private List<Activity> activityList;
 
     public Person(String name, FamilyRoleType familyRoleType) {
         super(familyRoleType);

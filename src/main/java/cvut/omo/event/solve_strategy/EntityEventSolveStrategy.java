@@ -27,6 +27,7 @@ public class EntityEventSolveStrategy extends SolveStrategy {
             if(checkContainingResponsible(type)){
                 responsible.handle(createActivity(responsible, event, type));
             }
+
             else{
                 Responsible responsible = giveEfficientResponsible(type);
                 responsible.handle(createActivity(responsible, event, type));

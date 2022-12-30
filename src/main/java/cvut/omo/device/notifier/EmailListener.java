@@ -16,7 +16,7 @@ public class EmailListener implements EventListener{
     public void update(String message, Sensor sensor) throws IOException {
         StringBuilder res = new StringBuilder();
 
-        res.append(Constants.PDF_EMAIL_HEADER);
+//        res.append(Constants.PDF_EMAIL_HEADER);
 
         final String text =
                 "Hello,\n we notify you that it worked in the house: " + sensor.toString() + message + "\nrespectfully, your Smart Home";

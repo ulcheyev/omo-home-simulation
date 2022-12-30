@@ -1,6 +1,6 @@
 package cvut.omo.event;
 
-import cvut.omo.data_collections.events.EventCollection;
+import cvut.omo.data_collections.activity_events.SmartHomeEventCollection;
 import cvut.omo.entity.Responsible;
 import cvut.omo.entity.activity.Activity;
 import cvut.omo.entity.activity.ActivityType;
@@ -40,14 +40,14 @@ public class Event {
     public Event(Room room, EventType eventType) {
         this.room = room;
         this.eventType = eventType;
-        EventCollection.addEvent(this);
+        SmartHomeEventCollection.addEvent(this);
     }
 
     public Event(Responsible responsible, EventType eventType) {
         this.responsible = responsible;
         this.room = responsible.getRoom();
         this.eventType = eventType;
-        EventCollection.addEvent(this);
+        SmartHomeEventCollection.addEvent(this);
     }
 
     public boolean isSolved(){
@@ -104,7 +104,7 @@ public class Event {
         String decs =
                 description==null
                 ? ""
-                : " (" + description + ")\n";
+                : " (" + description + ")";
 
         String resp_type =
                 !responsible.getResponsibleType().isNull()

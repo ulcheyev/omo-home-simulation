@@ -1,0 +1,2404 @@
+*************************
+ACTIVITY REPORT
+*************************
+
+[0] CAT activities :
+----CAT in room GARAGE on the 1 floor did PET_SAY
+----CAT in room GARAGE on the 1 floor did PET_SLEEP
+----CAT wait to PetToy because DOG is using this item
+----CAT in room GARAGE on the 1 floor did PLAY_WITH_TOY
+----CAT wait to PetToy because DOG is using this item
+----CAT in room GARAGE on the 1 floor did PLAY_WITH_TOY
+----CAT in room GARAGE on the 1 floor did PLAY_WITH_TOY
+************************************************************************************
+➨CAT used PetToy 5 times.
+************************************************************************************
+
+[1] DAUGHTER activities :
+----DAUGHTER in room KITCHEN on the 1 floor did RELOCATE from room HALL on the 1 floor
+----DAUGHTER in room KITCHEN on the 1 floor did DEVICE_FRIDGE_ON on Fridge
+----DAUGHTER in room KITCHEN on the 1 floor did DEVICE_FRIDGE_RUN on Fridge
+      ⮚ Returned CHICKEN
+----DAUGHTER in room KITCHEN on the 1 floor did DEVICE_FRIDGE_PAUSE on Fridge
+----DAUGHTER in room KITCHEN on the 1 floor did MAKE_TEA
+----DAUGHTER in room KITCHEN on the 1 floor did PERSON_EAT
+----DAUGHTER in room BEDROOM on the 3 floor did RELOCATE from room KITCHEN on the 1 floor
+----DAUGHTER in room BEDROOM on the 3 floor did PERSON_SLEEP
+----DAUGHTER in room BEDROOM on the 3 floor did DEVICE_COMPUTER_ON on Computer
+----DAUGHTER in room BEDROOM on the 3 floor did DEVICE_COMPUTER_RUN on Computer
+----DAUGHTER in room BEDROOM on the 3 floor did DEVICE_COMPUTER_RUN on Computer
+----DAUGHTER in room BEDROOM on the 3 floor did DEVICE_COMPUTER_RUN on Computer
+----DAUGHTER in room BEDROOM on the 3 floor did DEVICE_COMPUTER_OFF on Computer
+----DAUGHTER in room GARAGE on the 1 floor did RELOCATE from room BEDROOM on the 3 floor
+----DAUGHTER wait to Car because GRANDMOTHER is using this item
+----DAUGHTER in room GARAGE on the 1 floor did USE_CAR
+----DAUGHTER in room GARAGE on the 1 floor did TAKE_A_WALK_WITH_PET
+----DAUGHTER in room CHILDRENS_ROOM on the 3 floor did RELOCATE from room GARAGE on the 1 floor
+----DAUGHTER in room CHILDRENS_ROOM on the 3 floor did DEVICE_COMPUTER_RUN on Computer
+----DAUGHTER in room CHILDRENS_ROOM on the 3 floor did DEVICE_COMPUTER_RUN on Computer
+----DAUGHTER in room CHILDRENS_ROOM on the 3 floor did DEVICE_COMPUTER_OFF on Computer
+----DAUGHTER in room GARAGE on the 1 floor did TAKE_A_WALK_WITH_PET
+----DAUGHTER in room KITCHEN on the 1 floor did RELOCATE from room CHILDRENS_ROOM on the 3 floor
+----DAUGHTER in room KITCHEN on the 1 floor did DEVICE_FRIDGE_ON on Fridge
+----DAUGHTER in room KITCHEN on the 1 floor did DEVICE_FRIDGE_RUN on Fridge
+      ⮚ Returned SAUSAGE
+----DAUGHTER in room KITCHEN on the 1 floor did DEVICE_OVEN_ON on Oven
+----DAUGHTER in room KITCHEN on the 1 floor did DEVICE_OVEN_RUN on Oven
+----DAUGHTER in room KITCHEN on the 1 floor did DEVICE_FRIDGE_OFF on Fridge
+----DAUGHTER in room KITCHEN on the 1 floor did DEVICE_OVEN_OFF on Oven
+----DAUGHTER in room KITCHEN on the 1 floor did DEVICE_FRIDGE_ON on Fridge
+----DAUGHTER in room KITCHEN on the 1 floor did DEVICE_FRIDGE_RUN on Fridge
+      ⮚ Returned SAUSAGE
+----DAUGHTER in room KITCHEN on the 1 floor did DEVICE_FRIDGE_PAUSE on Fridge
+----DAUGHTER in room KITCHEN on the 1 floor did MAKE_TEA
+----DAUGHTER in room KITCHEN on the 1 floor did PERSON_EAT
+----DAUGHTER in room KITCHEN on the 1 floor did DEVICE_FRIDGE_ON on Fridge
+----DAUGHTER in room KITCHEN on the 1 floor did DEVICE_FRIDGE_RUN on Fridge
+      ⮚ Returned SAUSAGE
+----DAUGHTER in room KITCHEN on the 1 floor did DEVICE_FRIDGE_PAUSE on Fridge
+----DAUGHTER in room KITCHEN on the 1 floor did MAKE_TEA
+----DAUGHTER in room KITCHEN on the 1 floor did PERSON_EAT
+----DAUGHTER in room BEDROOM on the 3 floor did RELOCATE from room KITCHEN on the 1 floor
+----DAUGHTER in room BEDROOM on the 3 floor did DEVICE_TV_ON on TV
+----DAUGHTER in room BEDROOM on the 3 floor did DEVICE_TV_RUN on TV
+----DAUGHTER in room BEDROOM on the 3 floor did DEVICE_TV_OFF on TV
+----DAUGHTER in room BATHROOM on the 3 floor did RELOCATE from room BEDROOM on the 3 floor
+----DAUGHTER in room BATHROOM on the 3 floor did DEVICE_WASHING_MACHINE_ON on WashingMachine
+----DAUGHTER in room BATHROOM on the 3 floor did DEVICE_WASHING_MACHINE_RUN on WashingMachine
+----DAUGHTER in room BATHROOM on the 3 floor did DEVICE_WASHING_MACHINE_OFF on WashingMachine
+----DAUGHTER in room GARAGE on the 1 floor did CALL_THE_RESCUE_SERVICE
+----DAUGHTER in room KITCHEN on the 1 floor did RELOCATE from room BATHROOM on the 3 floor
+----DAUGHTER in room KITCHEN on the 1 floor did DEVICE_FRIDGE_ON on Fridge
+----DAUGHTER in room KITCHEN on the 1 floor did DEVICE_FRIDGE_RUN on Fridge
+      ⮚ Empty:( 
+----DAUGHTER in room KITCHEN on the 1 floor did DEVICE_FRIDGE_PAUSE on Fridge
+----DAUGHTER in room KITCHEN on the 1 floor did MAKE_TEA
+----DAUGHTER in room KITCHEN on the 1 floor did PERSON_EAT
+----DAUGHTER in room GARAGE on the 1 floor did TAKE_A_WALK_WITH_PET
+----DAUGHTER in room GARAGE on the 1 floor did TAKE_A_WALK_WITH_PET
+----DAUGHTER in room GARAGE on the 1 floor did TAKE_A_WALK_WITH_PET
+----DAUGHTER in room BEDROOM on the 3 floor did RELOCATE from room KITCHEN on the 1 floor
+----DAUGHTER in room BEDROOM on the 3 floor did DEVICE_COMPUTER_ON on Computer
+----DAUGHTER in room BEDROOM on the 3 floor did DEVICE_COMPUTER_RUN on Computer
+----DAUGHTER in room BEDROOM on the 3 floor did DEVICE_COMPUTER_RUN on Computer
+----DAUGHTER in room BEDROOM on the 3 floor did DEVICE_COMPUTER_RUN on Computer
+----DAUGHTER in room BEDROOM on the 3 floor did DEVICE_COMPUTER_OFF on Computer
+----DAUGHTER in room GARAGE on the 1 floor did RELOCATE from room BEDROOM on the 3 floor
+----DAUGHTER in room GARAGE on the 1 floor did USE_CAR
+************************************************************************************
+➨DAUGHTER used Car 3 times.
+➨DAUGHTER used Computer 13 times.
+➨DAUGHTER used WashingMachine 3 times.
+➨DAUGHTER used Fridge 15 times.
+➨DAUGHTER used Oven 3 times.
+➨DAUGHTER used TV 3 times.
+************************************************************************************
+
+[2] SON activities :
+----SON in room VESTIBULE on the 1 floor did CONTROL_THE_DOOR
+----SON in room VESTIBULE on the 1 floor did OPEN_THE_DOR
+----SON in room GARAGE on the 1 floor did RELOCATE from room VESTIBULE on the 1 floor
+----SON wait to Ski because GRANDMOTHER is using this item
+----SON in room GARAGE on the 1 floor did USE_SKIS
+----SON in room GARAGE on the 1 floor did USE_SKIS
+----SON wait to Car because GRANDMOTHER is using this item
+----SON in room GARAGE on the 1 floor did USE_CAR
+----SON in room BEDROOM on the 3 floor did RELOCATE from room GARAGE on the 1 floor
+----SON in room BEDROOM on the 3 floor did PERSON_SLEEP
+----SON in room KITCHEN on the 1 floor did RELOCATE from room BEDROOM on the 3 floor
+----SON in room KITCHEN on the 1 floor did DEVICE_FRIDGE_ON on Fridge
+----SON in room KITCHEN on the 1 floor did DEVICE_FRIDGE_RUN on Fridge
+      ⮚ Returned CHICKEN
+----SON in room KITCHEN on the 1 floor did DEVICE_OVEN_ON on Oven
+----SON in room KITCHEN on the 1 floor did DEVICE_OVEN_RUN on Oven
+----SON in room KITCHEN on the 1 floor did DEVICE_FRIDGE_OFF on Fridge
+----SON in room KITCHEN on the 1 floor did DEVICE_OVEN_OFF on Oven
+----SON in room CHILDRENS_ROOM on the 3 floor did RELOCATE from room KITCHEN on the 1 floor
+----SON in room CHILDRENS_ROOM on the 3 floor did DEVICE_COMPUTER_ON on Computer
+----SON in room CHILDRENS_ROOM on the 3 floor did DEVICE_COMPUTER_RUN on Computer
+----SON in room CHILDRENS_ROOM on the 3 floor did DEVICE_COMPUTER_ON on Computer
+----SON in room CHILDRENS_ROOM on the 3 floor did DEVICE_COMPUTER_RUN on Computer
+----SON in room CHILDRENS_ROOM on the 3 floor did DEVICE_COMPUTER_ON on Computer
+----SON in room CHILDRENS_ROOM on the 3 floor did DEVICE_COMPUTER_RUN on Computer
+----SON in room BEDROOM on the 3 floor did RELOCATE from room CHILDRENS_ROOM on the 3 floor
+----SON in room BEDROOM on the 3 floor did PERSON_SLEEP
+----SON in room BEDROOM on the 3 floor did DEVICE_COMPUTER_ON on Computer
+----SON in room BEDROOM on the 3 floor did DEVICE_COMPUTER_RUN on Computer
+----SON in room BEDROOM on the 3 floor did DEVICE_TV_ON on TV
+----SON in room BEDROOM on the 3 floor did DEVICE_TV_RUN on TV
+----SON in room BEDROOM on the 3 floor did DEVICE_TV_OFF on TV
+----SON in room BEDROOM on the 3 floor did DEVICE_TV_ON on TV
+----SON in room BEDROOM on the 3 floor did DEVICE_TV_RUN on TV
+----SON in room BEDROOM on the 3 floor did DEVICE_TV_OFF on TV
+----SON in room BATHROOM on the 3 floor did RELOCATE from room BEDROOM on the 3 floor
+----SON in room BATHROOM on the 3 floor did DEVICE_WASHING_MACHINE_ON on WashingMachine
+----SON in room BATHROOM on the 3 floor did DEVICE_WASHING_MACHINE_RUN on WashingMachine
+----SON in room BATHROOM on the 3 floor did DEVICE_WASHING_MACHINE_OFF on WashingMachine
+----SON in room GARAGE on the 1 floor did RELOCATE from room BATHROOM on the 3 floor
+----SON in room GARAGE on the 1 floor did USE_CAR
+************************************************************************************
+➨SON used Car 3 times.
+➨SON used Ski 3 times.
+➨SON used Computer 8 times.
+➨SON used WashingMachine 3 times.
+➨SON used Fridge 3 times.
+➨SON used Oven 3 times.
+➨SON used TV 6 times.
+************************************************************************************
+
+[3] DAUGHTER activities :
+----DAUGHTER in room BEDROOM on the 3 floor did RELOCATE from room BATHROOM on the 2 floor
+----DAUGHTER in room BEDROOM on the 3 floor did DEVICE_TV_ON on TV
+----DAUGHTER in room BEDROOM on the 3 floor did DEVICE_TV_RUN on TV
+----DAUGHTER in room BEDROOM on the 3 floor did DEVICE_TV_OFF on TV
+----DAUGHTER in room GARAGE on the 1 floor did CALL_THE_RESCUE_SERVICE
+----DAUGHTER in room GARAGE on the 1 floor did TAKE_A_WALK_WITH_PET
+----DAUGHTER in room BATHROOM on the 3 floor did RELOCATE from room BEDROOM on the 3 floor
+----DAUGHTER in room BATHROOM on the 3 floor did DEVICE_WASHING_MACHINE_ON on WashingMachine
+----DAUGHTER in room BATHROOM on the 3 floor did DEVICE_WASHING_MACHINE_RUN on WashingMachine
+----DAUGHTER in room BATHROOM on the 3 floor did DEVICE_WASHING_MACHINE_OFF on WashingMachine
+----DAUGHTER in room GARAGE on the 1 floor did CALL_THE_RESCUE_SERVICE
+----DAUGHTER in room GARAGE on the 1 floor did CALL_THE_RESCUE_SERVICE
+----DAUGHTER in room GARAGE on the 1 floor did CALL_THE_RESCUE_SERVICE
+----DAUGHTER in room GARAGE on the 1 floor did CALL_THE_RESCUE_SERVICE
+----DAUGHTER in room BATHROOM on the 3 floor did TIDY_UP
+----DAUGHTER in room BATHROOM on the 3 floor did TIDY_UP
+----DAUGHTER in room BEDROOM on the 3 floor did RELOCATE from room BATHROOM on the 3 floor
+----DAUGHTER in room BEDROOM on the 3 floor did DEVICE_COMPUTER_RUN on Computer
+----DAUGHTER in room BEDROOM on the 3 floor did DEVICE_COMPUTER_RUN on Computer
+----DAUGHTER in room BEDROOM on the 3 floor did DEVICE_COMPUTER_OFF on Computer
+----DAUGHTER in room GARAGE on the 1 floor did RELOCATE from room BEDROOM on the 3 floor
+----DAUGHTER wait to Ski because GRANDMOTHER is using this item
+----DAUGHTER in room GARAGE on the 1 floor did USE_SKIS
+----DAUGHTER in room GARAGE on the 1 floor did CALL_THE_RESCUE_SERVICE
+----DAUGHTER in room BATHROOM on the 3 floor did RELOCATE from room GARAGE on the 1 floor
+----DAUGHTER in room BATHROOM on the 3 floor did DEVICE_WASHING_MACHINE_ON on WashingMachine
+----DAUGHTER in room BATHROOM on the 3 floor did DEVICE_WASHING_MACHINE_RUN on WashingMachine
+----DAUGHTER in room BATHROOM on the 3 floor did DEVICE_WASHING_MACHINE_OFF on WashingMachine
+----DAUGHTER in room KITCHEN on the 1 floor did RELOCATE from room BATHROOM on the 3 floor
+----DAUGHTER in room KITCHEN on the 1 floor did DEVICE_FRIDGE_ON on Fridge
+----DAUGHTER in room KITCHEN on the 1 floor did DEVICE_FRIDGE_RUN on Fridge
+      ⮚ Empty:( 
+----DAUGHTER in room KITCHEN on the 1 floor did DEVICE_FRIDGE_PAUSE on Fridge
+----DAUGHTER in room KITCHEN on the 1 floor did MAKE_TEA
+----DAUGHTER in room KITCHEN on the 1 floor did PERSON_EAT
+----DAUGHTER in room GARAGE on the 1 floor did TAKE_A_WALK_WITH_PET
+----DAUGHTER in room CHILDRENS_ROOM on the 3 floor did RELOCATE from room KITCHEN on the 1 floor
+----DAUGHTER in room CHILDRENS_ROOM on the 3 floor did DEVICE_TV_ON on TV
+----DAUGHTER in room CHILDRENS_ROOM on the 3 floor did DEVICE_TV_RUN on TV
+----DAUGHTER in room CHILDRENS_ROOM on the 3 floor did DEVICE_TV_OFF on TV
+----DAUGHTER in room GARAGE on the 1 floor did CALL_THE_RESCUE_SERVICE
+----DAUGHTER in room GARAGE on the 1 floor did RELOCATE from room CHILDRENS_ROOM on the 3 floor
+----DAUGHTER wait to Car because GRANDMOTHER is using this item
+----DAUGHTER in room GARAGE on the 1 floor did USE_CAR
+************************************************************************************
+➨DAUGHTER used Car 2 times.
+➨DAUGHTER used Ski 2 times.
+➨DAUGHTER used WashingMachine 6 times.
+➨DAUGHTER used Computer 3 times.
+➨DAUGHTER used Fridge 3 times.
+➨DAUGHTER used TV 6 times.
+************************************************************************************
+
+[4] SON activities :
+----SON in room BATHROOM on the 3 floor did DEVICE_WASHING_MACHINE_ON on WashingMachine
+----SON in room BATHROOM on the 3 floor did DEVICE_WASHING_MACHINE_RUN on WashingMachine
+----SON in room BATHROOM on the 3 floor did DEVICE_WASHING_MACHINE_OFF on WashingMachine
+----SON in room BATHROOM on the 3 floor did DEVICE_WASHING_MACHINE_ON on WashingMachine
+----SON in room BATHROOM on the 3 floor did DEVICE_WASHING_MACHINE_RUN on WashingMachine
+----SON in room BATHROOM on the 3 floor did DEVICE_WASHING_MACHINE_OFF on WashingMachine
+----SON in room BEDROOM on the 3 floor did RELOCATE from room BATHROOM on the 3 floor
+----SON in room BEDROOM on the 3 floor did DEVICE_COMPUTER_ON on Computer
+----SON in room BEDROOM on the 3 floor did DEVICE_COMPUTER_RUN on Computer
+----SON in room GARAGE on the 1 floor did RELOCATE from room BEDROOM on the 3 floor
+----SON in room GARAGE on the 1 floor did USE_BIKE
+----SON in room CHILDRENS_ROOM on the 3 floor did RELOCATE from room GARAGE on the 1 floor
+----SON in room CHILDRENS_ROOM on the 3 floor did DEVICE_TV_ON on TV
+----SON in room CHILDRENS_ROOM on the 3 floor did DEVICE_TV_RUN on TV
+----SON in room CHILDRENS_ROOM on the 3 floor did DEVICE_TV_OFF on TV
+----SON in room GARAGE on the 1 floor did CALL_THE_RESCUE_SERVICE
+----SON in room BEDROOM on the 3 floor did RELOCATE from room CHILDRENS_ROOM on the 3 floor
+----SON in room BEDROOM on the 3 floor did PERSON_SLEEP
+----SON in room GARAGE on the 1 floor did RELOCATE from room BEDROOM on the 3 floor
+----SON wait to Bike because SON is using this item
+----SON in room GARAGE on the 1 floor did USE_BIKE
+----SON in room CHILDRENS_ROOM on the 3 floor did RELOCATE from room GARAGE on the 1 floor
+----SON in room CHILDRENS_ROOM on the 3 floor did DEVICE_COMPUTER_RUN on Computer
+----SON in room CHILDRENS_ROOM on the 3 floor did DEVICE_COMPUTER_RUN on Computer
+----SON in room CHILDRENS_ROOM on the 3 floor did DEVICE_COMPUTER_OFF on Computer
+----SON in room GARAGE on the 1 floor did RELOCATE from room CHILDRENS_ROOM on the 3 floor
+----SON wait to Ski because GRANDMOTHER is using this item
+----SON in room GARAGE on the 1 floor did USE_SKIS
+----SON wait to Car because GRANDMOTHER is using this item
+----SON in room GARAGE on the 1 floor did USE_CAR
+----SON in room GARAGE on the 1 floor did CALL_THE_RESCUE_SERVICE
+----SON in room BEDROOM on the 3 floor did RELOCATE from room GARAGE on the 1 floor
+----SON in room BEDROOM on the 3 floor did DEVICE_COMPUTER_ON on Computer
+----SON in room BEDROOM on the 3 floor did DEVICE_COMPUTER_RUN on Computer
+----SON in room BEDROOM on the 3 floor did DEVICE_COMPUTER_ON on Computer
+----SON in room BEDROOM on the 3 floor did DEVICE_COMPUTER_RUN on Computer
+----SON in room GARAGE on the 1 floor did RELOCATE from room BEDROOM on the 3 floor
+----SON in room GARAGE on the 1 floor did USE_CAR
+----SON in room GARAGE on the 1 floor did CALL_THE_RESCUE_SERVICE
+----SON in room GARAGE on the 1 floor did USE_SKIS
+----SON in room GARAGE on the 1 floor did USE_BIKE
+----SON in room KITCHEN on the 1 floor did RELOCATE from room GARAGE on the 1 floor
+----SON in room KITCHEN on the 1 floor did DEVICE_FRIDGE_ON on Fridge
+----SON in room KITCHEN on the 1 floor did DEVICE_FRIDGE_RUN on Fridge
+      ⮚ Empty:( 
+----SON in room KITCHEN on the 1 floor did DEVICE_OVEN_ON on Oven
+----SON in room KITCHEN on the 1 floor did DEVICE_OVEN_RUN on Oven
+----SON in room KITCHEN on the 1 floor did DEVICE_FRIDGE_OFF on Fridge
+----SON in room KITCHEN on the 1 floor did DEVICE_OVEN_OFF on Oven
+----SON in room GARAGE on the 1 floor did RELOCATE from room KITCHEN on the 1 floor
+----SON in room GARAGE on the 1 floor did USE_SKIS
+----SON in room GARAGE on the 1 floor did USE_BIKE
+************************************************************************************
+➨SON used Car 3 times.
+➨SON used Bike 5 times.
+➨SON used Ski 4 times.
+➨SON used WashingMachine 6 times.
+➨SON used Computer 9 times.
+➨SON used Fridge 3 times.
+➨SON used TV 3 times.
+➨SON used Oven 3 times.
+************************************************************************************
+
+[5] FATHER activities :
+----FATHER in room CHILDRENS_ROOM on the 3 floor did RELOCATE from room HALL on the 3 floor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_TV_ON on TV
+----FATHER in room BATHROOM on the 3 floor did RELOCATE from room CHILDRENS_ROOM on the 3 floor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_WATER_LEAK_SENSOR_OFF on WaterLeakSensor
+----FATHER in room BEDROOM on the 2 floor did CALL_THE_RESCUE_SERVICE
+----FATHER in room CHILDRENS_ROOM on the 2 floor did RELOCATE from room BATHROOM on the 3 floor
+----FATHER in room CHILDRENS_ROOM on the 2 floor did DEVICE_REPAIR on TV
+----FATHER in room BATHROOM on the 1 floor did RELOCATE from room CHILDRENS_ROOM on the 2 floor
+----FATHER in room BATHROOM on the 1 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room BATHROOM on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BEDROOM on the 3 floor did RELOCATE from room BATHROOM on the 1 floor
+----FATHER in room BEDROOM on the 3 floor did DEVICE_REPAIR on TV
+----FATHER in room KITCHEN on the 1 floor did RELOCATE from room BEDROOM on the 3 floor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_REPAIR on Oven
+----FATHER in room BATHROOM on the 3 floor did RELOCATE from room KITCHEN on the 1 floor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_REPAIR on WashingMachine
+----FATHER in room BATHROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BATHROOM on the 3 floor did RELOCATE from room BATHROOM on the 3 floor
+----FATHER in room BATHROOM on the 3 floor did CHANGE_BULB
+----FATHER in room HALL on the 2 floor did RELOCATE from room BATHROOM on the 3 floor
+----FATHER in room HALL on the 2 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room HALL on the 2 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BEDROOM on the 2 floor did CALL_THE_RESCUE_SERVICE
+----FATHER in room HALL on the 2 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BEDROOM on the 2 floor did CALL_THE_RESCUE_SERVICE
+----FATHER in room HALL on the 2 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BEDROOM on the 2 floor did CALL_THE_RESCUE_SERVICE
+----FATHER in room HALL on the 2 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BATHROOM on the 1 floor did RELOCATE from room HALL on the 2 floor
+----FATHER in room BATHROOM on the 1 floor did DEVICE_REPAIR on WashingMachine
+----FATHER in room BATHROOM on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BATHROOM on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BATHROOM on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room BATHROOM on the 1 floor
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room KITCHEN on the 1 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room HALL on the 3 floor did RELOCATE from room KITCHEN on the 1 floor
+----FATHER in room HALL on the 3 floor did CHANGE_BULB
+----FATHER in room HALL on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room HALL on the 3 floor
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_CURCUIT_BREAKER_OFF on CircuitBreaker
+----FATHER in room BEDROOM on the 3 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room BEDROOM on the 3 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room BEDROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room KITCHEN on the 1 floor did RELOCATE from room BEDROOM on the 3 floor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_REPAIR on WaterLeakSensor
+----FATHER in room BEDROOM on the 3 floor did RELOCATE from room KITCHEN on the 1 floor
+----FATHER in room BEDROOM on the 3 floor did CHANGE_BULB
+----FATHER in room BATHROOM on the 2 floor did RELOCATE from room BEDROOM on the 3 floor
+----FATHER in room BATHROOM on the 2 floor did DEVICE_REPAIR on WaterLeakSensor
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room BATHROOM on the 2 floor
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_CURCUIT_BREAKER_OFF on CircuitBreaker
+----FATHER in room BATHROOM on the 3 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_REPAIR on WaterLeakSensor
+----FATHER in room BEDROOM on the 3 floor did RELOCATE from room BATHROOM on the 3 floor
+----FATHER in room BEDROOM on the 3 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room BEDROOM on the 3 floor
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_CURCUIT_BREAKER_OFF on CircuitBreaker
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_CURCUIT_BREAKER_OFF on CircuitBreaker
+----FATHER in room KITCHEN on the 1 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_WATER_LEAK_SENSOR_OFF on WaterLeakSensor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room BATHROOM on the 1 floor did RELOCATE from room KITCHEN on the 1 floor
+----FATHER in room BATHROOM on the 1 floor did DEVICE_REPAIR on WaterLeakSensor
+----FATHER in room BATHROOM on the 1 floor did DEVICE_WATER_LEAK_SENSOR_OFF on WaterLeakSensor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did RELOCATE from room BATHROOM on the 1 floor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_TV_ON on TV
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room CHILDRENS_ROOM on the 3 floor
+----FATHER in room VESTIBULE on the 1 floor did CHANGE_BULB
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_REPAIR on CircuitBreaker
+----FATHER in room BATHROOM on the 3 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BATHROOM on the 2 floor did RELOCATE from room BATHROOM on the 3 floor
+----FATHER in room BATHROOM on the 2 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room BATHROOM on the 2 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room BATHROOM on the 2 floor
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_CURCUIT_BREAKER_OFF on CircuitBreaker
+----FATHER in room BEDROOM on the 3 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room BEDROOM on the 3 floor did PET_A_PET
+----FATHER in room BATHROOM on the 1 floor did RELOCATE from room BEDROOM on the 3 floor
+----FATHER in room BATHROOM on the 1 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room CHILDRENS_ROOM on the 2 floor did RELOCATE from room BATHROOM on the 1 floor
+----FATHER in room CHILDRENS_ROOM on the 2 floor did CHANGE_BULB
+----FATHER in room BEDROOM on the 3 floor did RELOCATE from room CHILDRENS_ROOM on the 2 floor
+----FATHER in room BEDROOM on the 3 floor did DEVICE_REPAIR on Computer
+----FATHER in room BATHROOM on the 3 floor did RELOCATE from room BEDROOM on the 3 floor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_REPAIR on WaterLeakSensor
+----FATHER in room HALL on the 3 floor did RELOCATE from room BATHROOM on the 3 floor
+----FATHER in room HALL on the 3 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room HALL on the 3 floor
+----FATHER in room VESTIBULE on the 1 floor did CONTROL_THE_DOOR
+----FATHER in room VESTIBULE on the 1 floor did OPEN_THE_DOR
+----FATHER in room GARAGE on the 1 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room GARAGE on the 1 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room BEDROOM on the 3 floor did RELOCATE from room GARAGE on the 1 floor
+----FATHER in room BEDROOM on the 3 floor did DEVICE_REPAIR on Computer
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room BEDROOM on the 3 floor
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_CURCUIT_BREAKER_OFF on CircuitBreaker
+----FATHER in room BEDROOM on the 3 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room BEDROOM on the 3 floor did DEVICE_REPAIR on Computer
+----FATHER in room BEDROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room CHILDRENS_ROOM on the 2 floor did RELOCATE from room BEDROOM on the 3 floor
+----FATHER in room CHILDRENS_ROOM on the 2 floor did DEVICE_REPAIR on TV
+----FATHER in room BATHROOM on the 3 floor did RELOCATE from room CHILDRENS_ROOM on the 2 floor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_REPAIR on WaterLeakSensor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BEDROOM on the 3 floor did RELOCATE from room BATHROOM on the 3 floor
+----FATHER in room BEDROOM on the 3 floor did DEVICE_TV_ON on TV
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room BEDROOM on the 3 floor
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_CURCUIT_BREAKER_OFF on CircuitBreaker
+----FATHER in room BATHROOM on the 1 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room BATHROOM on the 1 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room BATHROOM on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BATHROOM on the 2 floor did RELOCATE from room BATHROOM on the 1 floor
+----FATHER in room BATHROOM on the 2 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room CHILDRENS_ROOM on the 2 floor did RELOCATE from room BATHROOM on the 2 floor
+----FATHER in room CHILDRENS_ROOM on the 2 floor did DEVICE_REPAIR on TV
+----FATHER in room KITCHEN on the 1 floor did RELOCATE from room CHILDRENS_ROOM on the 2 floor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_REPAIR on Fridge
+----FATHER in room BEDROOM on the 3 floor did RELOCATE from room KITCHEN on the 1 floor
+----FATHER in room BEDROOM on the 3 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room BEDROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room BEDROOM on the 3 floor
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_CURCUIT_BREAKER_OFF on CircuitBreaker
+----FATHER in room CHILDRENS_ROOM on the 3 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_TV_ON on TV
+----FATHER in room BEDROOM on the 2 floor did RELOCATE from room CHILDRENS_ROOM on the 3 floor
+----FATHER in room BEDROOM on the 2 floor did DEVICE_REPAIR on TV
+----FATHER in room BEDROOM on the 2 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BEDROOM on the 2 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BEDROOM on the 2 floor did CALL_THE_RESCUE_SERVICE
+----FATHER in room BEDROOM on the 2 floor did DEVICE_TV_ON on TV
+----FATHER in room BATHROOM on the 2 floor did RELOCATE from room BEDROOM on the 2 floor
+----FATHER in room BATHROOM on the 2 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room BATHROOM on the 2 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BATHROOM on the 2 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BATHROOM on the 2 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BEDROOM on the 2 floor did CALL_THE_RESCUE_SERVICE
+----FATHER in room BEDROOM on the 3 floor did RELOCATE from room BATHROOM on the 2 floor
+----FATHER in room BEDROOM on the 3 floor did DEVICE_TV_ON on TV
+----FATHER in room BEDROOM on the 3 floor did RELOCATE from room BEDROOM on the 3 floor
+----FATHER in room BEDROOM on the 3 floor did DEVICE_REPAIR on Computer
+----FATHER in room BEDROOM on the 2 floor did CALL_THE_RESCUE_SERVICE
+----FATHER in room BEDROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BEDROOM on the 2 floor did CALL_THE_RESCUE_SERVICE
+----FATHER in room BEDROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BEDROOM on the 2 floor did RELOCATE from room BEDROOM on the 3 floor
+----FATHER in room BEDROOM on the 2 floor did DEVICE_REPAIR on Computer
+----FATHER in room BATHROOM on the 3 floor did RELOCATE from room BEDROOM on the 2 floor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room BATHROOM on the 2 floor did RELOCATE from room BATHROOM on the 3 floor
+----FATHER in room BATHROOM on the 2 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room BATHROOM on the 2 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BATHROOM on the 2 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BEDROOM on the 3 floor did RELOCATE from room BATHROOM on the 2 floor
+----FATHER in room BEDROOM on the 3 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room BEDROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room HALL on the 3 floor did RELOCATE from room BEDROOM on the 3 floor
+----FATHER in room HALL on the 3 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room HALL on the 3 floor
+----FATHER in room VESTIBULE on the 1 floor did CONTROL_THE_DOOR
+----FATHER in room VESTIBULE on the 1 floor did OPEN_THE_DOR
+----FATHER in room HALL on the 1 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room HALL on the 1 floor did CHANGE_BULB
+----FATHER in room KITCHEN on the 1 floor did RELOCATE from room HALL on the 1 floor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_REPAIR on Oven
+----FATHER in room KITCHEN on the 1 floor did DEVICE_WATER_LEAK_SENSOR_OFF on WaterLeakSensor
+----FATHER in room BEDROOM on the 2 floor did CALL_THE_RESCUE_SERVICE
+----FATHER in room BEDROOM on the 2 floor did RELOCATE from room KITCHEN on the 1 floor
+----FATHER in room BEDROOM on the 2 floor did DEVICE_REPAIR on Computer
+----FATHER in room BEDROOM on the 2 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BEDROOM on the 2 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BEDROOM on the 2 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BEDROOM on the 2 floor did CHANGE_BULB
+----FATHER in room BEDROOM on the 2 floor did DEVICE_TV_ON on TV
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room BEDROOM on the 2 floor
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_CURCUIT_BREAKER_OFF on CircuitBreaker
+----FATHER in room BATHROOM on the 3 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room BATHROOM on the 3 floor did PET_A_PET
+----FATHER in room KITCHEN on the 1 floor did RELOCATE from room BATHROOM on the 3 floor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_FRIDGE_ON on Fridge
+----FATHER in room KITCHEN on the 1 floor did DEVICE_FRIDGE_RUN on Fridge
+      ⮚ Returned MEAT
+----FATHER in room BATHROOM on the 3 floor did RELOCATE from room KITCHEN on the 1 floor
+----FATHER in room BATHROOM on the 3 floor did FEED_PET
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room BATHROOM on the 3 floor
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_CURCUIT_BREAKER_OFF on CircuitBreaker
+----FATHER in room BEDROOM on the 2 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room BEDROOM on the 2 floor did DEVICE_REPAIR on Computer
+----FATHER in room KITCHEN on the 1 floor did RELOCATE from room BEDROOM on the 2 floor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_WATER_LEAK_SENSOR_OFF on WaterLeakSensor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_REPAIR on TV
+----FATHER in room KITCHEN on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BEDROOM on the 2 floor did RELOCATE from room KITCHEN on the 1 floor
+----FATHER in room BEDROOM on the 2 floor did DEVICE_REPAIR on Computer
+----FATHER in room BEDROOM on the 2 floor did DEVICE_TV_ON on TV
+----FATHER in room KITCHEN on the 1 floor did RELOCATE from room BEDROOM on the 2 floor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_REPAIR on TV
+----FATHER in room BATHROOM on the 2 floor did RELOCATE from room KITCHEN on the 1 floor
+----FATHER in room BATHROOM on the 2 floor did DEVICE_REPAIR on WashingMachine
+----FATHER in room BATHROOM on the 3 floor did RELOCATE from room BATHROOM on the 2 floor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_REPAIR on WaterLeakSensor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room BATHROOM on the 3 floor
+----FATHER in room VESTIBULE on the 1 floor did CONTROL_THE_DOOR
+----FATHER in room VESTIBULE on the 1 floor did OPEN_THE_DOR
+----FATHER in room VESTIBULE on the 1 floor did CONTROL_THE_DOOR
+----FATHER in room VESTIBULE on the 1 floor did OPEN_THE_DOR
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room KITCHEN on the 1 floor did RELOCATE from room CHILDRENS_ROOM on the 3 floor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_WATER_LEAK_SENSOR_OFF on WaterLeakSensor
+----FATHER in room BEDROOM on the 2 floor did CALL_THE_RESCUE_SERVICE
+----FATHER in room KITCHEN on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room KITCHEN on the 1 floor
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_CURCUIT_BREAKER_OFF on CircuitBreaker
+----FATHER in room HALL on the 3 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room HALL on the 3 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room BEDROOM on the 3 floor did RELOCATE from room HALL on the 3 floor
+----FATHER in room BEDROOM on the 3 floor did PET_A_PET
+----FATHER in room KITCHEN on the 1 floor did RELOCATE from room BEDROOM on the 3 floor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_FRIDGE_ON on Fridge
+----FATHER in room KITCHEN on the 1 floor did DEVICE_FRIDGE_RUN on Fridge
+      ⮚ Returned MEAT
+----FATHER in room BEDROOM on the 3 floor did RELOCATE from room KITCHEN on the 1 floor
+----FATHER in room BEDROOM on the 3 floor did FEED_PET
+----FATHER in room BEDROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room BEDROOM on the 3 floor
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_CURCUIT_BREAKER_OFF on CircuitBreaker
+----FATHER in room BATHROOM on the 2 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room BATHROOM on the 2 floor did DEVICE_REPAIR on WashingMachine
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room BATHROOM on the 2 floor
+----FATHER in room VESTIBULE on the 1 floor did CONTROL_THE_DOOR
+----FATHER in room VESTIBULE on the 1 floor did OPEN_THE_DOR
+----FATHER in room KITCHEN on the 1 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room HALL on the 3 floor did RELOCATE from room KITCHEN on the 1 floor
+----FATHER in room HALL on the 3 floor did PET_A_PET
+----FATHER in room KITCHEN on the 1 floor did RELOCATE from room HALL on the 3 floor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_REPAIR on Fridge
+----FATHER in room BEDROOM on the 3 floor did RELOCATE from room KITCHEN on the 1 floor
+----FATHER in room BEDROOM on the 3 floor did DEVICE_TV_ON on TV
+----FATHER in room BEDROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BEDROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BATHROOM on the 3 floor did RELOCATE from room BEDROOM on the 3 floor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BEDROOM on the 2 floor did CALL_THE_RESCUE_SERVICE
+----FATHER in room BATHROOM on the 2 floor did RELOCATE from room BATHROOM on the 3 floor
+----FATHER in room BATHROOM on the 2 floor did DEVICE_REPAIR on WaterLeakSensor
+----FATHER in room BATHROOM on the 2 floor did DEVICE_WATER_LEAK_SENSOR_OFF on WaterLeakSensor
+----FATHER in room BEDROOM on the 2 floor did CALL_THE_RESCUE_SERVICE
+----FATHER in room BEDROOM on the 3 floor did RELOCATE from room BATHROOM on the 2 floor
+----FATHER in room BEDROOM on the 3 floor did CHANGE_BULB
+----FATHER in room BEDROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BEDROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room BEDROOM on the 3 floor
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_CURCUIT_BREAKER_OFF on CircuitBreaker
+----FATHER in room KITCHEN on the 1 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BEDROOM on the 3 floor did RELOCATE from room KITCHEN on the 1 floor
+----FATHER in room BEDROOM on the 3 floor did DEVICE_REPAIR on TV
+----FATHER in room BEDROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room HALL on the 3 floor did RELOCATE from room BEDROOM on the 3 floor
+----FATHER in room HALL on the 3 floor did CHANGE_BULB
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room HALL on the 3 floor
+----FATHER in room VESTIBULE on the 1 floor did CONTROL_THE_DOOR
+----FATHER in room VESTIBULE on the 1 floor did OPEN_THE_DOR
+----FATHER in room CHILDRENS_ROOM on the 3 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_REPAIR on Computer
+----FATHER in room BEDROOM on the 2 floor did RELOCATE from room CHILDRENS_ROOM on the 3 floor
+----FATHER in room BEDROOM on the 2 floor did DEVICE_REPAIR on TV
+----FATHER in room BEDROOM on the 2 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room BEDROOM on the 2 floor
+----FATHER in room VESTIBULE on the 1 floor did CONTROL_THE_DOOR
+----FATHER in room VESTIBULE on the 1 floor did OPEN_THE_DOR
+----FATHER in room BATHROOM on the 3 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_WATER_LEAK_SENSOR_OFF on WaterLeakSensor
+----FATHER in room BEDROOM on the 2 floor did CALL_THE_RESCUE_SERVICE
+----FATHER in room BEDROOM on the 3 floor did RELOCATE from room BATHROOM on the 3 floor
+----FATHER in room BEDROOM on the 3 floor did CHANGE_BULB
+----FATHER in room BEDROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BEDROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room BEDROOM on the 3 floor
+----FATHER in room VESTIBULE on the 1 floor did CONTROL_THE_DOOR
+----FATHER in room VESTIBULE on the 1 floor did OPEN_THE_DOR
+----FATHER in room BATHROOM on the 3 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BATHROOM on the 2 floor did RELOCATE from room BATHROOM on the 3 floor
+----FATHER in room BATHROOM on the 2 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room HALL on the 3 floor did RELOCATE from room BATHROOM on the 2 floor
+----FATHER in room HALL on the 3 floor did CHANGE_BULB
+----FATHER in room BATHROOM on the 2 floor did RELOCATE from room HALL on the 3 floor
+----FATHER in room BATHROOM on the 2 floor did CHANGE_BULB
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room BATHROOM on the 2 floor
+----FATHER in room VESTIBULE on the 1 floor did CONTROL_THE_DOOR
+----FATHER in room VESTIBULE on the 1 floor did OPEN_THE_DOR
+----FATHER in room BEDROOM on the 3 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room BEDROOM on the 3 floor did PET_A_PET
+----FATHER in room KITCHEN on the 1 floor did RELOCATE from room BEDROOM on the 3 floor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_WATER_LEAK_SENSOR_OFF on WaterLeakSensor
+----FATHER in room BEDROOM on the 3 floor did RELOCATE from room KITCHEN on the 1 floor
+----FATHER in room BEDROOM on the 3 floor did DEVICE_COMPUTER_ON on Computer
+----FATHER in room BEDROOM on the 3 floor did DEVICE_COMPUTER_RUN on Computer
+----FATHER in room BATHROOM on the 2 floor did RELOCATE from room BEDROOM on the 3 floor
+----FATHER in room BATHROOM on the 2 floor did DEVICE_REPAIR on WaterLeakSensor
+----FATHER in room BATHROOM on the 2 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BATHROOM on the 2 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room CHILDRENS_ROOM on the 2 floor did RELOCATE from room BATHROOM on the 2 floor
+----FATHER in room CHILDRENS_ROOM on the 2 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room CHILDRENS_ROOM on the 2 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room CHILDRENS_ROOM on the 2 floor
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_CURCUIT_BREAKER_OFF on CircuitBreaker
+----FATHER in room GARAGE on the 1 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room GARAGE on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BATHROOM on the 3 floor did RELOCATE from room GARAGE on the 1 floor
+----FATHER in room BATHROOM on the 3 floor did PET_A_PET
+----FATHER in room BATHROOM on the 1 floor did RELOCATE from room BATHROOM on the 3 floor
+----FATHER in room BATHROOM on the 1 floor did DEVICE_REPAIR on WaterLeakSensor
+----FATHER in room BEDROOM on the 3 floor did RELOCATE from room BATHROOM on the 1 floor
+----FATHER in room BEDROOM on the 3 floor did DEVICE_TV_ON on TV
+----FATHER in room KITCHEN on the 1 floor did RELOCATE from room BEDROOM on the 3 floor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_REPAIR on TV
+----FATHER in room KITCHEN on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_WATER_LEAK_SENSOR_OFF on WaterLeakSensor
+----FATHER in room BEDROOM on the 2 floor did CALL_THE_RESCUE_SERVICE
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room KITCHEN on the 1 floor
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_CURCUIT_BREAKER_OFF on CircuitBreaker
+----FATHER in room BEDROOM on the 2 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room BEDROOM on the 2 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room BEDROOM on the 3 floor did RELOCATE from room BEDROOM on the 2 floor
+----FATHER in room BEDROOM on the 3 floor did DEVICE_REPAIR on TV
+----FATHER in room BEDROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BATHROOM on the 3 floor did RELOCATE from room BEDROOM on the 3 floor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_WATER_LEAK_SENSOR_OFF on WaterLeakSensor
+----FATHER in room BEDROOM on the 2 floor did CALL_THE_RESCUE_SERVICE
+----FATHER in room HALL on the 3 floor did RELOCATE from room BATHROOM on the 3 floor
+----FATHER in room HALL on the 3 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room HALL on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BEDROOM on the 2 floor did RELOCATE from room HALL on the 3 floor
+----FATHER in room BEDROOM on the 2 floor did CHANGE_BULB
+----FATHER in room BEDROOM on the 2 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room BEDROOM on the 2 floor
+----FATHER in room VESTIBULE on the 1 floor did CONTROL_THE_DOOR
+----FATHER in room VESTIBULE on the 1 floor did OPEN_THE_DOR
+----FATHER in room CHILDRENS_ROOM on the 3 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room CHILDRENS_ROOM on the 3 floor
+----FATHER in room VESTIBULE on the 1 floor did CONTROL_THE_DOOR
+----FATHER in room VESTIBULE on the 1 floor did OPEN_THE_DOR
+----FATHER in room CHILDRENS_ROOM on the 3 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_TV_ON on TV
+----FATHER in room KITCHEN on the 1 floor did RELOCATE from room CHILDRENS_ROOM on the 3 floor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room BEDROOM on the 2 floor did RELOCATE from room KITCHEN on the 1 floor
+----FATHER in room BEDROOM on the 2 floor did DEVICE_REPAIR on TV
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room BEDROOM on the 2 floor
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_CURCUIT_BREAKER_OFF on CircuitBreaker
+----FATHER in room CHILDRENS_ROOM on the 3 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room CHILDRENS_ROOM on the 3 floor
+----FATHER in room VESTIBULE on the 1 floor did CONTROL_THE_DOOR
+----FATHER in room VESTIBULE on the 1 floor did OPEN_THE_DOR
+----FATHER in room KITCHEN on the 1 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_WATER_LEAK_SENSOR_OFF on WaterLeakSensor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BEDROOM on the 2 floor did RELOCATE from room KITCHEN on the 1 floor
+----FATHER in room BEDROOM on the 2 floor did DEVICE_REPAIR on TV
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room BEDROOM on the 2 floor
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_CURCUIT_BREAKER_OFF on CircuitBreaker
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_CURCUIT_BREAKER_OFF on CircuitBreaker
+----FATHER in room HALL on the 3 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room HALL on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room HALL on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did RELOCATE from room HALL on the 3 floor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_REPAIR on Computer
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room CHILDRENS_ROOM on the 3 floor
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room BEDROOM on the 3 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room BEDROOM on the 3 floor did DEVICE_REPAIR on Computer
+----FATHER in room HALL on the 3 floor did RELOCATE from room BEDROOM on the 3 floor
+----FATHER in room HALL on the 3 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room HALL on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room CHILDRENS_ROOM on the 2 floor did RELOCATE from room HALL on the 3 floor
+----FATHER in room CHILDRENS_ROOM on the 2 floor did CHANGE_BULB
+----FATHER in room CHILDRENS_ROOM on the 2 floor did DEVICE_TV_ON on TV
+----FATHER in room KITCHEN on the 1 floor did RELOCATE from room CHILDRENS_ROOM on the 2 floor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did RELOCATE from room KITCHEN on the 1 floor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_TV_ON on TV
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_TV_ON on TV
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BEDROOM on the 2 floor did CALL_THE_RESCUE_SERVICE
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room CHILDRENS_ROOM on the 3 floor
+----FATHER in room VESTIBULE on the 1 floor did CONTROL_THE_DOOR
+----FATHER in room VESTIBULE on the 1 floor did OPEN_THE_DOR
+----FATHER in room BATHROOM on the 3 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room CHILDRENS_ROOM on the 2 floor did RELOCATE from room BATHROOM on the 3 floor
+----FATHER in room CHILDRENS_ROOM on the 2 floor did DEVICE_REPAIR on TV
+----FATHER in room CHILDRENS_ROOM on the 2 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room CHILDRENS_ROOM on the 2 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BATHROOM on the 3 floor did RELOCATE from room CHILDRENS_ROOM on the 2 floor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_WATER_LEAK_SENSOR_OFF on WaterLeakSensor
+----FATHER in room BEDROOM on the 2 floor did CALL_THE_RESCUE_SERVICE
+----FATHER in room BATHROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room BATHROOM on the 3 floor
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_CURCUIT_BREAKER_OFF on CircuitBreaker
+----FATHER in room KITCHEN on the 1 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_WATER_LEAK_SENSOR_OFF on WaterLeakSensor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_REPAIR on Fridge
+----FATHER in room BEDROOM on the 3 floor did RELOCATE from room KITCHEN on the 1 floor
+----FATHER in room BEDROOM on the 3 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room BEDROOM on the 3 floor
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_CURCUIT_BREAKER_OFF on CircuitBreaker
+----FATHER in room GARAGE on the 1 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room GARAGE on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room GARAGE on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room GARAGE on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room GARAGE on the 1 floor
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_CURCUIT_BREAKER_OFF on CircuitBreaker
+----FATHER in room GARAGE on the 1 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room GARAGE on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room GARAGE on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BEDROOM on the 3 floor did RELOCATE from room GARAGE on the 1 floor
+----FATHER in room BEDROOM on the 3 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room BEDROOM on the 3 floor
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_CURCUIT_BREAKER_OFF on CircuitBreaker
+----FATHER in room CHILDRENS_ROOM on the 3 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_COMPUTER_ON on Computer
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_COMPUTER_RUN on Computer
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room CHILDRENS_ROOM on the 3 floor
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_CURCUIT_BREAKER_OFF on CircuitBreaker
+----FATHER in room BEDROOM on the 2 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room BEDROOM on the 2 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room BEDROOM on the 2 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BATHROOM on the 1 floor did RELOCATE from room BEDROOM on the 2 floor
+----FATHER in room BATHROOM on the 1 floor did DEVICE_REPAIR on WaterLeakSensor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did RELOCATE from room BATHROOM on the 1 floor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_TV_ON on TV
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room CHILDRENS_ROOM on the 3 floor
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_CURCUIT_BREAKER_OFF on CircuitBreaker
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_CURCUIT_BREAKER_OFF on CircuitBreaker
+----FATHER in room KITCHEN on the 1 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did RELOCATE from room KITCHEN on the 1 floor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_REPAIR on Computer
+----FATHER in room GARAGE on the 1 floor did RELOCATE from room CHILDRENS_ROOM on the 3 floor
+----FATHER in room GARAGE on the 1 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room BEDROOM on the 3 floor did RELOCATE from room GARAGE on the 1 floor
+----FATHER in room BEDROOM on the 3 floor did DEVICE_TV_ON on TV
+----FATHER in room BATHROOM on the 2 floor did RELOCATE from room BEDROOM on the 3 floor
+----FATHER in room BATHROOM on the 2 floor did DEVICE_REPAIR on WaterLeakSensor
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room BATHROOM on the 2 floor
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_CURCUIT_BREAKER_OFF on CircuitBreaker
+----FATHER in room BEDROOM on the 3 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room BEDROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BEDROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BEDROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room CHILDRENS_ROOM on the 2 floor did RELOCATE from room BEDROOM on the 3 floor
+----FATHER in room CHILDRENS_ROOM on the 2 floor did DEVICE_REPAIR on Computer
+----FATHER in room HALL on the 3 floor did RELOCATE from room CHILDRENS_ROOM on the 2 floor
+----FATHER in room HALL on the 3 floor did PET_A_PET
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room HALL on the 3 floor
+----FATHER in room VESTIBULE on the 1 floor did CONTROL_THE_DOOR
+----FATHER in room VESTIBULE on the 1 floor did OPEN_THE_DOR
+----FATHER in room BATHROOM on the 3 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room BATHROOM on the 3 floor
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_CURCUIT_BREAKER_OFF on CircuitBreaker
+----FATHER in room GARAGE on the 1 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room GARAGE on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room GARAGE on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BEDROOM on the 3 floor did RELOCATE from room GARAGE on the 1 floor
+----FATHER in room BEDROOM on the 3 floor did DEVICE_TV_ON on TV
+----FATHER in room BEDROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BEDROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room KITCHEN on the 1 floor did RELOCATE from room BEDROOM on the 3 floor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_REPAIR on Fridge
+----FATHER in room BATHROOM on the 1 floor did RELOCATE from room KITCHEN on the 1 floor
+----FATHER in room BATHROOM on the 1 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room BATHROOM on the 1 floor did DEVICE_REPAIR on WashingMachine
+----FATHER in room BATHROOM on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BATHROOM on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BATHROOM on the 2 floor did RELOCATE from room BATHROOM on the 1 floor
+----FATHER in room BATHROOM on the 2 floor did DEVICE_REPAIR on WashingMachine
+----FATHER in room BATHROOM on the 3 floor did RELOCATE from room BATHROOM on the 2 floor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_REPAIR on WaterLeakSensor
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room BATHROOM on the 3 floor
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_CURCUIT_BREAKER_OFF on CircuitBreaker
+----FATHER in room BATHROOM on the 2 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room BATHROOM on the 2 floor did DEVICE_REPAIR on WaterLeakSensor
+----FATHER in room BATHROOM on the 2 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BATHROOM on the 3 floor did RELOCATE from room BATHROOM on the 2 floor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room BATHROOM on the 3 floor
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_CURCUIT_BREAKER_OFF on CircuitBreaker
+----FATHER in room BEDROOM on the 2 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room BEDROOM on the 2 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room BEDROOM on the 2 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room BEDROOM on the 2 floor
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_CURCUIT_BREAKER_OFF on CircuitBreaker
+----FATHER in room BEDROOM on the 2 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room BEDROOM on the 2 floor did DEVICE_REPAIR on TV
+----FATHER in room BATHROOM on the 3 floor did RELOCATE from room BEDROOM on the 2 floor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_WATER_LEAK_SENSOR_OFF on WaterLeakSensor
+----FATHER in room BEDROOM on the 2 floor did CALL_THE_RESCUE_SERVICE
+----FATHER in room BATHROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room BATHROOM on the 3 floor
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_CURCUIT_BREAKER_OFF on CircuitBreaker
+----FATHER in room VESTIBULE on the 1 floor did CONTROL_THE_DOOR
+----FATHER in room VESTIBULE on the 1 floor did OPEN_THE_DOR
+----FATHER in room VESTIBULE on the 1 floor did CONTROL_THE_DOOR
+----FATHER in room VESTIBULE on the 1 floor did OPEN_THE_DOR
+----FATHER in room CHILDRENS_ROOM on the 3 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BEDROOM on the 2 floor did CALL_THE_RESCUE_SERVICE
+----FATHER in room BATHROOM on the 2 floor did RELOCATE from room CHILDRENS_ROOM on the 3 floor
+----FATHER in room BATHROOM on the 2 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room BATHROOM on the 2 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BATHROOM on the 2 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BATHROOM on the 2 floor did DEVICE_REPAIR on WashingMachine
+----FATHER in room GARAGE on the 1 floor did RELOCATE from room BATHROOM on the 2 floor
+----FATHER in room GARAGE on the 1 floor did CHANGE_BULB
+----FATHER in room CHILDRENS_ROOM on the 2 floor did RELOCATE from room GARAGE on the 1 floor
+----FATHER in room CHILDRENS_ROOM on the 2 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room CHILDRENS_ROOM on the 2 floor
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_CURCUIT_BREAKER_OFF on CircuitBreaker
+----FATHER in room BEDROOM on the 3 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room BEDROOM on the 3 floor did DEVICE_TV_ON on TV
+----FATHER in room BEDROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room CHILDRENS_ROOM on the 2 floor did RELOCATE from room BEDROOM on the 3 floor
+----FATHER in room CHILDRENS_ROOM on the 2 floor did DEVICE_REPAIR on TV
+----FATHER in room KITCHEN on the 1 floor did RELOCATE from room CHILDRENS_ROOM on the 2 floor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BATHROOM on the 1 floor did RELOCATE from room KITCHEN on the 1 floor
+----FATHER in room BATHROOM on the 1 floor did DEVICE_REPAIR on WaterLeakSensor
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room BATHROOM on the 1 floor
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_CURCUIT_BREAKER_OFF on CircuitBreaker
+----FATHER in room CHILDRENS_ROOM on the 3 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_TV_ON on TV
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_REPAIR on TV
+----FATHER in room BATHROOM on the 3 floor did RELOCATE from room CHILDRENS_ROOM on the 3 floor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_REPAIR on WaterLeakSensor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BEDROOM on the 2 floor did CALL_THE_RESCUE_SERVICE
+----FATHER in room BATHROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BEDROOM on the 2 floor did CALL_THE_RESCUE_SERVICE
+----FATHER in room BATHROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did RELOCATE from room BATHROOM on the 3 floor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_TV_ON on TV
+----FATHER in room BEDROOM on the 2 floor did RELOCATE from room CHILDRENS_ROOM on the 3 floor
+----FATHER in room BEDROOM on the 2 floor did CHANGE_BULB
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room BEDROOM on the 2 floor
+----FATHER in room VESTIBULE on the 1 floor did CONTROL_THE_DOOR
+----FATHER in room VESTIBULE on the 1 floor did OPEN_THE_DOR
+----FATHER in room BATHROOM on the 3 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room BATHROOM on the 3 floor
+----FATHER in room VESTIBULE on the 1 floor did CONTROL_THE_DOOR
+----FATHER in room VESTIBULE on the 1 floor did OPEN_THE_DOR
+----FATHER in room GARAGE on the 1 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room GARAGE on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BATHROOM on the 3 floor did RELOCATE from room GARAGE on the 1 floor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_WATER_LEAK_SENSOR_OFF on WaterLeakSensor
+----FATHER in room BEDROOM on the 3 floor did RELOCATE from room BATHROOM on the 3 floor
+----FATHER in room BEDROOM on the 3 floor did DEVICE_REPAIR on Computer
+----FATHER in room BEDROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room GARAGE on the 1 floor did RELOCATE from room BEDROOM on the 3 floor
+----FATHER in room GARAGE on the 1 floor did PET_A_PET
+----FATHER in room KITCHEN on the 1 floor did RELOCATE from room GARAGE on the 1 floor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_FRIDGE_ON on Fridge
+----FATHER in room KITCHEN on the 1 floor did DEVICE_FRIDGE_RUN on Fridge
+      ⮚ Returned MEAT
+----FATHER in room GARAGE on the 1 floor did RELOCATE from room KITCHEN on the 1 floor
+----FATHER in room GARAGE on the 1 floor did FEED_PET
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room GARAGE on the 1 floor
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_TV_ON on TV
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room GARAGE on the 1 floor did RELOCATE from room CHILDRENS_ROOM on the 3 floor
+----FATHER in room GARAGE on the 1 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did RELOCATE from room GARAGE on the 1 floor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_TV_ON on TV
+----FATHER in room BATHROOM on the 1 floor did RELOCATE from room CHILDRENS_ROOM on the 3 floor
+----FATHER in room BATHROOM on the 1 floor did DEVICE_REPAIR on WashingMachine
+----FATHER in room BATHROOM on the 2 floor did RELOCATE from room BATHROOM on the 1 floor
+----FATHER in room BATHROOM on the 2 floor did CHANGE_BULB
+----FATHER in room BATHROOM on the 2 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BATHROOM on the 3 floor did RELOCATE from room BATHROOM on the 2 floor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room HALL on the 3 floor did RELOCATE from room BATHROOM on the 3 floor
+----FATHER in room HALL on the 3 floor did PET_A_PET
+----FATHER in room KITCHEN on the 1 floor did RELOCATE from room HALL on the 3 floor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_FRIDGE_ON on Fridge
+----FATHER in room KITCHEN on the 1 floor did DEVICE_FRIDGE_RUN on Fridge
+      ⮚ Empty:( 
+----FATHER in room HALL on the 3 floor did RELOCATE from room KITCHEN on the 1 floor
+----FATHER in room HALL on the 3 floor did FEED_PET
+----FATHER in room HALL on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BEDROOM on the 2 floor did CALL_THE_RESCUE_SERVICE
+----FATHER in room BATHROOM on the 2 floor did RELOCATE from room HALL on the 3 floor
+----FATHER in room BATHROOM on the 2 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room BATHROOM on the 1 floor did RELOCATE from room BATHROOM on the 2 floor
+----FATHER in room BATHROOM on the 1 floor did DEVICE_REPAIR on WaterLeakSensor
+----FATHER in room BATHROOM on the 2 floor did RELOCATE from room BATHROOM on the 1 floor
+----FATHER in room BATHROOM on the 2 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room GARAGE on the 1 floor did RELOCATE from room BATHROOM on the 2 floor
+----FATHER in room GARAGE on the 1 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room GARAGE on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room GARAGE on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room GARAGE on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room GARAGE on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room GARAGE on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BEDROOM on the 2 floor did CALL_THE_RESCUE_SERVICE
+----FATHER in room BEDROOM on the 2 floor did RELOCATE from room GARAGE on the 1 floor
+----FATHER in room BEDROOM on the 2 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room BEDROOM on the 2 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BEDROOM on the 2 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room CHILDRENS_ROOM on the 2 floor did RELOCATE from room BEDROOM on the 2 floor
+----FATHER in room CHILDRENS_ROOM on the 2 floor did CHANGE_BULB
+----FATHER in room CHILDRENS_ROOM on the 2 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BATHROOM on the 3 floor did RELOCATE from room CHILDRENS_ROOM on the 2 floor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_REPAIR on WashingMachine
+----FATHER in room BATHROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room BATHROOM on the 3 floor
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_CURCUIT_BREAKER_OFF on CircuitBreaker
+----FATHER in room BEDROOM on the 3 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room BEDROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room BEDROOM on the 3 floor
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_CURCUIT_BREAKER_OFF on CircuitBreaker
+----FATHER in room CHILDRENS_ROOM on the 3 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room BATHROOM on the 1 floor did RELOCATE from room CHILDRENS_ROOM on the 3 floor
+----FATHER in room BATHROOM on the 1 floor did DEVICE_REPAIR on WaterLeakSensor
+----FATHER in room BATHROOM on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BATHROOM on the 3 floor did RELOCATE from room BATHROOM on the 1 floor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did RELOCATE from room BATHROOM on the 3 floor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_TV_ON on TV
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BEDROOM on the 2 floor did CALL_THE_RESCUE_SERVICE
+----FATHER in room BATHROOM on the 1 floor did RELOCATE from room CHILDRENS_ROOM on the 3 floor
+----FATHER in room BATHROOM on the 1 floor did DEVICE_REPAIR on WaterLeakSensor
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room BATHROOM on the 1 floor
+----FATHER in room VESTIBULE on the 1 floor did CONTROL_THE_DOOR
+----FATHER in room VESTIBULE on the 1 floor did OPEN_THE_DOR
+----FATHER in room BATHROOM on the 2 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room BATHROOM on the 2 floor did DEVICE_REPAIR on WaterLeakSensor
+----FATHER in room BATHROOM on the 2 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BATHROOM on the 2 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BATHROOM on the 2 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BEDROOM on the 3 floor did RELOCATE from room BATHROOM on the 2 floor
+----FATHER in room BEDROOM on the 3 floor did PET_A_PET
+----FATHER in room HALL on the 1 floor did RELOCATE from room BEDROOM on the 3 floor
+----FATHER in room HALL on the 1 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room BEDROOM on the 3 floor did RELOCATE from room HALL on the 1 floor
+----FATHER in room BEDROOM on the 3 floor did DEVICE_TV_ON on TV
+----FATHER in room BEDROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BATHROOM on the 2 floor did RELOCATE from room BEDROOM on the 3 floor
+----FATHER in room BATHROOM on the 2 floor did CHANGE_BULB
+----FATHER in room BATHROOM on the 2 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BATHROOM on the 2 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BATHROOM on the 2 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BATHROOM on the 3 floor did RELOCATE from room BATHROOM on the 2 floor
+----FATHER in room BATHROOM on the 3 floor did PET_A_PET
+----FATHER in room BATHROOM on the 3 floor did DEVICE_WATER_LEAK_SENSOR_OFF on WaterLeakSensor
+----FATHER in room BEDROOM on the 2 floor did CALL_THE_RESCUE_SERVICE
+----FATHER in room BATHROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BATHROOM on the 3 floor did RELOCATE from room BATHROOM on the 3 floor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_REPAIR on WashingMachine
+----FATHER in room BATHROOM on the 2 floor did RELOCATE from room BATHROOM on the 3 floor
+----FATHER in room BATHROOM on the 2 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room BATHROOM on the 2 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BATHROOM on the 1 floor did RELOCATE from room BATHROOM on the 2 floor
+----FATHER in room BATHROOM on the 1 floor did DEVICE_REPAIR on WashingMachine
+----FATHER in room BATHROOM on the 2 floor did RELOCATE from room BATHROOM on the 1 floor
+----FATHER in room BATHROOM on the 2 floor did DEVICE_REPAIR on WashingMachine
+----FATHER in room BATHROOM on the 2 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BATHROOM on the 2 floor did RELOCATE from room BATHROOM on the 2 floor
+----FATHER in room BATHROOM on the 2 floor did DEVICE_REPAIR on WashingMachine
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room BATHROOM on the 2 floor
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_CURCUIT_BREAKER_OFF on CircuitBreaker
+----FATHER in room VESTIBULE on the 1 floor did CONTROL_THE_DOOR
+----FATHER in room VESTIBULE on the 1 floor did OPEN_THE_DOR
+----FATHER in room KITCHEN on the 1 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_REPAIR on TV
+----FATHER in room HALL on the 3 floor did RELOCATE from room KITCHEN on the 1 floor
+----FATHER in room HALL on the 3 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room KITCHEN on the 1 floor did RELOCATE from room HALL on the 3 floor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_REPAIR on TV
+----FATHER in room BEDROOM on the 3 floor did RELOCATE from room KITCHEN on the 1 floor
+----FATHER in room BEDROOM on the 3 floor did CHANGE_BULB
+----FATHER in room BATHROOM on the 2 floor did RELOCATE from room BEDROOM on the 3 floor
+----FATHER in room BATHROOM on the 2 floor did DEVICE_REPAIR on WashingMachine
+----FATHER in room KITCHEN on the 1 floor did RELOCATE from room BATHROOM on the 2 floor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_REPAIR on Fridge
+----FATHER in room KITCHEN on the 1 floor did DEVICE_WATER_LEAK_SENSOR_OFF on WaterLeakSensor
+----FATHER in room BEDROOM on the 2 floor did CALL_THE_RESCUE_SERVICE
+----FATHER in room KITCHEN on the 1 floor did DEVICE_REPAIR on Oven
+----FATHER in room KITCHEN on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BEDROOM on the 2 floor did RELOCATE from room KITCHEN on the 1 floor
+----FATHER in room BEDROOM on the 2 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room GARAGE on the 1 floor did RELOCATE from room BEDROOM on the 2 floor
+----FATHER in room GARAGE on the 1 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room GARAGE on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room GARAGE on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room GARAGE on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room GARAGE on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did RELOCATE from room GARAGE on the 1 floor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_TV_ON on TV
+----FATHER in room BATHROOM on the 1 floor did RELOCATE from room CHILDRENS_ROOM on the 3 floor
+----FATHER in room BATHROOM on the 1 floor did DEVICE_REPAIR on WaterLeakSensor
+----FATHER in room BATHROOM on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did RELOCATE from room BATHROOM on the 1 floor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_TV_ON on TV
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_COMPUTER_ON on Computer
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_COMPUTER_RUN on Computer
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BATHROOM on the 1 floor did RELOCATE from room CHILDRENS_ROOM on the 3 floor
+----FATHER in room BATHROOM on the 1 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room BATHROOM on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BEDROOM on the 2 floor did CALL_THE_RESCUE_SERVICE
+----FATHER in room BATHROOM on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BATHROOM on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BATHROOM on the 3 floor did RELOCATE from room BATHROOM on the 1 floor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_REPAIR on WaterLeakSensor
+----FATHER in room CHILDRENS_ROOM on the 2 floor did RELOCATE from room BATHROOM on the 3 floor
+----FATHER in room CHILDRENS_ROOM on the 2 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room CHILDRENS_ROOM on the 2 floor
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_CURCUIT_BREAKER_OFF on CircuitBreaker
+----FATHER in room GARAGE on the 1 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room GARAGE on the 1 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room GARAGE on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BEDROOM on the 2 floor did CALL_THE_RESCUE_SERVICE
+----FATHER in room HALL on the 1 floor did RELOCATE from room GARAGE on the 1 floor
+----FATHER in room HALL on the 1 floor did CHANGE_BULB
+----FATHER in room KITCHEN on the 1 floor did RELOCATE from room HALL on the 1 floor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_REPAIR on Oven
+----FATHER in room KITCHEN on the 1 floor did DEVICE_REPAIR on Oven
+----FATHER in room BATHROOM on the 3 floor did RELOCATE from room KITCHEN on the 1 floor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_REPAIR on WaterLeakSensor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room HALL on the 1 floor did RELOCATE from room BATHROOM on the 3 floor
+----FATHER in room HALL on the 1 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room HALL on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room GARAGE on the 1 floor did RELOCATE from room HALL on the 1 floor
+----FATHER in room GARAGE on the 1 floor did PET_A_PET
+----FATHER in room KITCHEN on the 1 floor did RELOCATE from room GARAGE on the 1 floor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_FRIDGE_ON on Fridge
+----FATHER in room KITCHEN on the 1 floor did DEVICE_FRIDGE_RUN on Fridge
+      ⮚ Empty:( 
+----FATHER in room GARAGE on the 1 floor did RELOCATE from room KITCHEN on the 1 floor
+----FATHER in room GARAGE on the 1 floor did FEED_PET
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room GARAGE on the 1 floor
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_CURCUIT_BREAKER_OFF on CircuitBreaker
+----FATHER in room BATHROOM on the 2 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room BATHROOM on the 2 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room HALL on the 3 floor did RELOCATE from room BATHROOM on the 2 floor
+----FATHER in room HALL on the 3 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room BATHROOM on the 2 floor did RELOCATE from room HALL on the 3 floor
+----FATHER in room BATHROOM on the 2 floor did DEVICE_REPAIR on WaterLeakSensor
+----FATHER in room GARAGE on the 1 floor did RELOCATE from room BATHROOM on the 2 floor
+----FATHER in room GARAGE on the 1 floor did PET_A_PET
+----FATHER in room BATHROOM on the 3 floor did RELOCATE from room GARAGE on the 1 floor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_WATER_LEAK_SENSOR_OFF on WaterLeakSensor
+----FATHER in room BEDROOM on the 2 floor did CALL_THE_RESCUE_SERVICE
+----FATHER in room BATHROOM on the 3 floor did DEVICE_WASHING_MACHINE_ON on WashingMachine
+----FATHER in room BATHROOM on the 3 floor did DEVICE_WASHING_MACHINE_RUN on WashingMachine
+----FATHER in room BATHROOM on the 3 floor did DEVICE_WASHING_MACHINE_OFF on WashingMachine
+----FATHER in room CHILDRENS_ROOM on the 3 floor did RELOCATE from room BATHROOM on the 3 floor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_TV_ON on TV
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BEDROOM on the 2 floor did CALL_THE_RESCUE_SERVICE
+----FATHER in room HALL on the 2 floor did RELOCATE from room CHILDRENS_ROOM on the 3 floor
+----FATHER in room HALL on the 2 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room HALL on the 2 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room HALL on the 2 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room HALL on the 2 floor
+----FATHER in room VESTIBULE on the 1 floor did CONTROL_THE_DOOR
+----FATHER in room VESTIBULE on the 1 floor did OPEN_THE_DOR
+----FATHER in room KITCHEN on the 1 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BEDROOM on the 3 floor did RELOCATE from room KITCHEN on the 1 floor
+----FATHER in room BEDROOM on the 3 floor did PET_A_PET
+----FATHER in room BEDROOM on the 3 floor did DEVICE_COMPUTER_RUN on Computer
+----FATHER in room BEDROOM on the 3 floor did DEVICE_COMPUTER_RUN on Computer
+----FATHER in room BEDROOM on the 3 floor did DEVICE_COMPUTER_OFF on Computer
+----FATHER in room BEDROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BATHROOM on the 1 floor did RELOCATE from room BEDROOM on the 3 floor
+----FATHER in room BATHROOM on the 1 floor did DEVICE_REPAIR on WashingMachine
+----FATHER in room BATHROOM on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BEDROOM on the 3 floor did RELOCATE from room BATHROOM on the 1 floor
+----FATHER in room BEDROOM on the 3 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room BEDROOM on the 3 floor
+----FATHER in room VESTIBULE on the 1 floor did CONTROL_THE_DOOR
+----FATHER in room VESTIBULE on the 1 floor did OPEN_THE_DOR
+----FATHER in room KITCHEN on the 1 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_REPAIR on Oven
+----FATHER in room KITCHEN on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did RELOCATE from room KITCHEN on the 1 floor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_TV_ON on TV
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_TV_RUN on TV
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_TV_OFF on TV
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room KITCHEN on the 1 floor did RELOCATE from room CHILDRENS_ROOM on the 3 floor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_REPAIR on Fridge
+----FATHER in room BEDROOM on the 3 floor did RELOCATE from room KITCHEN on the 1 floor
+----FATHER in room BEDROOM on the 3 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room BEDROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BEDROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room BEDROOM on the 3 floor
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_CURCUIT_BREAKER_OFF on CircuitBreaker
+----FATHER in room BATHROOM on the 3 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_REPAIR on WashingMachine
+----FATHER in room BATHROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BEDROOM on the 2 floor did CALL_THE_RESCUE_SERVICE
+----FATHER in room BATHROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room BATHROOM on the 3 floor
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_CURCUIT_BREAKER_OFF on CircuitBreaker
+----FATHER in room BATHROOM on the 3 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room HALL on the 3 floor did RELOCATE from room BATHROOM on the 3 floor
+----FATHER in room HALL on the 3 floor did PET_A_PET
+----FATHER in room KITCHEN on the 1 floor did RELOCATE from room HALL on the 3 floor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_FRIDGE_ON on Fridge
+----FATHER in room KITCHEN on the 1 floor did DEVICE_FRIDGE_RUN on Fridge
+      ⮚ Empty:( 
+----FATHER in room HALL on the 3 floor did RELOCATE from room KITCHEN on the 1 floor
+----FATHER in room HALL on the 3 floor did FEED_PET
+----FATHER in room HALL on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BEDROOM on the 2 floor did RELOCATE from room HALL on the 3 floor
+----FATHER in room BEDROOM on the 2 floor did DEVICE_REPAIR on Computer
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room BEDROOM on the 2 floor
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_CURCUIT_BREAKER_OFF on CircuitBreaker
+----FATHER in room KITCHEN on the 1 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_REPAIR on WaterLeakSensor
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room KITCHEN on the 1 floor
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_CURCUIT_BREAKER_OFF on CircuitBreaker
+----FATHER in room VESTIBULE on the 1 floor did CONTROL_THE_DOOR
+----FATHER in room VESTIBULE on the 1 floor did OPEN_THE_DOR
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_CURCUIT_BREAKER_OFF on CircuitBreaker
+----FATHER in room BATHROOM on the 3 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room BATHROOM on the 3 floor did CHANGE_BULB
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room BATHROOM on the 3 floor
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_CURCUIT_BREAKER_OFF on CircuitBreaker
+----FATHER in room HALL on the 3 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room HALL on the 3 floor did PET_A_PET
+----FATHER in room GARAGE on the 1 floor did RELOCATE from room HALL on the 3 floor
+----FATHER in room GARAGE on the 1 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room GARAGE on the 1 floor
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_CURCUIT_BREAKER_OFF on CircuitBreaker
+----FATHER in room BATHROOM on the 3 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_REPAIR on WashingMachine
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room BATHROOM on the 3 floor
+----FATHER in room VESTIBULE on the 1 floor did CHANGE_BULB
+----FATHER in room BEDROOM on the 2 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room BEDROOM on the 2 floor did CHANGE_BULB
+----FATHER in room BEDROOM on the 2 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room BEDROOM on the 2 floor
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_REPAIR on CircuitBreaker
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_CURCUIT_BREAKER_OFF on CircuitBreaker
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_CURCUIT_BREAKER_OFF on CircuitBreaker
+----FATHER in room HALL on the 3 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room HALL on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room HALL on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room HALL on the 3 floor
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_CURCUIT_BREAKER_OFF on CircuitBreaker
+----FATHER in room HALL on the 3 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room HALL on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room HALL on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BATHROOM on the 3 floor did RELOCATE from room HALL on the 3 floor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_WATER_LEAK_SENSOR_OFF on WaterLeakSensor
+----FATHER in room BEDROOM on the 2 floor did CALL_THE_RESCUE_SERVICE
+----FATHER in room BATHROOM on the 3 floor did DEVICE_REPAIR on WaterLeakSensor
+----FATHER in room BATHROOM on the 2 floor did RELOCATE from room BATHROOM on the 3 floor
+----FATHER in room BATHROOM on the 2 floor did DEVICE_REPAIR on WashingMachine
+----FATHER in room BATHROOM on the 2 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BATHROOM on the 2 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room CHILDRENS_ROOM on the 2 floor did RELOCATE from room BATHROOM on the 2 floor
+----FATHER in room CHILDRENS_ROOM on the 2 floor did DEVICE_REPAIR on Computer
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room CHILDRENS_ROOM on the 2 floor
+----FATHER in room VESTIBULE on the 1 floor did CONTROL_THE_DOOR
+----FATHER in room VESTIBULE on the 1 floor did OPEN_THE_DOR
+----FATHER in room CHILDRENS_ROOM on the 3 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_TV_ON on TV
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room GARAGE on the 1 floor did RELOCATE from room CHILDRENS_ROOM on the 3 floor
+----FATHER wait to Bike because SON is using this item
+----FATHER in room GARAGE on the 1 floor did USE_BIKE
+----FATHER in room HALL on the 3 floor did RELOCATE from room GARAGE on the 1 floor
+----FATHER in room HALL on the 3 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room BEDROOM on the 3 floor did RELOCATE from room HALL on the 3 floor
+----FATHER in room BEDROOM on the 3 floor did DEVICE_TV_ON on TV
+----FATHER in room CHILDRENS_ROOM on the 2 floor did RELOCATE from room BEDROOM on the 3 floor
+----FATHER in room CHILDRENS_ROOM on the 2 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room BATHROOM on the 2 floor did RELOCATE from room CHILDRENS_ROOM on the 2 floor
+----FATHER in room BATHROOM on the 2 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room BEDROOM on the 3 floor did RELOCATE from room BATHROOM on the 2 floor
+----FATHER in room BEDROOM on the 3 floor did DEVICE_REPAIR on TV
+----FATHER in room BATHROOM on the 3 floor did RELOCATE from room BEDROOM on the 3 floor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_WATER_LEAK_SENSOR_OFF on WaterLeakSensor
+----FATHER in room BEDROOM on the 2 floor did CALL_THE_RESCUE_SERVICE
+----FATHER in room BATHROOM on the 3 floor did DEVICE_WATER_LEAK_SENSOR_OFF on WaterLeakSensor
+----FATHER in room BEDROOM on the 2 floor did CALL_THE_RESCUE_SERVICE
+----FATHER in room BEDROOM on the 3 floor did RELOCATE from room BATHROOM on the 3 floor
+----FATHER in room BEDROOM on the 3 floor did PET_A_PET
+----FATHER in room KITCHEN on the 1 floor did RELOCATE from room BEDROOM on the 3 floor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_FRIDGE_ON on Fridge
+----FATHER in room KITCHEN on the 1 floor did DEVICE_FRIDGE_RUN on Fridge
+      ⮚ Empty:( 
+----FATHER in room BEDROOM on the 3 floor did RELOCATE from room KITCHEN on the 1 floor
+----FATHER in room BEDROOM on the 3 floor did FEED_PET
+----FATHER in room KITCHEN on the 1 floor did RELOCATE from room BEDROOM on the 3 floor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_FRIDGE_ON on Fridge
+----FATHER in room KITCHEN on the 1 floor did DEVICE_FRIDGE_RUN on Fridge
+      ⮚ Empty:( 
+----FATHER in room KITCHEN on the 1 floor did DEVICE_FRIDGE_PAUSE on Fridge
+----FATHER in room KITCHEN on the 1 floor did MAKE_TEA
+----FATHER in room KITCHEN on the 1 floor did PERSON_EAT
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room KITCHEN on the 1 floor
+----FATHER in room VESTIBULE on the 1 floor did CONTROL_THE_DOOR
+----FATHER in room VESTIBULE on the 1 floor did OPEN_THE_DOR
+----FATHER in room BATHROOM on the 3 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_WATER_LEAK_SENSOR_OFF on WaterLeakSensor
+----FATHER in room BEDROOM on the 2 floor did CALL_THE_RESCUE_SERVICE
+----FATHER in room BATHROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did RELOCATE from room BATHROOM on the 3 floor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BEDROOM on the 3 floor did RELOCATE from room CHILDRENS_ROOM on the 3 floor
+----FATHER in room BEDROOM on the 3 floor did DEVICE_REPAIR on TV
+----FATHER in room BATHROOM on the 2 floor did RELOCATE from room BEDROOM on the 3 floor
+----FATHER in room BATHROOM on the 2 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room BATHROOM on the 2 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BEDROOM on the 2 floor did CALL_THE_RESCUE_SERVICE
+----FATHER in room BEDROOM on the 3 floor did RELOCATE from room BATHROOM on the 2 floor
+----FATHER in room BEDROOM on the 3 floor did PET_A_PET
+----FATHER in room KITCHEN on the 1 floor did RELOCATE from room BEDROOM on the 3 floor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_FRIDGE_ON on Fridge
+----FATHER in room KITCHEN on the 1 floor did DEVICE_FRIDGE_RUN on Fridge
+      ⮚ Empty:( 
+----FATHER in room BEDROOM on the 3 floor did RELOCATE from room KITCHEN on the 1 floor
+----FATHER in room BEDROOM on the 3 floor did FEED_PET
+----FATHER in room BATHROOM on the 3 floor did RELOCATE from room BEDROOM on the 3 floor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room BATHROOM on the 2 floor did RELOCATE from room BATHROOM on the 3 floor
+----FATHER in room BATHROOM on the 2 floor did DEVICE_REPAIR on WashingMachine
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room BATHROOM on the 2 floor
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room CHILDRENS_ROOM on the 3 floor
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_CURCUIT_BREAKER_OFF on CircuitBreaker
+----FATHER in room BATHROOM on the 3 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_REPAIR on WaterLeakSensor
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room BATHROOM on the 3 floor
+----FATHER in room VESTIBULE on the 1 floor did CONTROL_THE_DOOR
+----FATHER in room VESTIBULE on the 1 floor did OPEN_THE_DOR
+----FATHER in room HALL on the 3 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room HALL on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BEDROOM on the 2 floor did CALL_THE_RESCUE_SERVICE
+----FATHER in room KITCHEN on the 1 floor did RELOCATE from room HALL on the 3 floor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_FRIDGE_ON on Fridge
+----FATHER in room KITCHEN on the 1 floor did DEVICE_FRIDGE_RUN on Fridge
+      ⮚ Empty:( 
+----FATHER in room KITCHEN on the 1 floor did DEVICE_OVEN_ON on Oven
+----FATHER in room KITCHEN on the 1 floor did DEVICE_OVEN_RUN on Oven
+----FATHER in room KITCHEN on the 1 floor did DEVICE_FRIDGE_OFF on Fridge
+----FATHER in room KITCHEN on the 1 floor did DEVICE_OVEN_OFF on Oven
+----FATHER in room KITCHEN on the 1 floor did DEVICE_WATER_LEAK_SENSOR_OFF on WaterLeakSensor
+----FATHER in room BEDROOM on the 2 floor did CALL_THE_RESCUE_SERVICE
+----FATHER in room BATHROOM on the 3 floor did RELOCATE from room KITCHEN on the 1 floor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_WASHING_MACHINE_ON on WashingMachine
+----FATHER in room BATHROOM on the 3 floor did DEVICE_WASHING_MACHINE_RUN on WashingMachine
+----FATHER in room BATHROOM on the 3 floor did DEVICE_WASHING_MACHINE_OFF on WashingMachine
+----FATHER in room BATHROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_WATER_LEAK_SENSOR_OFF on WaterLeakSensor
+----FATHER in room BATHROOM on the 3 floor did RELOCATE from room BATHROOM on the 3 floor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_REPAIR on WashingMachine
+----FATHER in room BATHROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_WATER_LEAK_SENSOR_OFF on WaterLeakSensor
+----FATHER in room BEDROOM on the 2 floor did CALL_THE_RESCUE_SERVICE
+----FATHER in room BEDROOM on the 2 floor did RELOCATE from room BATHROOM on the 3 floor
+----FATHER in room BEDROOM on the 2 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room BEDROOM on the 2 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BATHROOM on the 1 floor did RELOCATE from room BEDROOM on the 2 floor
+----FATHER in room BATHROOM on the 1 floor did CHANGE_BULB
+----FATHER in room BATHROOM on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BATHROOM on the 3 floor did RELOCATE from room BATHROOM on the 1 floor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_REPAIR on WaterLeakSensor
+----FATHER in room BATHROOM on the 2 floor did RELOCATE from room BATHROOM on the 3 floor
+----FATHER in room BATHROOM on the 2 floor did DEVICE_REPAIR on WashingMachine
+----FATHER in room BATHROOM on the 1 floor did RELOCATE from room BATHROOM on the 2 floor
+----FATHER in room BATHROOM on the 1 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room BATHROOM on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room KITCHEN on the 1 floor did RELOCATE from room BATHROOM on the 1 floor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_REPAIR on Fridge
+----FATHER in room KITCHEN on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room KITCHEN on the 1 floor
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_CURCUIT_BREAKER_OFF on CircuitBreaker
+----FATHER in room KITCHEN on the 1 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did RELOCATE from room KITCHEN on the 1 floor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_TV_ON on TV
+----FATHER in room BEDROOM on the 3 floor did RELOCATE from room CHILDRENS_ROOM on the 3 floor
+----FATHER in room BEDROOM on the 3 floor did PET_A_PET
+----FATHER in room KITCHEN on the 1 floor did RELOCATE from room BEDROOM on the 3 floor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_FRIDGE_ON on Fridge
+----FATHER in room KITCHEN on the 1 floor did DEVICE_FRIDGE_RUN on Fridge
+      ⮚ Empty:( 
+----FATHER in room BEDROOM on the 3 floor did RELOCATE from room KITCHEN on the 1 floor
+----FATHER in room BEDROOM on the 3 floor did FEED_PET
+----FATHER in room BEDROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BEDROOM on the 2 floor did CALL_THE_RESCUE_SERVICE
+----FATHER in room BATHROOM on the 2 floor did RELOCATE from room BEDROOM on the 3 floor
+----FATHER in room BATHROOM on the 2 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room BATHROOM on the 2 floor
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_REPAIR on CircuitBreaker
+----FATHER in room VESTIBULE on the 1 floor did CONTROL_THE_DOOR
+----FATHER in room VESTIBULE on the 1 floor did OPEN_THE_DOR
+----FATHER in room BATHROOM on the 3 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BATHROOM on the 3 floor did RELOCATE from room BATHROOM on the 3 floor
+----FATHER in room BATHROOM on the 3 floor did CHANGE_BULB
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room BATHROOM on the 3 floor
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_CURCUIT_BREAKER_OFF on CircuitBreaker
+----FATHER in room CHILDRENS_ROOM on the 3 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room HALL on the 3 floor did RELOCATE from room CHILDRENS_ROOM on the 3 floor
+----FATHER in room HALL on the 3 floor did CHANGE_BULB
+----FATHER in room HALL on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room HALL on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BATHROOM on the 3 floor did RELOCATE from room HALL on the 3 floor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_REPAIR on WashingMachine
+----FATHER in room BEDROOM on the 2 floor did RELOCATE from room BATHROOM on the 3 floor
+----FATHER in room BEDROOM on the 2 floor did DEVICE_REPAIR on TV
+----FATHER in room BATHROOM on the 3 floor did RELOCATE from room BEDROOM on the 2 floor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_WATER_LEAK_SENSOR_OFF on WaterLeakSensor
+----FATHER in room BEDROOM on the 2 floor did CALL_THE_RESCUE_SERVICE
+----FATHER in room BATHROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room HALL on the 1 floor did RELOCATE from room BATHROOM on the 3 floor
+----FATHER in room HALL on the 1 floor did CHANGE_BULB
+----FATHER in room HALL on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room HALL on the 1 floor
+----FATHER in room VESTIBULE on the 1 floor did CONTROL_THE_DOOR
+----FATHER in room VESTIBULE on the 1 floor did OPEN_THE_DOR
+----FATHER in room GARAGE on the 1 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room GARAGE on the 1 floor did CHANGE_BULB
+----FATHER in room KITCHEN on the 1 floor did RELOCATE from room GARAGE on the 1 floor
+----FATHER in room KITCHEN on the 1 floor did CHANGE_BULB
+----FATHER in room HALL on the 1 floor did RELOCATE from room KITCHEN on the 1 floor
+----FATHER in room HALL on the 1 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room BATHROOM on the 3 floor did RELOCATE from room HALL on the 1 floor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room CHILDRENS_ROOM on the 2 floor did RELOCATE from room BATHROOM on the 3 floor
+----FATHER in room CHILDRENS_ROOM on the 2 floor did DEVICE_REPAIR on TV
+----FATHER in room BATHROOM on the 3 floor did RELOCATE from room CHILDRENS_ROOM on the 2 floor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room HALL on the 2 floor did RELOCATE from room BATHROOM on the 3 floor
+----FATHER in room HALL on the 2 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room HALL on the 2 floor
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_CURCUIT_BREAKER_OFF on CircuitBreaker
+----FATHER in room HALL on the 3 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room HALL on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room HALL on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room HALL on the 3 floor
+----FATHER in room VESTIBULE on the 1 floor did CONTROL_THE_DOOR
+----FATHER in room VESTIBULE on the 1 floor did OPEN_THE_DOR
+----FATHER in room CHILDRENS_ROOM on the 3 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room CHILDRENS_ROOM on the 3 floor
+----FATHER in room VESTIBULE on the 1 floor did CONTROL_THE_DOOR
+----FATHER in room VESTIBULE on the 1 floor did OPEN_THE_DOR
+----FATHER in room KITCHEN on the 1 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BEDROOM on the 2 floor did CALL_THE_RESCUE_SERVICE
+----FATHER in room HALL on the 3 floor did RELOCATE from room KITCHEN on the 1 floor
+----FATHER in room HALL on the 3 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room BEDROOM on the 3 floor did RELOCATE from room HALL on the 3 floor
+----FATHER in room BEDROOM on the 3 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room BEDROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BEDROOM on the 2 floor did RELOCATE from room BEDROOM on the 3 floor
+----FATHER in room BEDROOM on the 2 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room KITCHEN on the 1 floor did RELOCATE from room BEDROOM on the 2 floor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_REPAIR on WaterLeakSensor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_WATER_LEAK_SENSOR_OFF on WaterLeakSensor
+----FATHER in room BATHROOM on the 2 floor did RELOCATE from room KITCHEN on the 1 floor
+----FATHER in room BATHROOM on the 2 floor did DEVICE_REPAIR on WashingMachine
+----FATHER in room BATHROOM on the 2 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BEDROOM on the 2 floor did CALL_THE_RESCUE_SERVICE
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room BATHROOM on the 2 floor
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_REPAIR on CircuitBreaker
+----FATHER in room CHILDRENS_ROOM on the 3 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room KITCHEN on the 1 floor did RELOCATE from room CHILDRENS_ROOM on the 3 floor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_WATER_LEAK_SENSOR_OFF on WaterLeakSensor
+----FATHER in room BEDROOM on the 2 floor did CALL_THE_RESCUE_SERVICE
+----FATHER in room BEDROOM on the 3 floor did RELOCATE from room KITCHEN on the 1 floor
+----FATHER in room BEDROOM on the 3 floor did DEVICE_REPAIR on TV
+----FATHER in room BATHROOM on the 1 floor did RELOCATE from room BEDROOM on the 3 floor
+----FATHER in room BATHROOM on the 1 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room HALL on the 3 floor did RELOCATE from room BATHROOM on the 1 floor
+----FATHER in room HALL on the 3 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room KITCHEN on the 1 floor did RELOCATE from room HALL on the 3 floor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_REPAIR on Oven
+----FATHER in room KITCHEN on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BATHROOM on the 1 floor did RELOCATE from room KITCHEN on the 1 floor
+----FATHER in room BATHROOM on the 1 floor did DEVICE_REPAIR on WaterLeakSensor
+----FATHER in room BATHROOM on the 3 floor did RELOCATE from room BATHROOM on the 1 floor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room BEDROOM on the 3 floor did RELOCATE from room BATHROOM on the 3 floor
+----FATHER in room BEDROOM on the 3 floor did DEVICE_REPAIR on TV
+----FATHER in room BEDROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room KITCHEN on the 1 floor did RELOCATE from room BEDROOM on the 3 floor
+----FATHER in room KITCHEN on the 1 floor did CHANGE_BULB
+----FATHER in room BEDROOM on the 3 floor did RELOCATE from room KITCHEN on the 1 floor
+----FATHER in room BEDROOM on the 3 floor did DEVICE_REPAIR on TV
+----FATHER in room BEDROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BATHROOM on the 3 floor did RELOCATE from room BEDROOM on the 3 floor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_WATER_LEAK_SENSOR_OFF on WaterLeakSensor
+----FATHER in room BEDROOM on the 2 floor did CALL_THE_RESCUE_SERVICE
+----FATHER in room CHILDRENS_ROOM on the 3 floor did RELOCATE from room BATHROOM on the 3 floor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_TV_ON on TV
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room CHILDRENS_ROOM on the 3 floor
+----FATHER in room VESTIBULE on the 1 floor did CONTROL_THE_DOOR
+----FATHER in room VESTIBULE on the 1 floor did OPEN_THE_DOR
+----FATHER in room VESTIBULE on the 1 floor did CONTROL_THE_DOOR
+----FATHER in room VESTIBULE on the 1 floor did OPEN_THE_DOR
+----FATHER in room KITCHEN on the 1 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_REPAIR on TV
+----FATHER in room BEDROOM on the 3 floor did RELOCATE from room KITCHEN on the 1 floor
+----FATHER in room BEDROOM on the 3 floor did DEVICE_TV_ON on TV
+----FATHER in room HALL on the 2 floor did RELOCATE from room BEDROOM on the 3 floor
+----FATHER in room HALL on the 2 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room BEDROOM on the 3 floor did RELOCATE from room HALL on the 2 floor
+----FATHER in room BEDROOM on the 3 floor did DEVICE_TV_ON on TV
+----FATHER in room BEDROOM on the 3 floor did DEVICE_TV_ON on TV
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room BEDROOM on the 3 floor
+----FATHER in room VESTIBULE on the 1 floor did CONTROL_THE_DOOR
+----FATHER in room VESTIBULE on the 1 floor did OPEN_THE_DOR
+----FATHER in room BATHROOM on the 2 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room BATHROOM on the 2 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did RELOCATE from room BATHROOM on the 2 floor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_COMPUTER_RUN on Computer
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_COMPUTER_RUN on Computer
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_COMPUTER_OFF on Computer
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room CHILDRENS_ROOM on the 3 floor
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_CURCUIT_BREAKER_OFF on CircuitBreaker
+----FATHER in room GARAGE on the 1 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room GARAGE on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room GARAGE on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BEDROOM on the 2 floor did CALL_THE_RESCUE_SERVICE
+----FATHER in room BATHROOM on the 3 floor did RELOCATE from room GARAGE on the 1 floor
+----FATHER in room BATHROOM on the 3 floor did CHANGE_BULB
+----FATHER in room BATHROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room BATHROOM on the 3 floor
+----FATHER in room VESTIBULE on the 1 floor did CONTROL_THE_DOOR
+----FATHER in room VESTIBULE on the 1 floor did OPEN_THE_DOR
+----FATHER in room VESTIBULE on the 1 floor did CONTROL_THE_DOOR
+----FATHER in room VESTIBULE on the 1 floor did OPEN_THE_DOR
+----FATHER in room HALL on the 3 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room HALL on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room HALL on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room HALL on the 3 floor
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_CURCUIT_BREAKER_OFF on CircuitBreaker
+----FATHER in room KITCHEN on the 1 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BEDROOM on the 2 floor did CALL_THE_RESCUE_SERVICE
+----FATHER in room BATHROOM on the 3 floor did RELOCATE from room KITCHEN on the 1 floor
+----FATHER in room BATHROOM on the 3 floor did CHANGE_BULB
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room BATHROOM on the 3 floor
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_CURCUIT_BREAKER_OFF on CircuitBreaker
+----FATHER in room BATHROOM on the 2 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room BATHROOM on the 2 floor did DEVICE_REPAIR on WaterLeakSensor
+----FATHER in room BATHROOM on the 2 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BATHROOM on the 2 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BEDROOM on the 2 floor did CALL_THE_RESCUE_SERVICE
+----FATHER in room HALL on the 1 floor did RELOCATE from room BATHROOM on the 2 floor
+----FATHER in room HALL on the 1 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room HALL on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BEDROOM on the 2 floor did CALL_THE_RESCUE_SERVICE
+----FATHER in room HALL on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room GARAGE on the 1 floor did RELOCATE from room HALL on the 1 floor
+----FATHER in room GARAGE on the 1 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room BATHROOM on the 3 floor did RELOCATE from room GARAGE on the 1 floor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_REPAIR on WaterLeakSensor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_WATER_LEAK_SENSOR_OFF on WaterLeakSensor
+----FATHER in room BEDROOM on the 2 floor did CALL_THE_RESCUE_SERVICE
+----FATHER in room BATHROOM on the 2 floor did RELOCATE from room BATHROOM on the 3 floor
+----FATHER in room BATHROOM on the 2 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room BATHROOM on the 2 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room KITCHEN on the 1 floor did RELOCATE from room BATHROOM on the 2 floor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_REPAIR on Fridge
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room KITCHEN on the 1 floor
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_CURCUIT_BREAKER_OFF on CircuitBreaker
+----FATHER in room BEDROOM on the 3 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room BEDROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BEDROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room BEDROOM on the 3 floor
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_CURCUIT_BREAKER_OFF on CircuitBreaker
+----FATHER in room BATHROOM on the 3 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room BATHROOM on the 3 floor
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_REPAIR on CircuitBreaker
+----FATHER in room BEDROOM on the 3 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room BEDROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BEDROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room HALL on the 3 floor did RELOCATE from room BEDROOM on the 3 floor
+----FATHER in room HALL on the 3 floor did PET_A_PET
+----FATHER in room HALL on the 2 floor did RELOCATE from room HALL on the 3 floor
+----FATHER in room HALL on the 2 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room BATHROOM on the 1 floor did RELOCATE from room HALL on the 2 floor
+----FATHER in room BATHROOM on the 1 floor did DEVICE_REPAIR on WashingMachine
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room BATHROOM on the 1 floor
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_CURCUIT_BREAKER_OFF on CircuitBreaker
+----FATHER in room CHILDRENS_ROOM on the 3 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_TV_ON on TV
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room CHILDRENS_ROOM on the 3 floor
+----FATHER in room VESTIBULE on the 1 floor did CONTROL_THE_DOOR
+----FATHER in room VESTIBULE on the 1 floor did OPEN_THE_DOR
+----FATHER in room HALL on the 1 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room HALL on the 1 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room HALL on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BEDROOM on the 2 floor did CALL_THE_RESCUE_SERVICE
+----FATHER in room KITCHEN on the 1 floor did RELOCATE from room HALL on the 1 floor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_REPAIR on WaterLeakSensor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BATHROOM on the 2 floor did RELOCATE from room KITCHEN on the 1 floor
+----FATHER in room BATHROOM on the 2 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room BATHROOM on the 3 floor did RELOCATE from room BATHROOM on the 2 floor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_REPAIR on WashingMachine
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room BATHROOM on the 3 floor
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_CURCUIT_BREAKER_OFF on CircuitBreaker
+----FATHER in room BEDROOM on the 2 floor did CALL_THE_RESCUE_SERVICE
+----FATHER in room HALL on the 3 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room HALL on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BATHROOM on the 2 floor did RELOCATE from room HALL on the 3 floor
+----FATHER in room BATHROOM on the 2 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did RELOCATE from room BATHROOM on the 2 floor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_TV_ON on TV
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room CHILDRENS_ROOM on the 3 floor
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_CURCUIT_BREAKER_OFF on CircuitBreaker
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_CURCUIT_BREAKER_OFF on CircuitBreaker
+----FATHER in room KITCHEN on the 1 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_REPAIR on Fridge
+----FATHER in room KITCHEN on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BATHROOM on the 3 floor did RELOCATE from room KITCHEN on the 1 floor
+----FATHER in room BATHROOM on the 3 floor did CHANGE_BULB
+----FATHER in room BATHROOM on the 3 floor did RELOCATE from room BATHROOM on the 3 floor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_REPAIR on WaterLeakSensor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did RELOCATE from room BATHROOM on the 3 floor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_COMPUTER_ON on Computer
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_COMPUTER_RUN on Computer
+----FATHER in room BEDROOM on the 3 floor did RELOCATE from room CHILDRENS_ROOM on the 3 floor
+----FATHER in room BEDROOM on the 3 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room HALL on the 3 floor did RELOCATE from room BEDROOM on the 3 floor
+----FATHER in room HALL on the 3 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room HALL on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room HALL on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room HALL on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room HALL on the 3 floor
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_REPAIR on CircuitBreaker
+----FATHER in room KITCHEN on the 1 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_REPAIR on Oven
+----FATHER in room KITCHEN on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_WATER_LEAK_SENSOR_OFF on WaterLeakSensor
+----FATHER in room BEDROOM on the 2 floor did CALL_THE_RESCUE_SERVICE
+----FATHER in room KITCHEN on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room CHILDRENS_ROOM on the 2 floor did RELOCATE from room KITCHEN on the 1 floor
+----FATHER in room CHILDRENS_ROOM on the 2 floor did DEVICE_REPAIR on TV
+----FATHER in room CHILDRENS_ROOM on the 2 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BATHROOM on the 1 floor did RELOCATE from room CHILDRENS_ROOM on the 2 floor
+----FATHER in room BATHROOM on the 1 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room BEDROOM on the 3 floor did RELOCATE from room BATHROOM on the 1 floor
+----FATHER in room BEDROOM on the 3 floor did DEVICE_TV_ON on TV
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room BEDROOM on the 3 floor
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_CURCUIT_BREAKER_OFF on CircuitBreaker
+----FATHER in room BATHROOM on the 3 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_WATER_LEAK_SENSOR_OFF on WaterLeakSensor
+----FATHER in room BEDROOM on the 2 floor did CALL_THE_RESCUE_SERVICE
+----FATHER in room BEDROOM on the 2 floor did RELOCATE from room BATHROOM on the 3 floor
+----FATHER in room BEDROOM on the 2 floor did DEVICE_REPAIR on Computer
+----FATHER in room BEDROOM on the 3 floor did RELOCATE from room BEDROOM on the 2 floor
+----FATHER in room BEDROOM on the 3 floor did DEVICE_REPAIR on TV
+----FATHER in room GARAGE on the 1 floor did RELOCATE from room BEDROOM on the 3 floor
+----FATHER in room GARAGE on the 1 floor did USE_BIKE
+----FATHER in room BEDROOM on the 3 floor did RELOCATE from room GARAGE on the 1 floor
+----FATHER in room BEDROOM on the 3 floor did DEVICE_REPAIR on TV
+----FATHER in room HALL on the 3 floor did RELOCATE from room BEDROOM on the 3 floor
+----FATHER in room HALL on the 3 floor did PET_A_PET
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room HALL on the 3 floor
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_CURCUIT_BREAKER_OFF on CircuitBreaker
+----FATHER in room KITCHEN on the 1 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_REPAIR on WaterLeakSensor
+----FATHER in room BATHROOM on the 2 floor did RELOCATE from room KITCHEN on the 1 floor
+----FATHER in room BATHROOM on the 2 floor did DEVICE_REPAIR on WaterLeakSensor
+----FATHER in room BEDROOM on the 3 floor did RELOCATE from room BATHROOM on the 2 floor
+----FATHER in room BEDROOM on the 3 floor did DEVICE_TV_ON on TV
+----FATHER in room BEDROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BEDROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BATHROOM on the 1 floor did RELOCATE from room BEDROOM on the 3 floor
+----FATHER in room BATHROOM on the 1 floor did DEVICE_REPAIR on WashingMachine
+----FATHER in room BATHROOM on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BEDROOM on the 3 floor did RELOCATE from room BATHROOM on the 1 floor
+----FATHER in room BEDROOM on the 3 floor did DEVICE_TV_ON on TV
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room BEDROOM on the 3 floor
+----FATHER in room VESTIBULE on the 1 floor did CONTROL_THE_DOOR
+----FATHER in room VESTIBULE on the 1 floor did OPEN_THE_DOR
+----FATHER in room HALL on the 3 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room HALL on the 3 floor did CHANGE_BULB
+----FATHER in room KITCHEN on the 1 floor did RELOCATE from room HALL on the 3 floor
+----FATHER in room KITCHEN on the 1 floor did DEVICE_WATER_LEAK_SENSOR_OFF on WaterLeakSensor
+----FATHER in room BEDROOM on the 2 floor did CALL_THE_RESCUE_SERVICE
+----FATHER in room GARAGE on the 1 floor did RELOCATE from room KITCHEN on the 1 floor
+----FATHER in room GARAGE on the 1 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did RELOCATE from room GARAGE on the 1 floor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_COMPUTER_RUN on Computer
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_COMPUTER_RUN on Computer
+----FATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_COMPUTER_OFF on Computer
+----FATHER in room VESTIBULE on the 1 floor did RELOCATE from room CHILDRENS_ROOM on the 3 floor
+----FATHER in room VESTIBULE on the 1 floor did DEVICE_CURCUIT_BREAKER_OFF on CircuitBreaker
+----FATHER in room CHILDRENS_ROOM on the 3 floor did RELOCATE from room VESTIBULE on the 1 floor
+----FATHER in room CHILDRENS_ROOM on the 3 floor did CHANGE_BULB
+----FATHER in room BATHROOM on the 3 floor did RELOCATE from room CHILDRENS_ROOM on the 3 floor
+----FATHER in room BATHROOM on the 3 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room BATHROOM on the 2 floor did RELOCATE from room BATHROOM on the 3 floor
+----FATHER in room BATHROOM on the 2 floor did DEVICE_REPAIR on WashingMachine
+----FATHER in room BATHROOM on the 2 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----FATHER in room BATHROOM on the 2 floor did DEVICE_REPAIR on FireSensor
+----FATHER in room BEDROOM on the 2 floor did RELOCATE from room BATHROOM on the 2 floor
+----FATHER in room BEDROOM on the 2 floor did CHANGE_BULB
+************************************************************************************
+➨FATHER used CircuitBreaker 70 times.
+➨FATHER used Bike 3 times.
+➨FATHER used WaterLeakSensor 70 times.
+➨FATHER used WashingMachine 33 times.
+➨FATHER used Computer 34 times.
+➨FATHER used FireSensor 380 times.
+➨FATHER used Fridge 33 times.
+➨FATHER used TV 72 times.
+➨FATHER used Oven 11 times.
+************************************************************************************
+
+[6] GRANDMOTHER activities :
+----GRANDMOTHER in room GARAGE on the 1 floor did RELOCATE from room BATHROOM on the 2 floor
+----GRANDMOTHER in room GARAGE on the 1 floor did USE_SKIS
+----GRANDMOTHER in room GARAGE on the 1 floor did USE_CAR
+----GRANDMOTHER in room CHILDRENS_ROOM on the 3 floor did RELOCATE from room GARAGE on the 1 floor
+----GRANDMOTHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_COMPUTER_RUN on Computer
+----GRANDMOTHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_COMPUTER_RUN on Computer
+----GRANDMOTHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_COMPUTER_OFF on Computer
+----GRANDMOTHER in room GARAGE on the 1 floor did RELOCATE from room CHILDRENS_ROOM on the 3 floor
+----GRANDMOTHER wait to Ski because GRANDMOTHER is using this item
+----GRANDMOTHER in room GARAGE on the 1 floor did USE_SKIS
+----GRANDMOTHER in room CHILDRENS_ROOM on the 3 floor did CALL_THE_RESCUE_SERVICE
+----GRANDMOTHER wait to Bike because SON is using this item
+----GRANDMOTHER in room GARAGE on the 1 floor did USE_BIKE
+----GRANDMOTHER in room GARAGE on the 1 floor did USE_SKIS
+----GRANDMOTHER in room CHILDRENS_ROOM on the 3 floor did CALL_THE_RESCUE_SERVICE
+----GRANDMOTHER in room CHILDRENS_ROOM on the 3 floor did RELOCATE from room GARAGE on the 1 floor
+----GRANDMOTHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_COMPUTER_RUN on Computer
+----GRANDMOTHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_COMPUTER_RUN on Computer
+----GRANDMOTHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_COMPUTER_OFF on Computer
+----GRANDMOTHER in room CHILDRENS_ROOM on the 3 floor did CALL_THE_RESCUE_SERVICE
+----GRANDMOTHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_COMPUTER_ON on Computer
+----GRANDMOTHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_COMPUTER_RUN on Computer
+----GRANDMOTHER in room KITCHEN on the 1 floor did RELOCATE from room CHILDRENS_ROOM on the 3 floor
+----GRANDMOTHER in room KITCHEN on the 1 floor did DEVICE_FRIDGE_ON on Fridge
+----GRANDMOTHER in room KITCHEN on the 1 floor did DEVICE_FRIDGE_RUN on Fridge
+      ⮚ Empty:( 
+----GRANDMOTHER in room KITCHEN on the 1 floor did DEVICE_OVEN_ON on Oven
+----GRANDMOTHER in room KITCHEN on the 1 floor did DEVICE_OVEN_RUN on Oven
+----GRANDMOTHER in room KITCHEN on the 1 floor did DEVICE_FRIDGE_OFF on Fridge
+----GRANDMOTHER in room KITCHEN on the 1 floor did DEVICE_OVEN_OFF on Oven
+----GRANDMOTHER in room BATHROOM on the 3 floor did RELOCATE from room KITCHEN on the 1 floor
+----GRANDMOTHER in room BATHROOM on the 3 floor did DEVICE_WASHING_MACHINE_ON on WashingMachine
+----GRANDMOTHER in room BATHROOM on the 3 floor did DEVICE_WASHING_MACHINE_RUN on WashingMachine
+----GRANDMOTHER in room BATHROOM on the 3 floor did DEVICE_WASHING_MACHINE_OFF on WashingMachine
+----GRANDMOTHER in room CHILDRENS_ROOM on the 3 floor did CALL_THE_RESCUE_SERVICE
+----GRANDMOTHER in room CHILDRENS_ROOM on the 3 floor did CALL_THE_RESCUE_SERVICE
+----GRANDMOTHER in room CHILDRENS_ROOM on the 3 floor did CALL_THE_RESCUE_SERVICE
+----GRANDMOTHER in room CHILDRENS_ROOM on the 3 floor did RELOCATE from room BATHROOM on the 3 floor
+----GRANDMOTHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_TV_ON on TV
+----GRANDMOTHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_TV_RUN on TV
+----GRANDMOTHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_TV_OFF on TV
+----GRANDMOTHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_TV_ON on TV
+----GRANDMOTHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_TV_RUN on TV
+----GRANDMOTHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_TV_OFF on TV
+----GRANDMOTHER in room GARAGE on the 1 floor did RELOCATE from room CHILDRENS_ROOM on the 3 floor
+----GRANDMOTHER wait to Car because GRANDMOTHER is using this item
+----GRANDMOTHER in room GARAGE on the 1 floor did USE_CAR
+----GRANDMOTHER in room CHILDRENS_ROOM on the 3 floor did RELOCATE from room GARAGE on the 1 floor
+----GRANDMOTHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_TV_ON on TV
+----GRANDMOTHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_TV_RUN on TV
+----GRANDMOTHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_TV_OFF on TV
+************************************************************************************
+➨GRANDMOTHER used Car 3 times.
+➨GRANDMOTHER used Bike 2 times.
+➨GRANDMOTHER used Ski 4 times.
+➨GRANDMOTHER used Computer 8 times.
+➨GRANDMOTHER used WashingMachine 3 times.
+➨GRANDMOTHER used Fridge 3 times.
+➨GRANDMOTHER used Oven 3 times.
+➨GRANDMOTHER used TV 9 times.
+************************************************************************************
+
+[7] CAT activities :
+----CAT in room BEDROOM on the 3 floor did PET_SLEEP
+----CAT in room BEDROOM on the 3 floor did PET_SAY
+************************************************************************************
+************************************************************************************
+
+[8] DOG activities :
+----DOG in room BEDROOM on the 3 floor did PET_SAY
+----DOG in room BEDROOM on the 3 floor did PLAY_WITH_TOY
+----DOG in room BEDROOM on the 3 floor did PET_SLEEP
+----DOG in room BEDROOM on the 3 floor did PLAY_WITH_TOY
+----DOG in room BEDROOM on the 3 floor did PET_SLEEP
+----DOG wait to PetToy because DOG is using this item
+----DOG in room BEDROOM on the 3 floor did PLAY_WITH_TOY
+----DOG in room BEDROOM on the 3 floor did PET_SLEEP
+************************************************************************************
+➨DOG used PetToy 4 times.
+************************************************************************************
+
+[9] GRANDFATHER activities :
+----GRANDFATHER in room BATHROOM on the 3 floor did DEVICE_REPAIR on FireSensor
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did RELOCATE from room BATHROOM on the 3 floor
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_REPAIR on Computer
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_REPAIR on FireSensor
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_REPAIR on Computer
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_REPAIR on FireSensor
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BATHROOM on the 3 floor did RELOCATE from room CHILDRENS_ROOM on the 3 floor
+----GRANDFATHER in room BATHROOM on the 3 floor did DEVICE_WATER_LEAK_SENSOR_OFF on WaterLeakSensor
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did RELOCATE from room BATHROOM on the 3 floor
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_REPAIR on TV
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_TV_ON on TV
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_TV_RUN on TV
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_TV_OFF on TV
+----GRANDFATHER in room BATHROOM on the 3 floor did RELOCATE from room CHILDRENS_ROOM on the 3 floor
+----GRANDFATHER in room BATHROOM on the 3 floor did DEVICE_WATER_LEAK_SENSOR_OFF on WaterLeakSensor
+----GRANDFATHER in room BEDROOM on the 3 floor did RELOCATE from room BATHROOM on the 3 floor
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did DEVICE_COMPUTER_RUN on Computer
+----GRANDFATHER in room BEDROOM on the 3 floor did DEVICE_COMPUTER_RUN on Computer
+----GRANDFATHER in room BEDROOM on the 3 floor did DEVICE_COMPUTER_OFF on Computer
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room KITCHEN on the 1 floor did RELOCATE from room BEDROOM on the 3 floor
+----GRANDFATHER in room KITCHEN on the 1 floor did DEVICE_FRIDGE_ON on Fridge
+----GRANDFATHER in room KITCHEN on the 1 floor did DEVICE_FRIDGE_RUN on Fridge
+      ⮚ Returned SAUSAGE
+----GRANDFATHER in room KITCHEN on the 1 floor did DEVICE_OVEN_ON on Oven
+----GRANDFATHER in room KITCHEN on the 1 floor did DEVICE_OVEN_RUN on Oven
+----GRANDFATHER in room KITCHEN on the 1 floor did DEVICE_FRIDGE_OFF on Fridge
+----GRANDFATHER in room KITCHEN on the 1 floor did DEVICE_OVEN_OFF on Oven
+----GRANDFATHER in room KITCHEN on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_THE_RESCUE_SERVICE
+----GRANDFATHER in room BEDROOM on the 3 floor did RELOCATE from room KITCHEN on the 1 floor
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did DEVICE_REPAIR on Computer
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did DEVICE_REPAIR on Computer
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_THE_RESCUE_SERVICE
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did DEVICE_REPAIR on Computer
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did DEVICE_REPAIR on FireSensor
+----GRANDFATHER in room BEDROOM on the 3 floor did DEVICE_COMPUTER_ON on Computer
+----GRANDFATHER in room BEDROOM on the 3 floor did DEVICE_COMPUTER_RUN on Computer
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room KITCHEN on the 1 floor did RELOCATE from room BEDROOM on the 3 floor
+----GRANDFATHER in room KITCHEN on the 1 floor did DEVICE_FRIDGE_ON on Fridge
+----GRANDFATHER in room KITCHEN on the 1 floor did DEVICE_FRIDGE_RUN on Fridge
+      ⮚ Returned MILK
+----GRANDFATHER in room KITCHEN on the 1 floor did DEVICE_FRIDGE_PAUSE on Fridge
+----GRANDFATHER in room KITCHEN on the 1 floor did MAKE_TEA
+----GRANDFATHER in room KITCHEN on the 1 floor did PERSON_EAT
+----GRANDFATHER in room BEDROOM on the 3 floor did RELOCATE from room KITCHEN on the 1 floor
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did DEVICE_COMPUTER_ON on Computer
+----GRANDFATHER in room BEDROOM on the 3 floor did DEVICE_COMPUTER_RUN on Computer
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did DEVICE_REPAIR on Computer
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did DEVICE_REPAIR on FireSensor
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CHANGE_BULB
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did DEVICE_REPAIR on Computer
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room GARAGE on the 1 floor did RELOCATE from room BEDROOM on the 3 floor
+----GRANDFATHER wait to Bike because SON is using this item
+----GRANDFATHER in room GARAGE on the 1 floor did USE_BIKE
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did RELOCATE from room GARAGE on the 1 floor
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_REPAIR on FireSensor
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_REPAIR on FireSensor
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_REPAIR on Computer
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_REPAIR on Computer
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_REPAIR on TV
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_REPAIR on FireSensor
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_REPAIR on FireSensor
+----GRANDFATHER in room GARAGE on the 1 floor did RELOCATE from room CHILDRENS_ROOM on the 3 floor
+----GRANDFATHER wait to Car because GRANDMOTHER is using this item
+----GRANDFATHER in room GARAGE on the 1 floor did USE_CAR
+----GRANDFATHER in room BEDROOM on the 3 floor did RELOCATE from room GARAGE on the 1 floor
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did DEVICE_REPAIR on TV
+----GRANDFATHER in room BEDROOM on the 3 floor did CHANGE_BULB
+----GRANDFATHER in room BEDROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_THE_RESCUE_SERVICE
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did DEVICE_REPAIR on Computer
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room GARAGE on the 1 floor did RELOCATE from room BEDROOM on the 3 floor
+----GRANDFATHER in room GARAGE on the 1 floor did USE_BIKE
+----GRANDFATHER in room BEDROOM on the 3 floor did RELOCATE from room GARAGE on the 1 floor
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did DEVICE_REPAIR on TV
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_THE_RESCUE_SERVICE
+----GRANDFATHER in room BEDROOM on the 3 floor did DEVICE_REPAIR on Computer
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room KITCHEN on the 1 floor did RELOCATE from room BEDROOM on the 3 floor
+----GRANDFATHER in room KITCHEN on the 1 floor did DEVICE_WATER_LEAK_SENSOR_OFF on WaterLeakSensor
+----GRANDFATHER in room KITCHEN on the 1 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----GRANDFATHER in room BEDROOM on the 3 floor did RELOCATE from room KITCHEN on the 1 floor
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did DEVICE_FIRE_SENSOR_OFF on FireSensor
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did DEVICE_REPAIR on TV
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BATHROOM on the 3 floor did RELOCATE from room BEDROOM on the 3 floor
+----GRANDFATHER in room BATHROOM on the 3 floor did DEVICE_WASHING_MACHINE_ON on WashingMachine
+----GRANDFATHER in room BATHROOM on the 3 floor did DEVICE_WASHING_MACHINE_RUN on WashingMachine
+----GRANDFATHER in room BATHROOM on the 3 floor did DEVICE_WASHING_MACHINE_OFF on WashingMachine
+----GRANDFATHER in room BEDROOM on the 3 floor did RELOCATE from room BATHROOM on the 3 floor
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did DEVICE_COMPUTER_ON on Computer
+----GRANDFATHER in room BEDROOM on the 3 floor did DEVICE_COMPUTER_RUN on Computer
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+----GRANDFATHER in room BEDROOM on the 3 floor did CALL_GRANDPA_FOR_HELP
+************************************************************************************
+➨GRANDFATHER used Car 2 times.
+➨GRANDFATHER used Bike 3 times.
+➨GRANDFATHER used WaterLeakSensor 3 times.
+➨GRANDFATHER used Computer 20 times.
+➨GRANDFATHER used WashingMachine 3 times.
+➨GRANDFATHER used FireSensor 35 times.
+➨GRANDFATHER used Fridge 6 times.
+➨GRANDFATHER used TV 8 times.
+➨GRANDFATHER used Oven 3 times.
+************************************************************************************
+
+[10] MINI_PIG activities :
+----MINI_PIG in room HALL on the 3 floor did PET_SAY
+----MINI_PIG in room HALL on the 3 floor did PET_SAY
+----MINI_PIG in room HALL on the 3 floor did PET_SAY
+************************************************************************************
+************************************************************************************
+
+[11] MOTHER activities :
+----MOTHER in room BATHROOM on the 3 floor did RELOCATE from room BEDROOM on the 2 floor
+----MOTHER in room BATHROOM on the 3 floor did PERSON_CRY
+----MOTHER in room CHILDRENS_ROOM on the 2 floor did RELOCATE from room BATHROOM on the 3 floor
+----MOTHER in room CHILDRENS_ROOM on the 2 floor did TIDY_UP
+----MOTHER in room HALL on the 3 floor did CALL_THE_RESCUE_SERVICE
+----MOTHER in room BEDROOM on the 3 floor did RELOCATE from room CHILDRENS_ROOM on the 2 floor
+----MOTHER in room BEDROOM on the 3 floor did PERSON_SLEEP
+----MOTHER in room BATHROOM on the 3 floor did RELOCATE from room BEDROOM on the 3 floor
+----MOTHER in room BATHROOM on the 3 floor did PERSON_CRY
+----MOTHER in room HALL on the 2 floor did RELOCATE from room BATHROOM on the 3 floor
+----MOTHER in room HALL on the 2 floor did TIDY_UP
+----MOTHER in room BATHROOM on the 3 floor did RELOCATE from room HALL on the 2 floor
+----MOTHER in room BATHROOM on the 3 floor did PERSON_CRY
+----MOTHER in room BATHROOM on the 3 floor did PERSON_CRY
+----MOTHER in room HALL on the 3 floor did RELOCATE from room BATHROOM on the 3 floor
+----MOTHER in room HALL on the 3 floor did DECORATE_A_CHRISTMAS_TREE
+----MOTHER in room BATHROOM on the 3 floor did RELOCATE from room HALL on the 3 floor
+----MOTHER in room BATHROOM on the 3 floor did PERSON_CRY
+----MOTHER in room BATHROOM on the 3 floor did PERSON_CRY
+----MOTHER in room HALL on the 3 floor did RELOCATE from room BATHROOM on the 3 floor
+----MOTHER in room HALL on the 3 floor did DECORATE_A_CHRISTMAS_TREE
+----MOTHER in room HALL on the 3 floor did DECORATE_A_CHRISTMAS_TREE
+----MOTHER in room BATHROOM on the 3 floor did RELOCATE from room HALL on the 3 floor
+----MOTHER in room BATHROOM on the 3 floor did PERSON_CRY
+----MOTHER in room HALL on the 3 floor did CALL_THE_RESCUE_SERVICE
+----MOTHER in room BATHROOM on the 3 floor did PERSON_CRY
+----MOTHER in room BEDROOM on the 3 floor did RELOCATE from room BATHROOM on the 3 floor
+----MOTHER in room BEDROOM on the 3 floor did PERSON_SLEEP
+----MOTHER in room HALL on the 3 floor did RELOCATE from room BEDROOM on the 3 floor
+----MOTHER in room HALL on the 3 floor did DECORATE_A_CHRISTMAS_TREE
+----MOTHER in room BEDROOM on the 3 floor did RELOCATE from room HALL on the 3 floor
+----MOTHER in room BEDROOM on the 3 floor did DEVICE_COMPUTER_ON on Computer
+----MOTHER in room BEDROOM on the 3 floor did DEVICE_COMPUTER_RUN on Computer
+----MOTHER in room BATHROOM on the 3 floor did RELOCATE from room BEDROOM on the 3 floor
+----MOTHER in room BATHROOM on the 3 floor did PERSON_CRY
+----MOTHER in room BEDROOM on the 3 floor did RELOCATE from room BATHROOM on the 3 floor
+----MOTHER in room BEDROOM on the 3 floor did TIDY_UP
+----MOTHER in room BATHROOM on the 2 floor did RELOCATE from room BEDROOM on the 3 floor
+----MOTHER in room BATHROOM on the 2 floor did TIDY_UP
+----MOTHER in room BATHROOM on the 3 floor did RELOCATE from room BATHROOM on the 2 floor
+----MOTHER in room BATHROOM on the 3 floor did TIDY_UP
+----MOTHER in room HALL on the 3 floor did CALL_THE_RESCUE_SERVICE
+----MOTHER in room CHILDRENS_ROOM on the 3 floor did RELOCATE from room BATHROOM on the 3 floor
+----MOTHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_COMPUTER_RUN on Computer
+----MOTHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_COMPUTER_RUN on Computer
+----MOTHER in room CHILDRENS_ROOM on the 3 floor did DEVICE_COMPUTER_OFF on Computer
+----MOTHER in room BATHROOM on the 3 floor did RELOCATE from room CHILDRENS_ROOM on the 3 floor
+----MOTHER in room BATHROOM on the 3 floor did PERSON_CRY
+----MOTHER in room HALL on the 3 floor did RELOCATE from room BATHROOM on the 3 floor
+----MOTHER in room HALL on the 3 floor did DECORATE_A_CHRISTMAS_TREE
+----MOTHER in room BATHROOM on the 3 floor did RELOCATE from room HALL on the 3 floor
+----MOTHER in room BATHROOM on the 3 floor did PERSON_CRY
+----MOTHER in room HALL on the 3 floor did RELOCATE from room BATHROOM on the 3 floor
+----MOTHER in room HALL on the 3 floor did DECORATE_A_CHRISTMAS_TREE
+----MOTHER in room CHILDRENS_ROOM on the 2 floor did RELOCATE from room HALL on the 3 floor
+----MOTHER in room CHILDRENS_ROOM on the 2 floor did TIDY_UP
+----MOTHER in room BATHROOM on the 2 floor did RELOCATE from room CHILDRENS_ROOM on the 2 floor
+----MOTHER in room BATHROOM on the 2 floor did TIDY_UP
+----MOTHER in room HALL on the 3 floor did RELOCATE from room BATHROOM on the 2 floor
+----MOTHER in room HALL on the 3 floor did DECORATE_A_CHRISTMAS_TREE
+----MOTHER in room BEDROOM on the 3 floor did RELOCATE from room HALL on the 3 floor
+----MOTHER in room BEDROOM on the 3 floor did TIDY_UP
+----MOTHER in room BATHROOM on the 3 floor did RELOCATE from room BEDROOM on the 3 floor
+----MOTHER in room BATHROOM on the 3 floor did PERSON_CRY
+----MOTHER in room HALL on the 3 floor did RELOCATE from room BATHROOM on the 3 floor
+----MOTHER in room HALL on the 3 floor did DECORATE_A_CHRISTMAS_TREE
+----MOTHER in room HALL on the 3 floor did DECORATE_A_CHRISTMAS_TREE
+----MOTHER in room BATHROOM on the 3 floor did RELOCATE from room HALL on the 3 floor
+----MOTHER in room BATHROOM on the 3 floor did PERSON_CRY
+----MOTHER in room BATHROOM on the 3 floor did PERSON_CRY
+----MOTHER in room HALL on the 3 floor did RELOCATE from room BATHROOM on the 3 floor
+----MOTHER in room HALL on the 3 floor did DECORATE_A_CHRISTMAS_TREE
+----MOTHER in room HALL on the 3 floor did DECORATE_A_CHRISTMAS_TREE
+----MOTHER in room VESTIBULE on the 1 floor did RELOCATE from room HALL on the 3 floor
+----MOTHER in room VESTIBULE on the 1 floor did TIDY_UP
+----MOTHER in room VESTIBULE on the 1 floor did CONTROL_THE_DOOR
+----MOTHER in room VESTIBULE on the 1 floor did OPEN_THE_DOR
+----MOTHER in room BATHROOM on the 3 floor did RELOCATE from room VESTIBULE on the 1 floor
+----MOTHER in room BATHROOM on the 3 floor did PERSON_CRY
+----MOTHER in room BATHROOM on the 3 floor did PERSON_CRY
+----MOTHER in room BEDROOM on the 3 floor did RELOCATE from room BATHROOM on the 3 floor
+----MOTHER in room BEDROOM on the 3 floor did DEVICE_TV_ON on TV
+----MOTHER in room BEDROOM on the 3 floor did DEVICE_TV_RUN on TV
+----MOTHER in room BEDROOM on the 3 floor did DEVICE_TV_OFF on TV
+----MOTHER in room BATHROOM on the 3 floor did RELOCATE from room BEDROOM on the 3 floor
+----MOTHER in room BATHROOM on the 3 floor did PERSON_CRY
+----MOTHER in room BATHROOM on the 2 floor did RELOCATE from room BATHROOM on the 3 floor
+----MOTHER in room BATHROOM on the 2 floor did TIDY_UP
+----MOTHER in room HALL on the 3 floor did RELOCATE from room BATHROOM on the 2 floor
+----MOTHER in room HALL on the 3 floor did DECORATE_A_CHRISTMAS_TREE
+----MOTHER in room HALL on the 3 floor did DECORATE_A_CHRISTMAS_TREE
+----MOTHER in room HALL on the 3 floor did DECORATE_A_CHRISTMAS_TREE
+----MOTHER in room HALL on the 3 floor did DECORATE_A_CHRISTMAS_TREE
+----MOTHER in room BATHROOM on the 3 floor did RELOCATE from room HALL on the 3 floor
+----MOTHER in room BATHROOM on the 3 floor did PERSON_CRY
+----MOTHER in room BATHROOM on the 3 floor did PERSON_CRY
+----MOTHER in room HALL on the 3 floor did RELOCATE from room BATHROOM on the 3 floor
+----MOTHER in room HALL on the 3 floor did DECORATE_A_CHRISTMAS_TREE
+----MOTHER in room BATHROOM on the 3 floor did RELOCATE from room HALL on the 3 floor
+----MOTHER in room BATHROOM on the 3 floor did PERSON_CRY
+----MOTHER in room CHILDRENS_ROOM on the 2 floor did RELOCATE from room BATHROOM on the 3 floor
+----MOTHER in room CHILDRENS_ROOM on the 2 floor did TIDY_UP
+----MOTHER in room HALL on the 3 floor did RELOCATE from room CHILDRENS_ROOM on the 2 floor
+----MOTHER in room HALL on the 3 floor did DECORATE_A_CHRISTMAS_TREE
+----MOTHER in room BATHROOM on the 3 floor did RELOCATE from room HALL on the 3 floor
+----MOTHER in room BATHROOM on the 3 floor did PERSON_CRY
+----MOTHER in room CHILDRENS_ROOM on the 3 floor did RELOCATE from room BATHROOM on the 3 floor
+----MOTHER in room CHILDRENS_ROOM on the 3 floor did TIDY_UP
+----MOTHER in room HALL on the 3 floor did RELOCATE from room CHILDRENS_ROOM on the 3 floor
+----MOTHER in room HALL on the 3 floor did DECORATE_A_CHRISTMAS_TREE
+----MOTHER in room HALL on the 3 floor did TIDY_UP
+----MOTHER in room BATHROOM on the 3 floor did RELOCATE from room HALL on the 3 floor
+----MOTHER in room BATHROOM on the 3 floor did PERSON_CRY
+----MOTHER in room HALL on the 3 floor did RELOCATE from room BATHROOM on the 3 floor
+----MOTHER in room HALL on the 3 floor did DECORATE_A_CHRISTMAS_TREE
+----MOTHER in room HALL on the 3 floor did DECORATE_A_CHRISTMAS_TREE
+----MOTHER in room HALL on the 3 floor did DECORATE_A_CHRISTMAS_TREE
+----MOTHER in room VESTIBULE on the 1 floor did RELOCATE from room HALL on the 3 floor
+----MOTHER in room VESTIBULE on the 1 floor did TIDY_UP
+----MOTHER in room VESTIBULE on the 1 floor did CONTROL_THE_DOOR
+----MOTHER in room VESTIBULE on the 1 floor did OPEN_THE_DOR
+----MOTHER in room VESTIBULE on the 1 floor did CONTROL_THE_DOOR
+----MOTHER in room VESTIBULE on the 1 floor did OPEN_THE_DOR
+----MOTHER in room VESTIBULE on the 1 floor did CONTROL_THE_DOOR
+----MOTHER in room VESTIBULE on the 1 floor did OPEN_THE_DOR
+----MOTHER in room GARAGE on the 1 floor did RELOCATE from room VESTIBULE on the 1 floor
+----MOTHER wait to Car because GRANDMOTHER is using this item
+----MOTHER in room GARAGE on the 1 floor did USE_CAR
+----MOTHER in room BATHROOM on the 3 floor did RELOCATE from room GARAGE on the 1 floor
+----MOTHER in room BATHROOM on the 3 floor did PERSON_CRY
+----MOTHER in room HALL on the 3 floor did RELOCATE from room BATHROOM on the 3 floor
+----MOTHER in room HALL on the 3 floor did DECORATE_A_CHRISTMAS_TREE
+----MOTHER in room BATHROOM on the 3 floor did RELOCATE from room HALL on the 3 floor
+----MOTHER in room BATHROOM on the 3 floor did PERSON_CRY
+----MOTHER in room GARAGE on the 1 floor did RELOCATE from room BATHROOM on the 3 floor
+----MOTHER in room GARAGE on the 1 floor did USE_CAR
+----MOTHER in room KITCHEN on the 1 floor did RELOCATE from room GARAGE on the 1 floor
+----MOTHER in room KITCHEN on the 1 floor did DEVICE_FRIDGE_ON on Fridge
+----MOTHER in room KITCHEN on the 1 floor did DEVICE_FRIDGE_RUN on Fridge
+      ⮚ Empty:( 
+----MOTHER in room KITCHEN on the 1 floor did DEVICE_OVEN_ON on Oven
+----MOTHER in room KITCHEN on the 1 floor did DEVICE_OVEN_RUN on Oven
+----MOTHER in room KITCHEN on the 1 floor did DEVICE_FRIDGE_OFF on Fridge
+----MOTHER in room KITCHEN on the 1 floor did DEVICE_OVEN_OFF on Oven
+----MOTHER in room HALL on the 3 floor did RELOCATE from room KITCHEN on the 1 floor
+----MOTHER in room HALL on the 3 floor did DECORATE_A_CHRISTMAS_TREE
+----MOTHER in room BATHROOM on the 3 floor did RELOCATE from room HALL on the 3 floor
+----MOTHER in room BATHROOM on the 3 floor did PERSON_CRY
+----MOTHER in room HALL on the 3 floor did RELOCATE from room BATHROOM on the 3 floor
+----MOTHER in room HALL on the 3 floor did DECORATE_A_CHRISTMAS_TREE
+----MOTHER in room BATHROOM on the 3 floor did RELOCATE from room HALL on the 3 floor
+----MOTHER in room BATHROOM on the 3 floor did PERSON_CRY
+----MOTHER in room BEDROOM on the 2 floor did RELOCATE from room BATHROOM on the 3 floor
+----MOTHER in room BEDROOM on the 2 floor did TIDY_UP
+----MOTHER in room HALL on the 3 floor did RELOCATE from room BEDROOM on the 2 floor
+----MOTHER in room HALL on the 3 floor did DECORATE_A_CHRISTMAS_TREE
+----MOTHER in room CHILDRENS_ROOM on the 2 floor did RELOCATE from room HALL on the 3 floor
+----MOTHER in room CHILDRENS_ROOM on the 2 floor did TIDY_UP
+----MOTHER in room BATHROOM on the 3 floor did RELOCATE from room CHILDRENS_ROOM on the 2 floor
+----MOTHER in room BATHROOM on the 3 floor did PERSON_CRY
+----MOTHER in room BATHROOM on the 3 floor did DEVICE_WASHING_MACHINE_ON on WashingMachine
+----MOTHER in room BATHROOM on the 3 floor did DEVICE_WASHING_MACHINE_RUN on WashingMachine
+----MOTHER in room BATHROOM on the 3 floor did DEVICE_WASHING_MACHINE_OFF on WashingMachine
+----MOTHER in room HALL on the 3 floor did RELOCATE from room BATHROOM on the 3 floor
+----MOTHER in room HALL on the 3 floor did DECORATE_A_CHRISTMAS_TREE
+----MOTHER in room HALL on the 3 floor did DECORATE_A_CHRISTMAS_TREE
+----MOTHER in room HALL on the 3 floor did DECORATE_A_CHRISTMAS_TREE
+----MOTHER in room HALL on the 1 floor did RELOCATE from room HALL on the 3 floor
+----MOTHER in room HALL on the 1 floor did TIDY_UP
+----MOTHER in room HALL on the 3 floor did RELOCATE from room HALL on the 1 floor
+----MOTHER in room HALL on the 3 floor did TIDY_UP
+----MOTHER in room BATHROOM on the 3 floor did RELOCATE from room HALL on the 3 floor
+----MOTHER in room BATHROOM on the 3 floor did PERSON_CRY
+----MOTHER in room BATHROOM on the 3 floor did PERSON_CRY
+----MOTHER in room BATHROOM on the 2 floor did RELOCATE from room BATHROOM on the 3 floor
+----MOTHER in room BATHROOM on the 2 floor did TIDY_UP
+----MOTHER in room GARAGE on the 1 floor did RELOCATE from room BATHROOM on the 2 floor
+----MOTHER wait to Bike because SON is using this item
+----MOTHER in room GARAGE on the 1 floor did USE_BIKE
+----MOTHER in room BEDROOM on the 3 floor did RELOCATE from room GARAGE on the 1 floor
+----MOTHER in room BEDROOM on the 3 floor did TIDY_UP
+----MOTHER in room HALL on the 3 floor did CALL_THE_RESCUE_SERVICE
+----MOTHER in room HALL on the 3 floor did RELOCATE from room BEDROOM on the 3 floor
+----MOTHER in room HALL on the 3 floor did DECORATE_A_CHRISTMAS_TREE
+----MOTHER in room BATHROOM on the 3 floor did RELOCATE from room HALL on the 3 floor
+----MOTHER in room BATHROOM on the 3 floor did PERSON_CRY
+----MOTHER in room CHILDRENS_ROOM on the 3 floor did RELOCATE from room BATHROOM on the 3 floor
+----MOTHER in room CHILDRENS_ROOM on the 3 floor did TIDY_UP
+----MOTHER in room HALL on the 3 floor did RELOCATE from room CHILDRENS_ROOM on the 3 floor
+----MOTHER in room HALL on the 3 floor did DECORATE_A_CHRISTMAS_TREE
+----MOTHER in room BATHROOM on the 3 floor did RELOCATE from room HALL on the 3 floor
+----MOTHER in room BATHROOM on the 3 floor did PERSON_CRY
+----MOTHER in room BATHROOM on the 3 floor did PERSON_CRY
+----MOTHER in room HALL on the 1 floor did RELOCATE from room BATHROOM on the 3 floor
+----MOTHER in room HALL on the 1 floor did TIDY_UP
+----MOTHER in room BATHROOM on the 3 floor did RELOCATE from room HALL on the 1 floor
+----MOTHER in room BATHROOM on the 3 floor did PERSON_CRY
+----MOTHER in room BATHROOM on the 3 floor did PERSON_CRY
+----MOTHER in room HALL on the 3 floor did RELOCATE from room BATHROOM on the 3 floor
+----MOTHER in room HALL on the 3 floor did DECORATE_A_CHRISTMAS_TREE
+----MOTHER in room HALL on the 3 floor did DECORATE_A_CHRISTMAS_TREE
+----MOTHER in room HALL on the 3 floor did DECORATE_A_CHRISTMAS_TREE
+----MOTHER in room HALL on the 2 floor did RELOCATE from room HALL on the 3 floor
+----MOTHER in room HALL on the 2 floor did TIDY_UP
+----MOTHER in room BATHROOM on the 3 floor did RELOCATE from room HALL on the 2 floor
+----MOTHER in room BATHROOM on the 3 floor did PERSON_CRY
+----MOTHER in room BATHROOM on the 3 floor did PERSON_CRY
+----MOTHER in room HALL on the 3 floor did RELOCATE from room BATHROOM on the 3 floor
+----MOTHER in room HALL on the 3 floor did DECORATE_A_CHRISTMAS_TREE
+----MOTHER in room BATHROOM on the 3 floor did RELOCATE from room HALL on the 3 floor
+----MOTHER in room BATHROOM on the 3 floor did DEVICE_WASHING_MACHINE_ON on WashingMachine
+----MOTHER in room BATHROOM on the 3 floor did DEVICE_WASHING_MACHINE_RUN on WashingMachine
+----MOTHER in room BATHROOM on the 3 floor did DEVICE_WASHING_MACHINE_OFF on WashingMachine
+----MOTHER in room BATHROOM on the 3 floor did PERSON_CRY
+----MOTHER in room BEDROOM on the 3 floor did RELOCATE from room BATHROOM on the 3 floor
+----MOTHER in room BEDROOM on the 3 floor did PERSON_SLEEP
+----MOTHER in room BATHROOM on the 3 floor did RELOCATE from room BEDROOM on the 3 floor
+----MOTHER in room BATHROOM on the 3 floor did PERSON_CRY
+----MOTHER in room BATHROOM on the 3 floor did PERSON_CRY
+----MOTHER in room HALL on the 3 floor did RELOCATE from room BATHROOM on the 3 floor
+----MOTHER in room HALL on the 3 floor did DECORATE_A_CHRISTMAS_TREE
+************************************************************************************
+➨MOTHER used Car 3 times.
+➨MOTHER used Bike 2 times.
+➨MOTHER used Computer 5 times.
+➨MOTHER used WashingMachine 6 times.
+➨MOTHER used Fridge 3 times.
+➨MOTHER used TV 3 times.
+➨MOTHER used Oven 3 times.
+************************************************************************************
+
+[12] DOG activities :
+----DOG in room BATHROOM on the 3 floor did PET_SLEEP
+----DOG in room BATHROOM on the 3 floor did PET_SAY
+----DOG in room BATHROOM on the 3 floor did PET_SLEEP
+----DOG in room BATHROOM on the 3 floor did PLAY_WITH_TOY
+----DOG in room BATHROOM on the 3 floor did PLAY_WITH_TOY
+----DOG in room BATHROOM on the 3 floor did PET_SAY
+************************************************************************************
+➨DOG used PetToy 2 times.
+************************************************************************************
+

@@ -1,4 +1,4 @@
-package cvut.omo.data_collections.events;
+package cvut.omo.data_collections.activity_events;
 
 import cvut.omo.data_collections.Iterator;
 import cvut.omo.entity.activity.Activity;
@@ -6,14 +6,14 @@ import cvut.omo.event.Event;
 
 import java.util.List;
 
-public class EventCollectionReportIterator implements Iterator {
+public class EventReportIterator implements Iterator {
 
     private static int currIdx = 0;
 
     @Override
     public Object next() {
         StringBuilder sb = new StringBuilder();
-        Event event = EventCollection.at(currIdx++);
+        Event event = SmartHomeEventCollection.at(currIdx++);
 
         sb
                 .append("[")
@@ -32,13 +32,17 @@ public class EventCollectionReportIterator implements Iterator {
             }
         }
 
+        else{
+            sb.append("\n");
+        }
+
         return sb.toString();
 
     }
 
     @Override
     public boolean hasNext() {
-        return currIdx != EventCollection.size();
+        return currIdx != SmartHomeEventCollection.size();
     }
 
 

@@ -1,8 +1,6 @@
 package cvut.omo.device;
 
-import cvut.omo.entity.person.FamilyRoleType;
 import cvut.omo.entity.person.Person;
-import cvut.omo.entity.EntityStatus;
 
 public class BrokenState extends HomeDeviceState {
 
@@ -10,10 +8,9 @@ public class BrokenState extends HomeDeviceState {
         super(homeAppliances);
         homeAppliances.breakDown();
     }
-
-
     @Override
     public void switchOn(HomeAppliances homeAppliances) {}
+
 
     @Override
     public void switchOff(HomeAppliances homeAppliances) {}
@@ -22,6 +19,7 @@ public class BrokenState extends HomeDeviceState {
     public void repair(Person person, HomeAppliances homeAppliances) {
         person.lock();
         homeAppliances.setHomeDeviceState(new OffState(homeAppliances));
+
         person.unlock();
     }
 

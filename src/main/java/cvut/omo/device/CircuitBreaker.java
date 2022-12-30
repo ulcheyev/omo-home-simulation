@@ -3,15 +3,18 @@ package cvut.omo.device;
 import cvut.omo.app_utils.Constants;
 import cvut.omo.data_collections.consumption.ConsumptionCollection;
 import cvut.omo.event.EventGenerator;
+import cvut.omo.event.event_type.EventType;
 import cvut.omo.event.event_type.HomeEvent;
+import cvut.omo.exceptions.OMOException;
 import cvut.omo.home_structure.home_builder.Home;
+import cvut.omo.home_structure.room_builder.Room;
+import cvut.omo.home_structure.room_builder.RoomName;
 
 
 public class CircuitBreaker extends HomeAppliances{
 
     public CircuitBreaker(double lifeTime) {
         super(lifeTime);
-        Home.INSTANCE.setCircuitBreaker(this);
     }
 
     @Override
@@ -22,16 +25,44 @@ public class CircuitBreaker extends HomeAppliances{
 
     @Override
     public void disable(){
+
+        EventGenerator.generateEvent(HomeEvent.INFO, "Circuit breaker off, the current is coming in");
+
+        for(HomeDevice hd: Home.INSTANCE.getHomeDevices()){
+            if(!hd.equals(this)) {
+                hd.setCurrentConsumption(SourceType.ENERGY, Constants.DEVICE_OFF_STATE_ELECTRICITY);
+            }
+        }
+
     }
 
     @Override
-    public void enable(){}
+    public void enable(){
+
+        EventGenerator.generateEvent(HomeEvent.INFO, "Circuit breaker on, the current is not coming in");
+
+        for(HomeDevice hd: Home.INSTANCE.getHomeDevices()){
+            if(!hd.equals(this)) {
+                hd.setCurrentConsumption(SourceType.ENERGY, 0);
+            }
+        }
+
+    }
 
     @Override
-    public void goIntoIddleMode(){}
+    public void goIntoIddleMode(){
+
+    }
 
     @Override
     public void run(){
     }
 
+    @Override
+    public void setRoom(Room room) {
+        if (!room.getRoomName().equals(RoomName.VESTIBULE)) {
+            throw new OMOException("Circuit Breaker must locate in Vestibule Room");
+        }
+        super.setRoom(room);
+    }
 }

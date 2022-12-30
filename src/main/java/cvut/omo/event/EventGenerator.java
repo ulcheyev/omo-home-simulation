@@ -33,7 +33,11 @@ public class EventGenerator {
         }
 
         Event event = new Event(responsible, eventType);
-        event.setRoom(responsible.getRoom());
+        if (eventType.getRoomNames().contains(RoomName.STUB)) {
+            event.setRoom(new NullRoom());
+        }else{
+            event.setRoom(responsible.getRoom());
+        }
     }
 
     public static void generateRandomHomeEvent(){
