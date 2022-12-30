@@ -1,7 +1,6 @@
 package cvut.omo.event.event_type;
 
 import cvut.omo.entity.Responsible;
-import static cvut.omo.entity.activity.ActivityType.*;
 import cvut.omo.entity.activity.ActivityType;
 import cvut.omo.entity.person.Person;
 import cvut.omo.entity.pet.Pet;
@@ -10,6 +9,8 @@ import lombok.Getter;
 
 import java.util.Arrays;
 import java.util.List;
+
+import static cvut.omo.entity.activity.ActivityType.*;
 
 public enum EntityResponsibleEvent implements EventType {
 

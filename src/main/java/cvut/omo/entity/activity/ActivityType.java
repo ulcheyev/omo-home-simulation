@@ -1,10 +1,9 @@
 package cvut.omo.entity.activity;
+
 import cvut.omo.device.*;
 import cvut.omo.entity.ResponsibleType;
 import cvut.omo.entity.person.FamilyRoleType;
 import cvut.omo.entity.pet.PetType;
-import static cvut.omo.entity.person.FamilyRoleType.*;
-import static java.util.List.of;
 import cvut.omo.home_structure.room_builder.RoomName;
 import cvut.omo.usable.Usable;
 import cvut.omo.usable.item.Bike;
@@ -12,9 +11,13 @@ import cvut.omo.usable.item.Car;
 import cvut.omo.usable.item.PetToy;
 import cvut.omo.usable.item.Ski;
 import lombok.Getter;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
+import static cvut.omo.entity.person.FamilyRoleType.*;
+import static java.util.List.of;
 
 public enum ActivityType {
 

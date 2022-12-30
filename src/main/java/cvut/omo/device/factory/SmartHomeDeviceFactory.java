@@ -2,9 +2,6 @@ package cvut.omo.device.factory;
 
 import cvut.omo.app_utils.Constants;
 import cvut.omo.device.*;
-import cvut.omo.device.FireSensor;
-import cvut.omo.device.Sensor;
-import cvut.omo.device.WaterLeakSensor;
 
 public class SmartHomeDeviceFactory implements HomeDeviceFactory {
 

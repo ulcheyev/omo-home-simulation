@@ -19,7 +19,8 @@ import lombok.Setter;
 import java.io.IOException;
 import java.util.*;
 
-import static cvut.omo.app_utils.Constants.*;
+import static cvut.omo.app_utils.Constants.DEVICE_BROKEN_STATE;
+import static cvut.omo.app_utils.Constants.DEVICE_OFF_STATE_ELECTRICITY;
 
 
 @Getter

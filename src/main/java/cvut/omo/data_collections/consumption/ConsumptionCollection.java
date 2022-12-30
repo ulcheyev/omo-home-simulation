@@ -8,7 +8,9 @@ import cvut.omo.device.SourceType;
 import lombok.Getter;
 
 import java.io.IOException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 @Getter
 public class ConsumptionCollection implements IConsumptionCollection {
@@ -62,6 +64,7 @@ public class ConsumptionCollection implements IConsumptionCollection {
 
     @Override
     public void generateReport() throws IOException {
+        System.out.println("GENERATE CONSUMPTION REPORT");
         StringBuilder res = new StringBuilder();
         res.append(Constants.CONSUMPTION_REPORT_HEADER);
         ConsumptionReportIterator iterator = createConsumptionReportIterator();

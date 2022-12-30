@@ -1,7 +1,11 @@
 package cvut.omo.data_collections.consumption;
+
 import cvut.omo.device.HomeDevice;
 import cvut.omo.device.SourceType;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Getter
 @Setter

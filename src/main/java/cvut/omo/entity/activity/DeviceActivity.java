@@ -13,8 +13,6 @@ import cvut.omo.usable.Usable;
 import cvut.omo.usable.stuff.NullStuff;
 import cvut.omo.usable.stuff.Stuff;
 
-
-import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 

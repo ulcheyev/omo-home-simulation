@@ -1,6 +1,7 @@
 package cvut.omo.device.notifier;
 
 import cvut.omo.device.Sensor;
+
 import java.util.logging.Logger;
 
 public class SmsListener implements EventListener {
@@ -9,6 +10,6 @@ public class SmsListener implements EventListener {
 
     @Override
     public void update(String message, Sensor sensor) {
-        logger.info(message);
+//        logger.info(message);
     }
 }

@@ -2,18 +2,24 @@ package cvut.omo.home_structure.room_builder;
 
 import cvut.omo.data_collections.visitor.SmartHomeVisitor;
 import cvut.omo.device.HomeDevice;
-import cvut.omo.entity.nulls.NullResponsible;
 import cvut.omo.entity.Responsible;
 import cvut.omo.entity.ResponsibleType;
+import cvut.omo.entity.nulls.NullResponsible;
 import cvut.omo.entity.person.Person;
 import cvut.omo.entity.pet.Pet;
 import cvut.omo.home_structure.Floor;
 import cvut.omo.home_structure.HomeComponent;
 import cvut.omo.home_structure.Window;
 import cvut.omo.usable.item.Item;
-import lombok.*;
+import lombok.AccessLevel;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.ConcurrentModificationException;
+import java.util.List;
+import java.util.Objects;
 
 @Setter
 @Getter
@@ -56,7 +62,7 @@ public class Room implements HomeComponent {
                 return resp;
             }
         }
-        return NullResponsible.INSTANCE;
+        return new NullResponsible();
     }
 
     public boolean isEmpty(){return responsibles.isEmpty();}
@@ -102,32 +108,27 @@ public class Room implements HomeComponent {
     public void removePet(Pet pet){responsibles.remove(pet);}
 
 
-    public void close(){
-        setOpened(false);
-    }
-    public void open(){
-        setOpened(true);
-    }
 
     //ToDO
     public void update() throws InterruptedException {
     Thread thread = new Thread(
             () -> {
-                for(Responsible responsible: responsibles){
-                    responsible.update();
-                }
-                for(HomeDevice homeDevice: homeDevices){
-                    try {
-                        homeDevice.update();
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
+                try {
+                    for (Responsible responsible : responsibles) {
+                        responsible.update();
                     }
-                }
+                    for (HomeDevice homeDevice : homeDevices) {
+                        try {
+                            homeDevice.update();
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }catch (ConcurrentModificationException ignored){}
             }
     );
     thread.start();
     thread.join();
-
     }
 
     @Override

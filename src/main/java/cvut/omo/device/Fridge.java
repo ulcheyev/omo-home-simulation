@@ -3,7 +3,6 @@ package cvut.omo.device;
 import cvut.omo.app_utils.Constants;
 import cvut.omo.app_utils.Utils;
 import cvut.omo.data_collections.consumption.ConsumptionCollection;
-import cvut.omo.entity.person.Person;
 import cvut.omo.exceptions.OMOException;
 import cvut.omo.usable.stuff.Food;
 import cvut.omo.usable.stuff.Stuff;

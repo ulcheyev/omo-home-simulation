@@ -2,8 +2,8 @@ package cvut.omo.home_structure.room_builder;
 
 
 import cvut.omo.device.HomeDevice;
-import cvut.omo.usable.item.Item;
 import cvut.omo.home_structure.Floor;
+import cvut.omo.usable.item.Item;
 
 import java.util.List;
 

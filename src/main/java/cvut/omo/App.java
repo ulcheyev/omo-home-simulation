@@ -4,12 +4,14 @@ public class App {
 
 
     public static void main(String[] args) {
+
         OMOSmartHomeSimulationFacade smartHome = OMOSmartHomeSimulationFacade.INSTANCE;
 
-        //CREATE CONFIG
+        //CHOOSE CONFIG
         smartHome.createSmallConfig();
+//        smartHome.createLargeConfig();
 
-        //DO SIMULATION
+        //SIMULATE
         smartHome.simulate();
 
         //GENERATE REPORTS

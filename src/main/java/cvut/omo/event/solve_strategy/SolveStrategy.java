@@ -9,10 +9,9 @@ import cvut.omo.event.Event;
 import cvut.omo.home_structure.home_builder.Home;
 import cvut.omo.home_structure.room_builder.Room;
 
-import static cvut.omo.entity.activity.ActivityFactory.*;
-
-
 import java.util.List;
+
+import static cvut.omo.entity.activity.ActivityFactory.createActivity;
 
 public abstract class SolveStrategy {
 
@@ -36,7 +35,7 @@ public abstract class SolveStrategy {
 
     }
 
-    protected void handleResponsibles(Event event) throws InterruptedException {
+    protected void handleResponsibles(Event event)  {
         for(ActivityType activityType: event.getEventType().getChainToSolve()){
             Responsible responsible = giveEfficientResponsible(activityType);
             responsible.handle(createActivity(responsible, event, activityType));
@@ -44,9 +43,9 @@ public abstract class SolveStrategy {
     }
 
 
-    protected void checkRoomAndHandle(Room room, ActivityType activityType, Event event) throws InterruptedException {
+    protected void checkRoomAndHandle(Room room, ActivityType activityType, Event event) {
 
-        Responsible responsible = NullResponsible.INSTANCE;
+        Responsible responsible = new NullResponsible();
 
         for(ResponsibleType responsibleType: activityType.getResponsibles()) {
             if (room.contains(responsibleType)) {

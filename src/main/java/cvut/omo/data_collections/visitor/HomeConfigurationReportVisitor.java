@@ -7,8 +7,8 @@ import cvut.omo.device.HomeDevice;
 import cvut.omo.entity.person.Person;
 import cvut.omo.entity.pet.Pet;
 import cvut.omo.home_structure.Floor;
-import cvut.omo.home_structure.home_builder.Home;
 import cvut.omo.home_structure.HomeComponent;
+import cvut.omo.home_structure.home_builder.Home;
 import cvut.omo.home_structure.room_builder.Room;
 
 import java.io.IOException;
@@ -22,6 +22,7 @@ public class HomeConfigurationReportVisitor implements SmartHomeVisitor{
     private final Dictionary<Class<? extends HomeComponent>, Integer> quantities = new Hashtable<>();
 
     public void generateReport() throws IOException {
+        System.out.println("GENERATE HOME CONFIGURATION REPORT");
         StringBuilder sb = new StringBuilder();
         sb.append(Constants.HOME_CONFIG_REPORT_HEADER);
         for(HomeComponent homeComponent: Home.INSTANCE.getComponentsForReport()){

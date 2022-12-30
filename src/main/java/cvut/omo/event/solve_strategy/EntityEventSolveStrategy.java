@@ -4,9 +4,9 @@ import cvut.omo.entity.Responsible;
 import cvut.omo.entity.activity.ActivityType;
 import cvut.omo.event.Event;
 import cvut.omo.event.event_type.EventType;
-import cvut.omo.home_structure.home_builder.Home;
 import lombok.NoArgsConstructor;
-import static cvut.omo.entity.activity.ActivityFactory.*;
+
+import static cvut.omo.entity.activity.ActivityFactory.createActivity;
 
 @NoArgsConstructor
 public class EntityEventSolveStrategy extends SolveStrategy {

@@ -1,13 +1,10 @@
 package cvut.omo.event;
 
-import cvut.omo.app_utils.Utils;
-import cvut.omo.device.HomeDevice;
-import cvut.omo.device.documentation.Documentation;
 import cvut.omo.entity.Responsible;
 import cvut.omo.event.event_type.DeviceResponsibleEvent;
+import cvut.omo.event.event_type.EntityResponsibleEvent;
 import cvut.omo.event.event_type.EventType;
 import cvut.omo.event.event_type.HomeEvent;
-import cvut.omo.event.event_type.EntityResponsibleEvent;
 import cvut.omo.home_structure.home_builder.Home;
 import cvut.omo.home_structure.nulls.NullRoom;
 import cvut.omo.home_structure.room_builder.Room;
@@ -18,7 +15,7 @@ import static cvut.omo.app_utils.Utils.getRandomObjFromList;
 
 public class EventGenerator {
 
-    public static void generateRandomPersonEvent(){
+    public static void generateRandomEntityEvent(){
         EntityResponsibleEvent[] values = EntityResponsibleEvent.values();
         EntityResponsibleEvent value = values[getRandomInt(values.length)];
         generatePersonEvent(value);
@@ -75,7 +72,11 @@ public class EventGenerator {
     }
     public static void generateRandomDeviceEvent(){
         DeviceResponsibleEvent[] values = DeviceResponsibleEvent.values();
-        generateDeviceEvent(values[Utils.getRandomInt(values.length)]);
+        DeviceResponsibleEvent value = values[getRandomInt(values.length)];
+        while (value.equals(DeviceResponsibleEvent.DEVICE_BROKEN)) {
+            value = values[getRandomInt(values.length)];
+        }
+        generateDeviceEvent(value);
     }
 
 
@@ -84,7 +85,8 @@ public class EventGenerator {
         while(!eventType.getHomeDevices().contains(homeDevice.getClass())){
             homeDevice = (Responsible) getRandomObjFromList(Home.INSTANCE.getHomeDevices());
         }
-        if(eventType == DeviceResponsibleEvent.FIRE_SENSOR_ALARM || eventType == DeviceResponsibleEvent.WATER_LEAK_SENSOR_ALARM){
+        if(eventType == DeviceResponsibleEvent.FIRE_SENSOR_ALARM
+           || eventType == DeviceResponsibleEvent.WATER_LEAK_SENSOR_ALARM){
             int rnd = getRandomInt(100);
             if(rnd == 1){
                 Room room = homeDevice.getRoom();
@@ -116,28 +118,4 @@ public class EventGenerator {
         }
     }
 
-
-
-    public static void generateRandomEvents(int numberOfEvents){
-
-        int localNum = numberOfEvents;
-        while(localNum > 0){
-
-            int myRandomNumber = Utils.getRandomInt();
-
-            if(myRandomNumber % 2 == 0){
-                EventGenerator.generateRandomDeviceEvent();
-            }
-
-            else if(myRandomNumber % 3 == 0){
-                EventGenerator.generateRandomPersonEvent();
-            }
-
-            else{
-                EventGenerator.generateRandomHomeEvent();
-            }
-
-            localNum--;
-        }
-    }
 }

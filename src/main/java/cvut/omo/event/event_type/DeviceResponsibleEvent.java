@@ -2,16 +2,16 @@ package cvut.omo.event.event_type;
 
 import cvut.omo.device.FireSensor;
 import cvut.omo.device.HomeDevice;
-import cvut.omo.device.Sensor;
 import cvut.omo.device.WaterLeakSensor;
 import cvut.omo.entity.activity.ActivityType;
-import static cvut.omo.entity.activity.ActivityType.*;
-import static java.util.List.of;
 import lombok.Getter;
 import org.reflections.Reflections;
 
 import java.util.List;
 import java.util.Set;
+
+import static cvut.omo.entity.activity.ActivityType.*;
+import static java.util.List.of;
 
 public enum DeviceResponsibleEvent implements EventType {
 

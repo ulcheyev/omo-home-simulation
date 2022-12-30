@@ -2,7 +2,6 @@ package cvut.omo.entity.activity;
 
 
 import cvut.omo.entity.Responsible;
-import cvut.omo.entity.person.Person;
 import cvut.omo.event.Event;
 import cvut.omo.home_structure.room_builder.Room;
 import lombok.Getter;

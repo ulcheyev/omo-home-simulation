@@ -1,14 +1,13 @@
 package cvut.omo.home_structure;
 
 import cvut.omo.data_collections.visitor.SmartHomeVisitor;
-import cvut.omo.event.Event;
 import cvut.omo.home_structure.room_builder.Room;
-import lombok.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
-import java.util.Queue;
 
 @Getter
 @Setter

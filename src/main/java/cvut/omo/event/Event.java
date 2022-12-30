@@ -6,12 +6,12 @@ import cvut.omo.entity.activity.Activity;
 import cvut.omo.entity.activity.ActivityType;
 import cvut.omo.entity.nulls.NullResponsible;
 import cvut.omo.event.event_type.DeviceResponsibleEvent;
+import cvut.omo.event.event_type.EntityResponsibleEvent;
 import cvut.omo.event.event_type.EventType;
 import cvut.omo.event.event_type.HomeEvent;
-import cvut.omo.event.event_type.EntityResponsibleEvent;
 import cvut.omo.event.solve_strategy.DeviceEventSolveStrategy;
-import cvut.omo.event.solve_strategy.HomeEventSolveStrategy;
 import cvut.omo.event.solve_strategy.EntityEventSolveStrategy;
+import cvut.omo.event.solve_strategy.HomeEventSolveStrategy;
 import cvut.omo.event.solve_strategy.SolveStrategy;
 import cvut.omo.home_structure.room_builder.Room;
 import lombok.Getter;
@@ -34,7 +34,7 @@ public class Event {
     private String description;
 
     private List<Activity> chainToSolve = new ArrayList<>();
-    private Responsible responsible = NullResponsible.INSTANCE;
+    private Responsible responsible = new NullResponsible();
 
 
     public Event(Room room, EventType eventType) {

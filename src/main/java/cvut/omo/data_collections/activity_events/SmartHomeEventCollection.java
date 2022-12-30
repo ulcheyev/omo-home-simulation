@@ -56,6 +56,7 @@ public class SmartHomeEventCollection {
     }
 
     public static void generateEventReport() throws IOException {
+        System.out.println("GENERATE EVENTS REPORT");
         StringBuilder sb = new StringBuilder();
         EventReportIterator iterator = createEventReportIterator();
         sb.append(Constants.EVENT_REPORT_HEADER);
@@ -66,6 +67,7 @@ public class SmartHomeEventCollection {
     }
 
     public static void generateActivityAndUsageReport() throws IOException {
+        System.out.println("GENERATE ACTIVITY AND USAGE REPORT");
         StringBuilder sb = new StringBuilder();
         ActivityReportIterator iterator = createActivityReportIterator();
         sb.append(Constants.ACTIVITY_REPORT_HEADER);

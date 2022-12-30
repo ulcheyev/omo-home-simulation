@@ -1,7 +1,6 @@
 package cvut.omo.usable.stuff;
 
 import cvut.omo.app_utils.Utils;
-import lombok.Getter;
 
 import java.util.Arrays;
 

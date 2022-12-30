@@ -1,14 +1,11 @@
 package cvut.omo.app_utils;
 
 import cvut.omo.device.documentation.BrokennessLevel;
-import cvut.omo.entity.nulls.NullResponsible;
-import cvut.omo.entity.Responsible;
-import cvut.omo.entity.ResponsibleType;
-import cvut.omo.entity.activity.ActivityType;
-import cvut.omo.home_structure.room_builder.Room;
 
+import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Random;
+import java.util.Scanner;
 
 public class Utils {
 
@@ -46,6 +43,22 @@ public class Utils {
         return objs.get(getRandomInt(objs.size()));
     }
 
+    public  static int getInputNumber(String string){
+        boolean isValid = false;
+        int days = 0;
+        Scanner input = new Scanner(System.in);
+        while (!isValid) {
+            try {
+                System.out.print(string);
+                days = input.nextInt();
+                isValid = true;
+            }catch (InputMismatchException e){
+                System.out.println("Please, enter digit.");
+                input.nextLine();
+            }
+        }
+        return days;
+    }
 
 
 

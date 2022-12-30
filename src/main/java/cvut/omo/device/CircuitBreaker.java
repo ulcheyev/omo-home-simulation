@@ -3,7 +3,6 @@ package cvut.omo.device;
 import cvut.omo.app_utils.Constants;
 import cvut.omo.data_collections.consumption.ConsumptionCollection;
 import cvut.omo.event.EventGenerator;
-import cvut.omo.event.event_type.EventType;
 import cvut.omo.event.event_type.HomeEvent;
 import cvut.omo.exceptions.OMOException;
 import cvut.omo.home_structure.home_builder.Home;

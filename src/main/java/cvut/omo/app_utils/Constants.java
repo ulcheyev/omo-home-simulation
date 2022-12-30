@@ -3,8 +3,6 @@ package cvut.omo.app_utils;
 
 import com.google.common.collect.ImmutableList;
 
-import java.util.List;
-
 /**
  *
  */
@@ -14,21 +12,23 @@ public class Constants {
     public final static int DAY_IN_HOUR = 24;
     public final static char CURRENCY = '$';
 
-    public final static double COMPUTER_RUN_STATE_ELECTRICITY_CONSUMPTION = 8;
-    public final static double TV_ELECTRICITY_RUN_STATE_CONSUMPTION = 7;
-    public final static double SENSOR_ELECTRICITY_RUN_STATE_CONSUMPTION = 1.2;
-    public final static double OVEN_ELECTRICITY_RUN_STATE_CONSUMPTION = 11;
-    public final static double WASHING_MACHINE_RUN_STATE_ELECTRICITY_CONSUMPTION = 7.5;
-    public final static double WASHING_MACHINE_RUN_STATE_WATER_CONSUMPTION = 2.5;
-    public final static double FRIDGE_RUN_ELECTRICITY_CONSUMPTION = 7;
+    public final static double COMPUTER_RUN_STATE_ELECTRICITY_CONSUMPTION = 250;
+    public final static double TV_ELECTRICITY_RUN_STATE_CONSUMPTION = 166;
+    public final static double SENSOR_ELECTRICITY_RUN_STATE_CONSUMPTION = 101.2;
+    public final static double OVEN_ELECTRICITY_RUN_STATE_CONSUMPTION = 160.3;
+    public final static double WASHING_MACHINE_RUN_STATE_ELECTRICITY_CONSUMPTION = 124.2;
+    public final static double WASHING_MACHINE_RUN_STATE_WATER_CONSUMPTION = 55.7;
+    public final static double FRIDGE_RUN_ELECTRICITY_CONSUMPTION = 201.2;
 
-    public final static double COMPUTER_IDDLE_STATE_ELECTRICITY_CONSUMPTION = 3;
-    public final static double TV_ELECTRICITY_IDDLE_STATE_CONSUMPTION = 2;
-    public final static double SENSOR_ELECTRICITY_IDDLE_STATE_CONSUMPTION = 0.2;
-    public final static double OVEN_ELECTRICITY_IDDLE_STATE_CONSUMPTION = 2;
-    public final static double WASHING_MACHINE_IDDLE_STATE_ELECTRICITY_CONSUMPTION = 1;
-    public final static double WASHING_MACHINE_IDDLE_STATE_WATER_CONSUMPTION = 0;
-    public final static double FRIDGE_IDDLE_STATE_ELECTRICITY_CONSUMPTION = 1.3;
+
+    public final static double COMPUTER_IDDLE_STATE_ELECTRICITY_CONSUMPTION = 50;
+    public final static double TV_ELECTRICITY_IDDLE_STATE_CONSUMPTION = 5.3;
+    public final static double SENSOR_ELECTRICITY_IDDLE_STATE_CONSUMPTION = 55.6;
+    public final static double OVEN_ELECTRICITY_IDDLE_STATE_CONSUMPTION = 2.1;
+    public final static double WASHING_MACHINE_IDDLE_STATE_ELECTRICITY_CONSUMPTION = 24.1;
+    public final static double WASHING_MACHINE_IDDLE_STATE_WATER_CONSUMPTION = 24.7;
+    public final static double FRIDGE_IDDLE_STATE_ELECTRICITY_CONSUMPTION = 103;
+
 
     public final static double COMPUTER_LIFE_TIME = 15;
     public final static double FRIDGE_LIFE_TIME = 20;

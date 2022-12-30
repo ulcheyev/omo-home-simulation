@@ -1,11 +1,8 @@
 package cvut.omo.data_collections.activity_events;
 
 import cvut.omo.app_utils.Constants;
-import cvut.omo.app_utils.Utils;
 import cvut.omo.data_collections.Iterator;
 import cvut.omo.device.HomeAppliances;
-import cvut.omo.device.HomeDevice;
-import cvut.omo.device.SourceType;
 import cvut.omo.entity.Responsible;
 import cvut.omo.entity.activity.Activity;
 import cvut.omo.entity.activity.DeviceActivity;
@@ -14,10 +11,11 @@ import cvut.omo.entity.activity.WaitingActivity;
 import cvut.omo.event.Event;
 import cvut.omo.home_structure.home_builder.Home;
 import cvut.omo.usable.Usable;
-import org.apache.commons.lang3.tuple.MutablePair;
-import org.apache.commons.lang3.tuple.Pair;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Hashtable;
+import java.util.List;
+import java.util.Map;
 
 
 public class ActivityReportIterator implements Iterator {

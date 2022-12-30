@@ -1,10 +1,13 @@
 package cvut.omo.event.event_type;
-import static cvut.omo.entity.activity.ActivityType.*;
+
 import cvut.omo.entity.activity.ActivityType;
 import cvut.omo.home_structure.room_builder.RoomName;
 import lombok.Getter;
+
 import java.util.Arrays;
 import java.util.List;
+
+import static cvut.omo.entity.activity.ActivityType.*;
 
 public enum HomeEvent implements EventType {
 

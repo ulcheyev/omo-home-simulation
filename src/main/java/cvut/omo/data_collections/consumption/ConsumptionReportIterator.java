@@ -1,8 +1,8 @@
 package cvut.omo.data_collections.consumption;
 
 import cvut.omo.app_utils.Constants;
-import cvut.omo.device.HomeDevice;
 import cvut.omo.data_collections.Iterator;
+import cvut.omo.device.HomeDevice;
 import cvut.omo.device.SourceType;
 
 import java.util.Dictionary;

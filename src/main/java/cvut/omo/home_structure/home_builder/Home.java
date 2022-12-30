@@ -3,9 +3,9 @@ package cvut.omo.home_structure.home_builder;
 import cvut.omo.app_utils.Utils;
 import cvut.omo.device.HomeAppliances;
 import cvut.omo.device.HomeDevice;
-import cvut.omo.entity.nulls.NullResponsible;
 import cvut.omo.entity.Responsible;
 import cvut.omo.entity.ResponsibleType;
+import cvut.omo.entity.nulls.NullResponsible;
 import cvut.omo.entity.person.Person;
 import cvut.omo.entity.pet.Pet;
 import cvut.omo.home_structure.Floor;
@@ -102,7 +102,7 @@ public class Home {
                 }
             }
         }
-        return NullResponsible.INSTANCE;
+        return new NullResponsible();
     }
 
 
@@ -119,7 +119,7 @@ public class Home {
         return res;
     }
 
-    public void update() throws InterruptedException {
+    public void update() {
         Thread thread = new Thread(
                 () -> {
                     for(Floor floor: floors){

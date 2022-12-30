@@ -6,11 +6,7 @@ import cvut.omo.entity.pet.Pet;
 import cvut.omo.entity.pet.PetType;
 import cvut.omo.exceptions.FloorException;
 import cvut.omo.home_structure.Floor;
-import cvut.omo.home_structure.room_builder.Room;
-import cvut.omo.home_structure.room_builder.RoomName;
-import cvut.omo.home_structure.room_builder.RoomBuilder;
-import cvut.omo.home_structure.room_builder.SmartHomeRoomBuilder;
-import cvut.omo.home_structure.room_builder.SmartHomeRoomBuilderDirector;
+import cvut.omo.home_structure.room_builder.*;
 
 public final class SmartHomeBuilder implements HomeBuilder{
 

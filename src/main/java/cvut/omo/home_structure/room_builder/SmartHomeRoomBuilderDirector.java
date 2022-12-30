@@ -2,11 +2,11 @@ package cvut.omo.home_structure.room_builder;
 
 import cvut.omo.device.factory.HomeDeviceFactory;
 import cvut.omo.device.factory.SmartHomeDeviceFactory;
+import cvut.omo.home_structure.Floor;
 import cvut.omo.usable.item.Bike;
 import cvut.omo.usable.item.Car;
 import cvut.omo.usable.item.PetToy;
 import cvut.omo.usable.item.Ski;
-import cvut.omo.home_structure.Floor;
 
 
 public final class SmartHomeRoomBuilderDirector {

@@ -1,7 +1,6 @@
 package cvut.omo.home_structure.home_builder;
 
 import cvut.omo.entity.person.FamilyRoleType;
-import cvut.omo.entity.EntityStatus;
 import cvut.omo.entity.pet.PetType;
 
 public interface HomeBuilder {

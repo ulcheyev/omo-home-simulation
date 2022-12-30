@@ -3,5 +3,5 @@ DOCUMENTATION
 ********************
 
 This is very clever documentation for the device: FireSensor you just broke.
- It turned out that your device has a state of damage: HARDCORE.
- Nothing will help you, throw the device in the trash.
+ It turned out that your device has a state of damage: FINE.
+ The device is very, very slightly damaged. You will need to fix it for it to work.

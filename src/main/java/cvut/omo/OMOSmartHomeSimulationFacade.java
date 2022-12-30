@@ -1,10 +1,10 @@
 package cvut.omo;
 
+import cvut.omo.app_utils.Utils;
 import cvut.omo.data_collections.activity_events.SmartHomeEventCollection;
 import cvut.omo.data_collections.consumption.ConsumptionCollection;
 import cvut.omo.data_collections.visitor.HomeConfigurationReportVisitor;
 import cvut.omo.device.notifier.EmailListener;
-import cvut.omo.event.EventGenerator;
 import cvut.omo.home_structure.home_builder.Home;
 import cvut.omo.home_structure.home_builder.SmartHomeBuilder;
 import cvut.omo.home_structure.home_builder.SmartHomeBuilderDirector;
@@ -35,15 +35,11 @@ public class OMOSmartHomeSimulationFacade {
     }
 
     public void simulate(){
-        EventGenerator.generateRandomEvents(1000);
-        while (!SmartHomeEventCollection.allSolved()) {
-            try {
-                home.update();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
+        int inputNumber = Utils.getInputNumber("Input days quantity of simulation:");
+        Simulation.simulate(inputNumber);
+
     }
+
 
     public void generateEventReport(){
         try {
@@ -97,10 +93,9 @@ public class OMOSmartHomeSimulationFacade {
     }
 
     private void checkInput() {
-        Scanner myObj = new Scanner(System.in);
-        System.out.println("Enter email for accept alerts: ");
-        String email = myObj.nextLine();
-        EmailListener.setEmail(email);
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter email for alerts:");
+        EmailListener.setEmail(input.nextLine());
     }
 
 

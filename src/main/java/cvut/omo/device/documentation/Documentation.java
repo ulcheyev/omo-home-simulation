@@ -1,9 +1,10 @@
 package cvut.omo.device.documentation;
+
 import cvut.omo.app_utils.Constants;
 import cvut.omo.app_utils.FileWriter;
 import cvut.omo.device.HomeAppliances;
+
 import java.io.IOException;
-import java.util.Random;
 
 public class Documentation {
 

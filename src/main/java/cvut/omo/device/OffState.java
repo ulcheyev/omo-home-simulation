@@ -1,7 +1,6 @@
 package cvut.omo.device;
 
 import cvut.omo.entity.person.Person;
-import cvut.omo.usable.stuff.Stuff;
 
 public class OffState extends HomeDeviceState{
 

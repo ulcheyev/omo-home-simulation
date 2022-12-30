@@ -1,23 +1,18 @@
 package cvut.omo.entity;
+
 import cvut.omo.data_collections.visitor.SmartHomeVisitor;
 import cvut.omo.entity.activity.Activity;
-import cvut.omo.entity.activity.ActivityFactory;
 import cvut.omo.entity.activity.WaitingActivity;
-import cvut.omo.entity.nulls.NullResponsible;
-import cvut.omo.entity.nulls.NullResponsibleType;
 import cvut.omo.event.Event;
 import cvut.omo.event.EventGenerator;
 import cvut.omo.event.event_type.HomeEvent;
-import cvut.omo.exceptions.OMOException;
 import cvut.omo.home_structure.HomeComponent;
 import cvut.omo.home_structure.nulls.NullRoom;
 import cvut.omo.home_structure.room_builder.Room;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Queue;
 
 @Getter
