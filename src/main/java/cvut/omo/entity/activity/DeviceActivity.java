@@ -25,7 +25,7 @@ public class DeviceActivity extends Activity {
     private HomeDevice founded = null;
     private List<Stuff> stuffList = new ArrayList<>();
 
-    public DeviceActivity(Responsible responsible, Event event, Class<? extends Usable> toUse, ActivityType activityType) throws InterruptedException {
+    public DeviceActivity(Responsible responsible, Event event, Class<? extends Usable> toUse, ActivityType activityType) {
         super(responsible, event, activityType);
         this.toUse = toUse;
     }
@@ -63,7 +63,7 @@ public class DeviceActivity extends Activity {
                     }
                 }
             }
-            case REPAIR -> founded.repair((Person) responsible);
+            case REPAIR -> founded.repair(event, (Person) responsible);
             case PAUSE -> founded.clickPause();
             case BREAK -> founded.breakDevice();
         }

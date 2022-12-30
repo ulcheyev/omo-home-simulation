@@ -8,7 +8,7 @@ public class BaseActivity extends Activity {
 
     private static final String SLEEP_FLAG = "SLEEP";
 
-    public BaseActivity(Responsible res, Event event, ActivityType activityType) throws InterruptedException {
+    public BaseActivity(Responsible res, Event event, ActivityType activityType)  {
         super(res, event, activityType);
     }
 

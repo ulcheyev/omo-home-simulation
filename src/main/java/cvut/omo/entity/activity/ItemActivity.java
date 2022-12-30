@@ -9,7 +9,7 @@ public class ItemActivity extends Activity{
     //FLAGS
     private Class<? extends Usable> toUse;
 
-    public ItemActivity(Responsible responsible, Event event, Class<? extends Usable> toUse, ActivityType activityType) throws InterruptedException {
+    public ItemActivity(Responsible responsible, Event event, Class<? extends Usable> toUse, ActivityType activityType) {
         super(responsible, event, activityType);
         this.toUse = toUse;
     }

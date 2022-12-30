@@ -7,8 +7,11 @@ import cvut.omo.data_collections.visitor.SmartHomeVisitor;
 import cvut.omo.device.documentation.BrokennessLevel;
 import cvut.omo.device.documentation.Documentation;
 import cvut.omo.entity.Responsible;
+import cvut.omo.entity.activity.ActivityFactory;
+import cvut.omo.entity.activity.ActivityType;
 import cvut.omo.entity.nulls.NullResponsibleType;
 import cvut.omo.entity.person.Person;
+import cvut.omo.event.Event;
 import cvut.omo.home_structure.room_builder.Room;
 import lombok.Getter;
 import lombok.Setter;
@@ -54,7 +57,7 @@ public abstract class HomeAppliances extends Responsible implements HomeDevice{
         update();
     };
 
-    public void repair(Person person)  {
+    public void repair(Event event, Person person)  {
         if (homeDeviceState instanceof BrokenState && this.documentation == null) {
             try {
                 Documentation doc = new Documentation(this);
@@ -64,7 +67,18 @@ public abstract class HomeAppliances extends Responsible implements HomeDevice{
                 e.printStackTrace();
             }
         }
+
         homeDeviceState.repair(person, this);
+
+        person.handle(ActivityFactory.createActivity(
+                person,
+                event,
+                switch (this.getBrokennessLevel()){
+                    case FINE -> ActivityType.TRY_TO_FIX_IT_YOURSELF;
+                    case MEDIUM -> ActivityType.CALL_GRANDFATHER_TO_HELP_REPAIR;
+                    case HARDCORE -> ActivityType.THROW_THE_DEVICE_IN_THE_TRASH;})
+        );
+
         update();
     };
 

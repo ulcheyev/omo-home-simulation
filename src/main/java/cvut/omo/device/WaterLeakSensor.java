@@ -3,12 +3,10 @@ import cvut.omo.device.notifier.EventListener;
 
 import javax.mail.MessagingException;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+
 
 public class WaterLeakSensor extends Sensor {
 
-    List<EventListener> listenerList = new ArrayList<>();
     public String message = "Water leak, be careful!";
 
     public WaterLeakSensor(double lifeTime) {

@@ -64,30 +64,30 @@ HOME CONFIGURATION REPORT
 -----Home device FireSensor
 
 ***Pet lives in the house with a role CAT
-***Pet lives in the house with a role DOG
-+++Person Pipa lives in the home with a role SON
-+++Person Mr. Lolo lives in the home with a role GRANDMOTHER
-+++Person Male zlo lives in the home with a role DAUGHTER
++++Person Popa lives in the home with a role DAUGHTER
 ***Pet lives in the house with a role MINI_PIG
 ***Pet lives in the house with a role DOG
 +++Person Boba lives in the home with a role FATHER
-+++Person Mr. Pepa lives in the home with a role GRANDFATHER
-+++Person Eliot lives in the home with a role SON
 +++Person Lola lives in the home with a role MOTHER
++++Person Eliot lives in the home with a role SON
+***Pet lives in the house with a role DOG
++++Person Male zlo lives in the home with a role DAUGHTER
++++Person Mr. Pepa lives in the home with a role GRANDFATHER
++++Person Mr. Lolo lives in the home with a role GRANDMOTHER
++++Person Pipa lives in the home with a role SON
 ***Pet lives in the house with a role CAT
-+++Person Popa lives in the home with a role DAUGHTER
 
 ************************************************************************************
 Home has Floor in the amount of 3 pieces.
 Home has WaterLeakSensor in the amount of 6 pieces.
-Home has Person in the amount of 8 pieces.
-Home has Oven in the amount of 1 pieces.
-Home has WashingMachine in the amount of 5 pieces.
-Home has TV in the amount of 6 pieces.
-Home has Computer in the amount of 5 pieces.
-Home has Pet in the amount of 5 pieces.
 Home has Fridge in the amount of 1 pieces.
 Home has CircuitBreaker in the amount of 1 pieces.
-Home has Room in the amount of 16 pieces.
+Home has WashingMachine in the amount of 5 pieces.
+Home has Computer in the amount of 5 pieces.
+Home has Pet in the amount of 5 pieces.
 Home has FireSensor in the amount of 16 pieces.
+Home has Oven in the amount of 1 pieces.
+Home has Person in the amount of 8 pieces.
+Home has Room in the amount of 16 pieces.
+Home has TV in the amount of 6 pieces.
 ************************************************************************************

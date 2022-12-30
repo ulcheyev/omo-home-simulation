@@ -30,12 +30,12 @@ public class Documentation {
                         + name_device + " you just broke.\n It turned out that your device has a state of damage: ";
 
         switch (level_of_damage) {
-            case HARDCORE -> res.append(text + level_of_damage + ".\n Nothing will help you, give your device to the service.").append("\n");
-            case MEDIUM -> res.append(text +  level_of_damage + ".\n You still have a chance to save your device. You will need to fix it for it to work.").append("\n");
-            case FINE -> res.append(text + level_of_damage + ".\n The device is very, very slightly damaged. Call your grandfather and he will help you.").append("\n");
+            case HARDCORE -> res.append(text + level_of_damage + ".\n Nothing will help you, throw the device in the trash.").append("\n");
+            case MEDIUM -> res.append(text +  level_of_damage + ".\n You still have a chance to save your device. Call your grandfather and he will help you.").append("\n");
+            case FINE -> res.append(text + level_of_damage + ".\n The device is very, very slightly damaged. You will need to fix it for it to work.").append("\n");
         }
 
-        nameOfDocumentation = name_device + "_documentation" + new Random().nextInt();
+        nameOfDocumentation = name_device + "_documentation";
         FileWriter.generateNewDocumentation(nameOfDocumentation,res.toString());
     }
 }

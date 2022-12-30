@@ -28,7 +28,7 @@ public class EmailListener implements EventListener{
         Session mailSession = Session.getDefaultInstance(properties);
         MimeMessage msg = new MimeMessage(mailSession);
         msg.setFrom(new InternetAddress("marinaloki123"));
-        msg.addRecipient(Message.RecipientType.TO, new InternetAddress("ulchenkov2001@gmail.com"));
+        msg.addRecipient(Message.RecipientType.TO, new InternetAddress("mrg.lupenko@gmail.com"));
         final String text =
                 "Hello,\n we notify you that it worked in the house: "
                         + sensor.getClass().getSimpleName() + message + "\nrespectfully, your Smart Home";

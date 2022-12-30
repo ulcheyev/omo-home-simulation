@@ -2,12 +2,10 @@ package cvut.omo.device;
 
 import cvut.omo.device.documentation.Documentation;
 import cvut.omo.entity.person.Person;
+import cvut.omo.event.Event;
 import cvut.omo.home_structure.HomeComponent;
 import cvut.omo.home_structure.room_builder.Room;
 import cvut.omo.usable.Usable;
-import cvut.omo.usable.stuff.Stuff;
-
-import java.io.IOException;
 import java.util.Set;
 public interface HomeDevice extends HomeComponent, Usable {
 
@@ -15,7 +13,7 @@ public interface HomeDevice extends HomeComponent, Usable {
      void clickOff();
      void clickPause();
      void use(Person person);
-     void repair(Person person);
+     void repair(Event event, Person person);
      void breakDevice();
 
      Set<SourceType> getSourceTypes();

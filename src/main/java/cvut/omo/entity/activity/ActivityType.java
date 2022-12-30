@@ -35,7 +35,7 @@ public enum ActivityType {
     DEVICE_OVEN_ON(of(RoomName.KITCHEN), Oven.class, DeviceActivity.class),
     DEVICE_WASHING_MACHINE_ON(of(RoomName.BATHROOM), WashingMachine.class, DeviceActivity.class),
     DEVICE_WATER_LEAK_SENSOR_ON(of(RoomName.KITCHEN, RoomName.BATHROOM), WaterLeakSensor.class, DeviceActivity.class, FATHER, GRANDFATHER),
-    DEVICE_FIRE_SENSOR_ON(RoomType.getAll(), FireSensor.class, DeviceActivity.class, FATHER, GRANDFATHER),
+    DEVICE_FIRE_SENSOR_ON(of(RoomName.STUB), FireSensor.class, DeviceActivity.class, FATHER, GRANDFATHER),
     DEVICE_TV_ON(RoomType.CHILL.getRooms(), TV.class, DeviceActivity.class),
 
     //OFF Device -> CONF THE SAME AS ON
@@ -49,6 +49,8 @@ public enum ActivityType {
 
     //RUN DEVICES -> CONF THE SAME AS ON
     DEVICE_FRIDGE_RUN(DEVICE_FRIDGE_ON),
+    DEVICE_FIRE_SENSOR_RUN(of(RoomName.STUB), FireSensor.class, DeviceActivity.class),
+    DEVICE_WATER_LEAK_SENSOR_RUN(of(RoomName.STUB), WaterLeakSensor.class, DeviceActivity.class),
     DEVICE_COMPUTER_RUN(DEVICE_COMPUTER_ON),
     DEVICE_OVEN_RUN(DEVICE_OVEN_ON),
     DEVICE_WASHING_MACHINE_RUN(DEVICE_WASHING_MACHINE_ON),
@@ -63,10 +65,14 @@ public enum ActivityType {
     DEVICE_TV_PAUSE(DEVICE_TV_ON),
 
     //REPAIR
-    DEVICE_REPAIR(of(RoomName.COMMON), null, DeviceActivity.class,  FATHER, GRANDFATHER),
+    DEVICE_REPAIR(of(RoomName.COMMON), null, DeviceActivity.class,  FATHER),
     DEVICE_BREAK(of(RoomName.COMMON), null, DeviceActivity.class),
     CHANGE_BULB(of(RoomName.COMMON), null, BaseActivity.class, FATHER, GRANDFATHER),
     READ_A_DOCUMENTATION(of(RoomName.COMMON), null, BaseActivity.class, FATHER),
+    TRY_TO_FIX_IT_YOURSELF(of(RoomName.COMMON),null,BaseActivity.class, FATHER),
+    CALL_GRANDFATHER_TO_HELP_REPAIR(of(RoomName.COMMON),null,BaseActivity.class, FATHER),
+    GRANDFATHER_REPAIRING_THE_DEVICE(of(RoomName.COMMON),null,BaseActivity.class, GRANDFATHER),
+    THROW_THE_DEVICE_IN_THE_TRASH(of(RoomName.COMMON),null,BaseActivity.class, FATHER),
 
     //OTHER
     CONTROL_THE_DOOR(of(RoomName.VESTIBULE), null),
