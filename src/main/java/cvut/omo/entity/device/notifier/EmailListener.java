@@ -20,6 +20,9 @@ public class EmailListener implements EventListener{
 
     @Setter
     private static String email;
+    @Setter
+    private static boolean wantEMail = false;
+
 
     /**
      * Sends email to user

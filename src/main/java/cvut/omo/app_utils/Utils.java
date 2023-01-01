@@ -7,6 +7,8 @@ import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Class contains methods for general use
@@ -102,10 +104,30 @@ public class Utils {
                 "                                                                                    \n");
     }
 
+
     public static void checkInput() {
-        Scanner input = new Scanner(System.in);
-        System.out.print("Enter email for alerts:");
-        EmailListener.setEmail(input.nextLine());
+        Scanner myObj = new Scanner(System.in);
+        Scanner ano_ne_obj = new Scanner(System.in);
+        System.out.println("Do you want to receive email notifications?");
+        String ano_ne = ano_ne_obj.nextLine();
+        Pattern pattern = Pattern.compile("^((\\w|[-+])+(\\.[\\w-]+)*@[\\w-]+((\\.[\\d\\p{Alpha}]+)*(\\.\\p{Alpha}{2,})*)*)$");
+        while (!(ano_ne.equals("yes") || ano_ne.equals("no"))) {
+            System.out.println("Please enter a valid value: yes/no");
+            ano_ne = ano_ne_obj.nextLine();
+        }
+        if (ano_ne.equals("yes")) {
+            EmailListener.setWantEMail(true);
+            System.out.println("Enter email for accept alerts: ");
+            String email = myObj.nextLine();
+            Matcher matcher = pattern.matcher(email);
+            while (!matcher.find()) {
+                System.out.println("Please enter a valid email for accept alerts");
+                email = myObj.nextLine();
+            }
+            EmailListener.setEmail(email);
+        } else if (ano_ne.equals("no")) {
+            EmailListener.setWantEMail(false);
+        }
     }
 
 
