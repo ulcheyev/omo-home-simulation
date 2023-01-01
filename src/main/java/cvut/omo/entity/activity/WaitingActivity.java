@@ -2,13 +2,21 @@ package cvut.omo.entity.activity;
 
 import cvut.omo.data_collections.activity_events.SmartHomeEventCollection;
 import cvut.omo.entity.Responsible;
-import cvut.omo.usable.item.Item;
+import cvut.omo.entity.item.item.Item;
 
+/**
+ * Class represents waiting activity.
+ */
 public class WaitingActivity extends Activity{
 
     private final Activity activity;
     private final Item waitTo;
 
+    /**
+     * Constructor equates all values from the activity in the parameter
+     * @param waitTo item to wait
+     * @param activity the activity that will execute after waiting
+     */
     public WaitingActivity(Item waitTo, Activity activity) {
         this.waitTo = waitTo;
         this.activity = activity;
@@ -19,6 +27,11 @@ public class WaitingActivity extends Activity{
         SmartHomeEventCollection.swapTwoEndActivities(event);
     }
 
+    /**
+     *
+     * @param responsible responsible for activity
+     * @return {If {@link #activity } is executed successfully, return true}
+     */
     @Override
     protected boolean doWork(Responsible responsible) {
        if(activity.doWork(responsible)){

@@ -2,19 +2,28 @@ package cvut.omo.data_collections.consumption;
 
 import cvut.omo.app_utils.Constants;
 import cvut.omo.data_collections.Iterator;
-import cvut.omo.device.HomeDevice;
-import cvut.omo.device.SourceType;
+import cvut.omo.entity.device.HomeDevice;
+import cvut.omo.entity.device.SourceType;
 
 import java.util.Dictionary;
 import java.util.Hashtable;
 import java.util.List;
 
+/**
+ * Class represents iterating function over {@link ConsumptionCollection}
+ * to generate consumption report
+ */
 public class ConsumptionReportIterator implements Iterator {
 
     private int currIdx = 0;
     private static ConsumptionCollection data = ConsumptionCollection.getInstance();
+    /*stores data about source types and general consumption*/
     private final Dictionary<SourceType, Double> sourceTypes = new Hashtable<>();
 
+    /**
+     * Constructor for class.
+     * Reset all values in {@link #sourceTypes}
+     */
     public ConsumptionReportIterator() {
         for (SourceType sourceType : SourceType.values()) {
             sourceTypes.put(sourceType, 0.0);
@@ -52,6 +61,7 @@ public class ConsumptionReportIterator implements Iterator {
         return res.toString();
     }
 
+    /*generate single row*/
     private void generateRow(List<ConsumptionData> consumptionData, StringBuilder res,
                              SourceType sourceType, char currency)
     {
@@ -67,6 +77,7 @@ public class ConsumptionReportIterator implements Iterator {
                 .append(currency).append(") ");
     }
 
+    /*generate general info*/
     private void addInfoAboutConsumptionFromAllTime(StringBuilder res){
         res.append("\n");
         for (java.util.Iterator<SourceType> it = sourceTypes.keys().asIterator(); it.hasNext(); ){

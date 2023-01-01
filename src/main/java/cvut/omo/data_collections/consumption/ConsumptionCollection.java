@@ -3,8 +3,8 @@ package cvut.omo.data_collections.consumption;
 import cvut.omo.app_utils.Constants;
 import cvut.omo.app_utils.FileWriter;
 import cvut.omo.app_utils.Utils;
-import cvut.omo.device.HomeDevice;
-import cvut.omo.device.SourceType;
+import cvut.omo.entity.device.HomeDevice;
+import cvut.omo.entity.device.SourceType;
 import lombok.Getter;
 
 import java.io.IOException;
@@ -12,6 +12,10 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+/**
+ * Class represents collection, which store
+ * all {@link ConsumptionData} about devices
+ */
 @Getter
 public class ConsumptionCollection implements IConsumptionCollection {
 
@@ -21,6 +25,10 @@ public class ConsumptionCollection implements IConsumptionCollection {
 
     private ConsumptionCollection(){}
 
+    /**
+     * Collection is defining like a singleton.
+     * @return instance of collection
+     */
     public static ConsumptionCollection getInstance(){
         if(collection == null){
             return new ConsumptionCollection();
@@ -74,10 +82,14 @@ public class ConsumptionCollection implements IConsumptionCollection {
                 res.append(next).append("\n");
             }
         }
-        FileWriter.generateNewConsumptionReport("consumption_report" + Utils.getRandomInt(), res.toString());
+        FileWriter.generateNewReport("consumption_report" + Utils.getRandomInt(), res.toString());
     }
 
 
+    /**
+     *
+     * {@return {@link ConsumptionReportIterator} for generating report}
+     */
     public ConsumptionReportIterator createConsumptionReportIterator() {
         return new ConsumptionReportIterator();
     }

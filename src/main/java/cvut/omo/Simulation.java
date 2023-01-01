@@ -5,10 +5,18 @@ import cvut.omo.home_structure.home_builder.Home;
 
 import static cvut.omo.event.EventGenerator.*;
 
+/**
+ * Class performs the functions of simulating life in the {@link Home}
+ */
 public class Simulation {
 
-    static Home home = Home.INSTANCE;
+    private static Home home = Home.INSTANCE;
 
+    /**
+     * Simulate life in the {@link Home}.
+     * Generates random events.
+     * @param days number of days for simulation
+     */
     public static void simulate(int days){
         int hours = days * Constants.DAY_IN_HOUR;
 

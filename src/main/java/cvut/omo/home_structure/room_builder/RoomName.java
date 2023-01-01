@@ -1,5 +1,8 @@
 package cvut.omo.home_structure.room_builder;
 
+/**
+ * Class for room names.
+ */
 public enum RoomName {
     GARAGE,
     BATHROOM,

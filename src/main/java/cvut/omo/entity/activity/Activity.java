@@ -12,7 +12,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-
+/**
+ * Class represents activity in house.
+ */
 @Getter
 @Setter
 @NoArgsConstructor
@@ -24,6 +26,13 @@ public abstract class Activity {
     protected Responsible responsible;
     protected Event event;
 
+    /**
+     * Constructor fot class.
+     * Add this activity to activities in specified event.
+     * @param responsible responsible for this activity
+     * @param event the event to which this activity relates
+     * @param activityType {@link ActivityType} type of activity
+     */
     public Activity(Responsible responsible, Event event, ActivityType activityType) {
 
         this.event = event;
@@ -35,6 +44,12 @@ public abstract class Activity {
     }
 
 
+    /**
+     * Execute this activity.
+     * Lock responsible for activity, then unlock.
+     * If execute is success, activity executed {@link #isExecuted} flag is true.
+     * Check event solving.
+     */
     public void execute()
     {
         responsible.lock();
@@ -48,13 +63,24 @@ public abstract class Activity {
         event.checkSolving();
     };
 
+    /**
+     * Template method for concrete activities.
+     * @param responsible responsible for activity
+     * @return true, if activity execution is successfully
+     */
     protected abstract boolean doWork(Responsible responsible);
 
 
+    /**
+     *
+     * @return {returns true, if activity is executed}
+     */
     public  boolean isExecuted(){
         return isExecuted;
     }
 
+    /* assign room for activity depends on responsible
+     * and activity type*/
     private void assignRoom() {
 
         if(checkIfActivityTypeContainsStubRoom()){
@@ -83,6 +109,8 @@ public abstract class Activity {
         return activityType.getRoomNames().contains(RoomName.STUB);
     }
 
+    /*if responsible is in activity types room ->
+     * assign responsibles room*/
     private boolean checkResponsibleRoom(){
         boolean res = false;
         if(!responsible.isNull()){
@@ -93,6 +121,10 @@ public abstract class Activity {
         return res;
     }
 
+    /**
+     *
+     * @return string representation of object
+     */
     @Override
     public String toString() {
 
@@ -110,6 +142,8 @@ public abstract class Activity {
                 "did " + activityType.name();
     }
 
+    /*relocate responsible:if activity room and responsible room
+   are not equal -> add relocate activity to responsible activities*/
     private void checkResponsibleLocation(){
         if(!room.isNull() &&
                 !responsible.getRoom().equals(room))

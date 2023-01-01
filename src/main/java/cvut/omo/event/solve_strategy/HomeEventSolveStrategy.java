@@ -1,6 +1,6 @@
 package cvut.omo.event.solve_strategy;
 
-import cvut.omo.device.HomeAppliances;
+import cvut.omo.entity.device.HomeAppliances;
 import cvut.omo.entity.Responsible;
 import cvut.omo.entity.ResponsibleType;
 import cvut.omo.entity.activity.ActivityType;
@@ -13,14 +13,22 @@ import java.util.List;
 
 import static cvut.omo.entity.activity.ActivityFactory.createActivity;
 
+/**
+ * Class is needed to solve events from {@link cvut.omo.event.event_type.HomeEvent}
+ */
 public class HomeEventSolveStrategy extends SolveStrategy {
 
     private EventType eventType;
     private Room room;
     private Event event;
 
+    /**
+     * Check, if event {@link Room} is null.
+     * (NullRoom in {@link cvut.omo.home_structure.room_builder.RoomName} is according to STUB)
+     * @param event event to solve.
+     */
     @Override
-    public void solve(Event event) throws InterruptedException {
+    public void solve(Event event)  {
 
         eventType = event.getEventType();
         room = event.getRoom();
@@ -34,7 +42,7 @@ public class HomeEventSolveStrategy extends SolveStrategy {
 
     }
 
-    private void solveHomeEventWithNonNullRoom() throws InterruptedException {
+    private void solveHomeEventWithNonNullRoom()  {
 
         if (room.isEmpty()) {
             handleResponsibles(event);
@@ -47,7 +55,7 @@ public class HomeEventSolveStrategy extends SolveStrategy {
         }
     }
 
-    private void solveHomeEventWithNullRoom() throws InterruptedException {
+    private void solveHomeEventWithNullRoom() {
 
         for (ActivityType activityType : eventType.getChainToSolve()) {
 

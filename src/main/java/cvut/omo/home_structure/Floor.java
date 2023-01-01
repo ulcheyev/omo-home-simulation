@@ -1,6 +1,6 @@
 package cvut.omo.home_structure;
 
-import cvut.omo.data_collections.visitor.SmartHomeVisitor;
+import cvut.omo.data_collections.visitor.SmartHomeReportVisitor;
 import cvut.omo.home_structure.room_builder.Room;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,6 +9,9 @@ import lombok.Setter;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Class represents floor in home.
+ */
 @Getter
 @Setter
 @NoArgsConstructor
@@ -22,12 +25,16 @@ public class Floor implements HomeComponent {
         this.numberOfFloor = numberOfFloor;
     }
 
+    /**
+     * Adds room to floor
+     * @param room
+     */
     public void addRoom(Room room){
         rooms.add(room);
     }
 
     @Override
-    public String accept(SmartHomeVisitor visitor) {
+    public Object accept(SmartHomeReportVisitor visitor) {
         return visitor.visitFloor(this);
     }
 
@@ -36,6 +43,11 @@ public class Floor implements HomeComponent {
         return false;
     }
 
+    /**
+     * Updates floor.
+     * Updates every room in {@link #rooms}
+     * @throws InterruptedException {@link Thread}
+     */
     public void update() throws InterruptedException {
         for (Room room : rooms) {
             room.update();

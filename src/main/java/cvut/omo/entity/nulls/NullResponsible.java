@@ -5,6 +5,9 @@ import cvut.omo.entity.activity.Activity;
 import cvut.omo.home_structure.nulls.NullRoom;
 import cvut.omo.home_structure.room_builder.Room;
 
+/**
+ * Class warns against an NullPointerException
+ */
 public class NullResponsible extends Responsible {
 
     public NullResponsible(){
@@ -15,6 +18,8 @@ public class NullResponsible extends Responsible {
     public Room getRoom(){
         return new NullRoom();
     }
+
+
 
     @Override
     public boolean isNull() {

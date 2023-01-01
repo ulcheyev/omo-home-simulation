@@ -1,6 +1,8 @@
 package cvut.omo.event.event_type;
 
 import cvut.omo.entity.activity.ActivityType;
+import cvut.omo.entity.living.person.Person;
+import cvut.omo.entity.living.pet.Pet;
 import cvut.omo.home_structure.room_builder.RoomName;
 import lombok.Getter;
 
@@ -9,10 +11,13 @@ import java.util.List;
 
 import static cvut.omo.entity.activity.ActivityType.*;
 
+/**
+ * Class represents event type, which can be appeared in home in general.
+ */
 public enum HomeEvent implements EventType {
 
     /*
-     *STUB - IS NOT IN ROOM -> IN HOME IN GENERAL (f.e STORM)
+     *STUB - IS NOT IN ROOM -> IN HOME IN GENERAL / OR OUTSIDE HOME (f.e STORM)
      *COMMON - DOES NOT MATTER IN WHICH ROOM (f.e bulb burned out)
      */
 
@@ -26,7 +31,13 @@ public enum HomeEvent implements EventType {
     PREPARE_A_HOUSE_FOR_CHRISTMAS(RoomName.STUB, DECORATE_A_CHRISTMAS_TREE),
     INFO(RoomName.STUB);
 
-
+    /**
+     *
+     * @param roomName {@link RoomName} where event can be appeared
+     * @param chainToSolve a chain of {@link cvut.omo.entity.activity.Activity}
+     *                                , in which every {@link cvut.omo.entity.activity.Activity}
+     *                                 must be executed successfully that the event has been resolved
+     */
     HomeEvent(RoomName roomName,  ActivityType...chainToSolve){
         this.roomName = roomName;
         this.chainToSolve = Arrays.asList(chainToSolve);

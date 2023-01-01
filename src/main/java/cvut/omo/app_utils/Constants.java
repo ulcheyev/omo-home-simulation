@@ -4,9 +4,8 @@ package cvut.omo.app_utils;
 import com.google.common.collect.ImmutableList;
 
 /**
- *
+ * Class contains constants for using in application
  */
-
 public class Constants {
 
     public final static int DAY_IN_HOUR = 24;

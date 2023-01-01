@@ -2,33 +2,51 @@ package cvut.omo.entity.activity;
 
 import cvut.omo.app_utils.Constants;
 import cvut.omo.app_utils.Utils;
-import cvut.omo.device.Capacious;
-import cvut.omo.device.HomeDevice;
+import cvut.omo.entity.device.Capacious;
+import cvut.omo.entity.device.HomeDevice;
 import cvut.omo.entity.Responsible;
-import cvut.omo.entity.person.Person;
+import cvut.omo.entity.living.person.Person;
 import cvut.omo.event.Event;
 import cvut.omo.exceptions.OMOException;
 import cvut.omo.home_structure.home_builder.Home;
-import cvut.omo.usable.Usable;
-import cvut.omo.usable.stuff.NullStuff;
-import cvut.omo.usable.stuff.Stuff;
+import cvut.omo.entity.Usable;
+import cvut.omo.entity.item.stuff.NullStuff;
+import cvut.omo.entity.item.stuff.Stuff;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import static cvut.omo.app_utils.Constants.*;
 
+
+/**
+ * Class represents actions with the device
+ */
 public class DeviceActivity extends Activity {
 
     private Class<? extends Usable> toUse;
     private HomeDevice founded = null;
     private List<Stuff> stuffList = new ArrayList<>();
 
+    /**
+     *
+     * @param responsible responsible for this activity
+     * @param event the event to which this activity relates
+     * @param toUse the class that the responsible will interact with
+     * @param activityType {@link ActivityType} type of activity
+     */
     public DeviceActivity(Responsible responsible, Event event, Class<? extends Usable> toUse, ActivityType activityType) {
         super(responsible, event, activityType);
         this.toUse = toUse;
     }
 
+    /**
+     * Found the device that the responsible will interact with (depends on {@link #toUse})
+     * After finding device, call the specified method {@link #activityType} in the found device
+     * If {@link #toUse} is null, responsible is searching device.
+     *  @param responsible responsible for activity
+     * @return true, if activity is executed successfully
+     */
     @Override
     public boolean doWork(Responsible responsible) {
 
@@ -95,6 +113,8 @@ public class DeviceActivity extends Activity {
         }
         return s.toString();
     }
+
+    /*check if that  activity contains flags for interact with device*/
 
     private String containsFlag(ActivityType activityType){
         String name = activityType.name();

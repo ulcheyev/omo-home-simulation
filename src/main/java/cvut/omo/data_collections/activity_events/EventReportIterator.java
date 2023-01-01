@@ -6,6 +6,10 @@ import cvut.omo.event.Event;
 
 import java.util.List;
 
+/**
+ * Class represents iterating function over SmartHomeCollection
+ * to generate Events report
+ */
 public class EventReportIterator implements Iterator {
 
     private static int currIdx = 0;

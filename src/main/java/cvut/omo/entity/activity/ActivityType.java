@@ -1,31 +1,30 @@
 package cvut.omo.entity.activity;
 
-import cvut.omo.device.*;
+import cvut.omo.entity.device.*;
 import cvut.omo.entity.ResponsibleType;
-import cvut.omo.entity.person.FamilyRoleType;
-import cvut.omo.entity.pet.PetType;
+import cvut.omo.entity.living.person.FamilyRoleType;
+import cvut.omo.entity.living.pet.PetType;
 import cvut.omo.home_structure.room_builder.RoomName;
-import cvut.omo.usable.Usable;
-import cvut.omo.usable.item.Bike;
-import cvut.omo.usable.item.Car;
-import cvut.omo.usable.item.PetToy;
-import cvut.omo.usable.item.Ski;
+import cvut.omo.entity.Usable;
+import cvut.omo.entity.item.item.Bike;
+import cvut.omo.entity.item.item.Car;
+import cvut.omo.entity.item.item.PetToy;
+import cvut.omo.entity.item.item.Ski;
 import lombok.Getter;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static cvut.omo.entity.person.FamilyRoleType.*;
+import static cvut.omo.entity.living.person.FamilyRoleType.*;
 import static java.util.List.of;
 
 public enum ActivityType {
 
     /*
-    * RoomName.STUB -> Activity does not need specified room to self-execute
-    * RoomName.COMMON -> Activity need specified rooms, but depends on event room/ e.g responsible location room
-    *
-    * */
+     * RoomName.STUB -> Activity does not need specified room to self-execute.
+     * RoomName.COMMON -> Activity need specified rooms, but depends on event room or responsible location room.
+     * */
 
     //DEVICE
 
@@ -112,10 +111,27 @@ public enum ActivityType {
     //PERSON AND PETS
     RELOCATE(of(RoomName.STUB), RelocateActivity.class, null, FamilyRoleType.class.getEnumConstants(), PetType.class.getEnumConstants());
 
+
+    /**
+     *
+     * @param roomNames {@link RoomName} where activity can be executed
+     * @param use necessary device/item class for executing
+     * @param solver class that extends {@link Activity}, which will be solving this activity
+     * @param roles responsible roles, which can this execute this activity
+     *              (similarity of the use case diagram)
+     */
     ActivityType(List<RoomName > roomNames, Class<? extends Usable> use, Class<? extends Activity> solver, ResponsibleType...roles) {
         assignVariables(roomNames, solver, use, roles);
     }
 
+    /**
+     *
+     * @param roomNames {@link RoomName} where activity can be executed
+     * @param solver necessary device/item class for executing
+     * @param use class that extends {@link Activity}, which will be solving this activity
+     * @param roles responsible roles, which can this execute this activity
+     *                  (similarity of the use case diagram)
+     */
     ActivityType(List<RoomName > roomNames, Class<? extends Activity> solver, Class<? extends HomeDevice> use, ResponsibleType[]... roles){
         assignVariables(roomNames, solver, use);
         if (roles.length == 0) {
@@ -127,12 +143,23 @@ public enum ActivityType {
         }
     }
 
+    /**
+     * Solver will be implicitly BaseActivity
+     * @param roomNames {@link RoomName} where activity can be executed
+     * @param use class that extends {@link Activity}, which will be solving this activity
+     * @param roles responsible roles, which can this execute this activity
+     *               (similarity of the use case diagram)
+     */
     ActivityType(List<RoomName > roomNames, Class<? extends HomeDevice> use, ResponsibleType...roles) {
         assignVariables(roomNames, null, use, roles);
     }
 
 
 
+    /**
+     *
+     * @param activityType assign all values from activityType parameter
+     */
     ActivityType(ActivityType activityType){
         this.roomNames = activityType.getRoomNames();
         toUse = activityType.getToUse();
@@ -161,6 +188,7 @@ public enum ActivityType {
         }
     }
 
+    /*all family role*/
     private void defaultConfig(){
         responsibles.addAll(Arrays.asList(FamilyRoleType.class.getEnumConstants()));
     }
@@ -179,6 +207,9 @@ public enum ActivityType {
     private List<RoomName> roomNames;
 
 
+    /**
+     * Class represent device, which can be responsible for some activities
+     * */
     public enum Device implements ResponsibleType{
         CIRCUIT_BREAKER(CircuitBreaker.class);
         Device(Class<? extends HomeDevice> clazz) {

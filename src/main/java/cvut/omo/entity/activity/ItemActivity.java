@@ -5,8 +5,8 @@ import cvut.omo.entity.Responsible;
 import cvut.omo.event.Event;
 import cvut.omo.home_structure.home_builder.Home;
 import cvut.omo.home_structure.room_builder.Room;
-import cvut.omo.usable.Usable;
-import cvut.omo.usable.item.Item;
+import cvut.omo.entity.Usable;
+import cvut.omo.entity.item.item.Item;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,11 +16,26 @@ public class ItemActivity extends Activity{
     //FLAGS
     private Class<? extends Usable> toUse;
 
+    /**
+     *
+     * @param responsible responsible for this activity
+     * @param event the event to which this activity relates
+     * @param toUse the class that the responsible will interact with
+     * @param activityType {@link ActivityType} type of activity
+     */
     public ItemActivity(Responsible responsible, Event event, Class<? extends Usable> toUse, ActivityType activityType) {
         super(responsible, event, activityType);
         this.toUse = toUse;
     }
 
+    /**
+     * Found the item that the responsible will interact with (depends on {@link #toUse})
+     * After founding item, check, if item is free.
+     * Case item is free: item will be used by responsible immediately.
+     * Case item in use: responsible will have {@link WaitingActivity}
+     *  @param responsible responsible for activity
+     * @return true, if activity is executed successfully
+     */
     @Override
     public boolean doWork(Responsible responsible) {
         Item foundedItem = Utils.getRandomObjFromList(searchItems());
@@ -42,7 +57,7 @@ public class ItemActivity extends Activity{
         return false;
     }
 
-
+    /*search items*/
     private List<Item> searchItems(){
         List<Item> founded = new ArrayList<>();
         for(Room room: Home.INSTANCE.getAllRooms()){

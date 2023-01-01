@@ -5,54 +5,40 @@ import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+/**
+ * Class represents write to file function
+ */
 public class FileWriter {
 
-    /**
-     *
-     * @param fileName
-     * @param report
-     * @throws IOException
-     */
-    public static void generateNewConsumptionReport(String fileName, String report) throws IOException {
-        writeToFile(openFile("reports/", fileName), report);
-    }
+
 
     /**
-     *
+     * Generates report from to the specified file name with specified text report
      * @param fileName
-     * @param report
-     * @throws IOException
+     * @param report report text
+     * @throws IOException when the directory does not exist
      */
     public static void generateNewReport(String fileName, String report) throws IOException {
         writeToFile(openFile("reports/", fileName), report);
     }
 
     /**
-     *
-     * @param fileName
-     * @param text
-     * @throws IOException
+     * Generates documentation from to the specified file name with specified text documentation
+     * @param fileName file name
+     * @param text documentation text
+     * @throws IOException when the directory does not exist
      */
     public static void generateNewDocumentation(String fileName, String text) throws IOException {
         writeToFile(openFile("documentation/", fileName), text);
     }
 
-    /**
-     *
-     * @param fileName
-     * @param text
-     * @throws IOException
-     */
-    public static void generateNewEmail(String fileName, String text) throws IOException {
-        writeToFile(openFile("email/", fileName), text);
-    }
 
     /**
-     *
-     * @param path
-     * @param fileName
+     * Open file to write
+     * @param path path to file
+     * @param fileName file name
      * @return
-     * @throws IOException
+     * @throws IOException when the directory does not exist
      */
     private static File openFile(String path, String fileName) throws IOException {
         File file = new File(path+fileName+".txt");
@@ -62,9 +48,9 @@ public class FileWriter {
     }
 
     /**
-     *
-     * @param file
-     * @param string
+     * Write to file
+     * @param file to write
+     * @param string text to write to file
      * @throws IOException
      */
     private static void writeToFile(File file, String string) throws IOException {
@@ -75,8 +61,8 @@ public class FileWriter {
     }
 
     /**
-     *
-     * @param directory
+     * Clean directory
+     * @param directory to clean
      * @throws IOException
      */
     public static void cleanDirectory(String directory) throws IOException {

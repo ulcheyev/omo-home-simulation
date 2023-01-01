@@ -3,8 +3,8 @@ package cvut.omo;
 import cvut.omo.app_utils.Utils;
 import cvut.omo.data_collections.activity_events.SmartHomeEventCollection;
 import cvut.omo.data_collections.consumption.ConsumptionCollection;
-import cvut.omo.data_collections.visitor.HomeConfigurationReportVisitor;
-import cvut.omo.device.notifier.EmailListener;
+import cvut.omo.data_collections.visitor.HomeConfigurationReportReportVisitor;
+import cvut.omo.entity.device.notifier.EmailListener;
 import cvut.omo.home_structure.home_builder.Home;
 import cvut.omo.home_structure.home_builder.SmartHomeBuilder;
 import cvut.omo.home_structure.home_builder.SmartHomeBuilderDirector;
@@ -12,10 +12,20 @@ import cvut.omo.home_structure.home_builder.SmartHomeBuilderDirector;
 import java.io.IOException;
 import java.util.Scanner;
 
+import static cvut.omo.app_utils.Utils.checkInput;
+import static cvut.omo.app_utils.Utils.hello;
+
+/**
+ * Facade for simulate life in {@link Home} and generate reports.
+ */
 public class OMOSmartHomeSimulationFacade {
 
 
     private Home home;
+
+    /**
+     * Instance of {@link OMOSmartHomeSimulationFacade }
+     */
     public final static OMOSmartHomeSimulationFacade INSTANCE = new OMOSmartHomeSimulationFacade();
 
     private OMOSmartHomeSimulationFacade(){
@@ -23,24 +33,35 @@ public class OMOSmartHomeSimulationFacade {
         checkInput();
     }
 
-
+    /**
+     * Creates large configuration in {@link SmartHomeBuilderDirector }
+     */
     public void createLargeConfig(){
         SmartHomeBuilderDirector.createLargeHomeConfiguration(SmartHomeBuilder.INSTANCE);
         home = SmartHomeBuilder.INSTANCE.getResult();
     }
 
+    /**
+     * Creates small configuration in {@link SmartHomeBuilderDirector }
+     */
     public void createSmallConfig(){
         SmartHomeBuilderDirector.createSmallHomeConfiguration(SmartHomeBuilder.INSTANCE);
         home = SmartHomeBuilder.INSTANCE.getResult();
     }
 
+    /**
+     * Start simulation
+     */
     public void simulate(){
-        int inputNumber = Utils.getInputNumber("Input days quantity of simulation:");
+        int inputNumber = Utils.getInputNumber("Enter days quantity of simulation:");
         Simulation.simulate(inputNumber);
 
     }
 
 
+    /**
+     * Generates events report
+     */
     public void generateEventReport(){
         try {
             SmartHomeEventCollection.generateEventReport();
@@ -49,6 +70,9 @@ public class OMOSmartHomeSimulationFacade {
         }
     }
 
+    /**
+     * Generates activity and usage report
+     */
     public void generateActivityAndUsageReport(){
         try {
             SmartHomeEventCollection.generateActivityAndUsageReport();
@@ -57,6 +81,9 @@ public class OMOSmartHomeSimulationFacade {
         }
     }
 
+    /**
+     * Generates consumption report
+     */
     public void generateConsumptionReport(){
         try {
             ConsumptionCollection.getInstance().generateReport();
@@ -65,15 +92,21 @@ public class OMOSmartHomeSimulationFacade {
         }
     }
 
+    /**
+     * Generates home configuration report
+     */
     public void generateHomeConfigurationReport(){
         try {
-            HomeConfigurationReportVisitor visitor = new HomeConfigurationReportVisitor();
+            HomeConfigurationReportReportVisitor visitor = new HomeConfigurationReportReportVisitor();
             visitor.generateReport();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
+    /**
+     * Generates all reports
+     */
     public void generateAllReports(){
         generateEventReport();
         generateActivityAndUsageReport();
@@ -81,22 +114,7 @@ public class OMOSmartHomeSimulationFacade {
         generateHomeConfigurationReport();
     }
 
-    private void hello() {
-        System.out.println("\n" +
-        "███████╗███╗   ███╗ █████╗ ██████╗ ████████╗    ██╗  ██╗ ██████╗ ███╗   ███╗███████╗\n" +
-        "██╔════╝████╗ ████║██╔══██╗██╔══██╗╚══██╔══╝    ██║  ██║██╔═══██╗████╗ ████║██╔════╝\n" +
-        "███████╗██╔████╔██║███████║██████╔╝   ██║       ███████║██║   ██║██╔████╔██║█████╗  \n" +
-        "╚════██║██║╚██╔╝██║██╔══██║██╔══██╗   ██║       ██╔══██║██║   ██║██║╚██╔╝██║██╔══╝  \n" +
-        "███████║██║ ╚═╝ ██║██║  ██║██║  ██║   ██║       ██║  ██║╚██████╔╝██║ ╚═╝ ██║███████╗\n" +
-        "╚══════╝╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝       ╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚═╝╚══════╝\n" +
-        "                                                                                    \n");
-    }
 
-    private void checkInput() {
-        Scanner input = new Scanner(System.in);
-        System.out.print("Enter email for alerts:");
-        EmailListener.setEmail(input.nextLine());
-    }
 
 
 

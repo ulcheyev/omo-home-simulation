@@ -1,15 +1,21 @@
 package cvut.omo.home_structure.home_builder;
 
-import cvut.omo.entity.person.FamilyRoleType;
-import cvut.omo.entity.person.Person;
-import cvut.omo.entity.pet.Pet;
-import cvut.omo.entity.pet.PetType;
+import cvut.omo.entity.living.person.FamilyRoleType;
+import cvut.omo.entity.living.person.Person;
+import cvut.omo.entity.living.pet.Pet;
+import cvut.omo.entity.living.pet.PetType;
 import cvut.omo.exceptions.FloorException;
 import cvut.omo.home_structure.Floor;
 import cvut.omo.home_structure.room_builder.*;
 
+/**
+ * Class represent builder for {@link Home}
+ */
 public final class SmartHomeBuilder implements HomeBuilder{
 
+    /**
+     * Instance of {@link SmartHomeBuilder}
+     */
     public static final SmartHomeBuilder INSTANCE = new SmartHomeBuilder();
     private final SmartHomeRoomBuilderDirector smartHomeRoomBuilderDirector = SmartHomeRoomBuilderDirector.INSTANCE;
     private Home home = Home.INSTANCE;
@@ -21,7 +27,6 @@ public final class SmartHomeBuilder implements HomeBuilder{
         return this;
     }
 
-    //TODO proverka, esli roli uzhe est. Napr 2 mamy 2 papy
     @Override
     public HomeBuilder addPerson(String name, FamilyRoleType familyRoleType) {
        home.addEntity(new Person(name, familyRoleType));
@@ -52,10 +57,18 @@ public final class SmartHomeBuilder implements HomeBuilder{
         return new FloorStub(floor);
     }
 
+    /**
+     * Returns result
+     * @return
+     */
     public Home getResult(){
         return this.home;
     }
 
+    /**
+     * Class is needed, when user add floor.
+     * In this case, he can only add a room to the floor.
+     */
     protected class FloorStub {
 
         private Floor floor;

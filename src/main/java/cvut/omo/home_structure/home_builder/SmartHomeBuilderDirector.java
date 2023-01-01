@@ -1,13 +1,24 @@
 package cvut.omo.home_structure.home_builder;
-import cvut.omo.entity.person.FamilyRoleType;
-import cvut.omo.entity.pet.PetType;
+import cvut.omo.entity.living.person.FamilyRoleType;
+import cvut.omo.entity.living.pet.PetType;
 import cvut.omo.home_structure.room_builder.RoomName;
 
+/**
+ * Director for {@link SmartHomeBuilder}
+ */
 public final class SmartHomeBuilderDirector {
 
+    /**
+     * Instance of {@link SmartHomeBuilderDirector}
+     */
     public final static SmartHomeBuilderDirector INSTANCE = new SmartHomeBuilderDirector();
     private SmartHomeBuilderDirector(){}
 
+    /**
+     * Creates small home configuration.
+     * 2 floors, 6 persons, 10 rooms, 3 pets.
+     * @param homeBuilder {@link HomeBuilder} which will build this config.
+     */
     public static void createSmallHomeConfiguration(HomeBuilder homeBuilder){
 
         homeBuilder
@@ -39,6 +50,11 @@ public final class SmartHomeBuilderDirector {
                 .addPet(PetType.MINI_PIG);
     }
 
+    /**
+     * Creates large home configuration.
+     * 3 floors, 8 persons, 16 rooms, 5 pets.
+     * @param homeBuilder {@link HomeBuilder} which will build this config.
+     */
     public static void createLargeHomeConfiguration(HomeBuilder homeBuilder){
 
         homeBuilder

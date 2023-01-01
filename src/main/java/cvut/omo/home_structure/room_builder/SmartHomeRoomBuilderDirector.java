@@ -1,21 +1,36 @@
 package cvut.omo.home_structure.room_builder;
 
-import cvut.omo.device.factory.HomeDeviceFactory;
-import cvut.omo.device.factory.SmartHomeDeviceFactory;
+import cvut.omo.entity.device.*;
+import cvut.omo.entity.device.factory.HomeDeviceFactory;
+import cvut.omo.entity.device.factory.SmartHomeDeviceFactory;
 import cvut.omo.home_structure.Floor;
-import cvut.omo.usable.item.Bike;
-import cvut.omo.usable.item.Car;
-import cvut.omo.usable.item.PetToy;
-import cvut.omo.usable.item.Ski;
+import cvut.omo.entity.item.item.Bike;
+import cvut.omo.entity.item.item.Car;
+import cvut.omo.entity.item.item.PetToy;
+import cvut.omo.entity.item.item.Ski;
+import cvut.omo.home_structure.home_builder.SmartHomeBuilder;
 
 
+/**
+ * Director for {@link SmartHomeRoomBuilderDirector}
+ */
 public final class SmartHomeRoomBuilderDirector {
 
+    /**
+     * Instance of {@link SmartHomeRoomBuilderDirector}
+     */
     public static final SmartHomeRoomBuilderDirector INSTANCE = new SmartHomeRoomBuilderDirector();
     private SmartHomeRoomBuilderDirector(){}
     private HomeDeviceFactory homeDeviceFactory = SmartHomeDeviceFactory.INSTANCE;
 
-
+    /**
+     * Creates bathroom with:
+     * 1 {@link WashingMachine}
+     * 1 {@link WaterLeakSensor}
+     * 1 {@link FireSensor}
+     * @param roomBuilder builder, which will build this room
+     * @param floor room floor
+     */
     public void createBathRoom(RoomBuilder roomBuilder, Floor floor){
         roomBuilder
                 .reset()
@@ -28,6 +43,14 @@ public final class SmartHomeRoomBuilderDirector {
 
     }
 
+
+    /**
+     * Creates vestibule with:
+     * 1 {@link CircuitBreaker}
+     * 1 {@link FireSensor}
+     * @param roomBuilder builder, which will build this room
+     * @param floor room floor
+     */
     public void createVestibule(RoomBuilder roomBuilder, Floor floor){
         roomBuilder
                 .reset()
@@ -38,6 +61,17 @@ public final class SmartHomeRoomBuilderDirector {
                 .setHomeDevice(homeDeviceFactory.createCircuitBreaker());
     }
 
+
+    /**
+     * Creates kitchen with with:
+     * 1 {@link Oven}
+     * 1 {@link FireSensor}
+     * 1 {@link WaterLeakSensor}
+     * 1 {@link Fridge}
+     * 1 {@link TV}
+     * @param roomBuilder builder, which will build this room
+     * @param floor room floor
+     */
     public void createKitchen(RoomBuilder roomBuilder, Floor floor){
         roomBuilder
                 .reset()
@@ -52,6 +86,15 @@ public final class SmartHomeRoomBuilderDirector {
                 .setHomeDevice(homeDeviceFactory.createTV());
     }
 
+    /**
+     * Creates bedroom with:
+     * 1 {@link FireSensor}
+     * 1 {@link Computer}
+     * 1 {@link TV}
+     * 1 {@link PetToy}
+     * @param roomBuilder builder, which will build this room
+     * @param floor room floor
+     */
     public void createBedRoom(RoomBuilder roomBuilder, Floor floor){
         roomBuilder
                 .reset()
@@ -64,6 +107,16 @@ public final class SmartHomeRoomBuilderDirector {
                 .addItem(new PetToy());
     }
 
+    /**
+     * Creates garage with:
+     * 1 {@link FireSensor}
+     * 1 {@link Ski}
+     * 1 {@link Bike}
+     * 1 {@link PetToy}
+     * 1 {@link Car}
+     * @param roomBuilder builder, which will build this room
+     * @param floor room floor
+     */
     public void createGarage(RoomBuilder roomBuilder, Floor floor){
         roomBuilder
                 .reset()
@@ -76,6 +129,14 @@ public final class SmartHomeRoomBuilderDirector {
                 .addItem(new Ski());
     }
 
+
+    /**
+     * Creates hall with:
+     * 1 {@link FireSensor}
+     * 1 {@link PetToy}
+     * @param roomBuilder builder, which will build this room
+     * @param floor room floor
+     */
     public void createHall(RoomBuilder roomBuilder, Floor floor){
         roomBuilder
                 .reset()
@@ -86,6 +147,16 @@ public final class SmartHomeRoomBuilderDirector {
                 .addItem(new PetToy());
     }
 
+
+    /**
+     * Creates hall with:
+     * 1 {@link FireSensor}
+     * 1 {@link PetToy}
+     * 1 {@link TV}
+     *1 {@link Computer}
+     * @param roomBuilder builder, which will build this room
+     * @param floor room floor
+     */
     public void createChildrensRoom(RoomBuilder roomBuilder, Floor floor){
         roomBuilder
                 .reset()
@@ -98,6 +169,12 @@ public final class SmartHomeRoomBuilderDirector {
                 .addItem(new PetToy());
     }
 
+    /**
+     * Created room from specified {@link RoomName}
+     * @param roomBuilder builder, which will build this room
+     * @param roomName specified {@link RoomName}
+     * @param floor room {@link Floor}
+     */
     public void createRoom(RoomBuilder roomBuilder, RoomName roomName, Floor floor){
         switch (roomName){
             case BATHROOM -> {

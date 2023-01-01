@@ -10,32 +10,59 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * Collection, which stores every event
+ */
 public class SmartHomeEventCollection {
 
     public static final SmartHomeEventCollection INSTANCE = new SmartHomeEventCollection();
     private SmartHomeEventCollection(){};
     private static List<Event> events = new ArrayList<>();
 
+    /**
+     * Add event to collection.
+     * @param event event to add
+     */
     public static void addEvent(Event event){
         events.add(event);
         EventManager.listenTo(event);
     }
 
+    /**
+     * Remove element from collection.
+     * @param event event to remove
+     */
     public static void removeEvent(Event event){
         events.remove(event);
     }
 
+    /**
+     * Return event on the specified index.
+     * @param idx specified index
+     * @return event on specified index
+     */
     public static Event at(int idx){
         return events.get(idx);
     }
 
+    /**
+     * Returns size of collection.
+     * @return size of collection
+     */
     public static int size(){
         return events.size();
     }
 
+    /**
+     * Returns the entire collection.
+     * @return list with entire events
+     */
     public static List<Event> getAll(){return events;}
 
-
+    /**
+     * Check, if every event in collection is solved
+     * @return true if all events solved, false if not
+     */
     public static boolean allSolved() {
         for(Event event: events){
             if(!event.checkSolving()){
@@ -45,6 +72,11 @@ public class SmartHomeEventCollection {
         return true;
     }
 
+    /**
+     * Swap to activities at the end.
+     * Using for creation the chain of activities.
+     * @param event event, the activists of which will be swapped
+     */
     public static void swapTwoEndActivities(Event event){
         for(Event event1: events){
             if(event.equals(event1)){
@@ -55,6 +87,10 @@ public class SmartHomeEventCollection {
         }
     }
 
+    /**
+     * Generate event report.
+     * @throws IOException the directory does not exist
+     */
     public static void generateEventReport() throws IOException {
         System.out.println("GENERATE EVENTS REPORT");
         StringBuilder sb = new StringBuilder();
@@ -66,6 +102,10 @@ public class SmartHomeEventCollection {
         FileWriter.generateNewReport("events_report"+ Utils.getRandomInt(), sb.toString());
     }
 
+    /**
+     * Generate activity and usage report
+     * @throws IOException the directory does not exist
+     */
     public static void generateActivityAndUsageReport() throws IOException {
         System.out.println("GENERATE ACTIVITY AND USAGE REPORT");
         StringBuilder sb = new StringBuilder();
@@ -77,9 +117,18 @@ public class SmartHomeEventCollection {
         FileWriter.generateNewReport("activity_and_usage_report"+ Utils.getRandomInt(), sb.toString());
     }
 
+    /**
+     *
+     * @return {@link EventReportIterator} for create event report
+     */
     public static EventReportIterator createEventReportIterator(){
         return new EventReportIterator();
     }
+
+    /**
+     *
+     * @return {@link ActivityReportIterator} for create activity and usage report
+     */
     public static ActivityReportIterator createActivityReportIterator(){
         return new ActivityReportIterator();
     }

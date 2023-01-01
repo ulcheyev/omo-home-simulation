@@ -2,7 +2,7 @@ package cvut.omo.data_collections.activity_events;
 
 import cvut.omo.app_utils.Constants;
 import cvut.omo.data_collections.Iterator;
-import cvut.omo.device.HomeAppliances;
+import cvut.omo.entity.device.HomeAppliances;
 import cvut.omo.entity.Responsible;
 import cvut.omo.entity.activity.Activity;
 import cvut.omo.entity.activity.DeviceActivity;
@@ -10,7 +10,7 @@ import cvut.omo.entity.activity.ItemActivity;
 import cvut.omo.entity.activity.WaitingActivity;
 import cvut.omo.event.Event;
 import cvut.omo.home_structure.home_builder.Home;
-import cvut.omo.usable.Usable;
+import cvut.omo.entity.Usable;
 
 import java.util.HashMap;
 import java.util.Hashtable;
@@ -18,11 +18,18 @@ import java.util.List;
 import java.util.Map;
 
 
+/**
+ * Class represents iterating function over {@link SmartHomeEventCollection}
+ * to generate Activity and Usage report.
+ */
 public class ActivityReportIterator implements Iterator {
 
     private final List<Responsible> responsibleList;
     private Map<Class<? extends Usable> , Integer> usageData;
 
+    /**
+     * Constructor fot class.
+     */
     public ActivityReportIterator(){
         responsibleList = Home.INSTANCE.getAllEntityResponsibles();
         usageData = new Hashtable<>();
@@ -62,6 +69,10 @@ public class ActivityReportIterator implements Iterator {
         return responsibleList.size() != currIdx;
     }
 
+    /*
+   Check, if that activity has object to use and add that object
+   to usageData
+    */
     private void checkOnUsageAktivity(Activity activity){
         Class<? extends Activity> solver = activity.getActivityType().getSolver();
         if(solver.equals(DeviceActivity.class)
@@ -79,6 +90,9 @@ public class ActivityReportIterator implements Iterator {
 
     }
 
+    /*
+    Generate general info about using objects, that implements Usable interface
+   */
     private String generateGeneralInfo(Responsible responsible) {
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append(Constants.STARS_DOWN);
@@ -96,6 +110,9 @@ public class ActivityReportIterator implements Iterator {
         return stringBuilder.toString();
     }
 
+    /*
+   Identify toUse object by the specified activity.
+    */
     private Class<? extends Usable> identifuToUse(Activity activity) {
         Class<? extends Usable> toUse = activity.getActivityType().getToUse();
         if(toUse == null){

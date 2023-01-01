@@ -1,17 +1,6 @@
 package cvut.omo.home_structure;
 
-public class Window {
-    private boolean isOpened = false;
-
-    public boolean isOpened() {
-        return isOpened;
-    }
-
-    public void open() {
-        isOpened = true;
-    }
-
-    public void close() {
-        isOpened = false;
-    }
-}
+/**
+ * Class represents window in home.
+ */
+public class Window { }
