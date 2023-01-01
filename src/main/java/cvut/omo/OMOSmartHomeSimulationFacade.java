@@ -11,6 +11,8 @@ import cvut.omo.home_structure.home_builder.SmartHomeBuilderDirector;
 
 import java.io.IOException;
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class OMOSmartHomeSimulationFacade {
 
@@ -18,30 +20,30 @@ public class OMOSmartHomeSimulationFacade {
     private Home home;
     public final static OMOSmartHomeSimulationFacade INSTANCE = new OMOSmartHomeSimulationFacade();
 
-    private OMOSmartHomeSimulationFacade(){
+    private OMOSmartHomeSimulationFacade() {
         hello();
         checkInput();
     }
 
 
-    public void createLargeConfig(){
+    public void createLargeConfig() {
         SmartHomeBuilderDirector.createLargeHomeConfiguration(SmartHomeBuilder.INSTANCE);
         home = SmartHomeBuilder.INSTANCE.getResult();
     }
 
-    public void createSmallConfig(){
+    public void createSmallConfig() {
         SmartHomeBuilderDirector.createSmallHomeConfiguration(SmartHomeBuilder.INSTANCE);
         home = SmartHomeBuilder.INSTANCE.getResult();
     }
 
-    public void simulate(){
+    public void simulate() {
         int inputNumber = Utils.getInputNumber("Input days quantity of simulation:");
         Simulation.simulate(inputNumber);
 
     }
 
 
-    public void generateEventReport(){
+    public void generateEventReport() {
         try {
             SmartHomeEventCollection.generateEventReport();
         } catch (IOException e) {
@@ -49,7 +51,7 @@ public class OMOSmartHomeSimulationFacade {
         }
     }
 
-    public void generateActivityAndUsageReport(){
+    public void generateActivityAndUsageReport() {
         try {
             SmartHomeEventCollection.generateActivityAndUsageReport();
         } catch (IOException e) {
@@ -57,7 +59,7 @@ public class OMOSmartHomeSimulationFacade {
         }
     }
 
-    public void generateConsumptionReport(){
+    public void generateConsumptionReport() {
         try {
             ConsumptionCollection.getInstance().generateReport();
         } catch (IOException e) {
@@ -65,7 +67,7 @@ public class OMOSmartHomeSimulationFacade {
         }
     }
 
-    public void generateHomeConfigurationReport(){
+    public void generateHomeConfigurationReport() {
         try {
             HomeConfigurationReportVisitor visitor = new HomeConfigurationReportVisitor();
             visitor.generateReport();
@@ -74,7 +76,7 @@ public class OMOSmartHomeSimulationFacade {
         }
     }
 
-    public void generateAllReports(){
+    public void generateAllReports() {
         generateEventReport();
         generateActivityAndUsageReport();
         generateConsumptionReport();
@@ -83,23 +85,39 @@ public class OMOSmartHomeSimulationFacade {
 
     private void hello() {
         System.out.println("\n" +
-        "███████╗███╗   ███╗ █████╗ ██████╗ ████████╗    ██╗  ██╗ ██████╗ ███╗   ███╗███████╗\n" +
-        "██╔════╝████╗ ████║██╔══██╗██╔══██╗╚══██╔══╝    ██║  ██║██╔═══██╗████╗ ████║██╔════╝\n" +
-        "███████╗██╔████╔██║███████║██████╔╝   ██║       ███████║██║   ██║██╔████╔██║█████╗  \n" +
-        "╚════██║██║╚██╔╝██║██╔══██║██╔══██╗   ██║       ██╔══██║██║   ██║██║╚██╔╝██║██╔══╝  \n" +
-        "███████║██║ ╚═╝ ██║██║  ██║██║  ██║   ██║       ██║  ██║╚██████╔╝██║ ╚═╝ ██║███████╗\n" +
-        "╚══════╝╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝       ╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚═╝╚══════╝\n" +
-        "                                                                                    \n");
+                "███████╗███╗   ███╗ █████╗ ██████╗ ████████╗    ██╗  ██╗ ██████╗ ███╗   ███╗███████╗\n" +
+                "██╔════╝████╗ ████║██╔══██╗██╔══██╗╚══██╔══╝    ██║  ██║██╔═══██╗████╗ ████║██╔════╝\n" +
+                "███████╗██╔████╔██║███████║██████╔╝   ██║       ███████║██║   ██║██╔████╔██║█████╗  \n" +
+                "╚════██║██║╚██╔╝██║██╔══██║██╔══██╗   ██║       ██╔══██║██║   ██║██║╚██╔╝██║██╔══╝  \n" +
+                "███████║██║ ╚═╝ ██║██║  ██║██║  ██║   ██║       ██║  ██║╚██████╔╝██║ ╚═╝ ██║███████╗\n" +
+                "╚══════╝╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝       ╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚═╝╚══════╝\n" +
+                "                                                                                    \n");
     }
+
 
     private void checkInput() {
-        Scanner input = new Scanner(System.in);
-        System.out.print("Enter email for alerts:");
-        EmailListener.setEmail(input.nextLine());
+        Scanner myObj = new Scanner(System.in);
+        Scanner ano_ne_obj = new Scanner(System.in);
+        System.out.println("Do you want to receive email notifications?");
+        String ano_ne = ano_ne_obj.nextLine();
+        Pattern pattern = Pattern.compile("^((\\w|[-+])+(\\.[\\w-]+)*@[\\w-]+((\\.[\\d\\p{Alpha}]+)*(\\.\\p{Alpha}{2,})*)*)$");
+        while (!(ano_ne.equals("yes") || ano_ne.equals("no"))) {
+            System.out.println("Please enter a valid value: yes/no");
+            ano_ne = ano_ne_obj.nextLine();
+        }
+        if (ano_ne.equals("yes")) {
+            EmailListener.setWantEMail(true);
+            System.out.println("Enter email for accept alerts: ");
+            String email = myObj.nextLine();
+            Matcher matcher = pattern.matcher(email);
+            while (!matcher.find()) {
+                System.out.println("Please enter a valid email for accept alerts");
+                email = myObj.nextLine();
+            }
+            EmailListener.setEmail(email);
+        } else if (ano_ne.equals("no")) {
+            EmailListener.setWantEMail(false);
+        }
     }
-
-
-
-
-
 }
+
