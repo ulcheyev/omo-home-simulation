@@ -4,16 +4,10 @@ import cvut.omo.app_utils.Utils;
 import cvut.omo.data_collections.activity_events.SmartHomeEventCollection;
 import cvut.omo.data_collections.consumption.ConsumptionCollection;
 import cvut.omo.data_collections.visitor.HomeConfigurationReportReportVisitor;
-import cvut.omo.entity.device.notifier.EmailListener;
 import cvut.omo.home_structure.home_builder.Home;
 import cvut.omo.home_structure.home_builder.SmartHomeBuilder;
 import cvut.omo.home_structure.home_builder.SmartHomeBuilderDirector;
-
 import java.io.IOException;
-import java.util.Scanner;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 import static cvut.omo.app_utils.Utils.checkInput;
 import static cvut.omo.app_utils.Utils.hello;
 

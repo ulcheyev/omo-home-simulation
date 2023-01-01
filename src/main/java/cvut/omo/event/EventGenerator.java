@@ -1,7 +1,9 @@
 package cvut.omo.event;
 
+import cvut.omo.app_utils.Utils;
 import cvut.omo.entity.Responsible;
 import cvut.omo.event.event_type.DeviceResponsibleEvent;
+import static cvut.omo.event.event_type.DeviceResponsibleEvent.*;
 import cvut.omo.event.event_type.LivingEntityResponsibleEvent;
 import cvut.omo.event.event_type.EventType;
 import cvut.omo.event.event_type.HomeEvent;
@@ -9,6 +11,8 @@ import cvut.omo.home_structure.home_builder.Home;
 import cvut.omo.home_structure.nulls.NullRoom;
 import cvut.omo.home_structure.room_builder.Room;
 import cvut.omo.home_structure.room_builder.RoomName;
+
+import java.util.List;
 
 import static cvut.omo.app_utils.Utils.getRandomInt;
 import static cvut.omo.app_utils.Utils.getRandomObjFromList;
@@ -114,24 +118,33 @@ public class EventGenerator {
 
         Responsible homeDevice = (Responsible) getRandomObjFromList(Home.INSTANCE.getHomeDevices());
 
+
         while(!eventType.getHomeDevices().contains(homeDevice.getClass())){
             homeDevice = (Responsible) getRandomObjFromList(Home.INSTANCE.getHomeDevices());
         }
 
-        if(eventType == DeviceResponsibleEvent.FIRE_SENSOR_ALARM || eventType == DeviceResponsibleEvent.WATER_LEAK_SENSOR_ALARM){
-            int rnd = getRandomInt(50);
-            if(rnd % 23 == 0){
-                Room room = homeDevice.getRoom();
-                Event event = new Event(homeDevice, eventType);
-                event.setRoom(room);
-            }else{
-                generateRandomDeviceEvent();
-                return;
+        if(eventType.equals(DeviceResponsibleEvent.FIRE_SENSOR_ALARM )
+           || eventType.equals(DeviceResponsibleEvent.WATER_LEAK_SENSOR_ALARM)){
+
+            boolean probability = Utils.yesOrNo(0.09f);
+            if(!probability){
+                eventType = skipAlarmEvents();
             }
         }
         Room room = homeDevice.getRoom();
         Event event = new Event(homeDevice, eventType);
         event.setRoom(room);
+    }
+
+    private static DeviceResponsibleEvent skipAlarmEvents(){
+        DeviceResponsibleEvent[] values = DeviceResponsibleEvent.values();
+        DeviceResponsibleEvent eventType = getRandomObjFromList(List.of(values));
+        while(eventType.equals(FIRE_SENSOR_ALARM) ||
+                eventType.equals(WATER_LEAK_SENSOR_ALARM))
+        {
+           eventType = getRandomObjFromList(List.of(values));
+        }
+        return eventType;
     }
 
     /**

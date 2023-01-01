@@ -56,7 +56,7 @@ public class Utils {
      * @return true -> yes, false -> no
      */
     public static boolean yesOrNo(float probabilityOfYes) {
-        return PRNG.nextInt()%100 < (probabilityOfYes * 100);
+        return Math.random() < probabilityOfYes;
     }
 
 

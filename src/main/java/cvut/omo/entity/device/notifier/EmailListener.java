@@ -20,6 +20,8 @@ public class EmailListener implements EventListener{
 
     @Setter
     private static String email;
+
+    private static int counter = 0;
     @Setter
     private static boolean wantEMail = false;
 
@@ -31,13 +33,13 @@ public class EmailListener implements EventListener{
      */
     @Override
     public void update(String message, Sensor sensor) {
-//        final Properties properties = new Properties();
-//        Session mailSession = Session.getDefaultInstance(properties);
-//        MimeMessage msg = new MimeMessage(mailSession);
-//        try {
+        if(wantEMail == true){
+//            final Properties properties = new Properties();
 //            properties.load(new FileInputStream("mail.properties"));
+//            Session mailSession = Session.getDefaultInstance(properties);
+//            MimeMessage msg = new MimeMessage(mailSession);
 //            msg.setFrom(new InternetAddress("marinaloki123"));
-//            msg.addRecipient(Message.RecipientType.TO, new InternetAddress(email));
+//            msg.addRecipient(Message.RecipientType.TO, new InternetAddress("mrg.lupenko@gmail.com"));
 //            final String text =
 //                    "Hello,\n we notify you that it worked in the house: "
 //                            + sensor.getClass().getSimpleName() + message + "\nrespectfully, your Smart Home";
@@ -48,7 +50,13 @@ public class EmailListener implements EventListener{
 //            tr.connect("marinaloki123@gmail.com", "otiqrytddmprpkmq");
 //            tr.sendMessage(msg, msg.getAllRecipients());
 //            tr.close();
-//        }catch (MessagingException | IOException ignored){}
+
+            System.out.println(counter++ + "XEXE");
+        }
+        else{
+            return;
+        }
     }
+
 
 }
