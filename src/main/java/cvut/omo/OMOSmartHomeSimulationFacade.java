@@ -108,6 +108,7 @@ public class OMOSmartHomeSimulationFacade {
         generateActivityAndUsageReport();
         generateConsumptionReport();
         generateHomeConfigurationReport();
+        System.out.println("**CHECK THE REPORTS FOLDER IN THE ROOT**");
     }
 
 

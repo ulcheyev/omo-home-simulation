@@ -16,7 +16,6 @@ public class App {
 
         //GENERATE REPORTS
         smartHome.generateAllReports();
-
     }
 }
 

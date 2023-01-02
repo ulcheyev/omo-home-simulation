@@ -1,7 +1,0 @@
-********************
-DOCUMENTATION
-********************
-
-This is very clever documentation for the device: Fridge you just broke.
- It turned out that your device has a state of damage: MEDIUM.
- You still have a chance to save your device. Call your grandfather and he will help you.
