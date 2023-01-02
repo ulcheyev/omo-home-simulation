@@ -17,7 +17,7 @@ public class WaterLeakSensor extends Sensor {
     }
 
     @Override
-    public void alert() {
+    public void alert() throws MessagingException, IOException {
         for (EventListener listner :listenerList){
             listner.update(message, this);
         }

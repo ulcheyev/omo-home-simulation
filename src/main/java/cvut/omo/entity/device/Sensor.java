@@ -44,7 +44,7 @@ public abstract class Sensor extends HomeAppliances {
         this.setCurrentConsumption(SourceType.ENERGY, Constants.SENSOR_ELECTRICITY_IDDLE_STATE_CONSUMPTION);
     };
 
-    public void run(){
+    public void run() throws MessagingException, IOException {
         this.setCurrentConsumption(SourceType.ENERGY, Constants.SENSOR_ELECTRICITY_RUN_STATE_CONSUMPTION);
         alert();
     };
@@ -54,5 +54,5 @@ public abstract class Sensor extends HomeAppliances {
      * Each sensor has its own implementation.
      * Notifies all {@link #listenerList}
      */
-    public abstract void alert();
+    public abstract void alert() throws MessagingException, IOException;
 }

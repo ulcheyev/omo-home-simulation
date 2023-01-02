@@ -3,7 +3,7 @@ V našem projektu byl cíl vytvořit simulaci života v domě. Simulace životů
 
 ## Základní instrukce :page_facing_up:
 
-Neco
+Při spuštění simulace si budete muset nejprve vybrat, zda chcete dostávat e-mailová upozornění v případě poplachu, poté zadejte svůj e-mail a vyberte počet dní simulace.
 
 ## Funkční požadavky :hammer_and_wrench:
 
@@ -30,12 +30,12 @@ Neco
   - [+] HouseConfigurationReport: veškerá konfigurační data domu.
 
   - [+] EventReport: report eventů.
-  -	[-] ActivityAndUsageReport: Report akcí (aktivit) jednotlivých osob a zvířat.
+  -	[+] ActivityAndUsageReport: Report akcí (aktivit) jednotlivých osob a zvířat.
   -	[+] ConsumptionReport: Kolik jednotlivé spotřebiče spotřebovaly elektřiny, plynu, vody. Včetně finančního vyčíslení.
 
 - **F9.** [+] Při rozbití zařízení musí obyvatel domu prozkoumat dokumentaci k zařízení - najít záruční list, projít manuál na opravu a provést nápravnou akcí.
 
-- **F10.** [-] Rodina je aktivní a volný čas tráví zhruba v poměru (50% používání spotřebičů v domě a 50% sport kdy používá sportovní náčiní kolo nebo lyže). Když není volné zařízení nebo sportovní náčiní, tak osoba čeká.
+- **F10.** [+] Rodina je aktivní a volný čas tráví zhruba v poměru (50% používání spotřebičů v domě a 50% sport kdy používá sportovní náčiní kolo nebo lyže). Když není volné zařízení nebo sportovní náčiní, tak osoba čeká.
 
 </details>
 
@@ -81,7 +81,9 @@ Neco
  </details>
 
 ## Class Diagram :bar_chart:
-[Class diagram](https://gitlab.fel.cvut.cz/ulcheyev/lupenmar_ulcheyev_omo/-/blob/8ca68f36d484200e58f284b05b50ff08e2ec2a9c/diagrams/class_diagram_omo.drawio.pdf)
+[Class diagram v.01](https://gitlab.fel.cvut.cz/ulcheyev/lupenmar_ulcheyev_omo/-/blob/8ca68f36d484200e58f284b05b50ff08e2ec2a9c/diagrams/class_diagram_omo.drawio.pdf)
+
+[Class diagram v.02](https://gitlab.fel.cvut.cz/ulcheyev/lupenmar_ulcheyev_omo/-/blob/main/diagrams/class_diagram_v02.png)
 ## Use-case diagram :construction_worker:
 [Use-case diagram](https://gitlab.fel.cvut.cz/ulcheyev/lupenmar_ulcheyev_omo/-/blob/main/diagrams/use_case_omo.drawio.pdf)
 

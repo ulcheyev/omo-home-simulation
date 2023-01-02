@@ -14,7 +14,7 @@ public class FireSensor extends Sensor  {
 
 
     @Override
-    public void alert()  {
+    public void alert() throws MessagingException, IOException {
         for (EventListener listener :listenerList){
             listener.update(message, this);
         }

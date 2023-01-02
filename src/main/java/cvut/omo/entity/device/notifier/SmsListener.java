@@ -18,6 +18,6 @@ public class SmsListener implements EventListener {
      */
     @Override
     public void update(String message, Sensor sensor) {
-//        logger.info(message);
+        logger.info(message);
     }
 }

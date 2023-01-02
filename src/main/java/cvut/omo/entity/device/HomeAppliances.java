@@ -16,6 +16,7 @@ import cvut.omo.home_structure.room_builder.Room;
 import lombok.Getter;
 import lombok.Setter;
 
+import javax.mail.MessagingException;
 import java.io.IOException;
 import java.util.*;
 
@@ -186,7 +187,7 @@ public abstract class HomeAppliances extends Responsible implements HomeDevice{
     /**
      * Run current device. Change current consumption.
      */
-    protected abstract void run();
+    protected abstract void run() throws MessagingException, IOException;
 
     /**
      * Disable current device. Change current consumption.
