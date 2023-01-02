@@ -63,20 +63,27 @@ Při spuštění simulace si budete muset nejprve vybrat, zda chcete dostávat e
   - Mění spotřebu určitých zdrojů zařízeními v závislosti na jejich stavu.
 - **DP2.**  Iterator
   - Používá se při vytváření EventReport, ConsummentReport. Umožňuje iterativně obejít všechny objekty a shromáždit všechny data v kolekci s následným generováním reportu.
-- **DP3.**  Factory/Factory method
+- **DP3.**  Factory
+  - Používá se při vytváření domácích zařízení a aktivit.
 - **DP4.**  Singleton
-  - Používá se ve třídě vytváření náhodných celočíselných hodnot pro účely následného použití při generování eventu. To zaručuje jedinečnou hodnotu.
+  - Používá se při vytváření všesh objektů, které musí mít 1 instanci.
 - **DP5.**  Null Object Pattern
+ - Aby se vyhnout NullPointerException v nezbytných okamžicích.
 - **DP6.**  Observer
-  - Pokud jsou aktivovány senzory bezpečnostní , bude to oznámeno všemi nezbytnými prostředky.
+  - Pokud jsou aktivovány senzory bezpečnostní, bude to oznámeno všemi nezbytnými prostředky.
+  - Pro zpracování fronty použití předmětu (třída Item).
 - **DP7.**  Lazy Initialization
   - Používá se ke generování dokumentace pouze v případě, že je zařízení rozbité.
 - **DP8.**  Visitor
   - Používá se při vytváření HouseConfigurationReport. Umožňuje přidat operaci pro získání všech dat o objektů bez provádění změn ve stávající struktuře objektů.
 - **DP9.**  Builder
-  - Používá se k postupnému vytváření objektů, jako je zařízení, osoba, zvíře, vozidlo.
+  - Používá se k postupnému vytváření domu a místnosti.
 - **DP10.**  Composite
+  - Používá se k aktualizaci domu a komponent domu (patro, místnost...)
 - **DP11.**  Strategy
+  - Používá se k výběru řešení události konkrétního typu (HomeEvent, DeviceEvent...)
+- **DP12.**  Template method
+  - Umožňuje třídám Activity, SolveStrategy a HomeAppliances předefinovat některé kroky algoritmu a ponechat jejich strukturu nezměněnou.  
 
  </details>
 
