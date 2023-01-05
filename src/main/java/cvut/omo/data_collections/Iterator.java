@@ -13,8 +13,8 @@ public interface Iterator {
      Object next();
 
      /**
-      *
-      * @return is the iterator at the end of structure or not
+      * Returns is the iterator at the end of structure or not
+      * @return true, if the iterator is at the end of structure or not
       */
      boolean hasNext();
 }

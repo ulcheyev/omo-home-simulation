@@ -54,6 +54,7 @@ public class Utils {
     }
 
     /**
+     * Return random probability of yes
      * @param probabilityOfYes probability of yes
      * @return true -> yes, false -> no
      */
@@ -63,7 +64,7 @@ public class Utils {
 
 
     /**
-     *
+     * Returns random object from specified list
      * @param objs list of objects
      * @param <T> specified class
      * @return random object from list
@@ -94,7 +95,9 @@ public class Utils {
         return days;
     }
 
-
+    /**
+     * Hello before start program
+     */
     public static void hello() {
         System.out.println("\n" +
                 "███████╗███╗   ███╗ █████╗ ██████╗ ████████╗    ██╗  ██╗ ██████╗ ███╗   ███╗███████╗\n" +
@@ -106,7 +109,9 @@ public class Utils {
                 "                                                                                    \n");
     }
 
-
+    /**
+     * Scan email input
+     */
     public static void checkInput() {
         Scanner myObj = new Scanner(System.in);
         Scanner ano_ne_obj = new Scanner(System.in);
