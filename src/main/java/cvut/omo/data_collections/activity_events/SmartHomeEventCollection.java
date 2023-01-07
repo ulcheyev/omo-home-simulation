@@ -11,7 +11,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Collection, which stores every event
+ * Collection, which stores every event.
  */
 public class SmartHomeEventCollection {
 
@@ -60,7 +60,7 @@ public class SmartHomeEventCollection {
     public static List<Event> getAll(){return events;}
 
     /**
-     * Check, if every event in collection is solved
+     * Check, if every event in collection is solved.
      * @return true if all events solved, false if not
      */
     public static boolean allSolved() {
@@ -103,7 +103,7 @@ public class SmartHomeEventCollection {
     }
 
     /**
-     * Generate activity and usage report
+     * Generate activity and usage report.
      * @throws IOException the directory does not exist
      */
     public static void generateActivityAndUsageReport() throws IOException {
@@ -118,7 +118,6 @@ public class SmartHomeEventCollection {
     }
 
     /**
-     *
      * @return {@link EventReportIterator} for create event report
      */
     public static EventReportIterator createEventReportIterator(){
@@ -126,7 +125,6 @@ public class SmartHomeEventCollection {
     }
 
     /**
-     *
      * @return {@link ActivityReportIterator} for create activity and usage report
      */
     public static ActivityReportIterator createActivityReportIterator(){

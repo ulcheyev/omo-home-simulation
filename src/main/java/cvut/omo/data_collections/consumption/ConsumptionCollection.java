@@ -13,8 +13,7 @@ import java.util.HashMap;
 import java.util.List;
 
 /**
- * Class represents collection, which store
- * all {@link ConsumptionData} about devices
+ * Class represents collection, which store all {@link ConsumptionData} about devices.
  */
 @Getter
 public class ConsumptionCollection implements IConsumptionCollection {
@@ -87,7 +86,6 @@ public class ConsumptionCollection implements IConsumptionCollection {
 
 
     /**
-     *
      * {@return {@link ConsumptionReportIterator} for generating report}
      */
     public ConsumptionReportIterator createConsumptionReportIterator() {

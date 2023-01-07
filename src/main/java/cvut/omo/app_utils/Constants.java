@@ -4,7 +4,7 @@ package cvut.omo.app_utils;
 import com.google.common.collect.ImmutableList;
 
 /**
- * Class contains constants for using in application
+ * Class contains constants for using in application.
  */
 public class Constants {
 

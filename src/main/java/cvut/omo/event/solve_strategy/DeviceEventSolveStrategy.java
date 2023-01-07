@@ -5,7 +5,7 @@ import cvut.omo.event.Event;
 import cvut.omo.home_structure.room_builder.Room;
 
 /**
- * Class is needed to solve events from {@link cvut.omo.event.event_type.DeviceResponsibleEvent}
+ * Class is needed to solve events from {@link cvut.omo.event.event_type.DeviceResponsibleEvent}.
  */
 public class DeviceEventSolveStrategy extends SolveStrategy {
 

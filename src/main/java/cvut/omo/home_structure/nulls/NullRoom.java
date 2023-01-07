@@ -4,7 +4,7 @@ import cvut.omo.home_structure.Floor;
 import cvut.omo.home_structure.room_builder.Room;
 import cvut.omo.home_structure.room_builder.RoomName;
 /**
- * Class warns against an NullPointerException
+ * Class warns against an NullPointerException.
  */
 public class NullRoom extends Room {
 

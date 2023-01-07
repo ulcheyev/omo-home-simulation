@@ -12,7 +12,6 @@ public class BaseActivity extends Activity {
     private static final String SLEEP_FLAG = "SLEEP";
 
     /**
-     *
      * @param res responsible for this activity
      * @param event the event to which this activity relates
      * @param activityType {@link ActivityType} type of activity

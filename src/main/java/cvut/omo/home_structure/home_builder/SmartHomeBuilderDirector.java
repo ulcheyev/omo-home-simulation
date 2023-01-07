@@ -4,12 +4,12 @@ import cvut.omo.entity.living.pet.PetType;
 import cvut.omo.home_structure.room_builder.RoomName;
 
 /**
- * Director for {@link SmartHomeBuilder}
+ * Director for {@link SmartHomeBuilder}.
  */
 public final class SmartHomeBuilderDirector {
 
     /**
-     * Instance of {@link SmartHomeBuilderDirector}
+     * Instance of {@link SmartHomeBuilderDirector}.
      */
     public final static SmartHomeBuilderDirector INSTANCE = new SmartHomeBuilderDirector();
     private SmartHomeBuilderDirector(){}

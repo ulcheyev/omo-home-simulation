@@ -5,12 +5,12 @@ import cvut.omo.event.Event;
 import cvut.omo.home_structure.room_builder.Room;
 
 /**
- * Factory for {@link Activity}
+ * Factory for {@link Activity}.
  */
 public class ActivityFactory {
 
     /**
-     * Creates relocate activity
+     * Creates relocate activity.
      * @param res responsible for activity
      * @param event the event to which this activity relates
      * @param room the room to relocate
@@ -24,7 +24,7 @@ public class ActivityFactory {
 
 
     /**
-     * Creates new activity
+     * Creates new activity.
      * @param res responsible for activity
      * @param event the event to which this activity relates
      * @param activityType activity type from {@link ActivityType}

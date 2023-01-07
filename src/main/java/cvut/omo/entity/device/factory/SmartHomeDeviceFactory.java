@@ -3,10 +3,13 @@ package cvut.omo.entity.device.factory;
 import cvut.omo.app_utils.Constants;
 import cvut.omo.entity.device.*;
 
+/**
+ * Class is used to create device in {@link cvut.omo.home_structure.home_builder.Home}.
+ */
 public class SmartHomeDeviceFactory implements HomeDeviceFactory {
 
     /**
-     * Instance of SmartHomeDeviceFactory
+     * Instance of SmartHomeDeviceFactory.
      */
     public static final SmartHomeDeviceFactory INSTANCE = new SmartHomeDeviceFactory();
 

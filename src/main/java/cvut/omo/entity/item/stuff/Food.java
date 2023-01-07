@@ -6,7 +6,7 @@ import java.util.Arrays;
 
 /**
  * The class represents food, which can be in {@link cvut.omo.entity.device.HomeDevice},
- * for example, in {@link cvut.omo.entity.device.Fridge}
+ * for example, in {@link cvut.omo.entity.device.Fridge}.
  */
 public class Food extends Stuff{
 

@@ -24,7 +24,7 @@ import static cvut.omo.app_utils.Constants.DEVICE_BROKEN_STATE;
 import static cvut.omo.app_utils.Constants.DEVICE_OFF_STATE_ELECTRICITY;
 
 /**
- * Generalizing class for all appliances in the house
+ * Generalizing class for all appliances in the house.
  */
 @Getter
 @Setter
@@ -40,7 +40,7 @@ public abstract class HomeAppliances extends Responsible implements HomeDevice{
     protected BrokennessLevel brokennessLevel;
 
     /**
-     * Constructor for class
+     * Constructor for class.
      * @param lifeTime lifetime of current home device
      */
     public HomeAppliances(double lifeTime){
@@ -54,22 +54,22 @@ public abstract class HomeAppliances extends Responsible implements HomeDevice{
     //API METHODS
 
     /**
-     * Method switches on current device (depends on {@link #homeDeviceState}), then call {@link #update()}
+     * Method switches on current device (depends on {@link #homeDeviceState}), then call {@link #update()}.
      */
     public void switchOn(){homeDeviceState.switchOn(this); update();};
 
     /**
-     * Method switches off current device (depends on {@link #homeDeviceState}), then call {@link #update()}
+     * Method switches off current device (depends on {@link #homeDeviceState}), then call {@link #update()}.
      */
     public void switchOff(){homeDeviceState.switchOff(this); update();}
 
     /**
-     * Method pause current device (depends on {@link #homeDeviceState}), then call {@link #update()}
+     * Method pause current device (depends on {@link #homeDeviceState}), then call {@link #update()}.
      */
     public void pause(){homeDeviceState.pause(this); update();};
 
     /**
-     * Method allows using current device (depends on {@link #homeDeviceState}), then call {@link #update()}
+     * Method allows using current device (depends on {@link #homeDeviceState}), then call {@link #update()}.
      * @param person  {@link Person}, which uses current device
      */
     public void use(Person person){
@@ -78,7 +78,7 @@ public abstract class HomeAppliances extends Responsible implements HomeDevice{
     };
 
     /**
-     * Method allows repairing current device (depends on {@link #homeDeviceState}), then call {@link #update()}
+     * Method allows repairing current device (depends on {@link #homeDeviceState}), then call {@link #update()}.
      * @param event {@link Event} of this method call
      * @param person {@link Person} which will repair current device
      */
@@ -107,7 +107,7 @@ public abstract class HomeAppliances extends Responsible implements HomeDevice{
     };
 
     /**
-     * Method allows breaking current device (depends on {@link #homeDeviceState}), then call {@link #update()}
+     * Method allows breaking current device (depends on {@link #homeDeviceState}), then call {@link #update()}.
      */
     public void breakDevice(){
         homeDeviceState._break(this);
@@ -116,7 +116,7 @@ public abstract class HomeAppliances extends Responsible implements HomeDevice{
 
 
     /**
-     * Changes current consumption of this device
+     * Changes current consumption of this device.
      * @param sourceType source type of device
      * @param currentConsumption new consumption
      */
@@ -125,7 +125,7 @@ public abstract class HomeAppliances extends Responsible implements HomeDevice{
     }
 
     /**
-     * Return current consumption
+     * Return current consumption.
      * @param sourceType source type of this device which current consumption will return
      * @return {@link #currentConsumption}
      */
@@ -134,10 +134,8 @@ public abstract class HomeAppliances extends Responsible implements HomeDevice{
     }
 
     /**
-     * Method updates consumption data in {@link ConsumptionCollection} of this device
-     * (depends on {@link #homeDeviceState}).
-     * Check {@link #workingHours} of this device. If {@link #workingHours > {@link #lifeTimeInYear}},
-     * device will break.
+     * Method updates consumption data in {@link ConsumptionCollection} of this device (depends on {@link #homeDeviceState}).
+     * Check {@link #workingHours} of this device. If {@link #workingHours > {@link #lifeTimeInYear}}, device will break.
      */
     public void update(){
         super.update();
@@ -230,7 +228,7 @@ public abstract class HomeAppliances extends Responsible implements HomeDevice{
     }
 
     /**
-     * Change current device {@link #homeDeviceState}
+     * Change current device {@link #homeDeviceState}.
      * @param homeDeviceState state to set
      */
     public void setHomeDeviceState(HomeDeviceState homeDeviceState) {

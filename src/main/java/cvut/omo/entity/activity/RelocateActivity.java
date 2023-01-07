@@ -7,7 +7,7 @@ import cvut.omo.home_structure.room_builder.Room;
 import lombok.Getter;
 
 /**
- * Class represents move actions in house
+ * Class represents move actions in house.
  */
 public class RelocateActivity extends Activity {
 

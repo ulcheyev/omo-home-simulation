@@ -13,7 +13,7 @@ public class WaitingActivity extends Activity{
     private final Item waitTo;
 
     /**
-     * Constructor equates all values from the activity in the parameter
+     * Constructor equates all values from the activity in the parameter.
      * @param waitTo item to wait
      * @param activity the activity that will execute after waiting
      */

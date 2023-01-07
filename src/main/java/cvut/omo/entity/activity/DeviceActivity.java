@@ -20,7 +20,7 @@ import static cvut.omo.app_utils.Constants.*;
 
 
 /**
- * Class represents actions with the device
+ * Class represents actions with the device.
  */
 public class DeviceActivity extends Activity {
 
@@ -41,8 +41,8 @@ public class DeviceActivity extends Activity {
     }
 
     /**
-     * Found the device that the responsible will interact with (depends on {@link #toUse})
-     * After finding device, call the specified method {@link #activityType} in the found device
+     * Found the device that the responsible will interact with (depends on {@link #toUse}).
+     * After finding device, call the specified method {@link #activityType} in the found device.
      * If {@link #toUse} is null, responsible is searching device.
      *  @param responsible responsible for activity
      * @return true, if activity is executed successfully
@@ -114,7 +114,6 @@ public class DeviceActivity extends Activity {
         return s.toString();
     }
 
-    /*check if that  activity contains flags for interact with device*/
 
     private String containsFlag(ActivityType activityType){
         String name = activityType.name();

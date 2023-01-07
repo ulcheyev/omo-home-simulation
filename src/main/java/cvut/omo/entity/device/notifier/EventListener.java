@@ -4,10 +4,13 @@ import cvut.omo.entity.device.Sensor;
 import javax.mail.MessagingException;
 import java.io.IOException;
 
+/**
+ * Interface for notifiers.
+ */
 public interface EventListener {
 
     /**
-     * Method notifies the user about events related to {@link Sensor} alarms
+     * Method notifies the user about events related to {@link Sensor} alarms.
      * @param message message to send
      * @param sensor sensor, which alarm went off
      */

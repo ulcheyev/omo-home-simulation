@@ -8,12 +8,12 @@ import cvut.omo.home_structure.home_builder.Home;
 import java.util.List;
 
 /**
- * Class represent builder for {@link Room}
+ * Class represent builder for {@link Room}.
  */
 public final class SmartHomeRoomBuilder implements RoomBuilder {
 
     /**
-     * Instance of {@link SmartHomeRoomBuilder}
+     * Instance of {@link SmartHomeRoomBuilder}.
      */
     public static final SmartHomeRoomBuilder INSTANCE = new SmartHomeRoomBuilder();
     private SmartHomeRoomBuilder(){}
@@ -60,7 +60,7 @@ public final class SmartHomeRoomBuilder implements RoomBuilder {
     }
 
     /**
-     * Returns result
+     * Returns result.
      * @return result of building
      */
     public Room getResult(){

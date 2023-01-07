@@ -17,32 +17,32 @@ public interface RoomBuilder {
     RoomBuilder reset();
 
     /**
-     * Add window to room
+     * Add window to room.
      * @return current RoomBuilder
      */
     RoomBuilder setWindow();
 
     /**
-     * Set room name {@link RoomName}
+     * Set room name {@link RoomName}.
      * @return current RoomBuilder
      */
     RoomBuilder setRoomType(RoomName roomName);
 
     /**
-     * Set room floor
+     * Set room floor.
      * @param floor floor to set
      * @return current RoomBuilder
      */
     RoomBuilder setFloor(Floor floor);
 
     /**
-     * Add home device to room
+     * Add home device to room.
      * @return current RoomBuilder
      */
     RoomBuilder setHomeDevice(HomeDevice homeDevice);
 
     /**
-     * Add item to room
+     * Add item to room.
      * @param item item to add
      * @return current RoomBuilder
      */

@@ -7,7 +7,7 @@ import cvut.omo.entity.device.HomeAppliances;
 import java.io.IOException;
 
 /**
- * The class is an implementation of the documentation for {@link cvut.omo.entity.device.HomeDevice}
+ * The class is an implementation of the documentation for {@link cvut.omo.entity.device.HomeDevice}.
  */
 public class Documentation {
 
@@ -19,7 +19,7 @@ public class Documentation {
 
 
     /**
-     * Constructor for class
+     * Constructor for class.
      * @param homeAppliances the device for which documentation is being created
      */
     public Documentation(HomeAppliances homeAppliances){

@@ -10,8 +10,7 @@ import java.util.Hashtable;
 import java.util.List;
 
 /**
- * Class represents iterating function over {@link ConsumptionCollection}
- * to generate consumption report
+ * Class represents iterating function over {@link ConsumptionCollection} to generate consumption report.
  */
 public class ConsumptionReportIterator implements Iterator {
 
@@ -61,7 +60,6 @@ public class ConsumptionReportIterator implements Iterator {
         return res.toString();
     }
 
-    /*generate single row*/
     private void generateRow(List<ConsumptionData> consumptionData, StringBuilder res,
                              SourceType sourceType, char currency)
     {
@@ -77,7 +75,6 @@ public class ConsumptionReportIterator implements Iterator {
                 .append(currency).append(") ");
     }
 
-    /*generate general info*/
     private void addInfoAboutConsumptionFromAllTime(StringBuilder res){
         res.append("\n");
         for (java.util.Iterator<SourceType> it = sourceTypes.keys().asIterator(); it.hasNext(); ){

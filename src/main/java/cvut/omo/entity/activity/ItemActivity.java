@@ -11,13 +11,15 @@ import cvut.omo.entity.item.item.Item;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Class represents actions with {@link Item}.
+ */
 public class ItemActivity extends Activity{
 
-    //FLAGS
     private Class<? extends Usable> toUse;
 
     /**
-     *
+
      * @param responsible responsible for this activity
      * @param event the event to which this activity relates
      * @param toUse the class that the responsible will interact with
@@ -29,10 +31,10 @@ public class ItemActivity extends Activity{
     }
 
     /**
-     * Found the item that the responsible will interact with (depends on {@link #toUse})
+     * Found the item that the responsible will interact with (depends on {@link #toUse}).
      * After founding item, check, if item is free.
      * Case item is free: item will be used by responsible immediately.
-     * Case item in use: responsible will have {@link WaitingActivity}
+     * Case item in use: responsible will have {@link WaitingActivity}.
      *  @param responsible responsible for activity
      * @return true, if activity is executed successfully
      */
@@ -57,7 +59,6 @@ public class ItemActivity extends Activity{
         return false;
     }
 
-    /*search items*/
     private List<Item> searchItems(){
         List<Item> founded = new ArrayList<>();
         for(Room room: Home.INSTANCE.getAllRooms()){

@@ -3,7 +3,7 @@ package cvut.omo.data_collections.activity_events;
 import cvut.omo.event.Event;
 
 /**
- * Class is using for handling events
+ * Class is using for handling events.
  */
 public class EventManager {
 

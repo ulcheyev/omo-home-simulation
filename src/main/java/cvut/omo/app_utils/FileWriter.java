@@ -6,14 +6,14 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 /**
- * Class represents write to file function
+ * Class represents write to file function.
  */
 public class FileWriter {
 
 
 
     /**
-     * Generates report from to the specified file name with specified text report
+     * Generates report from to the specified file name with specified text report.
      * @param fileName
      * @param report report text
      * @throws IOException when the directory does not exist
@@ -23,7 +23,7 @@ public class FileWriter {
     }
 
     /**
-     * Generates documentation from to the specified file name with specified text documentation
+     * Generates documentation from to the specified file name with specified text documentation.
      * @param fileName file name
      * @param text documentation text
      * @throws IOException when the directory does not exist
@@ -34,7 +34,7 @@ public class FileWriter {
 
 
     /**
-     * Open file to write
+     * Open file to write.
      * @param path path to file
      * @param fileName file name
      * @return
@@ -48,7 +48,7 @@ public class FileWriter {
     }
 
     /**
-     * Write to file
+     * Write to file.
      * @param file to write
      * @param string text to write to file
      * @throws IOException
@@ -61,7 +61,7 @@ public class FileWriter {
     }
 
     /**
-     * Clean directory
+     * Clean directory.
      * @param directory to clean
      * @throws IOException
      */

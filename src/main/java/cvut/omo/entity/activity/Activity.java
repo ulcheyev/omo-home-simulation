@@ -72,15 +72,12 @@ public abstract class Activity {
 
 
     /**
-     *
      * @return {returns true, if activity is executed}
      */
     public  boolean isExecuted(){
         return isExecuted;
     }
 
-    /* assign room for activity depends on responsible
-     * and activity type*/
     private void assignRoom() {
 
         if(checkIfActivityTypeContainsStubRoom()){
@@ -109,8 +106,7 @@ public abstract class Activity {
         return activityType.getRoomNames().contains(RoomName.STUB);
     }
 
-    /*if responsible is in activity types room ->
-     * assign responsibles room*/
+
     private boolean checkResponsibleRoom(){
         boolean res = false;
         if(!responsible.isNull()){
@@ -142,8 +138,6 @@ public abstract class Activity {
                 "did " + activityType.name();
     }
 
-    /*relocate responsible:if activity room and responsible room
-   are not equal -> add relocate activity to responsible activities*/
     private void checkResponsibleLocation(){
         if(!room.isNull() &&
                 !responsible.getRoom().equals(room))

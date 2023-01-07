@@ -3,7 +3,7 @@ package cvut.omo.entity.item.stuff;
 import lombok.Getter;
 
 /**
- * The class represents things that can be in {@link cvut.omo.entity.device.HomeDevice}
+ * The class represents things that can be in {@link cvut.omo.entity.device.HomeDevice}.
  */
 public abstract class Stuff {
 
@@ -15,7 +15,7 @@ public abstract class Stuff {
     }
 
     /**
-     * Interface for stuff type
+     * Interface for stuff type.
      */
     public interface StuffType{}
 }

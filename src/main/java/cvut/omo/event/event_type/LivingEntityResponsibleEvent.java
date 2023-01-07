@@ -14,7 +14,7 @@ import java.util.List;
 import static cvut.omo.entity.activity.ActivityType.*;
 
 /**
- * Class represents event type, responsible for which may be {@link Person} or {@link Pet}
+ * Class represents event type, responsible for which may be {@link Person} or {@link Pet}.
  */
 public enum LivingEntityResponsibleEvent implements EventType {
 

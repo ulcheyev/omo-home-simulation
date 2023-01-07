@@ -6,7 +6,7 @@ import cvut.omo.home_structure.home_builder.Home;
 import static cvut.omo.event.EventGenerator.*;
 
 /**
- * Class performs the functions of simulating life in the {@link Home}
+ * Class performs the functions of simulating life in the {@link Home}.
  */
 public class Simulation {
 

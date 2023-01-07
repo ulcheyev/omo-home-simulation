@@ -16,11 +16,6 @@ import static cvut.omo.entity.activity.ActivityType.*;
  */
 public enum HomeEvent implements EventType {
 
-    /*
-     *STUB - IS NOT IN ROOM -> IN HOME IN GENERAL / OR OUTSIDE HOME (f.e STORM)
-     *COMMON - DOES NOT MATTER IN WHICH ROOM (f.e bulb burned out)
-     */
-
     KNOCK_ON_THE_DOOR(RoomName.VESTIBULE, CONTROL_THE_DOOR, OPEN_THE_DOR),
     BULB_BURNED_OUT(RoomName.COMMON,  CHANGE_BULB),
     RAIN(RoomName.STUB, DEVICE_CURCUIT_BREAKER_ON, DEVICE_CURCUIT_BREAKER_OFF),

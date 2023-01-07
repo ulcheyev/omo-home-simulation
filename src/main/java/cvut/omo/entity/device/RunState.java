@@ -6,7 +6,7 @@ import javax.mail.MessagingException;
 import java.io.IOException;
 
 /**
- * Class represent run state of {@link HomeDevice}
+ * Class represent run state of {@link HomeDevice}.
  */
 public class RunState extends HomeDeviceState{
 

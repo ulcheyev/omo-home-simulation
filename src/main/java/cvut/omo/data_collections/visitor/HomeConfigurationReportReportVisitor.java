@@ -18,7 +18,7 @@ import java.util.Iterator;
 
 
 /**
- * Class represents function, which generate home configuration report
+ * Class represents function, which generate home configuration report.
  *
  */
 public class HomeConfigurationReportReportVisitor implements SmartHomeReportVisitor {
@@ -106,7 +106,6 @@ public class HomeConfigurationReportReportVisitor implements SmartHomeReportVisi
         return "\n***Pet lives in the house with a role "  + pet.getResponsibleType();
     }
 
-    /*register component quantity for general info*/
     private void registerComponentQuantity(HomeComponent component){
         Integer res = quantities.get(component.getClass());
         if (res == null) res = 1;
@@ -114,7 +113,6 @@ public class HomeConfigurationReportReportVisitor implements SmartHomeReportVisi
         quantities.put(component.getClass(), res);
     }
 
-    /*return general (components quantity in house)*/
     private String getComponentQuantity(){
         StringBuilder res = new StringBuilder();
         res.append(Constants.STARS_UP);
