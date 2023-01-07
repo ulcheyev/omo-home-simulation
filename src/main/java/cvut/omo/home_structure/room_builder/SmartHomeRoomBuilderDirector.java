@@ -12,12 +12,12 @@ import cvut.omo.home_structure.home_builder.SmartHomeBuilder;
 
 
 /**
- * Director for {@link SmartHomeRoomBuilderDirector}
+ * Director for {@link SmartHomeRoomBuilderDirector}.
  */
 public final class SmartHomeRoomBuilderDirector {
 
     /**
-     * Instance of {@link SmartHomeRoomBuilderDirector}
+     * Instance of {@link SmartHomeRoomBuilderDirector}.
      */
     public static final SmartHomeRoomBuilderDirector INSTANCE = new SmartHomeRoomBuilderDirector();
     private SmartHomeRoomBuilderDirector(){}
@@ -63,7 +63,7 @@ public final class SmartHomeRoomBuilderDirector {
 
 
     /**
-     * Creates kitchen with with:
+     * Creates kitchen with:
      * 1 {@link Oven}
      * 1 {@link FireSensor}
      * 1 {@link WaterLeakSensor}
@@ -153,7 +153,7 @@ public final class SmartHomeRoomBuilderDirector {
      * 1 {@link FireSensor}
      * 1 {@link PetToy}
      * 1 {@link TV}
-     *1 {@link Computer}
+     * 1 {@link Computer}
      * @param roomBuilder builder, which will build this room
      * @param floor room floor
      */
@@ -170,7 +170,7 @@ public final class SmartHomeRoomBuilderDirector {
     }
 
     /**
-     * Created room from specified {@link RoomName}
+     * Created room from specified {@link RoomName}.
      * @param roomBuilder builder, which will build this room
      * @param roomName specified {@link RoomName}
      * @param floor room {@link Floor}

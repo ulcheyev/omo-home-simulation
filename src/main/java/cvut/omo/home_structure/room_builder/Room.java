@@ -47,7 +47,7 @@ public class Room implements HomeComponent {
     }
 
     /**
-     * Adds responsible to {@link #responsibles}
+     * Adds responsible to {@link #responsibles}.
      * @param responsible responsible to add
      */
     public void addResponsible(Responsible responsible){
@@ -56,7 +56,7 @@ public class Room implements HomeComponent {
     }
 
     /**
-     * Adds home device to {@link #homeDevices}
+     * Adds home device to {@link #homeDevices}.
      * @param homeDevice home device to add
      */
     public void addHomeDevice(HomeDevice homeDevice){
@@ -65,20 +65,20 @@ public class Room implements HomeComponent {
     }
 
     /**
-     * Adds window to {@link #windows}
+     * Adds window to {@link #windows}.
      */
     public void addWindow(){
         windows.add(new Window());
     }
 
     /**
-     * Adds item to {@link #items}
+     * Adds item to {@link #items}.
      * @param item item to add
      */
     public void addItem(Item item){items.add(item);}
 
     /**
-     * Returns responsible with specified {@link ResponsibleType}
+     * Returns responsible with specified {@link ResponsibleType}.
      * @param type specified {@link ResponsibleType}
      * @return responsible with specified {@link ResponsibleType} or {@link NullResponsible} is does not exist
      *
@@ -99,7 +99,7 @@ public class Room implements HomeComponent {
     public boolean isEmpty(){return responsibles.isEmpty();}
 
     /**
-     * Checks, if room contains specified {@link ResponsibleType}
+     * Checks, if room contains specified {@link ResponsibleType}.
      * @param roleType  specified {@link ResponsibleType}
      * @return true, if room contains specified {@link ResponsibleType}
      */
@@ -113,7 +113,7 @@ public class Room implements HomeComponent {
     }
 
     /**
-     * Return {@link Person} in current room
+     * Return {@link Person} in current room.
      * @return list of persons
      */
    public List<Person> getPersons(){
@@ -127,7 +127,7 @@ public class Room implements HomeComponent {
    }
 
     /**
-     * Return {@link Pet} in current room
+     * Return {@link Pet} in current room.
      * @return list of pets
      */
     public List<Pet> getPets(){
@@ -142,7 +142,7 @@ public class Room implements HomeComponent {
 
 
     /**
-     * Remove specified responsible from current room {@link #responsibles}
+     * Remove specified responsible from current room {@link #responsibles}.
      * @param responsible
      */
     public void removeResponsible(Responsible responsible){

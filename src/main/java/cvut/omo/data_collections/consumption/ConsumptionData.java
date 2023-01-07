@@ -8,8 +8,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 /**
- * Class store how many specified source type
- * the device has consumed.
+ * Class store how many specified source type the device has consumed.
  */
 @Getter
 @Setter
@@ -22,7 +21,7 @@ public class ConsumptionData {
     private double amountOfConsumed = 0.0;
 
     /**
-     * Constructor for class
+     * Constructor for class.
      * @param homeDevice home device
      * @param sourceType source type
      */
@@ -32,7 +31,7 @@ public class ConsumptionData {
     }
 
     /**
-     * Updates consumed data dependent on current device consumption
+     * Updates consumed data dependent on current device consumption.
      */
     public void update(){
         this.amountOfConsumed += homeDevice.getCurrentConsumption(sourceType);

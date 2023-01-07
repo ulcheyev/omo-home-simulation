@@ -82,7 +82,7 @@ public abstract class SolveStrategy {
 
 
     /**
-     * Return random responsible type from specified activity type
+     * Return random responsible type from specified activity type.
      * @param activityType specified {@link ActivityType}
      * @return random {@link Responsible}
      */

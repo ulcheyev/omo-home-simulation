@@ -17,7 +17,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /**
- * Class represents entity, which can do some {@link Activity}
+ * Class represents entity, which can do some {@link Activity}.
  */
 @Getter
 @Setter
@@ -32,7 +32,7 @@ public abstract class Responsible implements HomeComponent  {
 
 
     /**
-     * Constructor for responsible
+     * Constructor for responsible.
      * @param responsibleType any type, which extend {@link ResponsibleType}
      */
     protected Responsible(ResponsibleType responsibleType){
@@ -71,14 +71,14 @@ public abstract class Responsible implements HomeComponent  {
     }
 
     /**
-     * Lock current person, set status to busy
+     * Lock current person, set status to busy.
      */
     public void lock()  {
         setLivingEntityStatus(LivingEntityStatus.BUSY);
     }
 
     /**
-     * Unlock current person, set status to free
+     * Unlock current person, set status to free.
      */
     public void unlock() {
         setLivingEntityStatus(LivingEntityStatus.FREE);
@@ -86,7 +86,7 @@ public abstract class Responsible implements HomeComponent  {
     }
 
     /**
-     * Move to specified room
+     * Move to specified room.
      * @param room
      */
     public void relocate(Event event, Room room) {

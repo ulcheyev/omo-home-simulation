@@ -20,7 +20,7 @@ public class OMOSmartHomeSimulationFacade {
     private Home home;
 
     /**
-     * Instance of {@link OMOSmartHomeSimulationFacade }
+     * Instance of {@link OMOSmartHomeSimulationFacade }.
      */
     public final static OMOSmartHomeSimulationFacade INSTANCE = new OMOSmartHomeSimulationFacade();
 
@@ -30,7 +30,7 @@ public class OMOSmartHomeSimulationFacade {
     }
 
     /**
-     * Creates large configuration in {@link SmartHomeBuilderDirector }
+     * Creates large configuration in {@link SmartHomeBuilderDirector }.
      */
     public void createLargeConfig(){
         SmartHomeBuilderDirector.createLargeHomeConfiguration(SmartHomeBuilder.INSTANCE);
@@ -38,7 +38,7 @@ public class OMOSmartHomeSimulationFacade {
     }
 
     /**
-     * Creates small configuration in {@link SmartHomeBuilderDirector }
+     * Creates small configuration in {@link SmartHomeBuilderDirector }.
      */
     public void createSmallConfig(){
         SmartHomeBuilderDirector.createSmallHomeConfiguration(SmartHomeBuilder.INSTANCE);
@@ -46,7 +46,7 @@ public class OMOSmartHomeSimulationFacade {
     }
 
     /**
-     * Start simulation
+     * Start simulation.
      */
     public void simulate(){
         int inputNumber = Utils.getInputNumber("Enter days quantity of simulation:");
@@ -56,7 +56,7 @@ public class OMOSmartHomeSimulationFacade {
 
 
     /**
-     * Generates events report
+     * Generates events report.
      */
     public void generateEventReport(){
         try {
@@ -67,7 +67,7 @@ public class OMOSmartHomeSimulationFacade {
     }
 
     /**
-     * Generates activity and usage report
+     * Generates activity and usage report.
      */
     public void generateActivityAndUsageReport(){
         try {
@@ -78,7 +78,7 @@ public class OMOSmartHomeSimulationFacade {
     }
 
     /**
-     * Generates consumption report
+     * Generates consumption report.
      */
     public void generateConsumptionReport(){
         try {
@@ -89,7 +89,7 @@ public class OMOSmartHomeSimulationFacade {
     }
 
     /**
-     * Generates home configuration report
+     * Generates home configuration report.
      */
     public void generateHomeConfigurationReport(){
         try {
@@ -101,7 +101,7 @@ public class OMOSmartHomeSimulationFacade {
     }
 
     /**
-     * Generates all reports
+     * Generates all reports.
      */
     public void generateAllReports(){
         generateEventReport();

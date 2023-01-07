@@ -11,7 +11,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * Class contains methods for general use
+ * Class contains methods for general use.
  */
 public class Utils {
 
@@ -54,7 +54,7 @@ public class Utils {
     }
 
     /**
-     * Return random probability of yes
+     * Return random probability of yes.
      * @param probabilityOfYes probability of yes
      * @return true -> yes, false -> no
      */
@@ -64,7 +64,7 @@ public class Utils {
 
 
     /**
-     * Returns random object from specified list
+     * Returns random object from specified list.
      * @param objs list of objects
      * @param <T> specified class
      * @return random object from list
@@ -96,7 +96,7 @@ public class Utils {
     }
 
     /**
-     * Hello before start program
+     * Hello before start program.
      */
     public static void hello() {
         System.out.println("\n" +
@@ -110,7 +110,7 @@ public class Utils {
     }
 
     /**
-     * Scan email input
+     * Scan email input.
      */
     public static void checkInput() {
         Scanner myObj = new Scanner(System.in);

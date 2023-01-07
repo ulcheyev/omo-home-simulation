@@ -2,7 +2,7 @@ package cvut.omo.entity.item.stuff;
 
 
 /**
- * Class warns against an NullPointerException
+ * Class warns against an NullPointerException.
  */
 public class NullStuff extends Stuff{
     public boolean isNull(){

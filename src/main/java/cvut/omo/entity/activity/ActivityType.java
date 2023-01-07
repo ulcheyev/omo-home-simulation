@@ -17,6 +17,7 @@ import static java.util.List.of;
 
 public enum ActivityType {
 
+
     PET_A_PET(of(RoomName.COMMON),null),
     TAKE_A_WALK_WITH_PET(of(RoomName.STUB), null,  DAUGHTER, SON),
     FEED_PET(of(RoomName.COMMON), null),
@@ -122,7 +123,7 @@ public enum ActivityType {
     }
 
     /**
-     * Solver will be implicitly BaseActivity
+     * Solver will be implicitly BaseActivity.
      * @param roomNames {@link RoomName} where activity can be executed
      * @param use class that extends {@link Activity}, which will be solving this activity
      * @param roles responsible roles, which can this execute this activity
@@ -135,7 +136,6 @@ public enum ActivityType {
 
 
     /**
-     *
      * @param activityType assign all values from activityType parameter
      */
     ActivityType(ActivityType activityType){
@@ -185,7 +185,7 @@ public enum ActivityType {
 
 
     /**
-     * Class represent device, which can be responsible for some activities
+     * Class represent device, which can be responsible for some activities.
      * */
     public enum Device implements ResponsibleType{
         CIRCUIT_BREAKER(CircuitBreaker.class);

@@ -10,8 +10,7 @@ import java.util.Hashtable;
 import java.util.List;
 
 /**
- * Class represents iterating function over {@link ConsumptionCollection}
- * to generate consumption report
+ * Class represents iterating function over {@link ConsumptionCollection} to generate consumption report.
  */
 public class ConsumptionReportIterator implements Iterator {
 

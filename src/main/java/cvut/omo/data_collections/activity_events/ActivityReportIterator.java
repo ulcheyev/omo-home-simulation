@@ -19,8 +19,7 @@ import java.util.Map;
 
 
 /**
- * Class represents iterating function over {@link SmartHomeEventCollection}
- * to generate Activity and Usage report.
+ * Class represents iterating function over {@link SmartHomeEventCollection} to generate Activity and Usage report.
  */
 public class ActivityReportIterator implements Iterator {
 
@@ -74,7 +73,7 @@ public class ActivityReportIterator implements Iterator {
         if(solver.equals(DeviceActivity.class)
         || solver.equals(ItemActivity.class))
         {
-            Class<? extends Usable> toUse = identifuToUse(activity);
+            Class<? extends Usable> toUse = identifyToUse(activity);
 
             if(!usageData.containsKey(toUse)){
                 usageData.put(toUse, 1);
@@ -103,7 +102,8 @@ public class ActivityReportIterator implements Iterator {
         return stringBuilder.toString();
     }
 
-    private Class<? extends Usable> identifuToUse(Activity activity) {
+
+    private Class<? extends Usable> identifyToUse(Activity activity) {
         Class<? extends Usable> toUse = activity.getActivityType().getToUse();
         if(toUse == null){
             toUse = (((HomeAppliances) activity.getEvent().getResponsible()).getClass());

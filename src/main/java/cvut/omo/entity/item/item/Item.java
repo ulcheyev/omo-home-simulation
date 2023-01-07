@@ -9,7 +9,7 @@ import lombok.Setter;
 import java.util.LinkedList;
 import java.util.Queue;
 /**
- * Class represents item, which can be use
+ * Class represents item, which can be use.
  */
 @Getter
 @Setter
@@ -48,7 +48,7 @@ public abstract class Item implements Usable {
 
 
     /**
-     * Release item after use. Change {@link #itemState}
+     * Release item after use. Change {@link #itemState}.
      */
     public synchronized void release() {
         itemState = ItemState.FREE;
@@ -66,8 +66,7 @@ public abstract class Item implements Usable {
     }
 
     /**
-     * Add {@link Responsible} to {@link #listeners} of this item
-     *
+     * Add {@link Responsible} to {@link #listeners} of this item.
      * @param responsible
      */
     public void attach(Responsible responsible) {
@@ -75,7 +74,7 @@ public abstract class Item implements Usable {
     }
 
     /**
-     * Poll first {@link Responsible} from {@link #listeners}
+     * Poll first {@link Responsible} from {@link #listeners}.
      * @return first {@link Responsible} from queue to use this item
      */
     public Responsible pollFirst(){
@@ -83,7 +82,7 @@ public abstract class Item implements Usable {
     }
 
     /**
-     * Check, if responsible is already in {@link #listeners}
+     * Check, if responsible is already in {@link #listeners}.
      * @param responsible responsible to check
      * @return true, if responsible is in queue
      */

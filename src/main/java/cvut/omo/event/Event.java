@@ -22,7 +22,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Class represents events that may appear in the {@link cvut.omo.home_structure.home_builder.Home}
+ * Class represents events that may appear in the {@link cvut.omo.home_structure.home_builder.Home}.
  * There may be a responsible for the event, who must solve it himself or there may not be one.
  */
 @Getter
@@ -71,7 +71,7 @@ public class Event {
     private Event(){}
 
     /**
-     * Trying to solve this event. Choose correct strategy depends on {@link EventType}
+     * Trying to solve this event. Choose correct strategy depends on {@link EventType}.
      * @throws InterruptedException {@link Thread}
      */
     public void solve() throws InterruptedException {
@@ -101,9 +101,8 @@ public class Event {
     }
 
     /**
-     * Checks, if this event is solved.
-     * (every activity must be executed successfully in {@link #chainToSolve})
-     * @return
+     * Checks, if this event is solved (every activity must be executed successfully in {@link #chainToSolve}).
+     * @return true, if event is solved
      */
     public boolean checkSolving(){
        List<ActivityType> activityTypes = new ArrayList<>();
@@ -121,7 +120,7 @@ public class Event {
 
 
     /**
-     * Return string representation of event
+     * Return string representation of event.
      * @return string representation of event
      */
     @Override

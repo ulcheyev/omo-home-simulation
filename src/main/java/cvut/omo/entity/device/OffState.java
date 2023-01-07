@@ -2,7 +2,7 @@ package cvut.omo.entity.device;
 
 import cvut.omo.entity.living.person.Person;
 /**
- * Class represent off state of {@link HomeDevice}
+ * Class represent off state of {@link HomeDevice}.
  */
 public class OffState extends HomeDeviceState{
 

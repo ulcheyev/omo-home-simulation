@@ -26,7 +26,7 @@ public class Floor implements HomeComponent {
     }
 
     /**
-     * Adds room to floor
+     * Adds room to floor.
      * @param room
      */
     public void addRoom(Room room){

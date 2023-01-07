@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 import static cvut.omo.entity.activity.ActivityFactory.createActivity;
 
 /**
- * Class is needed to solve events from {@link cvut.omo.event.event_type.LivingEntityResponsibleEvent}
+ * Class is needed to solve events from {@link cvut.omo.event.event_type.LivingEntityResponsibleEvent}.
  */
 @NoArgsConstructor
 public class LivingEntityEventSolveStrategy extends SolveStrategy {

@@ -14,7 +14,7 @@ import static cvut.omo.entity.activity.ActivityType.*;
 import static java.util.List.of;
 
 /**
- * Class represents event type, responsible for which may be {@link HomeDevice}
+ * Class represents event type, responsible for which may be {@link HomeDevice}.
  */
 public enum DeviceResponsibleEvent implements EventType {
 

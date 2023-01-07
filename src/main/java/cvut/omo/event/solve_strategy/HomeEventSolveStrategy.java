@@ -14,7 +14,7 @@ import java.util.List;
 import static cvut.omo.entity.activity.ActivityFactory.createActivity;
 
 /**
- * Class is needed to solve events from {@link cvut.omo.event.event_type.HomeEvent}
+ * Class is needed to solve events from {@link cvut.omo.event.event_type.HomeEvent}.
  */
 public class HomeEventSolveStrategy extends SolveStrategy {
 

@@ -15,19 +15,19 @@ public interface HomeBuilder {
     HomeBuilder reset();
 
     /**
-     * Adds person to home
+     * Adds person to home.
      * @return current HomeBuilder
      */
     HomeBuilder addPerson(String name, FamilyRoleType familyRoleType);
 
     /**
-     * Adds pet to home
+     * Adds pet to home.
      * @return current HomeBuilder
      */
     HomeBuilder addPet(PetType petType);
 
     /**
-     * Adds floor to home
+     * Adds floor to home.
      * @return {@link cvut.omo.home_structure.home_builder.SmartHomeBuilder.FloorStub}
      */
     SmartHomeBuilder.FloorStub addFloor(int floorNumber);

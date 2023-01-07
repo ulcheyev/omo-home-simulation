@@ -10,7 +10,7 @@ import java.util.List;
 import static cvut.omo.home_structure.room_builder.RoomName.*;
 
 /**
- * The class is necessary for generalization {@link RoomName}
+ * The class is necessary for generalization {@link RoomName}.
  */
 public enum RoomType {
 

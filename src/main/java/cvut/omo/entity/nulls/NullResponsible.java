@@ -6,7 +6,7 @@ import cvut.omo.home_structure.nulls.NullRoom;
 import cvut.omo.home_structure.room_builder.Room;
 
 /**
- * Class warns against an NullPointerException
+ * Class warns against an NullPointerException.
  */
 public class NullResponsible extends Responsible {
 

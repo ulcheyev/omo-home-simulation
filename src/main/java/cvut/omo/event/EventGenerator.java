@@ -23,7 +23,7 @@ import static cvut.omo.app_utils.Utils.getRandomObjFromList;
 public class EventGenerator {
 
     /**
-     *Generates {@link Event} with random type from {@link LivingEntityResponsibleEvent}
+     *Generates {@link Event} with random type from {@link LivingEntityResponsibleEvent}.
      */
     public static void generateRandomEntityEvent(){
         LivingEntityResponsibleEvent[] values = LivingEntityResponsibleEvent.values();
@@ -33,8 +33,8 @@ public class EventGenerator {
 
     /**
      * Generates event with specified event type.
-     * Check, if room is stub -> set {@link NullRoom}
-     * Search and set {@link Responsible} for generated {@link Event}
+     * Check, if room is stub -> set {@link NullRoom}.
+     * Search and set {@link Responsible} for generated {@link Event}.
      * @param eventType specified event type
      */
     public static void generatePersonEvent(LivingEntityResponsibleEvent eventType){
@@ -56,7 +56,7 @@ public class EventGenerator {
     }
 
     /**
-     * Generates {@link Event} with random type from {@link HomeEvent}
+     * Generates {@link Event} with random type from {@link HomeEvent}.
      */
     public static void generateRandomHomeEvent(){
         HomeEvent[] values = HomeEvent.values();
@@ -69,8 +69,8 @@ public class EventGenerator {
 
     /**
      * Generates event with specified event type.
-     * Check, if room is stub -> set {@link NullRoom}
-     * If room is not stub, search a suitable room, see {@link HomeEvent}
+     * Check, if room is stub -> set {@link NullRoom}.
+     * If room is not stub, search a suitable room, see {@link HomeEvent}.
      * @param eventType specified event type
      */
     public static void generateHomeEvent(HomeEvent eventType){
@@ -98,7 +98,7 @@ public class EventGenerator {
     }
 
     /**
-     * Generates {@link Event} with random type from {@link DeviceResponsibleEvent}
+     * Generates {@link Event} with random type from {@link DeviceResponsibleEvent}.
      */
     public static void generateRandomDeviceEvent(){
         DeviceResponsibleEvent[] values = DeviceResponsibleEvent.values();
@@ -163,7 +163,7 @@ public class EventGenerator {
     }
 
     /**
-     * Generates event. Sets event room to {@link NullRoom}
+     * Generates event. Sets event room to {@link NullRoom}.
      * @param eventType event type
      * @param description description for event
      */

@@ -6,7 +6,7 @@ import cvut.omo.event.EventGenerator;
 import cvut.omo.event.event_type.DeviceResponsibleEvent;
 
 /**
- * Class represent idle state of {@link HomeDevice}
+ * Class represent idle state of {@link HomeDevice}.
  */
 public class IddleState extends HomeDeviceState{
 
@@ -40,7 +40,7 @@ public class IddleState extends HomeDeviceState{
     }
 
     /**
-     * While using person can break device with {@link #PROBABILITY_OF_BROKE} probability
+     * While using person can break device with {@link #PROBABILITY_OF_BROKE} probability.
      * @param person person, which is using this device
      * @param homeAppliances current device
      */

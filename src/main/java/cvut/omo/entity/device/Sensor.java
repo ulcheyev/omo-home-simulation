@@ -24,7 +24,7 @@ public abstract class Sensor extends HomeAppliances {
     public Sensor(double lifeTime) {super(lifeTime);}
 
     /**
-     * Creates and add {@link EventListener} to {@link #listenerList}
+     * Creates and add {@link EventListener} to {@link #listenerList}.
      */
     @Override
     protected void identify() {

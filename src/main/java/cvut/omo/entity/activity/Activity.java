@@ -72,7 +72,6 @@ public abstract class Activity {
 
 
     /**
-     *
      * @return {returns true, if activity is executed}
      */
     public  boolean isExecuted(){

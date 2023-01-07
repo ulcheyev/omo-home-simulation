@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.util.Properties;
 
 /**
- *
+ * Class is used to send email notification.
  */
 public class EmailListener implements EventListener{
 
@@ -25,7 +25,7 @@ public class EmailListener implements EventListener{
 
 
     /**
-     * Sends email to user
+     * Sends email to user.
      * @param message message to send
      * @param sensor sensor, which alarm went off
      */

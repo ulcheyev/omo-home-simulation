@@ -9,12 +9,12 @@ import cvut.omo.home_structure.Floor;
 import cvut.omo.home_structure.room_builder.*;
 
 /**
- * Class represent builder for {@link Home}
+ * Class represent builder for {@link Home}.
  */
 public final class SmartHomeBuilder implements HomeBuilder{
 
     /**
-     * Instance of {@link SmartHomeBuilder}
+     * Instance of {@link SmartHomeBuilder}.
      */
     public static final SmartHomeBuilder INSTANCE = new SmartHomeBuilder();
     private final SmartHomeRoomBuilderDirector smartHomeRoomBuilderDirector = SmartHomeRoomBuilderDirector.INSTANCE;
@@ -58,8 +58,8 @@ public final class SmartHomeBuilder implements HomeBuilder{
     }
 
     /**
-     * Returns result
-     * @return
+     * Returns result.
+     * @return instance of {@link Home}
      */
     public Home getResult(){
         return this.home;

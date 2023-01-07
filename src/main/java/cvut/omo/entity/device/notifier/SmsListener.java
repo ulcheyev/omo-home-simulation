@@ -5,7 +5,7 @@ import cvut.omo.entity.device.Sensor;
 import java.util.logging.Logger;
 
 /**
- * Class represents sms notifier (implemented with logger)
+ * Class represents sms notifier (implemented with logger).
  */
 public class SmsListener implements EventListener {
 

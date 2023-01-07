@@ -3,7 +3,7 @@ package cvut.omo.entity.device;
 import cvut.omo.entity.living.person.Person;
 
 /**
- * Class represent broken state of {@link HomeDevice}
+ * Class represent broken state of {@link HomeDevice}.
  */
 public class BrokenState extends HomeDeviceState {
 

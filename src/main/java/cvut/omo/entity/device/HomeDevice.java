@@ -10,7 +10,7 @@ import cvut.omo.entity.Usable;
 import java.util.Set;
 
 /**
- * Interface for {@link HomeAppliances}
+ * Interface for {@link HomeAppliances}.
  * @see HomeAppliances
  */
 public interface HomeDevice extends HomeComponent, Usable {

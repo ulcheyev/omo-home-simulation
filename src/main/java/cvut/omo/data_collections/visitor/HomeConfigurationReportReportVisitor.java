@@ -18,7 +18,7 @@ import java.util.Iterator;
 
 
 /**
- * Class represents function, which generate home configuration report
+ * Class represents function, which generate home configuration report.
  *
  */
 public class HomeConfigurationReportReportVisitor implements SmartHomeReportVisitor {

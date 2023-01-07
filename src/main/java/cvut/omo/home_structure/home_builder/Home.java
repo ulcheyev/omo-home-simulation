@@ -28,7 +28,7 @@ import java.util.List;
 public class Home {
 
     /**
-     * Instance of {@link Home}
+     * Instance of {@link Home}.
      */
     public final static Home INSTANCE = new Home();
 
@@ -47,13 +47,13 @@ public class Home {
     }
 
     /**
-     * Adds floor to {@link #floors}
+     * Adds floor to {@link #floors}.
      * @param floor floor to add
      */
     public void addFloor(Floor floor){floors.add(floor);}
 
     /**
-     * Adds entity to random floor and in random room in home
+     * Adds entity to random floor and in random room in home.
      * @param obj entity to add
      * @param <T> entity's class
      */
@@ -75,7 +75,7 @@ public class Home {
     }
 
     /**
-     * Returns home devices with specified class
+     * Returns home devices with specified class.
      * @param clazz specified class
      * @return list of home devices
      */
@@ -91,8 +91,8 @@ public class Home {
     }
 
     /**
-     * Returns all living responsibles in home
-     * @return
+     * Returns all living responsibles in home.
+     * @return list of responsibles
      */
     public List<Responsible> getAllEntityResponsibles(){
         List<Responsible> responsibles = new ArrayList<>();
@@ -106,7 +106,7 @@ public class Home {
 
     /**
      * Return list of {@link HomeComponent} in home.
-     * In list: {@link Floor}, {@link Room}, {@link HomeDevice}, {@link Person}, {@link Pet}
+     * In list: {@link Floor}, {@link Room}, {@link HomeDevice}, {@link Person}, {@link Pet}.
      * @return list of {@link HomeComponent}
      */
     public List<HomeComponent> getComponentsForReport(){
@@ -152,7 +152,7 @@ public class Home {
 
 
     /**
-     * Returns room with specified room name
+     * Returns room with specified room name.
      * @param type specified room name
      * @return room with specified room name
      */
