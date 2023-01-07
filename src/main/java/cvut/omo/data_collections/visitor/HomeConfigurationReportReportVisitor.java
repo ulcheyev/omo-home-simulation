@@ -1,7 +1,7 @@
 package cvut.omo.data_collections.visitor;
 
 import cvut.omo.app_utils.Constants;
-import cvut.omo.app_utils.FileWriter;
+import cvut.omo.app_utils.WriterToFile;
 import cvut.omo.app_utils.Utils;
 import cvut.omo.entity.device.HomeDevice;
 import cvut.omo.entity.living.person.Person;
@@ -33,7 +33,7 @@ public class HomeConfigurationReportReportVisitor implements SmartHomeReportVisi
             sb.append(homeComponent.accept(this));
         }
         sb.append(getComponentQuantity());
-        FileWriter.generateNewReport("home_config_report" + Utils.getRandomInt(), sb.toString());
+        WriterToFile.generateNewReport("home_config_report" + Utils.getRandomInt(), sb.toString());
     }
 
     /**
@@ -106,7 +106,6 @@ public class HomeConfigurationReportReportVisitor implements SmartHomeReportVisi
         return "\n***Pet lives in the house with a role "  + pet.getResponsibleType();
     }
 
-    /*register component quantity for general info*/
     private void registerComponentQuantity(HomeComponent component){
         Integer res = quantities.get(component.getClass());
         if (res == null) res = 1;
@@ -114,7 +113,6 @@ public class HomeConfigurationReportReportVisitor implements SmartHomeReportVisi
         quantities.put(component.getClass(), res);
     }
 
-    /*return general (components quantity in house)*/
     private String getComponentQuantity(){
         StringBuilder res = new StringBuilder();
         res.append(Constants.STARS_UP);

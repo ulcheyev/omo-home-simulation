@@ -18,7 +18,6 @@ import static cvut.omo.entity.activity.ActivityType.*;
  */
 public enum LivingEntityResponsibleEvent implements EventType {
 
-    //PERSON
 
     PERSON_NEED_EAT(Person.class,  DEVICE_FRIDGE_ON, DEVICE_FRIDGE_RUN, DEVICE_FRIDGE_PAUSE, MAKE_TEA, PERSON_EAT),
     NEED_WATCH_TV(Person.class, DEVICE_TV_ON, DEVICE_TV_RUN, DEVICE_TV_OFF),
@@ -32,7 +31,6 @@ public enum LivingEntityResponsibleEvent implements EventType {
     PERSON_NEED_RIDE_A_BIKE(Person.class, USE_BIKE),
     PERSON_NEED_DRIVE_A_CAR(Person.class, USE_CAR),
 
-    //PET
     PET_NEED_GO_FOR_A_WALK(Pet.class,  TAKE_A_WALK_WITH_PET),
     PET_NEED_PET(Pet.class,  PET_A_PET),
     PET_NEED_EAT(Pet.class,  PET_A_PET, DEVICE_FRIDGE_ON, DEVICE_FRIDGE_RUN, FEED_PET),

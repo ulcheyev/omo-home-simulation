@@ -23,7 +23,6 @@ public final class SmartHomeBuilderDirector {
 
         homeBuilder
                 .reset()
-                //Floors
                 .addFloor(1)
                 .addRoom(RoomName.BATHROOM)
                 .addRoom(RoomName.HALL)
@@ -37,14 +36,12 @@ public final class SmartHomeBuilderDirector {
                 .addRoom(RoomName.HALL)
                 .addRoom(RoomName.BATHROOM)
                 .and()
-                //Persons
                 .addPerson("Lola", FamilyRoleType.MOTHER)
                 .addPerson("Boba", FamilyRoleType.FATHER)
                 .addPerson("Pipa", FamilyRoleType.SON)
                 .addPerson("Popa", FamilyRoleType.DAUGHTER)
                 .addPerson("Mr. Pepa", FamilyRoleType.GRANDFATHER)
                 .addPerson("Mr. Lolo", FamilyRoleType.GRANDMOTHER)
-                //Pets
                 .addPet(PetType.CAT)
                 .addPet(PetType.DOG)
                 .addPet(PetType.MINI_PIG);
@@ -59,7 +56,6 @@ public final class SmartHomeBuilderDirector {
 
         homeBuilder
                 .reset()
-                //Floors
                 .addFloor(1)
                 .addRoom( RoomName.BATHROOM)
                 .addRoom(RoomName.HALL)
@@ -82,7 +78,6 @@ public final class SmartHomeBuilderDirector {
                 .addRoom(RoomName.BATHROOM)
                 .addRoom(RoomName.BATHROOM)
                 .and()
-                //Persons
                 .addPerson("Lola", FamilyRoleType.MOTHER)
                 .addPerson("Boba", FamilyRoleType.FATHER)
                 .addPerson("Pipa", FamilyRoleType.SON)
@@ -91,7 +86,6 @@ public final class SmartHomeBuilderDirector {
                 .addPerson("Male zlo", FamilyRoleType.DAUGHTER)
                 .addPerson("Mr. Pepa", FamilyRoleType.GRANDFATHER)
                 .addPerson("Mr. Lolo", FamilyRoleType.GRANDMOTHER)
-                //Pets
                 .addPet(PetType.CAT)
                 .addPet(PetType.DOG)
                 .addPet(PetType.CAT)

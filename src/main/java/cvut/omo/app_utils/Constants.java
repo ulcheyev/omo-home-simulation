@@ -55,7 +55,6 @@ public class Constants {
     public final static String STARS_DOWN = "************************************************************************************";
 
 
-    //FLAGS
     public final static String ON = "ON";
     public final static String OFF = "OFF";
     public final static String RUN = "RUN";

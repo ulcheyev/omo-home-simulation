@@ -61,7 +61,6 @@ public class HomeEventSolveStrategy extends SolveStrategy {
 
             ResponsibleType responsibleType = giveRandomResponsibleType(activityType);
 
-            //RESPONSIBLE IS DEVICE -> FOUND HOME DEVICES BY CLASS AND HANDLE
             if (responsibleType instanceof ActivityType.Device) {
                 List<HomeAppliances> hds =
                         Home.INSTANCE.getHomeAppliancesByClass
@@ -71,7 +70,6 @@ public class HomeEventSolveStrategy extends SolveStrategy {
                 }
 
             }
-            //RESPONSIBLE IS ENTITY -> FIND AND HANDLE
             else {
                 Responsible responsible = giveEfficientResponsible(activityType);
                 responsible.handle(createActivity(responsible, event, activityType));

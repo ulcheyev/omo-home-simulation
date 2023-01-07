@@ -1,7 +1,7 @@
 package cvut.omo.entity.device.documentation;
 
 import cvut.omo.app_utils.Constants;
-import cvut.omo.app_utils.FileWriter;
+import cvut.omo.app_utils.WriterToFile;
 import cvut.omo.entity.device.HomeAppliances;
 
 import java.io.IOException;
@@ -13,8 +13,8 @@ public class Documentation {
 
     private HomeAppliances homeAppliances;
 
-    protected String name_device;
-    protected BrokennessLevel level_of_damage;
+    protected String nameDevice;
+    protected BrokennessLevel brokennessLevel;
     protected String nameOfDocumentation;
 
 
@@ -28,26 +28,26 @@ public class Documentation {
 
     /**
      * Generate documentation for {@link #homeAppliances}.
-     * @throws IOException {@link  FileWriter}
+     * @throws IOException {@link  WriterToFile}
      */
     public void generateDocumentation() throws IOException {
-        name_device = homeAppliances.getClass().getSimpleName();
-        level_of_damage = homeAppliances.getBrokennessLevel();
+        nameDevice = homeAppliances.getClass().getSimpleName();
+        brokennessLevel = homeAppliances.getBrokennessLevel();
         StringBuilder res = new StringBuilder();
 
         res.append(Constants.PDF_DOCUMENTATION_HEADER);
 
         final String text =
                 "This is very clever documentation for the device: "
-                        + name_device + " you just broke.\n It turned out that your device has a state of damage: ";
+                        + nameDevice + " you just broke.\n It turned out that your device has a state of damage: ";
 
-        switch (level_of_damage) {
-            case HARDCORE -> res.append(text + level_of_damage + ".\n Nothing will help you, throw the device in the trash.").append("\n");
-            case MEDIUM -> res.append(text +  level_of_damage + ".\n You still have a chance to save your device. Call your grandfather and he will help you.").append("\n");
-            case FINE -> res.append(text + level_of_damage + ".\n The device is very, very slightly damaged. You will need to fix it for it to work.").append("\n");
+        switch (brokennessLevel) {
+            case HARDCORE -> res.append(text + brokennessLevel + ".\n Nothing will help you, throw the device in the trash.").append("\n");
+            case MEDIUM -> res.append(text +  brokennessLevel + ".\n You still have a chance to save your device. Call your grandfather and he will help you.").append("\n");
+            case FINE -> res.append(text + brokennessLevel + ".\n The device is very, very slightly damaged. You will need to fix it for it to work.").append("\n");
         }
 
-        nameOfDocumentation = name_device + "_documentation";
-        FileWriter.generateNewDocumentation(nameOfDocumentation,res.toString());
+        nameOfDocumentation = nameDevice + "_documentation";
+        WriterToFile.generateNewDocumentation(nameOfDocumentation,res.toString());
     }
 }

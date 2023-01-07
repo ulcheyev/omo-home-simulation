@@ -114,8 +114,6 @@ public class DeviceActivity extends Activity {
         return s.toString();
     }
 
-    /*check if that  activity contains flags for interact with device*/
-
     private String containsFlag(ActivityType activityType){
         String name = activityType.name();
         for(String flag: Constants.flags){

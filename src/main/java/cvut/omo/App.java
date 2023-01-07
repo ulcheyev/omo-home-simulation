@@ -7,14 +7,10 @@ public class App {
 
         OMOSmartHomeSimulationFacade smartHome = OMOSmartHomeSimulationFacade.INSTANCE;
 
-        //CHOOSE CONFIG
         smartHome.createSmallConfig();
-//        smartHome.createLargeConfig();
 
-        //SIMULATE
         smartHome.simulate();
 
-        //GENERATE REPORTS
         smartHome.generateAllReports();
     }
 }

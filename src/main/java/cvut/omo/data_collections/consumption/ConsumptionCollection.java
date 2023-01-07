@@ -1,7 +1,7 @@
 package cvut.omo.data_collections.consumption;
 
 import cvut.omo.app_utils.Constants;
-import cvut.omo.app_utils.FileWriter;
+import cvut.omo.app_utils.WriterToFile;
 import cvut.omo.app_utils.Utils;
 import cvut.omo.entity.device.HomeDevice;
 import cvut.omo.entity.device.SourceType;
@@ -82,7 +82,7 @@ public class ConsumptionCollection implements IConsumptionCollection {
                 res.append(next).append("\n");
             }
         }
-        FileWriter.generateNewReport("consumption_report" + Utils.getRandomInt(), res.toString());
+        WriterToFile.generateNewReport("consumption_report" + Utils.getRandomInt(), res.toString());
     }
 
 

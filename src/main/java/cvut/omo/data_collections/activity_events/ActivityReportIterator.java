@@ -69,10 +69,6 @@ public class ActivityReportIterator implements Iterator {
         return responsibleList.size() != currIdx;
     }
 
-    /*
-   Check, if that activity has object to use and add that object
-   to usageData
-    */
     private void checkOnUsageAktivity(Activity activity){
         Class<? extends Activity> solver = activity.getActivityType().getSolver();
         if(solver.equals(DeviceActivity.class)
@@ -90,9 +86,6 @@ public class ActivityReportIterator implements Iterator {
 
     }
 
-    /*
-    Generate general info about using objects, that implements Usable interface
-   */
     private String generateGeneralInfo(Responsible responsible) {
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append(Constants.STARS_DOWN);
@@ -110,9 +103,6 @@ public class ActivityReportIterator implements Iterator {
         return stringBuilder.toString();
     }
 
-    /*
-   Identify toUse object by the specified activity.
-    */
     private Class<? extends Usable> identifuToUse(Activity activity) {
         Class<? extends Usable> toUse = activity.getActivityType().getToUse();
         if(toUse == null){

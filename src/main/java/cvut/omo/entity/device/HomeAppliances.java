@@ -51,8 +51,6 @@ public abstract class HomeAppliances extends Responsible implements HomeDevice{
         identify();
     }
 
-    //API METHODS
-
     /**
      * Method switches on current device (depends on {@link #homeDeviceState}), then call {@link #update()}
      */
@@ -171,8 +169,6 @@ public abstract class HomeAppliances extends Responsible implements HomeDevice{
     public Object accept(SmartHomeReportVisitor visitor){
         return visitor.visitHomeDevice(this);
     };
-
-    //FUNCTIONAL METHODS
 
     /**
      * Enable current device. Change current consumption.

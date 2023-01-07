@@ -18,10 +18,6 @@ import static java.util.List.of;
  */
 public enum DeviceResponsibleEvent implements EventType {
 
-    /*
-    * EVENTS DEPEND ON HOME DEVICE LOCATION, DONT NEED TO SPECIFY ROOM
-    */
-
     DEVICE_BROKEN(of(DEVICE_BREAK, READ_A_DOCUMENTATION, DEVICE_REPAIR)),
     FIRE_SENSOR_ALARM(of(DEVICE_FIRE_SENSOR_ON, DEVICE_FIRE_SENSOR_RUN, CALL_GRANDPA_FOR_HELP), FireSensor.class),
     WATER_LEAK_SENSOR_ALARM(of(DEVICE_WATER_LEAK_SENSOR_ON,DEVICE_WATER_LEAK_SENSOR_RUN , CALL_GRANDPA_FOR_HELP), WaterLeakSensor.class);
@@ -46,7 +42,6 @@ public enum DeviceResponsibleEvent implements EventType {
         }
     }
 
-    /* all devices in device package*/
     private Set<Class<? extends HomeDevice>> defaultConfig() {
         Reflections reflections = new Reflections("cvut.omo.entity.device");
         return reflections.getSubTypesOf(HomeDevice.class);

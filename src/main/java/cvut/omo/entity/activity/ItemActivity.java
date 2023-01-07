@@ -13,7 +13,6 @@ import java.util.List;
 
 public class ItemActivity extends Activity{
 
-    //FLAGS
     private Class<? extends Usable> toUse;
 
     /**
@@ -57,7 +56,6 @@ public class ItemActivity extends Activity{
         return false;
     }
 
-    /*search items*/
     private List<Item> searchItems(){
         List<Item> founded = new ArrayList<>();
         for(Room room: Home.INSTANCE.getAllRooms()){

@@ -36,14 +36,12 @@ public abstract class SolveStrategy {
         List<ResponsibleType> responsiblesTypes = activityType.getResponsibles();
         Responsible responsible;
 
-        //SEARCH AND RETURN FREE
         for(ResponsibleType responsibleType: responsiblesTypes){
              responsible = Home.INSTANCE.searchResponsibleByType(responsibleType);
             if(responsible.isFree()){
                 return responsible;
             }
         }
-        //IF RESPONSIBLES ARE NOT FREE -> RETURN RANDOM
         return Home.INSTANCE.searchResponsibleByType(giveRandomResponsibleType(activityType));
 
     }

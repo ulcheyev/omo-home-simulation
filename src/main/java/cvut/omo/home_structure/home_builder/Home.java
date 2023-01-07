@@ -109,7 +109,6 @@ public class Home {
      * In list: {@link Floor}, {@link Room}, {@link HomeDevice}, {@link Person}, {@link Pet}
      * @return list of {@link HomeComponent}
      */
-    /* ROOM (devices in room are included) -> PERSONS -> PETS*/
     public List<HomeComponent> getComponentsForReport(){
         List<HomeComponent> homeComponents = new ArrayList<>();
         homeComponents.addAll(floors);

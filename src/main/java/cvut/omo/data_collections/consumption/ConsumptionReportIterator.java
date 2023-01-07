@@ -17,7 +17,6 @@ public class ConsumptionReportIterator implements Iterator {
 
     private int currIdx = 0;
     private static ConsumptionCollection data = ConsumptionCollection.getInstance();
-    /*stores data about source types and general consumption*/
     private final Dictionary<SourceType, Double> sourceTypes = new Hashtable<>();
 
     /**
@@ -40,9 +39,9 @@ public class ConsumptionReportIterator implements Iterator {
             List<ConsumptionData> dataAbout = data.getDataAbout(curr);
 
             res.append("[").append(currIdx+1).append("] ")
-                    .append(curr.getClass().getSimpleName() + //NAME OF DEVICE
-                    " in " + curr.getRoom().getRoomName() + // NAME OF ROOM
-                    " on the " + curr.getRoom().getFloor().getNumberOfFloor() + " floor" + //NUMBER OF FLOOR
+                    .append(curr.getClass().getSimpleName() +
+                    " in " + curr.getRoom().getRoomName() +
+                    " on the " + curr.getRoom().getFloor().getNumberOfFloor() + " floor" +
                     " has consumed ");
 
             if(dataAbout.stream().anyMatch(cons -> cons.getSourceType().equals(SourceType.ENERGY))){
@@ -61,7 +60,6 @@ public class ConsumptionReportIterator implements Iterator {
         return res.toString();
     }
 
-    /*generate single row*/
     private void generateRow(List<ConsumptionData> consumptionData, StringBuilder res,
                              SourceType sourceType, char currency)
     {
@@ -77,7 +75,6 @@ public class ConsumptionReportIterator implements Iterator {
                 .append(currency).append(") ");
     }
 
-    /*generate general info*/
     private void addInfoAboutConsumptionFromAllTime(StringBuilder res){
         res.append("\n");
         for (java.util.Iterator<SourceType> it = sourceTypes.keys().asIterator(); it.hasNext(); ){

@@ -8,8 +8,7 @@ import java.io.PrintWriter;
 /**
  * Class represents write to file function
  */
-public class FileWriter {
-
+public class WriterToFile {
 
 
     /**
@@ -42,8 +41,8 @@ public class FileWriter {
      */
     private static File openFile(String path, String fileName) throws IOException {
         File file = new File(path+fileName+".txt");
-        file.getParentFile().mkdirs(); //create parent directory
-        file.createNewFile(); // if file already exists will do nothing
+        file.getParentFile().mkdirs();
+        file.createNewFile();
         return file;
     }
 

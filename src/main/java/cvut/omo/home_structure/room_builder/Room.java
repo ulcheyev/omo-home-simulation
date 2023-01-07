@@ -202,10 +202,4 @@ public class Room implements HomeComponent {
                 && roomName == room.roomName;
     }
 
-//    public void removeWindow(Window window){windows.remove(window);}
-//    public void removeHomeDevice(HomeDevice homeDevice){homeDevices.remove(homeDevice);}
-//    public void removeItem(Item item){items.remove(item);}
-//    public void removePerson(Person person){responsibles.remove(person);}
-//    public void removePet(Pet pet){responsibles.remove(pet);}
-
 }

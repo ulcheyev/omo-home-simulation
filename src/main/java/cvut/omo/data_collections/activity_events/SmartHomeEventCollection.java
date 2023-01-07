@@ -1,7 +1,7 @@
 package cvut.omo.data_collections.activity_events;
 
 import cvut.omo.app_utils.Constants;
-import cvut.omo.app_utils.FileWriter;
+import cvut.omo.app_utils.WriterToFile;
 import cvut.omo.app_utils.Utils;
 import cvut.omo.event.Event;
 
@@ -99,7 +99,7 @@ public class SmartHomeEventCollection {
         while (iterator.hasNext()){
             sb.append(iterator.next()).append("\n");
         }
-        FileWriter.generateNewReport("events_report"+ Utils.getRandomInt(), sb.toString());
+        WriterToFile.generateNewReport("events_report"+ Utils.getRandomInt(), sb.toString());
     }
 
     /**
@@ -114,7 +114,7 @@ public class SmartHomeEventCollection {
         while (iterator.hasNext()){
             sb.append(iterator.next()).append("\n");
         }
-        FileWriter.generateNewReport("activity_and_usage_report"+ Utils.getRandomInt(), sb.toString());
+        WriterToFile.generateNewReport("activity_and_usage_report"+ Utils.getRandomInt(), sb.toString());
     }
 
     /**

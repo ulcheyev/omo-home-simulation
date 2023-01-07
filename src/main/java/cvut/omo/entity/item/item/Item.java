@@ -17,7 +17,6 @@ public abstract class Item implements Usable {
 
     private ItemState itemState = ItemState.FREE;
 
-    /*queue to use this item.*/
     private Queue<Responsible> listeners = new LinkedList<>();
 
     private Responsible currentResponsible;

@@ -1,8 +1,13 @@
 package cvut.omo.event.event_type;
 
 import cvut.omo.entity.activity.ActivityType;
+import cvut.omo.entity.activity.ItemActivity;
+import cvut.omo.entity.item.item.Blinds;
+import cvut.omo.entity.item.item.PetToy;
 import cvut.omo.entity.living.person.Person;
 import cvut.omo.entity.living.pet.Pet;
+import cvut.omo.entity.living.pet.PetType;
+import cvut.omo.home_structure.Window;
 import cvut.omo.home_structure.room_builder.RoomName;
 import lombok.Getter;
 
@@ -10,16 +15,12 @@ import java.util.Arrays;
 import java.util.List;
 
 import static cvut.omo.entity.activity.ActivityType.*;
+import static java.util.List.of;
 
 /**
  * Class represents event type, which can be appeared in home in general.
  */
 public enum HomeEvent implements EventType {
-
-    /*
-     *STUB - IS NOT IN ROOM -> IN HOME IN GENERAL / OR OUTSIDE HOME (f.e STORM)
-     *COMMON - DOES NOT MATTER IN WHICH ROOM (f.e bulb burned out)
-     */
 
     KNOCK_ON_THE_DOOR(RoomName.VESTIBULE, CONTROL_THE_DOOR, OPEN_THE_DOR),
     BULB_BURNED_OUT(RoomName.COMMON,  CHANGE_BULB),
