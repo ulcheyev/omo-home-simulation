@@ -13,8 +13,9 @@ public class SmsListener implements EventListener {
 
     /**
      * Writes alarm events to logger
+     *
      * @param message message to send
-     * @param sensor sensor, which alarm went off
+     * @param sensor  sensor, which alarm went off
      */
     @Override
     public void update(String message, Sensor sensor) {

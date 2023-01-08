@@ -9,6 +9,7 @@ import cvut.omo.entity.item.stuff.Stuff;
 public interface Capacious {
     /**
      * Return random item from this device.
+     *
      * @return random item from this device
      */
     Stuff giveRandomItem();

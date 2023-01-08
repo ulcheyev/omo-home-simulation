@@ -20,24 +20,25 @@ public enum DeviceResponsibleEvent implements EventType {
 
     DEVICE_BROKEN(of(DEVICE_BREAK, READ_A_DOCUMENTATION, DEVICE_REPAIR)),
     FIRE_SENSOR_ALARM(of(DEVICE_FIRE_SENSOR_ON, DEVICE_FIRE_SENSOR_RUN, CALL_GRANDPA_FOR_HELP), FireSensor.class),
-    WATER_LEAK_SENSOR_ALARM(of(DEVICE_WATER_LEAK_SENSOR_ON,DEVICE_WATER_LEAK_SENSOR_RUN , CALL_GRANDPA_FOR_HELP), WaterLeakSensor.class);
+    WATER_LEAK_SENSOR_ALARM(of(DEVICE_WATER_LEAK_SENSOR_ON, DEVICE_WATER_LEAK_SENSOR_RUN, CALL_GRANDPA_FOR_HELP), WaterLeakSensor.class);
 
     @Getter
-    private final Set<Class <? extends HomeDevice>> homeDevices;
+    private final Set<Class<? extends HomeDevice>> homeDevices;
 
     /**
      * Constructor for Device Event.
+     *
      * @param chainToSolve a chain of {@link cvut.omo.entity.activity.Activity}
      *                     , in which every {@link cvut.omo.entity.activity.Activity}
      *                     must be executed successfully that the event has been resolved
-     * @param homeDevices {@link HomeDevice}, which can be {@link cvut.omo.entity.Responsible} for this event
+     * @param homeDevices  {@link HomeDevice}, which can be {@link cvut.omo.entity.Responsible} for this event
      */
     @SafeVarargs
-    DeviceResponsibleEvent(List<ActivityType> chainToSolve, Class <? extends HomeDevice> ... homeDevices) {
+    DeviceResponsibleEvent(List<ActivityType> chainToSolve, Class<? extends HomeDevice>... homeDevices) {
         this.chainToSolve = chainToSolve;
-        if(homeDevices.length == 0){
+        if (homeDevices.length == 0) {
             this.homeDevices = defaultConfig();
-        }else {
+        } else {
             this.homeDevices = Set.of(homeDevices);
         }
     }

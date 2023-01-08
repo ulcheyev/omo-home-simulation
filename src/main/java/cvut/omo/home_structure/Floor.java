@@ -27,9 +27,10 @@ public class Floor implements HomeComponent {
 
     /**
      * Adds room to floor.
+     *
      * @param room
      */
-    public void addRoom(Room room){
+    public void addRoom(Room room) {
         rooms.add(room);
     }
 
@@ -46,6 +47,7 @@ public class Floor implements HomeComponent {
     /**
      * Updates floor.
      * Updates every room in {@link #rooms}
+     *
      * @throws InterruptedException {@link Thread}
      */
     public void update() throws InterruptedException {

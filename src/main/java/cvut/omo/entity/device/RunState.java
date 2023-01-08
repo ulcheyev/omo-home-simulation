@@ -8,9 +8,9 @@ import java.io.IOException;
 /**
  * Class represent run state of {@link HomeDevice}.
  */
-public class RunState extends HomeDeviceState{
+public class RunState extends HomeDeviceState {
 
-    public RunState(Person person, HomeAppliances homeAppliances){
+    public RunState(Person person, HomeAppliances homeAppliances) {
         super(homeAppliances);
         try {
             homeAppliances.run();

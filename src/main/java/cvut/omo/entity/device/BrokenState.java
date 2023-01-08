@@ -7,16 +7,19 @@ import cvut.omo.entity.living.person.Person;
  */
 public class BrokenState extends HomeDeviceState {
 
-    public BrokenState(HomeAppliances homeAppliances){
+    public BrokenState(HomeAppliances homeAppliances) {
         super(homeAppliances);
         homeAppliances.breakDown();
     }
+
     @Override
-    public void switchOn(HomeAppliances homeAppliances) {}
+    public void switchOn(HomeAppliances homeAppliances) {
+    }
 
 
     @Override
-    public void switchOff(HomeAppliances homeAppliances) {}
+    public void switchOff(HomeAppliances homeAppliances) {
+    }
 
     @Override
     public void repair(Person person, HomeAppliances homeAppliances) {
@@ -27,11 +30,14 @@ public class BrokenState extends HomeDeviceState {
     }
 
     @Override
-    public void _break(HomeAppliances homeAppliances) {}
+    public void _break(HomeAppliances homeAppliances) {
+    }
 
     @Override
-    public void pause(HomeAppliances homeAppliances) {}
+    public void pause(HomeAppliances homeAppliances) {
+    }
 
     @Override
-    public void use(Person person, HomeAppliances homeAppliances) {}
+    public void use(Person person, HomeAppliances homeAppliances) {
+    }
 }

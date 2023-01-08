@@ -6,8 +6,6 @@ package cvut.omo.entity.device.documentation;
  */
 public enum InstructionType {
 
-    BUY,
-    FIX,
-    CALL_GRANDFATHER
+    BUY, FIX, CALL_GRANDFATHER
 
 }

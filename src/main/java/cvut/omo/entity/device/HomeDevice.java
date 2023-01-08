@@ -11,26 +11,39 @@ import java.util.Set;
 
 /**
  * Interface for {@link HomeAppliances}.
+ *
  * @see HomeAppliances
  */
 public interface HomeDevice extends HomeComponent, Usable {
 
-     void switchOn();
-     void switchOff();
-     void pause();
-     void use(Person person);
-     void repair(Event event, Person person);
-     void breakDevice();
+    void switchOn();
 
-     Set<SourceType> getSourceTypes();
-     double getCurrentConsumption(SourceType sourceType);
-     Room getRoom();
-     double getWorkingHours();
-     Documentation getDocumentation();
-     boolean isNotConsume();
+    void switchOff();
+
+    void pause();
+
+    void use(Person person);
+
+    void repair(Event event, Person person);
+
+    void breakDevice();
+
+    Set<SourceType> getSourceTypes();
+
+    double getCurrentConsumption(SourceType sourceType);
+
+    Room getRoom();
+
+    double getWorkingHours();
+
+    Documentation getDocumentation();
+
+    boolean isNotConsume();
 
 
-     void setRoom(Room room);
-     void setCurrentConsumption(SourceType sourceType, double currentConsumption);
-     void update() throws InterruptedException;
+    void setRoom(Room room);
+
+    void setCurrentConsumption(SourceType sourceType, double currentConsumption);
+
+    void update() throws InterruptedException;
 }

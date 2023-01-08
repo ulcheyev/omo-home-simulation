@@ -11,7 +11,7 @@ import cvut.omo.home_structure.room_builder.*;
 /**
  * Class represent builder for {@link Home}.
  */
-public final class SmartHomeBuilder implements HomeBuilder{
+public final class SmartHomeBuilder implements HomeBuilder {
 
     /**
      * Instance of {@link SmartHomeBuilder}.
@@ -19,7 +19,9 @@ public final class SmartHomeBuilder implements HomeBuilder{
     public static final SmartHomeBuilder INSTANCE = new SmartHomeBuilder();
     private final SmartHomeRoomBuilderDirector smartHomeRoomBuilderDirector = SmartHomeRoomBuilderDirector.INSTANCE;
     private Home home = Home.INSTANCE;
-    private SmartHomeBuilder(){}
+
+    private SmartHomeBuilder() {
+    }
 
     @Override
     public HomeBuilder reset() {
@@ -29,8 +31,8 @@ public final class SmartHomeBuilder implements HomeBuilder{
 
     @Override
     public HomeBuilder addPerson(String name, FamilyRoleType familyRoleType) {
-       home.addEntity(new Person(name, familyRoleType));
-       return this;
+        home.addEntity(new Person(name, familyRoleType));
+        return this;
     }
 
     @Override
@@ -41,16 +43,10 @@ public final class SmartHomeBuilder implements HomeBuilder{
 
     @Override
     public FloorStub addFloor(int floorNumber) {
-        if(home.getFloors()
-                .stream()
-                .anyMatch(floor -> floor.getNumberOfFloor().equals(floorNumber))
-        )
-        {
+        if (home.getFloors().stream().anyMatch(floor -> floor.getNumberOfFloor().equals(floorNumber))) {
             throw new FloorException("Floor with number " + floorNumber + " already exists");
-        }else if(!home.getFloors()
-                .stream()
-                .anyMatch(floor -> floor.getNumberOfFloor().equals(floorNumber-1)) && floorNumber != 1){
-            throw new FloorException("First you need to add a floor with a number " + (floorNumber-1));
+        } else if (!home.getFloors().stream().anyMatch(floor -> floor.getNumberOfFloor().equals(floorNumber - 1)) && floorNumber != 1) {
+            throw new FloorException("First you need to add a floor with a number " + (floorNumber - 1));
         }
         Floor floor = new Floor(floorNumber);
         home.addFloor(floor);
@@ -59,9 +55,10 @@ public final class SmartHomeBuilder implements HomeBuilder{
 
     /**
      * Returns result.
+     *
      * @return instance of {@link Home}
      */
-    public Home getResult(){
+    public Home getResult() {
         return this.home;
     }
 
@@ -74,7 +71,7 @@ public final class SmartHomeBuilder implements HomeBuilder{
         private Floor floor;
         private RoomBuilder defaultRoomBuilder = SmartHomeRoomBuilder.INSTANCE;
 
-        public FloorStub setRoomBuilder(RoomBuilder roomBuilder){
+        public FloorStub setRoomBuilder(RoomBuilder roomBuilder) {
             this.defaultRoomBuilder = roomBuilder;
             return this;
         }
@@ -93,7 +90,7 @@ public final class SmartHomeBuilder implements HomeBuilder{
             return this;
         }
 
-        public SmartHomeBuilder and(){
+        public SmartHomeBuilder and() {
             return SmartHomeBuilder.this;
         }
     }

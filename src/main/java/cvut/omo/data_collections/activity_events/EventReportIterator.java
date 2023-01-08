@@ -26,16 +26,14 @@ public class EventReportIterator implements Iterator {
 
         List<Activity> chainToSolve = event.getChainToSolve();
 
-        if(!chainToSolve.isEmpty()) {
+        if (!chainToSolve.isEmpty()) {
             sb.append(". Solved by chain:\n");
 
             for (int idx = 1; idx <= chainToSolve.size(); idx++) {
                 Activity activity = chainToSolve.get(idx - 1);
                 sb.append("---").append(idx).append(". ").append(activity.toString()).append("\n");
             }
-        }
-
-        else{
+        } else {
             sb.append("\n");
         }
 
@@ -47,7 +45,6 @@ public class EventReportIterator implements Iterator {
     public boolean hasNext() {
         return currIdx != SmartHomeEventCollection.size();
     }
-
 
 
 }

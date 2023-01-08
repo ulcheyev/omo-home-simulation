@@ -8,7 +8,9 @@ import cvut.omo.data_collections.consumption.ConsumptionCollection;
  */
 public class Computer extends HomeAppliances {
 
-    public Computer(double lifeTime) {super(lifeTime);}
+    public Computer(double lifeTime) {
+        super(lifeTime);
+    }
 
     @Override
     protected void identify() {

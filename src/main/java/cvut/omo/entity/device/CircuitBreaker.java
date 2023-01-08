@@ -12,7 +12,7 @@ import cvut.omo.home_structure.room_builder.RoomName;
 /**
  * Class represents circuit breaker device.
  */
-public class CircuitBreaker extends HomeAppliances{
+public class CircuitBreaker extends HomeAppliances {
 
     public CircuitBreaker(double lifeTime) {
         super(lifeTime);
@@ -25,10 +25,10 @@ public class CircuitBreaker extends HomeAppliances{
     }
 
     @Override
-    public void disable(){
+    public void disable() {
         EventGenerator.generateEvent(HomeEvent.INFO, "Circuit breaker off, the current is coming in");
-        for(HomeDevice hd: Home.INSTANCE.getHomeDevices()){
-            if(!hd.equals(this)) {
+        for (HomeDevice hd : Home.INSTANCE.getHomeDevices()) {
+            if (!hd.equals(this)) {
                 hd.setCurrentConsumption(SourceType.ENERGY, Constants.DEVICE_OFF_STATE_ELECTRICITY);
             }
         }
@@ -36,20 +36,22 @@ public class CircuitBreaker extends HomeAppliances{
     }
 
     @Override
-    public void enable(){
+    public void enable() {
         EventGenerator.generateEvent(HomeEvent.INFO, "Circuit breaker on, the current is not coming in");
-        for(HomeDevice hd: Home.INSTANCE.getHomeDevices()){
-            if(!hd.equals(this)) {
+        for (HomeDevice hd : Home.INSTANCE.getHomeDevices()) {
+            if (!hd.equals(this)) {
                 hd.setCurrentConsumption(SourceType.ENERGY, 0);
             }
         }
     }
 
     @Override
-    public void goIntoIddleMode(){}
+    public void goIntoIddleMode() {
+    }
 
     @Override
-    public void run(){}
+    public void run() {
+    }
 
     @Override
     public void setRoom(Room room) {

@@ -16,8 +16,7 @@ public class Person extends Responsible implements HomeComponent {
     private String name;
 
     /**
-     *
-     * @param name person name
+     * @param name           person name
      * @param familyRoleType person {@link FamilyRoleType}
      */
     public Person(String name, FamilyRoleType familyRoleType) {

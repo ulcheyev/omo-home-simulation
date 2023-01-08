@@ -31,35 +31,36 @@ public class Room implements HomeComponent {
 
     private List<HomeDevice> homeDevices = new ArrayList<>();
     private List<Window> windows = new ArrayList<>();
-    private List<Item> items= new ArrayList<>();
+    private List<Item> items = new ArrayList<>();
     private List<Responsible> responsibles = new ArrayList<>();
     private Floor floor;
     private RoomName roomName;
 
     /**
-     *
-     * @param floor room floor
+     * @param floor    room floor
      * @param roomName {@link RoomName}
      */
-    public Room(Floor floor, RoomName roomName){
+    public Room(Floor floor, RoomName roomName) {
         this.floor = floor;
         this.roomName = roomName;
     }
 
     /**
      * Adds responsible to {@link #responsibles}.
+     *
      * @param responsible responsible to add
      */
-    public void addResponsible(Responsible responsible){
+    public void addResponsible(Responsible responsible) {
         responsible.setRoom(this);
         responsibles.add(responsible);
     }
 
     /**
      * Adds home device to {@link #homeDevices}.
+     *
      * @param homeDevice home device to add
      */
-    public void addHomeDevice(HomeDevice homeDevice){
+    public void addHomeDevice(HomeDevice homeDevice) {
         homeDevices.add(homeDevice);
         homeDevice.setRoom(this);
     }
@@ -67,25 +68,28 @@ public class Room implements HomeComponent {
     /**
      * Adds window to {@link #windows}.
      */
-    public void addWindow(){
-        windows.add(new Window());
+    public void addWindow() {
+        windows.add(new Window(this));
     }
 
     /**
      * Adds item to {@link #items}.
+     *
      * @param item item to add
      */
-    public void addItem(Item item){items.add(item);}
+    public void addItem(Item item) {
+        items.add(item);
+    }
 
     /**
      * Returns responsible with specified {@link ResponsibleType}.
+     *
      * @param type specified {@link ResponsibleType}
      * @return responsible with specified {@link ResponsibleType} or {@link NullResponsible} is does not exist
-     *
      */
-    public Responsible getResponsible(ResponsibleType type){
-        for(Responsible resp: responsibles){
-            if(resp.getResponsibleType().equals(type)){
+    public Responsible getResponsible(ResponsibleType type) {
+        for (Responsible resp : responsibles) {
+            if (resp.getResponsibleType().equals(type)) {
                 return resp;
             }
         }
@@ -93,19 +97,21 @@ public class Room implements HomeComponent {
     }
 
     /**
-     *
      * @return true, if room is empty
      */
-    public boolean isEmpty(){return responsibles.isEmpty();}
+    public boolean isEmpty() {
+        return responsibles.isEmpty();
+    }
 
     /**
      * Checks, if room contains specified {@link ResponsibleType}.
-     * @param roleType  specified {@link ResponsibleType}
+     *
+     * @param roleType specified {@link ResponsibleType}
      * @return true, if room contains specified {@link ResponsibleType}
      */
-    public boolean contains(ResponsibleType roleType){
-        for(Responsible resp: responsibles){
-            if (resp.getResponsibleType().equals(roleType)){
+    public boolean contains(ResponsibleType roleType) {
+        for (Responsible resp : responsibles) {
+            if (resp.getResponsibleType().equals(roleType)) {
                 return true;
             }
         }
@@ -114,26 +120,28 @@ public class Room implements HomeComponent {
 
     /**
      * Return {@link Person} in current room.
+     *
      * @return list of persons
      */
-   public List<Person> getPersons(){
+    public List<Person> getPersons() {
         List<Person> persons = new ArrayList<>();
-        for(Responsible responsible:responsibles){
-            if(responsible instanceof  Person){
+        for (Responsible responsible : responsibles) {
+            if (responsible instanceof Person) {
                 persons.add((Person) responsible);
             }
         }
         return persons;
-   }
+    }
 
     /**
      * Return {@link Pet} in current room.
+     *
      * @return list of pets
      */
-    public List<Pet> getPets(){
+    public List<Pet> getPets() {
         List<Pet> persons = new ArrayList<>();
-        for(Responsible responsible:responsibles){
-            if(responsible instanceof  Pet){
+        for (Responsible responsible : responsibles) {
+            if (responsible instanceof Pet) {
                 persons.add((Pet) responsible);
             }
         }
@@ -143,9 +151,10 @@ public class Room implements HomeComponent {
 
     /**
      * Remove specified responsible from current room {@link #responsibles}.
+     *
      * @param responsible
      */
-    public void removeResponsible(Responsible responsible){
+    public void removeResponsible(Responsible responsible) {
         responsible.setRoom(null);
         responsibles.remove(responsible);
     }
@@ -155,27 +164,29 @@ public class Room implements HomeComponent {
      * Updates current room.
      * Updates every device in {@link #homeDevices}.
      * Updates every responsible in {@link #responsibles}.
+     *
      * @throws InterruptedException
      */
     public void update() throws InterruptedException {
-    Thread thread = new Thread(
-            () -> {
-                try {
-                    for (Responsible responsible : responsibles) {
-                        responsible.update();
-                    }
-                    for (HomeDevice homeDevice : homeDevices) {
-                        try {
-                            homeDevice.update();
-                        } catch (InterruptedException e) {
-                            e.printStackTrace();
+        Thread thread = new Thread(
+                () -> {
+                    try {
+                        for (Responsible responsible : responsibles) {
+                            responsible.update();
                         }
+                        for (HomeDevice homeDevice : homeDevices) {
+                            try {
+                                homeDevice.update();
+                            } catch (InterruptedException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    } catch (ConcurrentModificationException ignored) {
                     }
-                }catch (ConcurrentModificationException ignored){}
-            }
-    );
-    thread.start();
-    thread.join();
+                }
+        );
+        thread.start();
+        thread.join();
     }
 
     @Override

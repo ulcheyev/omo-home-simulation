@@ -1,6 +1,4 @@
 .idea
 .DS_Store
-logger.properties
-mail.properties
 target
 omo_sem.iml

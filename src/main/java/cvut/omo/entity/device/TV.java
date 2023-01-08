@@ -8,7 +8,9 @@ import cvut.omo.data_collections.consumption.ConsumptionCollection;
  */
 public class TV extends HomeAppliances {
 
-    public TV(double lifeTime) {super(lifeTime);}
+    public TV(double lifeTime) {
+        super(lifeTime);
+    }
 
     @Override
     protected void identify() {

@@ -16,7 +16,9 @@ public final class SmartHomeRoomBuilder implements RoomBuilder {
      * Instance of {@link SmartHomeRoomBuilder}.
      */
     public static final SmartHomeRoomBuilder INSTANCE = new SmartHomeRoomBuilder();
-    private SmartHomeRoomBuilder(){}
+
+    private SmartHomeRoomBuilder() {
+    }
 
     private Room room = new Room();
 
@@ -61,9 +63,10 @@ public final class SmartHomeRoomBuilder implements RoomBuilder {
 
     /**
      * Returns result.
+     *
      * @return result of building
      */
-    public Room getResult(){
+    public Room getResult() {
         Room res = room;
         reset();
         return res;

@@ -8,14 +8,12 @@ import cvut.omo.data_collections.visitor.SmartHomeReportVisitor;
 public interface HomeComponent {
 
     /**
-     *
      * @param visitor visitor to accept
      * @return necessary object, depends on implementation
      */
     Object accept(SmartHomeReportVisitor visitor);
 
     /**
-     *
      * @return true, if null.
      */
     boolean isNull();

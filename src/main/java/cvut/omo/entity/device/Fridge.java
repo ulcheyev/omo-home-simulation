@@ -14,7 +14,7 @@ import java.util.List;
 /**
  * Class represents fridge device.
  */
-public class Fridge extends HomeAppliances implements Capacious{
+public class Fridge extends HomeAppliances implements Capacious {
 
     private static final int FRIDGE_FULLNESS = 10;
     private List<Food> foods = new ArrayList<>();
@@ -25,7 +25,7 @@ public class Fridge extends HomeAppliances implements Capacious{
     }
 
     private void fullFridge() {
-        for(int i = 0; i < FRIDGE_FULLNESS; i++){
+        for (int i = 0; i < FRIDGE_FULLNESS; i++) {
             foods.add(new Food());
         }
     }
@@ -53,7 +53,7 @@ public class Fridge extends HomeAppliances implements Capacious{
 
     @Override
     public Stuff giveRandomItem() {
-        if(foods.isEmpty()){
+        if (foods.isEmpty()) {
             throw new OMOException("Fridge is empty");
         }
         Food randomObjFromList = Utils.getRandomObjFromList(foods);

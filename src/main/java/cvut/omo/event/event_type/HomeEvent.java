@@ -23,23 +23,21 @@ import static java.util.List.of;
 public enum HomeEvent implements EventType {
 
     KNOCK_ON_THE_DOOR(RoomName.VESTIBULE, CONTROL_THE_DOOR, OPEN_THE_DOR),
-    BULB_BURNED_OUT(RoomName.COMMON,  CHANGE_BULB),
+    BULB_BURNED_OUT(RoomName.COMMON, CHANGE_BULB),
     RAIN(RoomName.STUB, DEVICE_CURCUIT_BREAKER_ON, DEVICE_CURCUIT_BREAKER_OFF),
-    WATER_LEAK_ALARM_WENT_OFF(RoomName.COMMON ,DEVICE_WATER_LEAK_SENSOR_OFF, CALL_THE_RESCUE_SERVICE),
+    WATER_LEAK_ALARM_WENT_OFF(RoomName.COMMON, DEVICE_WATER_LEAK_SENSOR_OFF, CALL_THE_RESCUE_SERVICE),
     THUNDERSTORM(RoomName.STUB, DEVICE_CURCUIT_BREAKER_ON, DEVICE_CURCUIT_BREAKER_OFF),
     TV_STAR_HAS_DIED(RoomName.STUB, DEVICE_TV_ON, PERSON_CRY),
     NEED_TO_TIDY_UP_THE_HOUSE(RoomName.COMMON, TIDY_UP),
-    PREPARE_A_HOUSE_FOR_CHRISTMAS(RoomName.STUB, DECORATE_A_CHRISTMAS_TREE),
-    INFO(RoomName.STUB);
+    PREPARE_A_HOUSE_FOR_CHRISTMAS(RoomName.STUB, DECORATE_A_CHRISTMAS_TREE), INFO(RoomName.STUB);
 
     /**
-     *
-     * @param roomName {@link RoomName} where event can be appeared
+     * @param roomName     {@link RoomName} where event can be appeared
      * @param chainToSolve a chain of {@link cvut.omo.entity.activity.Activity}
-     *                                , in which every {@link cvut.omo.entity.activity.Activity}
-     *                                 must be executed successfully that the event has been resolved
+     *                     , in which every {@link cvut.omo.entity.activity.Activity}
+     *                     must be executed successfully that the event has been resolved
      */
-    HomeEvent(RoomName roomName,  ActivityType...chainToSolve){
+    HomeEvent(RoomName roomName, ActivityType... chainToSolve) {
         this.roomName = roomName;
         this.chainToSolve = Arrays.asList(chainToSolve);
     }

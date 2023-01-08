@@ -39,7 +39,7 @@ public class Home {
     private static int currFloorIdx = 0;
 
 
-    private Home(){
+    private Home() {
         isPowerEnable = true;
         floors = new ArrayList<>();
         persons = new ArrayList<>();
@@ -48,16 +48,20 @@ public class Home {
 
     /**
      * Adds floor to {@link #floors}.
+     *
      * @param floor floor to add
      */
-    public void addFloor(Floor floor){floors.add(floor);}
+    public void addFloor(Floor floor) {
+        floors.add(floor);
+    }
 
     /**
      * Adds entity to random floor and in random room in home.
+     *
      * @param obj entity to add
      * @param <T> entity's class
      */
-    public <T extends Responsible> void  addEntity( T obj ){
+    public <T extends Responsible> void addEntity(T obj) {
         int idxForFloor = Utils.getRandomInt(floors.size());
         int idxForRoom = Utils.getRandomInt(floors.get(idxForFloor).getRooms().size());
         floors.get(idxForFloor).getRooms().get(idxForRoom).addResponsible(obj);
@@ -65,26 +69,27 @@ public class Home {
 
     /**
      * Returns all devices in home.
+     *
      * @return list of home devices
      */
-    public List<HomeDevice> getHomeDevices(){
+    public List<HomeDevice> getHomeDevices() {
         List<HomeDevice> res = new ArrayList<>();
-        floors.forEach(floor -> floor.getRooms()
-                .forEach(room -> res.addAll(room.getHomeDevices())));
+        floors.forEach(floor -> floor.getRooms().forEach(room -> res.addAll(room.getHomeDevices())));
         return res;
     }
 
     /**
      * Returns home devices with specified class.
+     *
      * @param clazz specified class
      * @return list of home devices
      */
-    public List<HomeAppliances> getHomeAppliancesByClass(Class<? extends Usable> clazz){
+    public List<HomeAppliances> getHomeAppliancesByClass(Class<? extends Usable> clazz) {
         List<HomeDevice> hds = getHomeDevices();
         List<HomeAppliances> res = new ArrayList<>();
-        for(HomeDevice hd: hds){
-            if(hd.getClass().equals(clazz)){
-                res.add((HomeAppliances)hd);
+        for (HomeDevice hd : hds) {
+            if (hd.getClass().equals(clazz)) {
+                res.add((HomeAppliances) hd);
             }
         }
         return res;
@@ -92,12 +97,13 @@ public class Home {
 
     /**
      * Returns all living responsibles in home.
+     *
      * @return list of responsibles
      */
-    public List<Responsible> getAllEntityResponsibles(){
+    public List<Responsible> getAllEntityResponsibles() {
         List<Responsible> responsibles = new ArrayList<>();
-        for(Floor floor: floors){
-            for (Room room: floor.getRooms()){
+        for (Floor floor : floors) {
+            for (Room room : floor.getRooms()) {
                 responsibles.addAll(room.getResponsibles());
             }
         }
@@ -107,9 +113,10 @@ public class Home {
     /**
      * Return list of {@link HomeComponent} in home.
      * In list: {@link Floor}, {@link Room}, {@link HomeDevice}, {@link Person}, {@link Pet}.
+     *
      * @return list of {@link HomeComponent}
      */
-    public List<HomeComponent> getComponentsForReport(){
+    public List<HomeComponent> getComponentsForReport() {
         List<HomeComponent> homeComponents = new ArrayList<>();
         homeComponents.addAll(floors);
         homeComponents.addAll(getAllEntityResponsibles());
@@ -119,11 +126,12 @@ public class Home {
 
     /**
      * Return room which are in the home.
+     *
      * @return list of rooms
      */
-    public List<Room> getAllRooms(){
+    public List<Room> getAllRooms() {
         List<Room> rooms = new ArrayList<>();
-        for(Floor floor: floors){
+        for (Floor floor : floors) {
             rooms.addAll(floor.getRooms());
         }
         return rooms;
@@ -132,19 +140,20 @@ public class Home {
     /**
      * Searches and returns responsible with specified responsible type.
      * If it does not exist -> return {@link NullResponsible}
+     *
      * @param role specified responsible type
      * @return responsible with specified responsible type
      */
     public Responsible searchResponsibleByType(ResponsibleType role) {
         List<Responsible> responsibles = new ArrayList<>();
-        for(Floor floor: floors) {
+        for (Floor floor : floors) {
             for (Room room : floor.getRooms()) {
-                if(room.contains(role)){
+                if (room.contains(role)) {
                     responsibles.add(room.getResponsible(role));
                 }
             }
         }
-        if(responsibles.isEmpty()){
+        if (responsibles.isEmpty()) {
             return new NullResponsible();
         }
         return Utils.getRandomObjFromList(responsibles);
@@ -153,6 +162,7 @@ public class Home {
 
     /**
      * Returns room with specified room name.
+     *
      * @param type specified room name
      * @return room with specified room name
      */
@@ -173,17 +183,17 @@ public class Home {
      * Updates every floor in home.
      */
     public void update() {
-        Thread thread = new Thread(
-                () -> {
-                    for(Floor floor: floors){
-                        try {
-                            floor.update();
-                        } catch (InterruptedException e) {
-                            e.printStackTrace();
-                        }
-                    }
+        Thread thread = new Thread(() -> {
+            for (Floor floor : floors) {
+                try {
+                    floor.update();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
                 }
-        );
+            }
+        });
         thread.start();
-    };
+    }
+
+    ;
 }

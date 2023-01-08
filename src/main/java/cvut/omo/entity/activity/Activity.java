@@ -29,8 +29,9 @@ public abstract class Activity {
     /**
      * Constructor fot class.
      * Add this activity to activities in specified event.
-     * @param responsible responsible for this activity
-     * @param event the event to which this activity relates
+     *
+     * @param responsible  responsible for this activity
+     * @param event        the event to which this activity relates
      * @param activityType {@link ActivityType} type of activity
      */
     public Activity(Responsible responsible, Event event, ActivityType activityType) {
@@ -50,21 +51,23 @@ public abstract class Activity {
      * If execute is success, activity executed {@link #isExecuted} flag is true.
      * Check event solving.
      */
-    public void execute()
-    {
+    public void execute() {
         responsible.lock();
         checkResponsibleLocation();
 
-        if(doWork(responsible)){
+        if (doWork(responsible)) {
             isExecuted = true;
         }
 
         responsible.unlock();
         event.checkSolving();
-    };
+    }
+
+    ;
 
     /**
      * Template method for concrete activities.
+     *
      * @param responsible responsible for activity
      * @return true, if activity execution is successfully
      */
@@ -74,24 +77,21 @@ public abstract class Activity {
     /**
      * @return {returns true, if activity is executed}
      */
-    public  boolean isExecuted(){
+    public boolean isExecuted() {
         return isExecuted;
     }
 
     private void assignRoom() {
 
-        if(checkIfActivityTypeContainsStubRoom()){
+        if (checkIfActivityTypeContainsStubRoom()) {
             return;
-        }
-        else if(checkIfActivityTypeContainsCommonRoom()){
+        } else if (checkIfActivityTypeContainsCommonRoom()) {
             this.room = event.getRoom();
             return;
-        }
-        else if(checkResponsibleRoom()){
+        } else if (checkResponsibleRoom()) {
             this.room = responsible.getRoom();
             return;
-        }
-        else{
+        } else {
             RoomName name = Utils.getRandomObjFromList(activityType.getRoomNames());
             this.room = Home.INSTANCE.searchRoomByType(name);
         }
@@ -102,47 +102,34 @@ public abstract class Activity {
         return activityType.getRoomNames().contains(RoomName.COMMON);
     }
 
-    private boolean checkIfActivityTypeContainsStubRoom(){
+    private boolean checkIfActivityTypeContainsStubRoom() {
         return activityType.getRoomNames().contains(RoomName.STUB);
     }
 
-    private boolean checkResponsibleRoom(){
+    private boolean checkResponsibleRoom() {
         boolean res = false;
-        if(!responsible.isNull()){
-            res =  activityType
-                    .getRoomNames()
-                    .contains(responsible.getRoom().getRoomName());
+        if (!responsible.isNull()) {
+            res = activityType.getRoomNames().contains(responsible.getRoom().getRoomName());
         }
         return res;
     }
 
     /**
-     *
      * @return string representation of object
      */
     @Override
     public String toString() {
 
-        String type = responsible.getResponsibleType().isNull()
-                ? responsible.getClass().getSimpleName()
-                : responsible.getResponsibleType().toString();
+        String type = responsible.getResponsibleType().isNull() ? responsible.getClass().getSimpleName() : responsible.getResponsibleType().toString();
 
-        Room location = room.isNull()
-                ? responsible.getRoom()
-                : room;
+        Room location = room.isNull() ? responsible.getRoom() : room;
 
-        return   type +
-                " in room " + location.getRoomName() +
-                " on the " + location.getFloor().getNumberOfFloor() + " floor " +
-                "did " + activityType.name();
+        return type + " in room " + location.getRoomName() + " on the " + location.getFloor().getNumberOfFloor() + " floor " + "did " + activityType.name();
     }
 
-    private void checkResponsibleLocation(){
-        if(!room.isNull() &&
-                !responsible.getRoom().equals(room))
-        {
-            RelocateActivity relocateActivity =
-                    ActivityFactory.createRelocateActivity(responsible, event, room);
+    private void checkResponsibleLocation() {
+        if (!room.isNull() && !responsible.getRoom().equals(room)) {
+            RelocateActivity relocateActivity = ActivityFactory.createRelocateActivity(responsible, event, room);
             relocateActivity.doWork(responsible);
             SmartHomeEventCollection.swapTwoEndActivities(event);
         }

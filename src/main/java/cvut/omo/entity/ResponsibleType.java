@@ -6,7 +6,6 @@ package cvut.omo.entity;
 public interface ResponsibleType {
 
     /**
-     *
      * @return true, if null.
      */
     boolean isNull();

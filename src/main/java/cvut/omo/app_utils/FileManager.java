@@ -1,4 +1,5 @@
 package cvut.omo.app_utils;
+
 import org.apache.commons.io.FileUtils;
 
 import java.io.File;
@@ -8,13 +9,13 @@ import java.io.PrintWriter;
 /**
  * Class represents write to file function.
  */
-public class WriterToFile {
-
+public class FileManager {
 
     /**
      * Generates report from to the specified file name with specified text report.
+     *
      * @param fileName
-     * @param report report text
+     * @param report   report text
      * @throws IOException when the directory does not exist
      */
     public static void generateNewReport(String fileName, String report) throws IOException {
@@ -23,8 +24,9 @@ public class WriterToFile {
 
     /**
      * Generates documentation from to the specified file name with specified text documentation.
+     *
      * @param fileName file name
-     * @param text documentation text
+     * @param text     documentation text
      * @throws IOException when the directory does not exist
      */
     public static void generateNewDocumentation(String fileName, String text) throws IOException {
@@ -34,13 +36,14 @@ public class WriterToFile {
 
     /**
      * Open file to write.
-     * @param path path to file
+     *
+     * @param path     path to file
      * @param fileName file name
      * @return
      * @throws IOException when the directory does not exist
      */
     private static File openFile(String path, String fileName) throws IOException {
-        File file = new File(path+fileName+".txt");
+        File file = new File(path + fileName + ".txt");
         file.getParentFile().mkdirs();
         file.createNewFile();
         return file;
@@ -48,7 +51,8 @@ public class WriterToFile {
 
     /**
      * Write to file.
-     * @param file to write
+     *
+     * @param file   to write
      * @param string text to write to file
      * @throws IOException
      */
@@ -58,17 +62,6 @@ public class WriterToFile {
         printWriter.print(string);
         printWriter.close();
     }
-
-    /**
-     * Clean directory.
-     * @param directory to clean
-     * @throws IOException
-     */
-    public static void cleanDirectory(String directory) throws IOException {
-        File file = new File(directory);
-        FileUtils.cleanDirectory(file);
-    }
-
 
 
 }

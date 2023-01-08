@@ -8,18 +8,19 @@ import cvut.omo.event.event_type.DeviceResponsibleEvent;
 /**
  * Class represent idle state of {@link HomeDevice}.
  */
-public class IddleState extends HomeDeviceState{
+public class IddleState extends HomeDeviceState {
 
     private final static double PROBABILITY_OF_BROKE = 0.15;
 
-    public IddleState(HomeAppliances homeAppliances){
+    public IddleState(HomeAppliances homeAppliances) {
         super(homeAppliances);
         homeAppliances.goIntoIddleMode();
     }
 
 
     @Override
-    public void switchOn(HomeAppliances homeAppliances) {}
+    public void switchOn(HomeAppliances homeAppliances) {
+    }
 
     @Override
     public void switchOff(HomeAppliances homeAppliances) {
@@ -41,18 +42,19 @@ public class IddleState extends HomeDeviceState{
 
     /**
      * While using person can break device with {@link #PROBABILITY_OF_BROKE} probability.
-     * @param person person, which is using this device
+     *
+     * @param person         person, which is using this device
      * @param homeAppliances current device
      */
     @Override
     public void use(Person person, HomeAppliances homeAppliances) {
 
-        if(Utils.getRandomDouble() < PROBABILITY_OF_BROKE){
+        if (Utils.getRandomDouble() < PROBABILITY_OF_BROKE) {
 
             homeAppliances.setHomeDeviceState(new BrokenState(homeAppliances));
             String desc = "Person " + person.getName() + " broke this device...";
             EventGenerator.generateEventWithResponsible(homeAppliances, DeviceResponsibleEvent.DEVICE_BROKEN, desc);
-        }else {
+        } else {
             homeAppliances.setHomeDeviceState(new RunState(person, homeAppliances));
         }
     }

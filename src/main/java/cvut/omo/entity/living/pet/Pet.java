@@ -19,7 +19,6 @@ public class Pet extends Responsible implements HomeComponent {
     private List<Activity> activityList;
 
     /**
-     *
      * @param petType {@link PetType}
      */
     public Pet(PetType petType) {

@@ -1,13 +1,16 @@
 package cvut.omo.entity.device;
+
 import cvut.omo.app_utils.Constants;
 import cvut.omo.data_collections.consumption.ConsumptionCollection;
 
 /**
  * Class represents washing machine device.
  */
-public class WashingMachine extends HomeAppliances{
+public class WashingMachine extends HomeAppliances {
 
-    public WashingMachine(double lifeTime) {super(lifeTime);}
+    public WashingMachine(double lifeTime) {
+        super(lifeTime);
+    }
 
     @Override
     protected void identify() {

@@ -18,14 +18,14 @@ public enum RoomType {
     HOUSEHOLD(GARAGE, KITCHEN, HALL),
     PERSONAL_NEEDS(BATHROOM);
 
-    RoomType(RoomName ... roomName){
+    RoomType(RoomName... roomName) {
         rooms.addAll(Arrays.asList(roomName));
     }
 
     @Getter
     private final List<RoomName> rooms = new ArrayList<>();
 
-    public static List<RoomName> getAll(){
+    public static List<RoomName> getAll() {
         List<RoomName> res = new ArrayList<>();
         res.addAll(CHILL.rooms);
         res.addAll(HOUSEHOLD.rooms);

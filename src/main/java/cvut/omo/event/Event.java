@@ -32,15 +32,14 @@ public class Event {
 
     private Room room;
     private EventType eventType;
-    private  boolean isSolved = false;
+    private boolean isSolved = false;
     private SolveStrategy solveStrategy;
     private String description;
     private List<Activity> chainToSolve = new ArrayList<>();
     private Responsible responsible = new NullResponsible();
 
     /**
-     *
-     * @param room event room
+     * @param room      event room
      * @param eventType event type
      */
     public Event(Room room, EventType eventType) {
@@ -50,9 +49,8 @@ public class Event {
     }
 
     /**
-     *
      * @param responsible responsible for event
-     * @param eventType event type
+     * @param eventType   event type
      */
     public Event(Responsible responsible, EventType eventType) {
         this.responsible = responsible;
@@ -63,15 +61,19 @@ public class Event {
 
     /**
      * Check, if event is solved.
+     *
      * @return true, if event is solved
      */
-    public boolean isSolved(){
+    public boolean isSolved() {
         return isSolved;
     }
-    private Event(){}
+
+    private Event() {
+    }
 
     /**
      * Trying to solve this event. Choose correct strategy depends on {@link EventType}.
+     *
      * @throws InterruptedException {@link Thread}
      */
     public void solve() throws InterruptedException {
@@ -79,14 +81,10 @@ public class Event {
         if (eventType instanceof LivingEntityResponsibleEvent) {
             solveStrategy = new LivingEntityEventSolveStrategy(responsible);
             solveStrategy.solve(this);
-        }
-
-        else if (eventType instanceof HomeEvent) {
+        } else if (eventType instanceof HomeEvent) {
             solveStrategy = new HomeEventSolveStrategy();
             solveStrategy.solve(this);
-        }
-
-        else if (eventType instanceof DeviceResponsibleEvent) {
+        } else if (eventType instanceof DeviceResponsibleEvent) {
             solveStrategy = new DeviceEventSolveStrategy();
             solveStrategy.solve(this);
         }
@@ -94,61 +92,47 @@ public class Event {
 
     /**
      * Add {@link Activity} in chain to solve this event.
+     *
      * @param activity activity to add in chain
      */
-    public void addActivity(Activity activity){
+    public void addActivity(Activity activity) {
         chainToSolve.add(activity);
     }
 
     /**
      * Checks, if this event is solved (every activity must be executed successfully in {@link #chainToSolve}).
+     *
      * @return true, if event is solved
      */
-    public boolean checkSolving(){
-       List<ActivityType> activityTypes = new ArrayList<>();
-       for(Activity activity: chainToSolve){
-           activityTypes.add(activity.getActivityType());
-       }
-       for(ActivityType activityType: eventType.getChainToSolve()){
-           if(!activityTypes.contains(activityType)){
-               return false;
-           }
-       }
-       isSolved = true;
-       return true;
+    public boolean checkSolving() {
+        List<ActivityType> activityTypes = new ArrayList<>();
+        for (Activity activity : chainToSolve) {
+            activityTypes.add(activity.getActivityType());
+        }
+        for (ActivityType activityType : eventType.getChainToSolve()) {
+            if (!activityTypes.contains(activityType)) {
+                return false;
+            }
+        }
+        isSolved = true;
+        return true;
     }
 
 
     /**
      * Return string representation of event.
+     *
      * @return string representation of event
      */
     @Override
     public String toString() {
 
-        String decs =
-                description==null
-                ? ""
-                : " (" + description + ")";
+        String decs = description == null ? "" : " (" + description + ")";
 
-        String resp_type =
-                !responsible.getResponsibleType().isNull()
-                ? " by "  + responsible.getResponsibleType().toString()
-                : !responsible.getClass().equals(NullResponsible.class)
-                ? " by "  + responsible.getClass().getSimpleName()
-                : "";
+        String resp_type = !responsible.getResponsibleType().isNull() ? " by " + responsible.getResponsibleType().toString() : !responsible.getClass().equals(NullResponsible.class) ? " by " + responsible.getClass().getSimpleName() : "";
 
-        String location = room.isNull()
-                ? ""
-                : " in " + room.getRoomName().toString()
-                + " on the "
-                + room.getFloor().getNumberOfFloor()
-                + " floor";
+        String location = room.isNull() ? "" : " in " + room.getRoomName().toString() + " on the " + room.getFloor().getNumberOfFloor() + " floor";
 
-        return "Event with type " +
-                eventType.toString() +
-                resp_type +
-                location +
-                decs;
+        return "Event with type " + eventType.toString() + resp_type + location + decs;
     }
 }

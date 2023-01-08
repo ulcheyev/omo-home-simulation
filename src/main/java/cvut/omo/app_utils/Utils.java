@@ -3,58 +3,63 @@ package cvut.omo.app_utils;
 import cvut.omo.entity.device.documentation.BrokennessLevel;
 import cvut.omo.entity.device.notifier.EmailListener;
 
+import javax.mail.internet.AddressException;
+import javax.mail.internet.InternetAddress;
 import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+
 
 /**
  * Class contains methods for general use.
  */
 public class Utils {
 
-    private static final String EMAIL_REGEX = "^[\\\\w!#$%&amp;'*+/=?`{|}~^-]+(?:\\\\.[\\\\w!#$%&amp;'*+/=?`{|}~^-]+)*@(?:[a-zA-Z0-9-]+\\\\.)+[a-zA-Z]{2,6}$";
-    private static final Pattern EMAIL_PATTERN = Pattern.compile(EMAIL_REGEX);
-
     private static final Random PRNG = new Random();
 
     /**
      * Returns random int.
+     *
      * @param to max int to generate
      * @return generated number to the max int "to"
      */
-    public static int getRandomInt(int to){
-        return PRNG.nextInt(to);
+    public static int getRandomInt(int to) {
+        return Math.abs(PRNG.nextInt(to));
     }
 
 
     /**
      * Returns random double.
+     *
      * @return generated random double
      */
-    public static double getRandomDouble(){return PRNG.nextDouble();}
+    public static double getRandomDouble() {
+        return PRNG.nextDouble();
+    }
 
     /**
      * Returns random int.
+     *
      * @return generated random int
      */
-    public static int getRandomInt(){
+    public static int getRandomInt() {
         return PRNG.nextInt();
     }
 
     /**
      * Returns random {@link BrokennessLevel}.
+     *
      * @return random value from BrokennessLevel
      */
-    public static BrokennessLevel getRandomBrokennessLevel()  {
+    public static BrokennessLevel getRandomBrokennessLevel() {
         BrokennessLevel[] brokennessLevels = BrokennessLevel.values();
         return brokennessLevels[getRandomInt(brokennessLevels.length)];
     }
 
     /**
      * Return random probability of yes.
+     *
      * @param probabilityOfYes probability of yes
      * @return true -> yes, false -> no
      */
@@ -65,8 +70,9 @@ public class Utils {
 
     /**
      * Returns random object from specified list.
+     *
      * @param objs list of objects
-     * @param <T> specified class
+     * @param <T>  specified class
      * @return random object from list
      */
     public static <T> T getRandomObjFromList(List<T> objs) {
@@ -75,10 +81,11 @@ public class Utils {
 
     /**
      * Scan user input for int.
+     *
      * @param string message to show
      * @return valid int from input
      */
-    public  static int getInputNumber(String string){
+    public static int getInputNumber(String string) {
         boolean isValid = false;
         int days = 0;
         Scanner input = new Scanner(System.in);
@@ -87,7 +94,7 @@ public class Utils {
                 System.out.print(string);
                 days = input.nextInt();
                 isValid = true;
-            }catch (InputMismatchException e){
+            } catch (InputMismatchException e) {
                 System.out.println("Please, enter digit.");
                 input.nextLine();
             }
@@ -135,17 +142,16 @@ public class Utils {
         }
     }
 
-    public static boolean emailValidator(String email)
-    {
-        if (email == null) {
-            return false;
+    private static boolean emailValidator(String email) {
+        boolean result = true;
+        try {
+            InternetAddress emailAddr = new InternetAddress(email);
+            emailAddr.validate();
+        } catch (AddressException ex) {
+            result = false;
         }
-        Matcher matcher = EMAIL_PATTERN.matcher(email);
-        return matcher.matches();
+        return result;
+
     }
-
-
-
-
 
 }

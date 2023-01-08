@@ -64,5 +64,4 @@ public class Constants {
     public final static ImmutableList<String> flags = ImmutableList.of(ON, OFF, RUN, REPAIR, PAUSE, BREAK);
 
 
-
 }

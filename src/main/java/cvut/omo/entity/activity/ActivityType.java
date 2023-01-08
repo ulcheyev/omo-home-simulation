@@ -1,4 +1,5 @@
 package cvut.omo.entity.activity;
+
 import cvut.omo.entity.device.*;
 import cvut.omo.entity.ResponsibleType;
 import cvut.omo.entity.item.item.*;
@@ -18,17 +19,18 @@ import static java.util.List.of;
 public enum ActivityType {
 
 
-    PET_A_PET(of(RoomName.COMMON),null),
-    TAKE_A_WALK_WITH_PET(of(RoomName.STUB), null,  DAUGHTER, SON),
+    PET_A_PET(of(RoomName.COMMON), null),
+    TAKE_A_WALK_WITH_PET(of(RoomName.STUB), null, DAUGHTER, SON),
     FEED_PET(of(RoomName.COMMON), null),
     PERSON_SLEEP(of(RoomName.BEDROOM), null),
 
     USE_BIKE(of(RoomName.GARAGE), Bike.class, ItemActivity.class),
     USE_SKIS(of(RoomName.GARAGE), Ski.class, ItemActivity.class),
     USE_CAR(of(RoomName.GARAGE), Car.class, ItemActivity.class),
-    WINDOWS_OPENED(of(RoomName.STUB), Blinds.class, ItemActivity.class),
+    OPEN_BLINDS(of(RoomName.STUB), Blinds.class, ItemActivity.class),
+    CLOSE_BLINDS(of(RoomName.STUB), Blinds.class, ItemActivity.class),
 
-    DEVICE_FRIDGE_ON(of(RoomName.KITCHEN),Fridge.class, DeviceActivity.class),
+    DEVICE_FRIDGE_ON(of(RoomName.KITCHEN), Fridge.class, DeviceActivity.class),
     DEVICE_COMPUTER_ON(RoomType.CHILL.getRooms(), Computer.class, DeviceActivity.class),
     DEVICE_OVEN_ON(of(RoomName.KITCHEN), Oven.class, DeviceActivity.class),
     DEVICE_WASHING_MACHINE_ON(of(RoomName.BATHROOM), WashingMachine.class, DeviceActivity.class),
@@ -62,21 +64,21 @@ public enum ActivityType {
     DEVICE_WASHING_MACHINE_PAUSE(DEVICE_WASHING_MACHINE_ON),
     DEVICE_TV_PAUSE(DEVICE_TV_ON),
 
-    DEVICE_REPAIR(of(RoomName.COMMON), null, DeviceActivity.class,  FATHER),
+    DEVICE_REPAIR(of(RoomName.COMMON), null, DeviceActivity.class, FATHER),
     DEVICE_BREAK(of(RoomName.COMMON), null, DeviceActivity.class),
     CHANGE_BULB(of(RoomName.COMMON), null, BaseActivity.class, FATHER, GRANDFATHER),
     READ_A_DOCUMENTATION(of(RoomName.COMMON), null, BaseActivity.class, FATHER),
-    TRY_TO_FIX_IT_YOURSELF(of(RoomName.COMMON),null,BaseActivity.class, FATHER),
-    CALL_GRANDFATHER_TO_HELP_REPAIR(of(RoomName.COMMON),null,BaseActivity.class, FATHER),
-    GRANDFATHER_REPAIRING_THE_DEVICE(of(RoomName.COMMON),null,BaseActivity.class, GRANDFATHER),
-    THROW_THE_DEVICE_IN_THE_TRASH(of(RoomName.COMMON),null,BaseActivity.class, FATHER),
+    TRY_TO_FIX_IT_YOURSELF(of(RoomName.COMMON), null, BaseActivity.class, FATHER),
+    CALL_GRANDFATHER_TO_HELP_REPAIR(of(RoomName.COMMON), null, BaseActivity.class, FATHER),
+    GRANDFATHER_REPAIRING_THE_DEVICE(of(RoomName.COMMON), null, BaseActivity.class, GRANDFATHER),
+    THROW_THE_DEVICE_IN_THE_TRASH(of(RoomName.COMMON), null, BaseActivity.class, FATHER),
 
 
     CONTROL_THE_DOOR(of(RoomName.VESTIBULE), null),
     CALL_THE_RESCUE_SERVICE(of(RoomName.STUB), FireSensor.class),
     OPEN_THE_DOR(of(RoomName.VESTIBULE), null),
-    MAKE_TEA(of(RoomName.KITCHEN),  Fridge.class),
-    PERSON_EAT(of(RoomName.KITCHEN),  null),
+    MAKE_TEA(of(RoomName.KITCHEN), Fridge.class),
+    PERSON_EAT(of(RoomName.KITCHEN), null),
     PERSON_CRY(of(RoomName.BATHROOM), null, MOTHER, GRANDMOTHER),
     CALL_GRANDPA_FOR_HELP(of(RoomName.BEDROOM, RoomName.CHILDRENS_ROOM), null, BaseActivity.class, GRANDFATHER),
     TIDY_UP(of(RoomName.COMMON), null, BaseActivity.class, MOTHER, DAUGHTER),
@@ -92,31 +94,29 @@ public enum ActivityType {
 
 
     /**
-     *
      * @param roomNames {@link RoomName} where activity can be executed
-     * @param use necessary device/item class for executing
-     * @param solver class that extends {@link Activity}, which will be solving this activity
-     * @param roles responsible roles, which can this execute this activity
-     *              (similarity of the use case diagram)
+     * @param use       necessary device/item class for executing
+     * @param solver    class that extends {@link Activity}, which will be solving this activity
+     * @param roles     responsible roles, which can this execute this activity
+     *                  (similarity of the use case diagram)
      */
-    ActivityType(List<RoomName > roomNames, Class<? extends Usable> use, Class<? extends Activity> solver, ResponsibleType...roles) {
+    ActivityType(List<RoomName> roomNames, Class<? extends Usable> use, Class<? extends Activity> solver, ResponsibleType... roles) {
         assignVariables(roomNames, solver, use, roles);
     }
 
     /**
-     *
      * @param roomNames {@link RoomName} where activity can be executed
-     * @param solver necessary device/item class for executing
-     * @param use class that extends {@link Activity}, which will be solving this activity
-     * @param roles responsible roles, which can this execute this activity
+     * @param solver    necessary device/item class for executing
+     * @param use       class that extends {@link Activity}, which will be solving this activity
+     * @param roles     responsible roles, which can this execute this activity
      *                  (similarity of the use case diagram)
      */
-    ActivityType(List<RoomName > roomNames, Class<? extends Activity> solver, Class<? extends HomeDevice> use, ResponsibleType[]... roles){
+    ActivityType(List<RoomName> roomNames, Class<? extends Activity> solver, Class<? extends HomeDevice> use, ResponsibleType[]... roles) {
         assignVariables(roomNames, solver, use);
         if (roles.length == 0) {
             defaultConfig();
         } else {
-            for(ResponsibleType[] responsibleTypes: roles){
+            for (ResponsibleType[] responsibleTypes : roles) {
                 responsibles.addAll(of(responsibleTypes));
             }
         }
@@ -124,21 +124,21 @@ public enum ActivityType {
 
     /**
      * Solver will be implicitly BaseActivity.
+     *
      * @param roomNames {@link RoomName} where activity can be executed
-     * @param use class that extends {@link Activity}, which will be solving this activity
-     * @param roles responsible roles, which can this execute this activity
-     *               (similarity of the use case diagram)
+     * @param use       class that extends {@link Activity}, which will be solving this activity
+     * @param roles     responsible roles, which can this execute this activity
+     *                  (similarity of the use case diagram)
      */
-    ActivityType(List<RoomName > roomNames, Class<? extends HomeDevice> use, ResponsibleType...roles) {
+    ActivityType(List<RoomName> roomNames, Class<? extends HomeDevice> use, ResponsibleType... roles) {
         assignVariables(roomNames, null, use, roles);
     }
-
 
 
     /**
      * @param activityType assign all values from activityType parameter
      */
-    ActivityType(ActivityType activityType){
+    ActivityType(ActivityType activityType) {
         this.roomNames = activityType.getRoomNames();
         toUse = activityType.getToUse();
         this.solver = activityType.getSolver();
@@ -149,15 +149,14 @@ public enum ActivityType {
         }
     }
 
-    private void assignVariables(List<RoomName > roomNames, Class<? extends Activity> solver, Class<? extends Usable> use, ResponsibleType... roles){
+    private void assignVariables(List<RoomName> roomNames, Class<? extends Activity> solver, Class<? extends Usable> use, ResponsibleType... roles) {
         this.roomNames = roomNames;
         toUse = use;
-        if(solver != null){
+        if (solver != null) {
             this.solver = solver;
 
-        }
-        else{
-           this. solver = BaseActivity.class;
+        } else {
+            this.solver = BaseActivity.class;
         }
         if (roles.length == 0) {
             defaultConfig();
@@ -166,7 +165,7 @@ public enum ActivityType {
         }
     }
 
-    private void defaultConfig(){
+    private void defaultConfig() {
         responsibles.addAll(Arrays.asList(FamilyRoleType.class.getEnumConstants()));
     }
 
@@ -186,20 +185,22 @@ public enum ActivityType {
 
     /**
      * Class represent device, which can be responsible for some activities.
-     * */
-    public enum Device implements ResponsibleType{
+     */
+    public enum Device implements ResponsibleType {
         CIRCUIT_BREAKER(CircuitBreaker.class);
+
         Device(Class<? extends HomeDevice> clazz) {
             this.clazz = clazz;
         }
+
         @Getter
         private final Class<? extends HomeDevice> clazz;
+
         @Override
         public boolean isNull() {
             return false;
         }
     }
-
 
 
 }

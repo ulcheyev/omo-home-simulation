@@ -21,7 +21,9 @@ public abstract class Sensor extends HomeAppliances {
     protected List<EventListener> listenerList;
     protected static Documentation documentation;
 
-    public Sensor(double lifeTime) {super(lifeTime);}
+    public Sensor(double lifeTime) {
+        super(lifeTime);
+    }
 
     /**
      * Creates and add {@link EventListener} to {@link #listenerList}.
@@ -35,19 +37,25 @@ public abstract class Sensor extends HomeAppliances {
         listenerList.add(new SmsListener());
     }
 
-    public  void enable(){
+    public void enable() {
         this.setCurrentConsumption(SourceType.ENERGY, Constants.SENSOR_ELECTRICITY_IDDLE_STATE_CONSUMPTION);
-    };
+    }
+
+    ;
 
 
-    public void goIntoIddleMode(){
+    public void goIntoIddleMode() {
         this.setCurrentConsumption(SourceType.ENERGY, Constants.SENSOR_ELECTRICITY_IDDLE_STATE_CONSUMPTION);
-    };
+    }
+
+    ;
 
     public void run() throws MessagingException, IOException {
         this.setCurrentConsumption(SourceType.ENERGY, Constants.SENSOR_ELECTRICITY_RUN_STATE_CONSUMPTION);
         alert();
-    };
+    }
+
+    ;
 
     /**
      * Causes alarm in the house.

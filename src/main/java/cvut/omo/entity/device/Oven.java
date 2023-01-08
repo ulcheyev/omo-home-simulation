@@ -7,9 +7,11 @@ import cvut.omo.data_collections.consumption.ConsumptionCollection;
 /**
  * Class represents oven device.
  */
-public class Oven extends HomeAppliances{
+public class Oven extends HomeAppliances {
 
-    public Oven(double lifeTime) {super(lifeTime);}
+    public Oven(double lifeTime) {
+        super(lifeTime);
+    }
 
     @Override
     protected void identify() {

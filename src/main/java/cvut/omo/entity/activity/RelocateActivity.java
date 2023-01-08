@@ -15,13 +15,12 @@ public class RelocateActivity extends Activity {
     private Room from;
 
     /**
-     *
-     * @param responsible responsible for this activity
-     * @param event the event to which this activity relates
-     * @param toRoom the room that the responsible will moved in
+     * @param responsible  responsible for this activity
+     * @param event        the event to which this activity relates
+     * @param toRoom       the room that the responsible will moved in
      * @param activityType implicitly RELOCATE
      */
-    public RelocateActivity(Responsible responsible, Event event, Room toRoom, ActivityType activityType)  {
+    public RelocateActivity(Responsible responsible, Event event, Room toRoom, ActivityType activityType) {
         super(responsible, event, activityType);
         from = responsible.getRoom();
         this.room = toRoom;
@@ -29,6 +28,7 @@ public class RelocateActivity extends Activity {
 
     /**
      * Relocates responsible.
+     *
      * @param responsible responsible for activity
      * @return true, if activity is executed successfully
      */
@@ -41,10 +41,7 @@ public class RelocateActivity extends Activity {
 
     @Override
     public String toString() {
-        return  super.toString() +
-                " from room " + from.getRoomName() +
-                " on the " + from.getFloor().getNumberOfFloor()
-                + " floor";
+        return super.toString() + " from room " + from.getRoomName() + " on the " + from.getFloor().getNumberOfFloor() + " floor";
 
     }
 }

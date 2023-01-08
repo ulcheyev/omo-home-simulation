@@ -8,7 +8,7 @@ import java.util.Arrays;
  * The class represents food, which can be in {@link cvut.omo.entity.device.HomeDevice},
  * for example, in {@link cvut.omo.entity.device.Fridge}.
  */
-public class Food extends Stuff{
+public class Food extends Stuff {
 
     private FoodType foodType = Utils.getRandomObjFromList(Arrays.asList(FoodType.class.getEnumConstants()));
 
@@ -17,11 +17,8 @@ public class Food extends Stuff{
         return foodType;
     }
 
-    private enum FoodType implements StuffType{
-        MILK,
-        SAUSAGE,
-        CHICKEN,
-        MEAT
+    private enum FoodType implements StuffType {
+        MILK, SAUSAGE, CHICKEN, MEAT
     }
 
 }

@@ -1,4 +1,5 @@
 package cvut.omo.entity.device;
+
 import cvut.omo.entity.device.notifier.EventListener;
 
 import javax.mail.MessagingException;
@@ -18,7 +19,7 @@ public class WaterLeakSensor extends Sensor {
 
     @Override
     public void alert() throws MessagingException, IOException {
-        for (EventListener listner :listenerList){
+        for (EventListener listner : listenerList) {
             listner.update(message, this);
         }
     }

@@ -10,15 +10,14 @@ import cvut.omo.home_structure.room_builder.Room;
  */
 public class NullResponsible extends Responsible {
 
-    public NullResponsible(){
+    public NullResponsible() {
         super(new NullResponsibleType());
     }
 
     @Override
-    public Room getRoom(){
+    public Room getRoom() {
         return new NullRoom();
     }
-
 
 
     @Override
@@ -28,8 +27,8 @@ public class NullResponsible extends Responsible {
 
 
     @Override
-    public void handle(Activity activity){}
-
+    public void handle(Activity activity) {
+    }
 
 
 }

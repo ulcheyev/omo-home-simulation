@@ -11,29 +11,26 @@ public class ActivityFactory {
 
     /**
      * Creates relocate activity.
-     * @param res responsible for activity
+     *
+     * @param res   responsible for activity
      * @param event the event to which this activity relates
-     * @param room the room to relocate
+     * @param room  the room to relocate
      * @return new {@link RelocateActivity}
      */
-    public static RelocateActivity createRelocateActivity(Responsible res, Event event, Room room){
+    public static RelocateActivity createRelocateActivity(Responsible res, Event event, Room room) {
         return new RelocateActivity(res, event, room, ActivityType.RELOCATE);
     }
 
 
-
-
     /**
      * Creates new activity.
-     * @param res responsible for activity
-     * @param event the event to which this activity relates
+     *
+     * @param res          responsible for activity
+     * @param event        the event to which this activity relates
      * @param activityType activity type from {@link ActivityType}
      * @return new {@link Activity}
      */
-    public static Activity createActivity(Responsible res,
-                                          Event event,
-                                          ActivityType activityType)
-    {
+    public static Activity createActivity(Responsible res, Event event, ActivityType activityType) {
 
         Class<? extends Activity> solver = activityType.getSolver();
 

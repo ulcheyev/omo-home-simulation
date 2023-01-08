@@ -1,7 +1,7 @@
 package cvut.omo.data_collections.activity_events;
 
 import cvut.omo.app_utils.Constants;
-import cvut.omo.app_utils.WriterToFile;
+import cvut.omo.app_utils.FileManager;
 import cvut.omo.app_utils.Utils;
 import cvut.omo.event.Event;
 
@@ -16,58 +16,71 @@ import java.util.List;
 public class SmartHomeEventCollection {
 
     public static final SmartHomeEventCollection INSTANCE = new SmartHomeEventCollection();
-    private SmartHomeEventCollection(){};
+
+    private SmartHomeEventCollection() {
+    }
+
+    ;
     private static List<Event> events = new ArrayList<>();
 
     /**
      * Add event to collection.
+     *
      * @param event event to add
      */
-    public static void addEvent(Event event){
+    public static void addEvent(Event event) {
         events.add(event);
         EventManager.listenTo(event);
     }
 
     /**
      * Remove element from collection.
+     *
      * @param event event to remove
      */
-    public static void removeEvent(Event event){
+    public static void removeEvent(Event event) {
         events.remove(event);
     }
 
     /**
      * Return event on the specified index.
+     *
      * @param idx specified index
      * @return event on specified index
      */
-    public static Event at(int idx){
+    public static Event at(int idx) {
         return events.get(idx);
     }
 
     /**
      * Returns size of collection.
+     *
      * @return size of collection
      */
-    public static int size(){
+    public static int size() {
         return events.size();
     }
 
     /**
      * Returns the entire collection.
+     *
      * @return list with entire events
      */
-    public static List<Event> getAll(){return events;}
+    public static List<Event> getAll() {
+        return events;
+    }
 
     /**
      * Check, if every event in collection is solved.
+     *
      * @return true if all events solved, false if not
      */
     public static boolean allSolved() {
-        for(Event event: events){
-            if(!event.checkSolving()){
+        for (Event event : events) {
+            if (!event.checkSolving()) {
                 return false;
-            };
+            }
+            ;
         }
         return true;
     }
@@ -75,11 +88,12 @@ public class SmartHomeEventCollection {
     /**
      * Swap to activities at the end.
      * Using for creation the chain of activities.
+     *
      * @param event event, the activists of which will be swapped
      */
-    public static void swapTwoEndActivities(Event event){
-        for(Event event1: events){
-            if(event.equals(event1)){
+    public static void swapTwoEndActivities(Event event) {
+        for (Event event1 : events) {
+            if (event.equals(event1)) {
                 int last = event.getChainToSolve().size() - 1;
                 int predLast = Math.max(last - 1, 0);
                 Collections.swap(event.getChainToSolve(), predLast, last);
@@ -89,6 +103,7 @@ public class SmartHomeEventCollection {
 
     /**
      * Generate event report.
+     *
      * @throws IOException the directory does not exist
      */
     public static void generateEventReport() throws IOException {
@@ -96,14 +111,15 @@ public class SmartHomeEventCollection {
         StringBuilder sb = new StringBuilder();
         EventReportIterator iterator = createEventReportIterator();
         sb.append(Constants.EVENT_REPORT_HEADER);
-        while (iterator.hasNext()){
+        while (iterator.hasNext()) {
             sb.append(iterator.next()).append("\n");
         }
-        WriterToFile.generateNewReport("events_report"+ Utils.getRandomInt(), sb.toString());
+        FileManager.generateNewReport("events_report" + Utils.getRandomInt(), sb.toString());
     }
 
     /**
      * Generate activity and usage report.
+     *
      * @throws IOException the directory does not exist
      */
     public static void generateActivityAndUsageReport() throws IOException {
@@ -111,23 +127,23 @@ public class SmartHomeEventCollection {
         StringBuilder sb = new StringBuilder();
         ActivityReportIterator iterator = createActivityReportIterator();
         sb.append(Constants.ACTIVITY_REPORT_HEADER);
-        while (iterator.hasNext()){
+        while (iterator.hasNext()) {
             sb.append(iterator.next()).append("\n");
         }
-        WriterToFile.generateNewReport("activity_and_usage_report"+ Utils.getRandomInt(), sb.toString());
+        FileManager.generateNewReport("activity_and_usage_report" + Utils.getRandomInt(), sb.toString());
     }
 
     /**
      * @return {@link EventReportIterator} for create event report
      */
-    public static EventReportIterator createEventReportIterator(){
+    public static EventReportIterator createEventReportIterator() {
         return new EventReportIterator();
     }
 
     /**
      * @return {@link ActivityReportIterator} for create activity and usage report
      */
-    public static ActivityReportIterator createActivityReportIterator(){
+    public static ActivityReportIterator createActivityReportIterator() {
         return new ActivityReportIterator();
     }
 

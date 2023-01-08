@@ -1,6 +1,5 @@
 package cvut.omo.entity.item.item;
 
 public enum ItemState {
-    IN_USE,
-    FREE
+    IN_USE, FREE
 }

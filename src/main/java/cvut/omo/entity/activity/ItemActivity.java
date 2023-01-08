@@ -14,15 +14,14 @@ import java.util.List;
 /**
  * Class represents actions with {@link Item}.
  */
-public class ItemActivity extends Activity{
+public class ItemActivity extends Activity {
 
     private Class<? extends Usable> toUse;
 
     /**
-
-     * @param responsible responsible for this activity
-     * @param event the event to which this activity relates
-     * @param toUse the class that the responsible will interact with
+     * @param responsible  responsible for this activity
+     * @param event        the event to which this activity relates
+     * @param toUse        the class that the responsible will interact with
      * @param activityType {@link ActivityType} type of activity
      */
     public ItemActivity(Responsible responsible, Event event, Class<? extends Usable> toUse, ActivityType activityType) {
@@ -35,7 +34,8 @@ public class ItemActivity extends Activity{
      * After founding item, check, if item is free.
      * Case item is free: item will be used by responsible immediately.
      * Case item in use: responsible will have {@link WaitingActivity}.
-     *  @param responsible responsible for activity
+     *
+     * @param responsible responsible for activity
      * @return true, if activity is executed successfully
      */
     @Override
@@ -49,9 +49,8 @@ public class ItemActivity extends Activity{
             }
             return true;
 
-        }
-        else{
-            if(!foundedItem.alreadyListen(responsible)){
+        } else {
+            if (!foundedItem.alreadyListen(responsible)) {
                 foundedItem.attach(responsible);
                 responsible.handle(new WaitingActivity(foundedItem, this));
             }
@@ -59,14 +58,14 @@ public class ItemActivity extends Activity{
         return false;
     }
 
-    private List<Item> searchItems(){
+    private List<Item> searchItems() {
         List<Item> founded = new ArrayList<>();
-        for(Room room: Home.INSTANCE.getAllRooms()){
-           for(Item item: room.getItems()){
-               if(item.getClass().equals(toUse)){
-                   founded.add(item);
-               }
-           }
+        for (Room room : Home.INSTANCE.getAllRooms()) {
+            for (Item item : room.getItems()) {
+                if (item.getClass().equals(toUse)) {
+                    founded.add(item);
+                }
+            }
         }
         return founded;
     }
@@ -74,6 +73,6 @@ public class ItemActivity extends Activity{
 
     @Override
     public String toString() {
-        return  super.toString();
+        return super.toString();
     }
 }

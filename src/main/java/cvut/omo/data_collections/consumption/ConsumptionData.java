@@ -22,6 +22,7 @@ public class ConsumptionData {
 
     /**
      * Constructor for class.
+     *
      * @param homeDevice home device
      * @param sourceType source type
      */
@@ -33,10 +34,9 @@ public class ConsumptionData {
     /**
      * Updates consumed data dependent on current device consumption.
      */
-    public void update(){
+    public void update() {
         this.amountOfConsumed += homeDevice.getCurrentConsumption(sourceType);
     }
-
 
 
 }

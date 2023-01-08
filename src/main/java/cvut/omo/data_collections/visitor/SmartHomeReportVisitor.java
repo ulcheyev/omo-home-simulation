@@ -14,6 +14,7 @@ public interface SmartHomeReportVisitor {
 
     /**
      * Visit the given floor.
+     *
      * @param floor floor to visit
      * @return info about floor in string representation
      */
@@ -21,6 +22,7 @@ public interface SmartHomeReportVisitor {
 
     /**
      * Visit the given room.
+     *
      * @param room room to visit
      * @return info about room in string representation
      */
@@ -28,6 +30,7 @@ public interface SmartHomeReportVisitor {
 
     /**
      * Visit the given device.
+     *
      * @param device device to visit
      * @return info about home device in string representation
      */
@@ -35,6 +38,7 @@ public interface SmartHomeReportVisitor {
 
     /**
      * Visit the given person.
+     *
      * @param person to visit
      * @return info about person in string representation
      */
@@ -42,6 +46,7 @@ public interface SmartHomeReportVisitor {
 
     /**
      * Visit the given pet.
+     *
      * @param pet to visit
      * @return info about pet in string representation
      */

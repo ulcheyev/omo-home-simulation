@@ -1,7 +1,7 @@
 package cvut.omo.data_collections.visitor;
 
 import cvut.omo.app_utils.Constants;
-import cvut.omo.app_utils.WriterToFile;
+import cvut.omo.app_utils.FileManager;
 import cvut.omo.app_utils.Utils;
 import cvut.omo.entity.device.HomeDevice;
 import cvut.omo.entity.living.person.Person;
@@ -19,7 +19,6 @@ import java.util.Iterator;
 
 /**
  * Class represents function, which generate home configuration report.
- *
  */
 public class HomeConfigurationReportReportVisitor implements SmartHomeReportVisitor {
 
@@ -29,31 +28,29 @@ public class HomeConfigurationReportReportVisitor implements SmartHomeReportVisi
         System.out.println("GENERATE HOME CONFIGURATION REPORT");
         StringBuilder sb = new StringBuilder();
         sb.append(Constants.HOME_CONFIG_REPORT_HEADER);
-        for(HomeComponent homeComponent: Home.INSTANCE.getComponentsForReport()){
+        for (HomeComponent homeComponent : Home.INSTANCE.getComponentsForReport()) {
             sb.append(homeComponent.accept(this));
         }
         sb.append(getComponentQuantity());
-        WriterToFile.generateNewReport("home_config_report" + Utils.getRandomInt(), sb.toString());
+        FileManager.generateNewReport("home_config_report" + Utils.getRandomInt(), sb.toString());
     }
 
     /**
-     *
      * @param floor floor to visit
      * @return info about floor (number) and floor rooms (names)
      */
     @Override
     public String visitFloor(Floor floor) {
         StringBuilder sb = new StringBuilder();
-        sb.append("-Floor "+ floor.getNumberOfFloor() + " contains: " + "\n");
+        sb.append("-Floor " + floor.getNumberOfFloor() + " contains: " + "\n");
         registerComponentQuantity(floor);
-        for(Room room: floor.getRooms()){
+        for (Room room : floor.getRooms()) {
             sb.append(room.accept(this));
         }
         return sb.toString();
     }
 
     /**
-     *
      * @param room room to visit
      * @return info about room (name) and room device (types)
      */
@@ -61,10 +58,10 @@ public class HomeConfigurationReportReportVisitor implements SmartHomeReportVisi
     public String visitRoom(Room room) {
         StringBuilder sb = new StringBuilder();
         registerComponentQuantity(room);
-        sb.append("---Room " +  room.getRoomName() + " with " + room.getWindows().size() + " windows and contains: \n");
-        if(room.getHomeDevices().isEmpty()){
+        sb.append("---Room " + room.getRoomName() + " with " + room.getWindows().size() + " windows and contains: \n");
+        if (room.getHomeDevices().isEmpty()) {
             sb.append("nothing\n");
-        }else{
+        } else {
             for (HomeDevice homeDevice : room.getHomeDevices()) {
                 sb.append(homeDevice.accept(this));
             }
@@ -74,7 +71,6 @@ public class HomeConfigurationReportReportVisitor implements SmartHomeReportVisi
     }
 
     /**
-     *
      * @param homeDevice device to visit
      * @return info about home device (type, room)
      */
@@ -85,7 +81,6 @@ public class HomeConfigurationReportReportVisitor implements SmartHomeReportVisi
     }
 
     /**
-     *
      * @param person to visit
      * @return info about person (name, role)
      */
@@ -96,24 +91,23 @@ public class HomeConfigurationReportReportVisitor implements SmartHomeReportVisi
     }
 
     /**
-     *
      * @param pet to visit
      * @return info about pet (type)
      */
     @Override
     public String visitPet(Pet pet) {
         registerComponentQuantity(pet);
-        return "\n***Pet lives in the house with a role "  + pet.getResponsibleType();
+        return "\n***Pet lives in the house with a role " + pet.getResponsibleType();
     }
 
-    private void registerComponentQuantity(HomeComponent component){
+    private void registerComponentQuantity(HomeComponent component) {
         Integer res = quantities.get(component.getClass());
         if (res == null) res = 1;
         else res++;
         quantities.put(component.getClass(), res);
     }
 
-    private String getComponentQuantity(){
+    private String getComponentQuantity() {
         StringBuilder res = new StringBuilder();
         res.append(Constants.STARS_UP);
         for (Iterator<Class<? extends HomeComponent>> it = quantities.keys().asIterator(); it.hasNext(); ) {

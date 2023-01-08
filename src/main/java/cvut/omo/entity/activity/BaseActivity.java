@@ -12,8 +12,8 @@ public class BaseActivity extends Activity {
     private static final String SLEEP_FLAG = "SLEEP";
 
     /**
-     * @param res responsible for this activity
-     * @param event the event to which this activity relates
+     * @param res          responsible for this activity
+     * @param event        the event to which this activity relates
      * @param activityType {@link ActivityType} type of activity
      */
     public BaseActivity(Responsible res, Event event, ActivityType activityType) {
@@ -21,8 +21,8 @@ public class BaseActivity extends Activity {
     }
 
     @Override
-    public boolean doWork(Responsible responsible)  {
-        if(activityType.name().contains(SLEEP_FLAG)){
+    public boolean doWork(Responsible responsible) {
+        if (activityType.name().contains(SLEEP_FLAG)) {
             responsible.goToSleep();
         }
         return true;

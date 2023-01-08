@@ -29,10 +29,9 @@ public class DeviceActivity extends Activity {
     private List<Stuff> stuffList = new ArrayList<>();
 
     /**
-     *
-     * @param responsible responsible for this activity
-     * @param event the event to which this activity relates
-     * @param toUse the class that the responsible will interact with
+     * @param responsible  responsible for this activity
+     * @param event        the event to which this activity relates
+     * @param toUse        the class that the responsible will interact with
      * @param activityType {@link ActivityType} type of activity
      */
     public DeviceActivity(Responsible responsible, Event event, Class<? extends Usable> toUse, ActivityType activityType) {
@@ -44,38 +43,36 @@ public class DeviceActivity extends Activity {
      * Found the device that the responsible will interact with (depends on {@link #toUse}).
      * After finding device, call the specified method {@link #activityType} in the found device.
      * If {@link #toUse} is null, responsible is searching device.
-     *  @param responsible responsible for activity
+     *
+     * @param responsible responsible for activity
      * @return true, if activity is executed successfully
      */
     @Override
     public boolean doWork(Responsible responsible) {
 
-        if(toUse == null){
+        if (toUse == null) {
             founded = (HomeDevice) event.getResponsible();
-        }
-
-        else {
-            if(room.isNull()){
+        } else {
+            if (room.isNull()) {
                 founded = Utils.getRandomObjFromList(Home.INSTANCE.getHomeAppliancesByClass(toUse));
-            }
-            else {
+            } else {
                 founded = Utils.getRandomObjFromList(room.getHomeDevices());
-                while(!founded.getClass().equals(toUse)){
+                while (!founded.getClass().equals(toUse)) {
                     founded = Utils.getRandomObjFromList(room.getHomeDevices());
                 }
             }
         }
 
-        switch (containsFlag(activityType)){
+        switch (containsFlag(activityType)) {
             case ON -> founded.switchOn();
             case OFF -> founded.switchOff();
             case RUN -> {
                 founded.use((Person) responsible);
-                if(founded instanceof Capacious){
+                if (founded instanceof Capacious) {
                     try {
                         Capacious founded = ((Capacious) this.founded);
                         stuffList.add(founded.giveRandomItem());
-                    }catch (OMOException e){
+                    } catch (OMOException e) {
                         stuffList.add(new NullStuff());
                     }
                 }
@@ -90,46 +87,36 @@ public class DeviceActivity extends Activity {
     @Override
     public String toString() {
 
-        String device = responsible instanceof HomeDevice ? ""
-                : " on " + founded.getClass().getSimpleName();
+        String device = responsible instanceof HomeDevice ? "" : " on " + founded.getClass().getSimpleName();
 
-        StringBuilder s = new StringBuilder(super.toString() +
-                device);
+        StringBuilder s = new StringBuilder(super.toString() + device);
 
-        if(!stuffList.isEmpty()){
-            for(Stuff stuff: stuffList) {
+        if (!stuffList.isEmpty()) {
+            for (Stuff stuff : stuffList) {
                 String padded = String.format("%-6s", " ");
                 s.append("\n").append(padded);
                 s.append("⮚ ");
 
                 if (stuff.isNull()) {
-                   s.append("Empty:( ");
+                    s.append("Empty:( ");
                     break;
                 } else {
-                    s.append("Returned ")
-                            .append(stuff.getStuffType());
+                    s.append("Returned ").append(stuff.getStuffType());
                 }
             }
         }
         return s.toString();
     }
 
-    private String containsFlag(ActivityType activityType){
+    private String containsFlag(ActivityType activityType) {
         String name = activityType.name();
-        for(String flag: Constants.flags){
-            if(name.contains(flag)){
+        for (String flag : Constants.flags) {
+            if (name.contains(flag)) {
                 return flag;
             }
         }
         return name;
     }
 
-    private HomeDevice findHomeDevice(List<HomeDevice> homeDevices){
-        HomeDevice homeDevice = Utils.getRandomObjFromList(homeDevices);
-        while(!homeDevice.getClass().equals(event.getResponsible().getClass())){
-            homeDevice = Utils.getRandomObjFromList(homeDevices);
-        }
-        return homeDevice;
-    }
 
 }

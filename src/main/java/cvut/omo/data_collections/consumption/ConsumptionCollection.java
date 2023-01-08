@@ -1,7 +1,7 @@
 package cvut.omo.data_collections.consumption;
 
 import cvut.omo.app_utils.Constants;
-import cvut.omo.app_utils.WriterToFile;
+import cvut.omo.app_utils.FileManager;
 import cvut.omo.app_utils.Utils;
 import cvut.omo.entity.device.HomeDevice;
 import cvut.omo.entity.device.SourceType;
@@ -22,14 +22,16 @@ public class ConsumptionCollection implements IConsumptionCollection {
     private static ConsumptionCollection collection;
     private static int size = 0;
 
-    private ConsumptionCollection(){}
+    private ConsumptionCollection() {
+    }
 
     /**
      * Collection is defining like a singleton.
+     *
      * @return instance of collection
      */
-    public static ConsumptionCollection getInstance(){
-        if(collection == null){
+    public static ConsumptionCollection getInstance() {
+        if (collection == null) {
             return new ConsumptionCollection();
         }
         return collection;
@@ -37,7 +39,7 @@ public class ConsumptionCollection implements IConsumptionCollection {
 
     @Override
     public void put(HomeDevice homeDevice) {
-        if(!data.containsKey(homeDevice)) {
+        if (!data.containsKey(homeDevice)) {
             List<ConsumptionData> list = new ArrayList<>();
             for (SourceType sourceType : homeDevice.getSourceTypes()) {
                 list.add(new ConsumptionData(homeDevice, sourceType));
@@ -50,23 +52,25 @@ public class ConsumptionCollection implements IConsumptionCollection {
 
     @Override
     public void update(HomeDevice homeDevice) {
-        for(ConsumptionData consumptionData: data.get(homeDevice)){
+        for (ConsumptionData consumptionData : data.get(homeDevice)) {
             consumptionData.update();
         }
     }
 
     @Override
-    public HomeDevice getAt(int idx){
+    public HomeDevice getAt(int idx) {
         return (HomeDevice) data.keySet().toArray()[idx];
     }
 
     @Override
-    public List<ConsumptionData> getDataAbout(HomeDevice homeDevice){
+    public List<ConsumptionData> getDataAbout(HomeDevice homeDevice) {
         return data.get(homeDevice);
     }
 
     @Override
-    public int getSize() {return size;}
+    public int getSize() {
+        return size;
+    }
 
 
     @Override
@@ -75,13 +79,13 @@ public class ConsumptionCollection implements IConsumptionCollection {
         StringBuilder res = new StringBuilder();
         res.append(Constants.CONSUMPTION_REPORT_HEADER);
         ConsumptionReportIterator iterator = createConsumptionReportIterator();
-        while (iterator.hasNext()){
+        while (iterator.hasNext()) {
             String next = iterator.next();
-            if(!next.isBlank()) {
+            if (!next.isBlank()) {
                 res.append(next).append("\n");
             }
         }
-        WriterToFile.generateNewReport("consumption_report" + Utils.getRandomInt(), res.toString());
+        FileManager.generateNewReport("consumption_report" + Utils.getRandomInt(), res.toString());
     }
 
 

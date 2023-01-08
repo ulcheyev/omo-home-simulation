@@ -7,7 +7,9 @@ import cvut.omo.data_collections.visitor.HomeConfigurationReportReportVisitor;
 import cvut.omo.home_structure.home_builder.Home;
 import cvut.omo.home_structure.home_builder.SmartHomeBuilder;
 import cvut.omo.home_structure.home_builder.SmartHomeBuilderDirector;
+
 import java.io.IOException;
+
 import static cvut.omo.app_utils.Utils.checkInput;
 import static cvut.omo.app_utils.Utils.hello;
 
@@ -32,7 +34,7 @@ public class OMOSmartHomeSimulationFacade {
     /**
      * Creates large configuration in {@link SmartHomeBuilderDirector }.
      */
-    public void createLargeConfig(){
+    public void createLargeConfig() {
         SmartHomeBuilderDirector.createLargeHomeConfiguration(SmartHomeBuilder.INSTANCE);
         home = SmartHomeBuilder.INSTANCE.getResult();
     }
@@ -40,7 +42,7 @@ public class OMOSmartHomeSimulationFacade {
     /**
      * Creates small configuration in {@link SmartHomeBuilderDirector }.
      */
-    public void createSmallConfig(){
+    public void createSmallConfig() {
         SmartHomeBuilderDirector.createSmallHomeConfiguration(SmartHomeBuilder.INSTANCE);
         home = SmartHomeBuilder.INSTANCE.getResult();
     }
@@ -48,7 +50,7 @@ public class OMOSmartHomeSimulationFacade {
     /**
      * Start simulation.
      */
-    public void simulate(){
+    public void simulate() {
         int inputNumber = Utils.getInputNumber("Enter days quantity of simulation:");
         Simulation.simulate(inputNumber);
 
@@ -58,7 +60,7 @@ public class OMOSmartHomeSimulationFacade {
     /**
      * Generates events report.
      */
-    public void generateEventReport(){
+    public void generateEventReport() {
         try {
             SmartHomeEventCollection.generateEventReport();
         } catch (IOException e) {
@@ -69,7 +71,7 @@ public class OMOSmartHomeSimulationFacade {
     /**
      * Generates activity and usage report.
      */
-    public void generateActivityAndUsageReport(){
+    public void generateActivityAndUsageReport() {
         try {
             SmartHomeEventCollection.generateActivityAndUsageReport();
         } catch (IOException e) {
@@ -80,7 +82,7 @@ public class OMOSmartHomeSimulationFacade {
     /**
      * Generates consumption report.
      */
-    public void generateConsumptionReport(){
+    public void generateConsumptionReport() {
         try {
             ConsumptionCollection.getInstance().generateReport();
         } catch (IOException e) {
@@ -91,7 +93,7 @@ public class OMOSmartHomeSimulationFacade {
     /**
      * Generates home configuration report.
      */
-    public void generateHomeConfigurationReport(){
+    public void generateHomeConfigurationReport() {
         try {
             HomeConfigurationReportReportVisitor visitor = new HomeConfigurationReportReportVisitor();
             visitor.generateReport();
@@ -103,7 +105,7 @@ public class OMOSmartHomeSimulationFacade {
     /**
      * Generates all reports.
      */
-    public void generateAllReports(){
+    public void generateAllReports() {
         generateEventReport();
         generateActivityAndUsageReport();
         generateConsumptionReport();

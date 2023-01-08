@@ -10,12 +10,13 @@ public abstract class Stuff {
     @Getter
     private StuffType stuffType;
 
-    public boolean isNull(){
+    public boolean isNull() {
         return false;
     }
 
     /**
      * Interface for stuff type.
      */
-    public interface StuffType{}
+    public interface StuffType {
+    }
 }

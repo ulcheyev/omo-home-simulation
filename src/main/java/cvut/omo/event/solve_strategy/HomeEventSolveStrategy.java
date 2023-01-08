@@ -25,10 +25,11 @@ public class HomeEventSolveStrategy extends SolveStrategy {
     /**
      * Check, if event {@link Room} is null.
      * (NullRoom in {@link cvut.omo.home_structure.room_builder.RoomName} is according to STUB)
+     *
      * @param event event to solve.
      */
     @Override
-    public void solve(Event event)  {
+    public void solve(Event event) {
 
         eventType = event.getEventType();
         room = event.getRoom();
@@ -42,13 +43,11 @@ public class HomeEventSolveStrategy extends SolveStrategy {
 
     }
 
-    private void solveHomeEventWithNonNullRoom()  {
+    private void solveHomeEventWithNonNullRoom() {
 
         if (room.isEmpty()) {
             handleResponsibles(event);
-        }
-
-        else {
+        } else {
             for (ActivityType activityType : eventType.getChainToSolve()) {
                 checkRoomAndHandle(room, activityType, event);
             }
@@ -62,15 +61,12 @@ public class HomeEventSolveStrategy extends SolveStrategy {
             ResponsibleType responsibleType = giveRandomResponsibleType(activityType);
 
             if (responsibleType instanceof ActivityType.Device) {
-                List<HomeAppliances> hds =
-                        Home.INSTANCE.getHomeAppliancesByClass
-                                        (((ActivityType.Device) responsibleType).getClazz());
+                List<HomeAppliances> hds = Home.INSTANCE.getHomeAppliancesByClass(((ActivityType.Device) responsibleType).getClazz());
                 for (HomeAppliances homeDevice : hds) {
                     homeDevice.handle(createActivity(homeDevice, event, activityType));
                 }
 
-            }
-            else {
+            } else {
                 Responsible responsible = giveEfficientResponsible(activityType);
                 responsible.handle(createActivity(responsible, event, activityType));
             }

@@ -5,15 +5,16 @@ import cvut.omo.entity.living.person.Person;
 /**
  * Class represent on state of {@link HomeDevice}.
  */
-public class OnState extends HomeDeviceState{
+public class OnState extends HomeDeviceState {
 
-    public OnState(HomeAppliances homeAppliances){
+    public OnState(HomeAppliances homeAppliances) {
         super(homeAppliances);
         homeAppliances.enable();
     }
 
     @Override
-    public void switchOn(HomeAppliances homeAppliances) {}
+    public void switchOn(HomeAppliances homeAppliances) {
+    }
 
     @Override
     public void switchOff(HomeAppliances homeAppliances) {
